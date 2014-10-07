@@ -91,10 +91,16 @@ add_action( 'widgets_init', 'hideout_widgets_init' );
 /**
  * Enqueue scripts and styles.
  */
-function hideout_scripts() {
-	wp_enqueue_style( 'hideout-style', get_stylesheet_uri() );
 
-	wp_enqueue_style( 'hideout-custom-style', get_template_directory_uri() . '/css/hideout.css' );
+function load_fonts() {
+        wp_register_style('googleFonts', 'http://fonts.googleapis.com/css?family=Oswald:400,300,700|Quattrocento:400,700|Oxygen:300,400,700|Playfair+Display:400,700,900|Lato:400,700,900|Merriweather:400,300,700|Berkshire+Swash');
+
+        wp_enqueue_style( 'googleFonts');
+    }
+
+function hideout_scripts() {
+    
+	wp_enqueue_style( 'hideout-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'hideout-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
@@ -108,10 +114,15 @@ function hideout_scripts() {
 
 	wp_enqueue_style( 'bootstrap-css' );
 
+	wp_enqueue_style( 'hideout-custom-style', get_template_directory_uri() . '/css/hideout.css' );
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
+
+add_action('wp_print_styles', 'load_fonts');
+
 add_action( 'wp_enqueue_scripts', 'hideout_scripts' );
 
 remove_filter('the_content', 'wpautop');

@@ -25,8 +25,8 @@
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'hideout' ); ?></a>
 
-	<header id="masthead" class="site-header" role="banner">
-		<nav class="navbar navbar-default navbar-inverse" role="navigation"> 
+	<header id="masthead" class="site-header " role="banner">
+		<nav class="navbar navbar-default navbar-inverse container" role="navigation"> 
 		<!-- Brand and toggle get grouped for better mobile display --> 
 		  <div class="navbar-header"> 
 		    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> 
@@ -34,8 +34,8 @@
 		      <span class="icon-bar">2</span> 
 		      <span class="icon-bar"></span> 
 		      <span class="icon-bar"></span> 
-		    </button> 
-		    <a class="navbar-brand" href="<?php bloginfo('url') ?>"><?php bloginfo('name') ?></a> 
+		    </button>
+		    <a class="navbar-brand" href="<?php bloginfo('url') ?>"><h2><?php bloginfo('name') ?></h2></a>
 		  </div> 
 		  <!-- Collect the nav links, forms, and other content for toggling --> 
 		  <div class="collapse navbar-collapse navbar-ex1-collapse pull-right"> 
@@ -56,14 +56,6 @@
 
 		  </div>
 		</nav>
-
-
-
-
-
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle"><?php _e( 'Primary Menu', 'hideout' ); ?></button>
-		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
-	<div id="content" class="site-content">
+	<!-- <div id="content" class="site-content"> -->
