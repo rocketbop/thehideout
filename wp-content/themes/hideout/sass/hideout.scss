@@ -3,11 +3,12 @@
 // Colors
 
 $black-dark: #111;
+$white: #fff;
 
 
 /**** BASE STYLES **********************/
 /*--------------------------------------------------------------
-1.0 Typefaces
+1.0 Typefaces and Decoration 
 --------------------------------------------------------------*/
 
 h1, h2, h3, h4, h5, h6 {
@@ -18,7 +19,27 @@ p {
 	font-family: "Merriweather";
 }
 
+li {
+	list-style: none;
+}
 
+/*--------------------------------------------------------------
+2.0 Design
+--------------------------------------------------------------*/
+
+body {
+	background-color: $white;
+	background-image: url('../images/pw_pattern.png');
+	background-repeat: repeat;
+}
+
+#primary {
+	background: $white;
+}
+
+#sidebar {
+	background: $black-dark;
+}
 /**** LAYOUT STYLES *****************/
 
 
@@ -35,6 +56,11 @@ header nav.navbar-inverse {
 	border: none;
 }
 
+header .navbar-inverse .navbar-nav>.active>a,
+header .navbar-inverse .navbar-nav>.active>a:hover,
+header .navbar-inverse .navbar-nav>.active>a:focus {
+	background-color: $black-dark;
+}
 header a.navbar-brand {
 	//text-transform: uppercase;
 }
@@ -46,12 +72,16 @@ header h2 {
 
 }
 
-header ul.nav.navbar-nav {
-	margin-top: 3em;
-}
-
 
 div.entry-content h1 {
 	font-weight: 700;
 
 }
+
+
+@media (min-width: 768px) {
+	header ul.nav.navbar-nav {
+	margin-top: 3em;
+	}
+}
+	

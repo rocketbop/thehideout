@@ -1,12 +1,29 @@
 /**** BASE STYLES **********************/
 /*--------------------------------------------------------------
-1.0 Typefaces
+1.0 Typefaces and Decoration 
 --------------------------------------------------------------*/
 h1, h2, h3, h4, h5, h6 {
   font-family: "Lato"; }
 
 p {
   font-family: "Merriweather"; }
+
+li {
+  list-style: none; }
+
+/*--------------------------------------------------------------
+2.0 Design
+--------------------------------------------------------------*/
+body {
+  background-color: white;
+  background-image: url("../images/pw_pattern.png");
+  background-repeat: repeat; }
+
+#primary {
+  background: white; }
+
+#sidebar {
+  background: #111111; }
 
 /**** LAYOUT STYLES *****************/
 header {
@@ -19,13 +36,19 @@ header nav.navbar-inverse {
   background-color: #111111;
   border: none; }
 
+header .navbar-inverse .navbar-nav > .active > a,
+header .navbar-inverse .navbar-nav > .active > a:hover,
+header .navbar-inverse .navbar-nav > .active > a:focus {
+  background-color: #111111; }
+
 header h2 {
   font-family: "Berkshire Swash";
   font-size: 2.5em;
   margin-top: .6em; }
 
-header ul.nav.navbar-nav {
-  margin-top: 3em; }
-
 div.entry-content h1 {
   font-weight: 700; }
+
+@media (min-width: 768px) {
+  header ul.nav.navbar-nav {
+    margin-top: 3em; } }

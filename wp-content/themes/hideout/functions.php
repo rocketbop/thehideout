@@ -77,13 +77,22 @@ add_action( 'after_setup_theme', 'hideout_setup' );
  */
 function hideout_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'hideout' ),
+		-
 		'id'            => 'sidebar-1',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h1 class="widget-title">',
 		'after_title'   => '</h1>',
+	) );
+
+	register_sidebar( array(
+
+		'id'			=> 'sidebar-home',
+		'name'			=> 'Home Sidebar',
+		'before_widget' => '<li id="%1$s" class="test">',
+ 		'after_widget' => '</li>',
+		'description'	=> ''
 	) );
 }
 add_action( 'widgets_init', 'hideout_widgets_init' );
