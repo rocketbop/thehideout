@@ -2,8 +2,11 @@
 
 // Colors
 
-$black-dark: #111;
+$black-dark: #171717;
 $white: #fff;
+$yellow-weak: #fff7d2;
+$yellow-medium: #ffe362;
+$yellow-strong: #f2cd23;
 
 
 /**** BASE STYLES **********************/
@@ -29,17 +32,17 @@ li {
 
 body {
 	background-color: $white;
-	background-image: url('../images/pw_pattern.png');
-	background-repeat: repeat;
+/* 	background-image: url('../images/pw_pattern.png');
+	background-repeat: repeat; */
 }
 
 #primary {
 	background: $white;
 }
 
-#sidebar {
+/* #sidebar {
 	background: $black-dark;
-}
+} */
 /**** LAYOUT STYLES *****************/
 
 
@@ -62,22 +65,60 @@ header .navbar-inverse .navbar-nav>.active>a:focus {
 	background-color: $black-dark;
 }
 header a.navbar-brand {
-	//text-transform: uppercase;
 }
 
 header h2 {
 	font-family: "Berkshire Swash";
 	font-size: 2.5em;
 	margin-top: .6em;
+	color: $yellow-weak;
+
 
 }
 
+header h2:hover {
+	color: $yellow-medium;
+}
 
+header h2:active {
+	color: $yellow-strong;
+}
+
+#jumbotron {
+	min-height: 25em;
+	background-image: url('../images/stock-inside.jpg');
+	background-size: cover;
+	background-position: bottom;
+}
+
+#jumbotron h2 {
+	text-align: center;
+	margin-top: 0;
+	padding-top: 5em;
+	color: $yellow-weak;
+	font-family: "Oswald";
+}
+
+div.metaslider {
+	margin-top: 2em;
+}
 div.entry-content h1 {
 	font-weight: 700;
 
 }
 
+#sidebar h2 {
+	text-align: center;
+}
+
+#sidebar li > ul {
+	margin-left: 0;
+}
+
+footer.site-footer {
+	background-color: $black-dark;
+	min-height: 8em;
+}
 
 @media (min-width: 768px) {
 	header ul.nav.navbar-nav {

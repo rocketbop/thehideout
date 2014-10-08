@@ -16,38 +16,71 @@ li {
 --------------------------------------------------------------*/
 body {
   background-color: white;
-  background-image: url("../images/pw_pattern.png");
-  background-repeat: repeat; }
+  /* 	background-image: url('../images/pw_pattern.png');
+  	background-repeat: repeat; */ }
 
 #primary {
   background: white; }
 
-#sidebar {
-  background: #111111; }
-
+/* #sidebar {
+	background: $black-dark;
+} */
 /**** LAYOUT STYLES *****************/
 header {
-  background-color: #111111; }
+  background-color: #171717; }
 
 header .navbar {
   min-height: 8em; }
 
 header nav.navbar-inverse {
-  background-color: #111111;
+  background-color: #171717;
   border: none; }
 
 header .navbar-inverse .navbar-nav > .active > a,
 header .navbar-inverse .navbar-nav > .active > a:hover,
 header .navbar-inverse .navbar-nav > .active > a:focus {
-  background-color: #111111; }
+  background-color: #171717; }
 
 header h2 {
   font-family: "Berkshire Swash";
   font-size: 2.5em;
-  margin-top: .6em; }
+  margin-top: .6em;
+  color: #fff7d2; }
+
+header h2:hover {
+  color: #ffe362; }
+
+header h2:active {
+  color: #f2cd23; }
+
+#jumbotron {
+  min-height: 25em;
+  background-image: url("../images/stock-inside.jpg");
+  background-size: cover;
+  background-position: bottom; }
+
+#jumbotron h2 {
+  text-align: center;
+  margin-top: 0;
+  padding-top: 5em;
+  color: #fff7d2;
+  font-family: "Oswald"; }
+
+div.metaslider {
+  margin-top: 2em; }
 
 div.entry-content h1 {
   font-weight: 700; }
+
+#sidebar h2 {
+  text-align: center; }
+
+#sidebar li > ul {
+  margin-left: 0; }
+
+footer.site-footer {
+  background-color: #171717;
+  min-height: 8em; }
 
 @media (min-width: 768px) {
   header ul.nav.navbar-nav {
