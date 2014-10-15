@@ -15,7 +15,7 @@ li {
 2.0 Design
 --------------------------------------------------------------*/
 body {
-  background-color: white;
+  background-color: #171717;
   /* 	background-image: url('../images/pw_pattern.png');
   	background-repeat: repeat; */ }
 
@@ -43,8 +43,8 @@ header .navbar-inverse .navbar-nav > .active > a:focus {
 
 header h2 {
   font-family: "Berkshire Swash";
-  font-size: 2.5em;
-  margin-top: .6em;
+  font-size: 1.5em;
+  margin-top: 1.3em;
   color: #fff7d2; }
 
 header h2:hover {
@@ -53,13 +53,13 @@ header h2:hover {
 header h2:active {
   color: #f2cd23; }
 
-#jumbotron {
-  min-height: 25em;
+#banner {
+  min-height: 40em;
   background-image: url("../images/stock-inside.jpg");
   background-size: cover;
   background-position: bottom; }
 
-#jumbotron h2 {
+#banner h2 {
   text-align: center;
   margin-top: 0;
   padding-top: 5em;

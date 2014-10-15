@@ -31,7 +31,7 @@ li {
 --------------------------------------------------------------*/
 
 body {
-	background-color: $white;
+	background-color: $black-dark;
 /* 	background-image: url('../images/pw_pattern.png');
 	background-repeat: repeat; */
 }
@@ -69,8 +69,8 @@ header a.navbar-brand {
 
 header h2 {
 	font-family: "Berkshire Swash";
-	font-size: 2.5em;
-	margin-top: .6em;
+	font-size: 1.5em;
+	margin-top: 1.3em;
 	color: $yellow-weak;
 
 
@@ -84,14 +84,14 @@ header h2:active {
 	color: $yellow-strong;
 }
 
-#jumbotron {
-	min-height: 25em;
+#banner {
+	min-height: 40em;
 	background-image: url('../images/stock-inside.jpg');
 	background-size: cover;
 	background-position: bottom;
 }
 
-#jumbotron h2 {
+#banner h2 {
 	text-align: center;
 	margin-top: 0;
 	padding-top: 5em;

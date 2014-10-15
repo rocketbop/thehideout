@@ -90,7 +90,7 @@ function hideout_widgets_init() {
 
 		'id'			=> 'sidebar-home',
 		'name'			=> 'Home Sidebar',
-		'before_widget' => '<li id="%1$s" class="test">',
+		'before_widget' => '<li id="%1$s">',
  		'after_widget' => '</li>',
 		'description'	=> ''
 	) );
