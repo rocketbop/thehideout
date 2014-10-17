@@ -15,11 +15,11 @@ $yellow-strong: #f2cd23;
 --------------------------------------------------------------*/
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: "Lato";
+	font-family: "Lato", san-serif;
 }
 
 p {
-	font-family: "Merriweather";
+	font-family: "Merriweather", san-serif;
 }
 
 li {
@@ -68,7 +68,7 @@ header a.navbar-brand {
 }
 
 header h2 {
-	font-family: "Berkshire Swash";
+	font-family: "Berkshire Swash", serif;
 	font-size: 1.5em;
 	margin-top: 1.3em;
 	color: $yellow-weak;

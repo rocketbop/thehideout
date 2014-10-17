@@ -119,6 +119,8 @@ function hideout_scripts() {
 
 	wp_enqueue_script( 'event-controller', get_template_directory_uri() . '/angular/controllers/eventController.js', false, NULL);
 
+	wp_enqueue_script( 'custom-filters', get_template_directory_uri() . '/angular/filters/customFilters.js', false, NULL);
+
 
 
 	wp_enqueue_script( 'hideout-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
