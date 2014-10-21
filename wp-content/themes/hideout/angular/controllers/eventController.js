@@ -1,23 +1,32 @@
 angular.module("theHideoutApp")
-	.constant("eventUrl", "http://localhost:8888/thehideout/wp-json/posts?filter[category_name]=events")
-  .constant("eventListPageCount", 3)
+	// .constant("eventUrl", "http://localhost:8888/thehideout/wp-json/posts?filter[category_name]=events")
+ //  .constant("eventListPageCount", 3)
 	.controller("eventCtrl", function ($scope, $filter, $http, eventUrl, eventListPageCount) {
 	  
-  // GET THE DATA
+  // THE MODEL
 	  $scope.data = {};
 
 	  $http.get(eventUrl)
 	  	.success(function (data) {
 	  		$scope.data.events = data;
-
         console.log($scope.data.events);
+        //$scope.data.events.push("hello");
         for(var i = 0; i < $scope.data.events.length; i++) {
-          console.log($scope.data.events[i].meta.date_of_event);
+          if ($scope.data.events[i].meta)
+          var metadata = $scope.data.events[i].meta;
+          //console.log(typeof meta);
+          //console.log(metadata['category']);
+          for (key in metadata) {
+            console.log("Key is " + key + " Value is " + metadata[key]);
+            $scope.data.events[i].push({key: metadata[key]});
+          }
+        };
+       
+        console.log("The events object: " + $scope.data.events[0].meta.category);
+        for(var i = 0; i < $scope.data.events.length; i++) {
 
           // Convert json timestamp to date object
           $scope.data.events[i].meta.date_of_event = new Date($scope.data.events[i].meta.date_of_event * 1000);
-          console.log(angular.isDate($scope.data.events[i].meta.date_of_event));
-          console.log($scope.data.events[i].meta.date_of_event);
         };
 	  		
 	  	})
@@ -34,9 +43,11 @@ angular.module("theHideoutApp")
       selectedCategory = new Category;
     }; 
 
-    $scope.categoryFilterFn = function () {
-
-    };
+    $scope.categoryFilterFn = function (event) {
+      // This will return false if both conditions are false, true otherwise.
+      return  selectedCategory == null ||
+              event.meta.category == selectedCategory;
+    }
 
 
 	// PAGINATION

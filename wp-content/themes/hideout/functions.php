@@ -119,6 +119,12 @@ function hideout_scripts() {
 
 	wp_enqueue_script( 'event-controller', get_template_directory_uri() . '/angular/controllers/eventController.js', false, NULL);
 
+	wp_enqueue_script( 'test-model', get_template_directory_uri() . '/angular/components/test/testModel.js', false, NULL);
+
+	wp_enqueue_script( 'test-controller', get_template_directory_uri() . '/angular/components/test/testController.js', false, NULL);
+
+
+
 	wp_enqueue_script( 'custom-filters', get_template_directory_uri() . '/angular/filters/customFilters.js', false, NULL);
 
 
@@ -164,7 +170,7 @@ remove_filter('the_content', 'wpautop');
 */
 
 function wp_api_encode_acf($data,$post,$context){
-	$data['meta'] = array_merge($data['meta'],get_fields($post['ID']));
+	$data = array_merge($data,get_fields($post['ID']));
 	return $data;
 }
  
