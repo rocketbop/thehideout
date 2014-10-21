@@ -1,0 +1,14 @@
+
+- Create a page template for code testing
+- Create the page in WordPress and apply the template
+- Creat e test controller
+- Apply the test controller to the test page
+- Add basic model data to the controller
+- log the model date in the page
+- Move the basic model date to a test model 
+- Pass the model data to the controller via a factory
+- Amend the model data to a http request to get real data
+- Create code that changes the data to the desired format.
+- Test in browser
+- Create new model for events
+- Add new code.

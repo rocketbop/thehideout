@@ -117,9 +117,15 @@ function hideout_scripts() {
 
 	wp_enqueue_script( 'the-hideout-app', get_template_directory_uri() . '/angular/thehideoutapp.js');
 
-	wp_enqueue_script( 'event-controller', get_template_directory_uri() . '/angular/controllers/eventController.js', false, NULL);
+	wp_enqueue_script( 'event-model', get_template_directory_uri() . '/angular/components/event/eventModel.js', false, NULL);
+	
 
-	wp_enqueue_script( 'test-model', get_template_directory_uri() . '/angular/components/test/testModel.js', false, NULL);
+
+
+
+	// wp_enqueue_script( 'test-model', get_template_directory_uri() . '/angular/components/test/testModel.js', false, NULL);
+
+		wp_enqueue_script( 'event-controller', get_template_directory_uri() . '/angular/components/event/eventController.js', false, NULL);
 
 	wp_enqueue_script( 'test-controller', get_template_directory_uri() . '/angular/components/test/testController.js', false, NULL);
 

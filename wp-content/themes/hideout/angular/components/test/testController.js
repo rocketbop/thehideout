@@ -7,10 +7,6 @@ angular.module("theHideoutApp")
       $scope.events = events;
       console.log($scope.events);
     });
-    eventService.doSomething();
-    //$scope.events = myArray;
-    
-   // $scope.events = "Hello";
 
-
+ 
   }]);
