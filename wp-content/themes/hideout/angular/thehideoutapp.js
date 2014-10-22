@@ -1,3 +1,3 @@
-angular.module("theHideoutApp", ["customFilters"]);
+angular.module("theHideoutApp", ["ui.unique"]);
 
 

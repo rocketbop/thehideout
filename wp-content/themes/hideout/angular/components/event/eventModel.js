@@ -9,7 +9,6 @@ angular.module("theHideoutApp")
       },
 
       doSomething: function() {
-        console.log("Do Something");
       }
 
  };
