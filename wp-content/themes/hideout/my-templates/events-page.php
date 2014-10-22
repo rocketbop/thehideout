@@ -14,12 +14,12 @@ get_header(); ?>
       <a ng-click="selectCategory()"
         class="btn btn-block btn-default btn-lg">All</a>
         <!-- The unique filter will mean categories with more than one event will not be generated in duplicate -->
-      <a ng-click="selectCategory(event.category)" ng-repeat="event in events | orderBy:'category' | unique:'category'"  class=" btn btn-block btn-default btn-lg">{{event.category}}</a>  
+      <a ng-click="selectCategory(event.category)" ng-repeat="event in events | orderBy:'category' | unique:'category'"  class=" btn btn-block btn-default btn-lg" ng-class="getCategoryClass(event.category)">{{event.category}}</a>  
 
     </div>
     <div class="col-md-9">
       
-      	<h1>Events</h1>
+      	<h1>{{selectedCategory}} Events</h1>
       	<div ng-repeat="event in events | orderBy: '-date_of_event' | filter:categoryFilterFn ">
 
       		<p>{{event.content}}</p>
