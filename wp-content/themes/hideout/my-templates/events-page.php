@@ -20,7 +20,7 @@ get_header(); ?>
     <div class="col-md-9">
       
       	<h1>{{selectedCategory}} Events</h1>
-      	<div ng-repeat="event in events | orderBy: '-date_of_event' | filter:categoryFilterFn ">
+      	<div ng-repeat="event in events | orderBy: '-date_of_event' | filter:categoryFilterFn | range:selectedPage:pageSize">
 
       		<p>{{event.content}}</p>
       		<!-- <p><strong>Date Created</strong>{{event.date | date:'EEEE, dd MM yyyy, h:mm'}}</p> -->
@@ -30,6 +30,15 @@ get_header(); ?>
           <img src="{{event.event_image.url}}">
 
       	</div>
+
+        <div class="pull-right btn-group">
+            <a ng-repeat=
+               "page in events | filter:categoryFilterFn | pageCount:pageSize"
+               ng-click="selectPage($index + 1)" class="btn btn-default"
+               ng-class="getPageClass($index + 1)">
+                {{$index + 1}}
+            </a>
+        </div>
      </div>
     </div>
   </div>  

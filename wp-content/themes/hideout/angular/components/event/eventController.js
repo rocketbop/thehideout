@@ -1,7 +1,7 @@
 angular.module("theHideoutApp")
-  .constant('eventListPageCount', 3)
-  .constant("productListActiveClass", "btn-primary")
-  .controller("eventCtrl", ['$scope', '$filter', 'eventListPageCount', 'eventService', 'productListActiveClass', function ($scope, $filter, eventListPageCount, eventService, productListActiveClass) {
+  .constant('eventListPageCount', 2) // items per page
+  .constant("eventListActiveClass", "btn-primary")
+  .controller("eventCtrl", ['$scope', '$filter', 'eventListPageCount', 'eventService', 'eventListActiveClass', function ($scope, $filter, eventListPageCount, eventService, eventListActiveClass) {
 
 
 
@@ -25,8 +25,9 @@ angular.module("theHideoutApp")
     $scope.selectedCategory = "All";
     
     $scope.selectCategory = function (newCategory) {
-      
+
       selectedCategory = newCategory;
+      $scope.selectedPage = 1; // Go to page 1 on new category selection
       // Make the current category available in the scope. Note $scope.selectedCategory != selectedCategory within the controller
       if (newCategory == undefined) {
         $scope.selectedCategory = "All";
@@ -36,6 +37,10 @@ angular.module("theHideoutApp")
 
     }; 
 
+    $scope.selectPage = function (newPage) {
+      $scope.selectedPage = newPage;
+    }
+
     $scope.categoryFilterFn = function (event) {
       // This will return false if both conditions are false, true otherwise.
       return  selectedCategory == null ||
@@ -44,14 +49,18 @@ angular.module("theHideoutApp")
 
     // Return the active class if the item matches the selected category, or return an empty string
     $scope.getCategoryClass = function (category) {
-      return (selectedCategory == category) ? productListActiveClass : "";
+      return (selectedCategory == category) ? eventListActiveClass : "";
+    }
+
+    $scope.getPageClass = function (page) {
+      return $scope.selectedPage == page ? eventListActiveClass : "";
     }
 
 
   // PAGINATION
-     $scope.selectedPage = 1;
+     $scope.selectedPage = 1; // Initial, or on page reload
      $scope.pageSize = eventListPageCount;
- 
+
   }]);
 
 

@@ -117,7 +117,7 @@ function hideout_scripts() {
 
 	wp_enqueue_script( 'the-hideout-app', get_template_directory_uri() . '/angular/thehideoutapp.js');
 
-	// wp_enqueue_script( 'custom-filters', get_template_directory_uri() . '/angular/filters/customFilters.js', false, NULL);	
+	wp_enqueue_script( 'custom-filters', get_template_directory_uri() . '/angular/filters/customFilters.js', false, NULL);	
 
 	wp_enqueue_script( 'ui-unique', get_template_directory_uri() . '/angular/bower_components/angular-ui-utils/unique.js', false, NULL);
 
