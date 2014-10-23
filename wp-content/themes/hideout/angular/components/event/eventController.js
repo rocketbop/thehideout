@@ -15,6 +15,7 @@ angular.module("theHideoutApp")
         $scope.events[i].date_of_event = $scope.events[i].date_of_event * 1000;
       };
      
+     console.log($scope.events);
     });
 
 

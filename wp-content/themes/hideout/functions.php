@@ -113,7 +113,9 @@ function hideout_scripts() {
 
 	wp_enqueue_script( 'hideout-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
-	wp_enqueue_script( 'angular-js', get_template_directory_uri() . '/angular/angular.js', false, NULL);
+	wp_enqueue_script( 'angular-js', get_template_directory_uri() . '/angular/bower_components/angular/angular.js', false, NULL);
+
+	wp_enqueue_script( 'angular-sanitize-js', get_template_directory_uri() . '/angular/bower_components/angular-sanitize/angular-sanitize.js', false, NULL);
 
 	wp_enqueue_script( 'the-hideout-app', get_template_directory_uri() . '/angular/thehideoutapp.js');
 

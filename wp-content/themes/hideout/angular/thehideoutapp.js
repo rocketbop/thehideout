@@ -1,3 +1,3 @@
-angular.module("theHideoutApp", [, "customFilters", "ui.unique"]);
+angular.module("theHideoutApp", [, "customFilters", "ui.unique", "ngSanitize"]);
 
 
