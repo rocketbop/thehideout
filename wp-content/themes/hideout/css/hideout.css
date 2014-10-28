@@ -3,10 +3,11 @@
 1.0 Typefaces and Decoration 
 --------------------------------------------------------------*/
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Lato", san-serif; }
+  font-family: "Oswald", serif; }
 
 p {
-  font-family: "Merriweather", san-serif; }
+  font-family: "Lato", san-serif;
+  line-height: 1.6em; }
 
 li {
   list-style: none; }
@@ -95,11 +96,20 @@ Front Page Music Module
     font-family: "Oswald"; }
   .music-module p, .music-module a {
     font-family: "Lato"; }
+  .music-module .medium-background-color {
+    background-color: #734726; }
+  .music-module .dark-text {
+    color: #1a1a1a; }
+  .music-module .light-text {
+    color: white; }
   .music-module .music-module-header {
     background-color: #9b5e31;
     height: 8em; }
     .music-module .music-module-header h1 {
       margin-top: 1em; }
+    .music-module .music-module-header h3 {
+      margin-top: 2em;
+      color: #1a1a1a; }
   .music-module .music-module-icon {
     background-color: white;
     height: 5em; }
@@ -109,32 +119,67 @@ Front Page Music Module
   .music-module .music-module-blurb {
     background-color: #1a1a1a;
     height: 20em; }
-  .music-module .music-module-upcoming-act {
+    .music-module .music-module-blurb h2 {
+      margin-bottom: 1em; }
+  .music-module .music-module-upcoming-event-maxi {
     height: 25em;
     display: block;
     position: relative; }
-    .music-module .music-module-upcoming-act h1, .music-module .music-module-upcoming-act h5 {
+    .music-module .music-module-upcoming-event-maxi h1, .music-module .music-module-upcoming-event-maxi h5 {
       text-align: center; }
-    .music-module .music-module-upcoming-act h1 {
-      margin-top: 2em; }
-  .music-module .music-module-upcoming-act::after {
+    .music-module .music-module-upcoming-event-maxi h1 {
+      margin-top: 1em;
+      font-size: 6em; }
+  .music-module .music-module-upcoming-event-maxi::after {
     content: "";
     background-image: url("../images/u2-band.jpg");
     background-size: cover;
-    opacity: 0.3;
+    opacity: 0.4;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
     position: absolute;
     z-index: 5; }
+  .music-module .music-module-upcoming-event-maxi:hover::after {
+    opacity: 0.7;
+    -webkit-transition: opacity 1.0s ease-in-out;
+    -moz-transition: opacity 1.0s ease-in-out;
+    transition: opacity 1.0s ease-in-out; }
   .music-module .music-module-upcoming-banner {
     background-color: #434343;
     height: 8em; }
     .music-module .music-module-upcoming-banner h2 {
       margin-top: 1.2em; }
-  .music-module .music-module-upcoming-event-list p:first-child {
-    margin-top: 1.2em; }
+  .music-module .music-module-upcoming-event-mini {
+    height: 8em;
+    max-height: 8em;
+    overflow: hidden; }
+    .music-module .music-module-upcoming-event-mini h3 {
+      margin-top: .5em; }
+    .music-module .music-module-upcoming-event-mini .unit {
+      height: 8em; }
+    .music-module .music-module-upcoming-event-mini .unit::after {
+      content: "MORE";
+      font-size: 1.5em;
+      font-family: "Oswald";
+      padding: .4em .1em 0 .4em;
+      position: absolute;
+      background-color: #1a1a1a;
+      bottom: 0;
+      right: 0; }
+    .music-module .music-module-upcoming-event-mini .unit.unit-2 h4,
+    .music-module .music-module-upcoming-event-mini .unit.unit-3 h4 {
+      margin-top: .8em; }
+
+/*--------------------------------------------------------------
+Front Page Food Module
+--------------------------------------------------------------*/
+.food-module {
+  background-color: #2b4c1a;
+  color: white; }
+  .food-module .module-header {
+    background-color: #417326; }
 
 /*--------------------------------------------------------------
 Events Page

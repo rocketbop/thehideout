@@ -1,12 +1,13 @@
-<!-- This will become a template for angular which can be used for a number of sections -->
-
 
 <div class="music-module">
 
   <div class="container">
     <div class="row">
-        <div class=" music-module-header col-md-12">
+        <div class=" music-module-header col-md-4">
           <h1>MUSIC</h1>
+        </div>
+        <div class=" music-module-header col-md-8">
+          <h3>Live Events at <strong>The Hideout</strong></h3>
         </div>
     </div>
     <div class="row">
@@ -17,21 +18,22 @@
           Image
           </div>
           <div class="music-module-byline col-md-8">
-          Soul of Life
+          <h3>Soul of Life</h3>
           </div>
           
         </div>
         <div class="row">
           <div class="music-module-blurb col-md-12">
-            <h2>Music at the Hideout</h2>
-            <p>The Hideout has been supporting live music for years.</p>
-            <p>Hashtag kitsch single-origin coffee artisan gentrify, tattooed kogi biodiesel Tumblr beard retro Intelligentsia. Godard ethical umami semiotics. Meditation YOLO cray, Schlitz typewriter direct trade master cleanse chambray skateboard keffiyeh mlkshk cornhole ennui Intelligentsia tousled. Forage slow-carb scenester swag, banjo meh Tumblr Godard Helvetica.</p>
+            <h2>Music at The Hideout</h2>
+            <p>The Hideout has been supporting live food for years.</p>
+            <p>Hashtag kitsch single-origin coffee artisan gentrify, tattooed kogi biodiesel Tumblr beard retro Intelligentsia. Godard ethical umami semiotics.</p>
+            <p>Slow-carb scenester swag, banjo meh Tumblr Godard Helvetica.</p>
           </div>
           
         </div>
         
       </div>
-      <div class="col-md-8 music-module-upcoming-act">
+      <div class="col-md-8 music-module-upcoming-event-maxi">
 
         <h4>NEXT UP:</h4>
         <h1>U2</h1>
@@ -49,22 +51,53 @@
         </h2>
         
       </div>
-      <div class="music-module-upcoming-event-list col-md-8">
+      <div class="music-module-upcoming-event-mini col-md-8">
         <div class="row">
-          <div class="col-md-4">
-            <h4>Event Name:</h4>
-            <h6>Date:</h6>
-            <p>Descrtiption</p>
+          <div class="unit col-md-5">
+            <div class="row">
+              <div class="dark-text col-md-3">
+                <h3>Event: </h3>
+                <h4>Date: </h4>
+                <h4>Time: </h4>
+              </div>
+              <div class="col-md-9">
+                <h3>Snow Patrol</h3>
+                <h4>18 January 2015</h4>
+                <h4 class="dark-text">8PM</h4>
+              </div>
+            </div>
+
           </div>
-          <div class="col-md-4">
-            <h4>Event Name:</h4>
-            <h6>Date:</h6>
-            <p>Descrtiption</p>
+          <div class="unit unit-2 col-md-4 ">
+            <div class="row">
+              <div class="dark-text col-md-3">
+                <h4>Event: </h4>
+                <h5>Date: </h5>
+                <h5>Time: </h5>
+              </div>
+              <div class="col-md-9">
+                <h4>The Frames</h4>
+                <h5>21 January 2015</h5>
+                <h5 class="dark-text">9PM</h5>
+              </div>
+
+            </div>
           </div>
-          <div class="col-md-4">
-            <h4>Event Name:</h4>
-            <h6>Date:</h6>
-            <p>Descrtiption</p>
+          <div class="unit unit-3 col-md-3">
+            <div class="row">
+              <div class="dark-text col-md-4">
+                <h4>Event: </h4>
+                <h5>Date: </h5>
+                <h5>Time: </h5> 
+              </div>
+              <div class="col-md-8">
+                <h4>Led Zeppelin</h4>
+                <h5>28 March 2015</h5>
+                <h5 class="dark-text">11:30PM</h5> 
+              </div>
+
+            </div>
+            
           </div>
         </div>
 
