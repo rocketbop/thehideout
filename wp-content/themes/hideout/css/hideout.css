@@ -33,9 +33,6 @@ body {
 header {
   background-color: #171717; }
 
-header .navbar {
-  min-height: 8em; }
-
 header nav.navbar-inverse {
   background-color: #171717;
   border: none; }
@@ -48,7 +45,6 @@ header .navbar-inverse .navbar-nav > .active > a:focus {
 header h2 {
   font-family: "Berkshire Swash", serif;
   font-size: 1.5em;
-  margin-top: 1.3em;
   color: #fff7d2; }
 
 header h2:hover {
@@ -85,6 +81,37 @@ div.entry-content h1 {
 footer.site-footer {
   background-color: #171717;
   min-height: 8em; }
+
+  /*--------------------------------------------------------------
+Nav
+--------------------------------------------------------------*/
+.navbar-brand {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  text-align: center;
+  margin: auto; }
+
+/*--------------------------------------------------------------
+Front Page News
+--------------------------------------------------------------*/
+.news-module {
+  background-color: white; }
+  .news-module .container:first-child {
+    background-color: #dddddd; }
+  .news-module .news-section {
+    background-color: #dddddd; }
+    .news-module .news-section .item {
+      margin-top: 1em;
+      margin-bottom: 1em; }
+      .news-module .news-section .item img {
+        opacity: .5; }
+      .news-module .news-section .item img.hovered {
+        opacity: 1.0; }
+    .news-module .news-section .item:hover {
+      background-color: white; }
+  .news-module .twitter-section {
+    background-color: #dddddd; }
 
 /*--------------------------------------------------------------
 Front Page Music Module
