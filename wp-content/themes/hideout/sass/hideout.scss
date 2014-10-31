@@ -45,7 +45,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: "Oswald", serif;
 }
 
-p {
+p, li, a {
 	font-family: "Lato", san-serif;
 	line-height: 1.6em;
 }
@@ -74,99 +74,66 @@ body {
 	background: $white;
 }
 
-/* #sidebar {
-	background: $black-dark;
-} */
+
+
 /**** LAYOUT STYLES *****************/
 
 
 header {
-	background-color: $black-dark;
-}
-
-header .navbar {
-	//height: 0em;
-}
-
-header nav.navbar-inverse {
-	background-color: $black-dark;
-	border: none;
-}
-
-header .navbar-inverse .navbar-nav>.active>a,
-header .navbar-inverse .navbar-nav>.active>a:hover,
-header .navbar-inverse .navbar-nav>.active>a:focus {
-	background-color: $black-dark;
-}
-header a.navbar-brand {
-}
-
-header h2 {
-	font-family: "Berkshire Swash", serif;
-	font-size: 1.5em;
-	//margin-top: 1.3em;
-	color: $light-yellow;
 
 
-}
 
-header h2:hover {
-	color: $medium-yellow;
-}
+	.navbar-container {
+		background-color: rgba(250,250,250,0.3);
+		height: 5em;
 
-header h2:active {
-	color: $dark-yellow;
-}
+	}
 
-#banner {
-	min-height: 40em;
-	background-image: url('../images/stock-inside.jpg');
-	background-size: cover;
-	background-position: bottom;
-}
+	.navbar-container.opaque-thin {
+		background-color: rgba(250,250,250,1.0);
+		height: 3em;
+		transition: all 1.0s ease;
+		
+	}
 
-#banner h2 {
-	text-align: center;
-	margin-top: 0;
-	padding-top: 5em;
-	color: $light-yellow;
-	font-family: "Oswald";
-}
+	.navbar {
+		margin-bottom: 0;
+		background-color: rgba(1,1,1,0.0);
+		border:	none;
 
-div.metaslider {
-	margin-top: 2em;
-}
-div.entry-content h1 {
-	font-weight: 700;
+		li, a {
+			color: black;
+			font-weight: 700;
+		}
 
-}
-
-#sidebar h2 {
-	text-align: center;
-}
-
-#sidebar li > ul {
-	margin-left: 0;
-}
-
-footer.site-footer {
-	background-color: $black-dark;
-	min-height: 8em;
-}
+		/*Put Brand in the center*/
+		.navbar-brand {
+			position: absolute;
+		  width: 100%;
+		  left: 0;
+		  text-align: center;
+		  margin: auto;
+		}
+		
+	}
 
 
-  /*--------------------------------------------------------------
-Nav
---------------------------------------------------------------*/
+
+	.front-page-top-background {
+		min-height: 30em;
+		background-image: url('../images/stock-inside.jpg');
+		
+	  -webkit-background-size: cover;
+		-moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+		background-position: bottom;
+
+	}
 
 
-.navbar-brand {
-	position: absolute;
-  width: 100%;
-  left: 0;
-  text-align: center;
-  margin: auto;
-}
+} 
+
 
 /*--------------------------------------------------------------
 Front Page News
@@ -409,9 +376,16 @@ Events Page
 
 	}
 }
+
 @media (min-width: 768px) {
-	header ul.nav.navbar-nav {
-	margin-top: 3em;
-	}
+	// header ul.nav.navbar-nav {
+	// margin-top: 3em;
+	// }
 }
 	
+
+
+footer.site-footer {
+	background-color: $black-dark;
+	min-height: 8em;
+}

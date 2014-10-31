@@ -19,6 +19,11 @@
 			</div><!-- .site-info -->
 		</div>	
 	</footer><!-- #colophon -->
+
+
+
+	  </div> <!-- page container-fluid -->
+
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

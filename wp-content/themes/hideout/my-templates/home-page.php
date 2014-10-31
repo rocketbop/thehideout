@@ -5,7 +5,7 @@ Template Name: Home Page
 
 get_header(); ?>
 
-<?php get_template_part( 'templates/content', 'banner' ); ?>
+		
 
 	<div id="primary" class="content-area ">
 

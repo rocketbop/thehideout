@@ -5,7 +5,7 @@
 h1, h2, h3, h4, h5, h6 {
   font-family: "Oswald", serif; }
 
-p {
+p, li, a {
   font-family: "Lato", san-serif;
   line-height: 1.6em; }
 
@@ -26,71 +26,36 @@ body {
 #primary {
   background: white; }
 
-/* #sidebar {
-	background: $black-dark;
-} */
 /**** LAYOUT STYLES *****************/
-header {
-  background-color: #171717; }
-
-header nav.navbar-inverse {
-  background-color: #171717;
-  border: none; }
-
-header .navbar-inverse .navbar-nav > .active > a,
-header .navbar-inverse .navbar-nav > .active > a:hover,
-header .navbar-inverse .navbar-nav > .active > a:focus {
-  background-color: #171717; }
-
-header h2 {
-  font-family: "Berkshire Swash", serif;
-  font-size: 1.5em;
-  color: #fff7d2; }
-
-header h2:hover {
-  color: #ffe362; }
-
-header h2:active {
-  color: #f2cd23; }
-
-#banner {
-  min-height: 40em;
+header .navbar-container {
+  background-color: rgba(250, 250, 250, 0.3);
+  height: 5em; }
+header .navbar-container.opaque-thin {
+  background-color: #fafafa;
+  height: 3em;
+  transition: all 1.0s ease; }
+header .navbar {
+  margin-bottom: 0;
+  background-color: rgba(1, 1, 1, 0);
+  border: none;
+  /*Put Brand in the center*/ }
+  header .navbar li, header .navbar a {
+    color: black;
+    font-weight: 700; }
+  header .navbar .navbar-brand {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    margin: auto; }
+header .front-page-top-background {
+  min-height: 30em;
   background-image: url("../images/stock-inside.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
   background-position: bottom; }
-
-#banner h2 {
-  text-align: center;
-  margin-top: 0;
-  padding-top: 5em;
-  color: #fff7d2;
-  font-family: "Oswald"; }
-
-div.metaslider {
-  margin-top: 2em; }
-
-div.entry-content h1 {
-  font-weight: 700; }
-
-#sidebar h2 {
-  text-align: center; }
-
-#sidebar li > ul {
-  margin-left: 0; }
-
-footer.site-footer {
-  background-color: #171717;
-  min-height: 8em; }
-
-  /*--------------------------------------------------------------
-Nav
---------------------------------------------------------------*/
-.navbar-brand {
-  position: absolute;
-  width: 100%;
-  left: 0;
-  text-align: center;
-  margin: auto; }
 
 /*--------------------------------------------------------------
 Front Page News
@@ -211,6 +176,6 @@ Front Page Food Module
 /*--------------------------------------------------------------
 Events Page
 --------------------------------------------------------------*/
-@media (min-width: 768px) {
-  header ul.nav.navbar-nav {
-    margin-top: 3em; } }
+footer.site-footer {
+  background-color: #171717;
+  min-height: 8em; }
