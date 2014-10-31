@@ -137,7 +137,7 @@ function hideout_scripts() {
 
 	wp_register_script( 'bootstrap-js', get_template_directory_uri() . '/bootstrap/js/bootstrap.min.js', array( 'jquery' ), '3.2.0', true );
 
-	wp_register_style( 'bootstrap-css', get_template_directory_uri() . '/bootstrap/css/bootstrap.min.css', array(), '3.2.0', 'all' );
+	wp_register_style( 'bootstrap-css', get_template_directory_uri() . '/bootstrap/css/bootstrap.css', array(), '3.2.0', 'all' );
 
 	wp_enqueue_script( 'bootstrap-js' );
 
@@ -151,7 +151,7 @@ function hideout_scripts() {
 	wp_register_script('global-scripts', get_template_directory_uri() . '/js/global-scripts.js');
    
 	wp_enqueue_script('global-scripts');
-	
+
 	// Enqueue Home Page Scripts
 	if (is_page_template( 'my-templates/home-page.php' )) {
 	  wp_enqueue_script('front-page-scripts');
