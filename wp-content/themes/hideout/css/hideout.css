@@ -28,7 +28,7 @@ body {
 
 /**** LAYOUT STYLES *****************/
 header .navbar-container {
-  background-color: rgba(65, 115, 38, 0.7);
+  background-color: rgba(65, 115, 38, 0.9);
   height: 5em;
   transition: all 1.0s ease; }
   header .navbar-container ul li {
@@ -47,6 +47,7 @@ header .navbar-container {
 header .navbar-container.opaque-thin {
   background-color: #fafafa;
   height: 3.5em;
+  border-bottom: 1px solid black;
   transition: all 1.0s ease; }
   header .navbar-container.opaque-thin ul li {
     font-size: 1.2em;
@@ -78,6 +79,14 @@ header .front-page-top-background {
   -o-background-size: cover;
   background-size: cover;
   background-position: bottom; }
+
+/*--------------------------------------------------------------
+Front Page Introduction
+--------------------------------------------------------------*/
+.introduction-module {
+  background-color: white; }
+  .introduction-module h2, .introduction-module h3 {
+    text-align: center; }
 
 /*--------------------------------------------------------------
 Front Page News

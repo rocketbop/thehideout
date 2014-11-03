@@ -74,11 +74,11 @@
           ?>
         </div>
 
-                <div class="collapse navbar-collapse navbar-right"> 
+        <div class="collapse navbar-collapse navbar-right"> 
           <?php /* Primary navigation */
             wp_nav_menu( array(
-              'menu'              => 'primary',
-              'theme_location'    => 'primary',
+              'menu'              => 'secondary',
+              'theme_location'    => 'secondary',
               'depth'             => 2,
               'container'         => 'div',
               'container_class'   => 'collapse navbar-collapse',

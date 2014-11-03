@@ -83,7 +83,8 @@ header {
 
 	.navbar-container {
 		//background-color: rgba(250,250,250,0.3);
-		background-color: rgba(65,115,38,0.7);
+		background-color: rgba(65,115,38,0.9);
+
 		
 		height: 5em;
 		transition: all 1.0s ease;
@@ -113,6 +114,7 @@ header {
 	.navbar-container.opaque-thin {
 		background-color: rgba(250,250,250,1.0);
 		height: 3.5em;
+		border-bottom: 1px solid black;
 		transition: all 1.0s ease;
 
 		ul li {
@@ -168,6 +170,20 @@ header {
 
 
 } 
+
+/*--------------------------------------------------------------
+Front Page Introduction
+--------------------------------------------------------------*/
+
+.introduction-module {
+	background-color:		$white;
+
+	h2, h3 {
+		text-align: 				center;
+	} 
+
+	
+}
 
 
 /*--------------------------------------------------------------

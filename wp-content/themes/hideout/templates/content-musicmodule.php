@@ -15,7 +15,6 @@
         <div class="row">
 
           <div class="music-module-icon col-md-4">
-          Image
           </div>
           <div class="music-module-byline col-md-8">
           <h3>Soul of Life</h3>
