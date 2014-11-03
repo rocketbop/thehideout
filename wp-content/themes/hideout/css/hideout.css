@@ -28,38 +28,61 @@ body {
 
 /**** LAYOUT STYLES *****************/
 header .navbar-container {
-  background-color: rgba(65, 115, 38, 0.9);
+  background-color: rgba(5, 5, 5, 0.9);
   height: 5em;
-  transition: all 1.0s ease; }
+  transition: all 2.0s ease; }
   header .navbar-container ul li {
     font-size: 1.5em;
     margin-top: .5em;
-    transition: all 1.0s ease; }
+    transition: all 2.0s ease; }
     header .navbar-container ul li a {
       color: white;
-      transition: all 1.0s ease; }
+      transition: all 2.0s ease; }
+  header .navbar-container ul li.current-menu-item {
+    /* Place an underline under active menu */ }
+    header .navbar-container ul li.current-menu-item a:after {
+      content: "";
+      background: white;
+      position: absolute;
+      bottom: 0;
+      left: 15%;
+      height: 2px;
+      width: 70%;
+      transition: all 2.0s ease; }
   header .navbar-container h2 {
     font-family: "Oswald";
     font-style: 1.9em;
     color: white;
     margin-top: 0;
-    transition: all 1.0s ease; }
+    transition: all 2.0s ease; }
 header .navbar-container.opaque-thin {
   background-color: #fafafa;
   height: 3.5em;
   border-bottom: 1px solid black;
-  transition: all 1.0s ease; }
+  transition: all 2.0s ease; }
   header .navbar-container.opaque-thin ul li {
     font-size: 1.2em;
     margin-top: 0.1em;
     color: black;
-    transition: all 1.0s ease; }
+    transition: all 2.0s ease; }
     header .navbar-container.opaque-thin ul li a {
-      color: #1a1a1a; }
+      color: #1a1a1a;
+      transition: all 2.0s ease; }
+  header .navbar-container.opaque-thin ul li.current-menu-item {
+    /* Place an underline under active menu */ }
+    header .navbar-container.opaque-thin ul li.current-menu-item a:after {
+      content: "";
+      background: #1a1a1a;
+      position: absolute;
+      bottom: 20%;
+      left: 15%;
+      height: 2px;
+      width: 70%;
+      transition: all 2.0s ease; }
   header .navbar-container.opaque-thin h2 {
     font-size: 1.3em;
     color: #1a1a1a;
-    transition: all 1.0s ease; }
+    transition: all 2.0s ease; }
 header .navbar {
   margin-bottom: 0;
   background-color: rgba(1, 1, 1, 0);
