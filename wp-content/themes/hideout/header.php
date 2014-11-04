@@ -42,56 +42,63 @@
   ?>
       <div class="navbar-container navbar-fixed-top">
         <nav class="navbar navbar-default  container" role="navigation"> 
-      <!-- Brand and toggle get grouped for better mobile display --> 
-        <div class="navbar-header"> 
+        <!-- Brand and toggle get grouped for better mobile display --> 
+          <div class="navbar-header"> 
 
-          <a class="navbar-brand" href="<?php bloginfo('url') ?>"><h2><?php bloginfo('name') ?></h2></a>
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> 
-            <span class="sr-only">Toggle navigation</span> 
-            <span class="icon-bar"></span> 
-            <span class="icon-bar"></span> 
-            <span class="icon-bar"></span> 
-          </button>
+            <a class="navbar-brand" href="<?php bloginfo('url') ?>"><h2><?php bloginfo('name') ?></h2></a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> 
+              <span class="sr-only">Toggle navigation</span> 
+              <span class="icon-bar"></span> 
+              <span class="icon-bar"></span> 
+              <span class="icon-bar"></span> 
+            </button>
 
-        </div> 
-        <!-- Collect the nav links, forms, and other content for toggling --> 
-
-
-
-        <div class="collapse navbar-collapse navbar-left"> 
-          <?php /* Primary navigation */
-            wp_nav_menu( array(
-              'menu'              => 'primary',
-              'theme_location'    => 'primary',
-              'depth'             => 2,
-              'container'         => 'div',
-              'container_class'   => 'collapse navbar-collapse',
-              'container_id'      => '',
-              'menu_class'        => 'nav navbar-nav',
-              'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
-              'walker'            => new wp_bootstrap_navwalker())
-            );
-          ?>
-        </div>
-
-        <div class="collapse navbar-collapse navbar-right"> 
-          <?php /* Primary navigation */
-            wp_nav_menu( array(
-              'menu'              => 'secondary',
-              'theme_location'    => 'secondary',
-              'depth'             => 2,
-              'container'         => 'div',
-              'container_class'   => 'collapse navbar-collapse',
-              'container_id'      => '',
-              'menu_class'        => 'nav navbar-nav',
-              'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
-              'walker'            => new wp_bootstrap_navwalker())
-            );
-          ?>
-        </div>
+          </div> 
+          <!-- Collect the nav links, forms, and other content for toggling --> 
 
 
-      </nav>
+
+          <div class="collapse navbar-collapse navbar-left"> 
+            <?php /* Primary navigation */
+              wp_nav_menu( array(
+                'menu'              => 'primary',
+                'theme_location'    => 'primary',
+                'depth'             => 2,
+                'container'         => 'div',
+                'container_class'   => 'collapse navbar-collapse',
+                'container_id'      => '',
+                'menu_class'        => 'nav navbar-nav',
+                'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+                'walker'            => new wp_bootstrap_navwalker())
+              );
+            ?>
+          </div>
+
+          <div class="collapse navbar-collapse navbar-right"> 
+            <?php /* Primary navigation */
+              wp_nav_menu( array(
+                'menu'              => 'secondary',
+                'theme_location'    => 'secondary',
+                'depth'             => 2,
+                'container'         => 'div',
+                'container_class'   => 'collapse navbar-collapse',
+                'container_id'      => '',
+                'menu_class'        => 'nav navbar-nav',
+                'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+                'walker'            => new wp_bootstrap_navwalker())
+              );
+            ?>
+          </div>
+
+
+        </nav>
+
+        <?php 
+          if (is_page_template( 'my-templates/home-page.php' )) {
+            get_template_part( 'templates/content', 'front-page-message' );
+          }
+          // else get the a template part for something else
+        ?>
       </div>
      
 

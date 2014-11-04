@@ -11,13 +11,18 @@ jQuery(document).ready(function($) {
     });
 
   // set the height of the welcome spash to the inner height of the window
-  setSplashHeight(); // Set the initial size of the splash
-  $(window).resize(setSplashHeight); //Resize the splash on window resize
+  setSplash(); // Set the initial size of the splash
+  $(window).resize(setSplash); //Resize the splash on window resize
 
-  function setSplashHeight () {
+  function setSplash () {
     var windowHeight = $(window).get(0).innerHeight;
-    $('.front-page-top-background').css('height', windowHeight);
-    // alert("Hello");
+    $('.front-page-top-background').css('height', windowHeight)
+      .find('.front-page-top-message').css('margin-top', (windowHeight / 4));     
   };
 
+  $(window).scroll(function(i){
+    $('.front-page-top-message').css({'opacity':( 200-$(window).scrollTop() )/200});
+  })
 });
+
+
