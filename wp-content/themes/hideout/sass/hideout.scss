@@ -239,7 +239,7 @@ header {
 
 
 	.front-page-top-background {
-		min-height: 30em;
+		//height: 20em;
 		background-image: url('../images/stock-inside.jpg');
 		
 	  -webkit-background-size: cover;
@@ -310,9 +310,6 @@ Front Page News
 				opacity: .8;
 			}
 
-			img.hovered {
-				opacity: 1.0;
-			}
 		}
 
 		.item.item-bottom {
@@ -324,8 +321,21 @@ Front Page News
 
 		}
 
-		.item:hover {
-			background-color: $gold-5;
+		.item.hovered {
+			img {
+				opacity: 1.0;
+			}
+
+			p {
+				color: black;
+			}
+		}
+
+		.item.item-bottom.hovered {
+			p {
+				color: grey;
+			}
+
 		}
 	}
 
@@ -337,6 +347,7 @@ Front Page News
 
 		h1 {
 			color: $dark-grey;
+			text-align: center;
 		}
 
 	}

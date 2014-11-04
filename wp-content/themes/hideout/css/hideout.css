@@ -114,7 +114,6 @@ header .navbar {
     text-align: center;
     margin: auto; }
 header .front-page-top-background {
-  min-height: 30em;
   background-image: url("../images/stock-inside.jpg");
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -151,18 +150,21 @@ Front Page News
       background-color: #ff7400; }
       .news-module .news-section .item img {
         opacity: .8; }
-      .news-module .news-section .item img.hovered {
-        opacity: 1.0; }
     .news-module .news-section .item.item-bottom {
       background-color: white; }
       .news-module .news-section .item.item-bottom p, .news-module .news-section .item.item-bottom li, .news-module .news-section .item.item-bottom a, .news-module .news-section .item.item-bottom h1, .news-module .news-section .item.item-bottom h2, .news-module .news-section .item.item-bottom h3, .news-module .news-section .item.item-bottom h4, .news-module .news-section .item.item-bottom h5, .news-module .news-section .item.item-bottom h6 {
         color: #1a1a1a; }
-    .news-module .news-section .item:hover {
-      background-color: #ffb273; }
+    .news-module .news-section .item.hovered img {
+      opacity: 1.0; }
+    .news-module .news-section .item.hovered p {
+      color: black; }
+    .news-module .news-section .item.item-bottom.hovered p {
+      color: grey; }
   .news-module .twitter-section {
     background-color: #dddddd; }
     .news-module .twitter-section h1 {
-      color: #1a1a1a; }
+      color: #1a1a1a;
+      text-align: center; }
 
 /*--------------------------------------------------------------
 Front Page Music Module
