@@ -95,12 +95,14 @@
 
 
       </div>
-              <?php 
-          if (is_page_template( 'my-templates/home-page.php' )) {
-            get_template_part( 'templates/content', 'front-page-message' );
-          }
-          // else get the a template part for something else
-        ?>
+
+      <!-- Import the message div for the spash screen -->
+      <?php 
+        if (is_page_template( 'my-templates/home-page.php' )) {
+          get_template_part( 'templates/content', 'front-page-message' );
+        }
+        
+      ?>
      
 
       

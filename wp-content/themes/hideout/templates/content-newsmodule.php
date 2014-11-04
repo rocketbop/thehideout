@@ -6,7 +6,7 @@
   
     <div class="news-section  col-md-8">
       <div class="section-title">
-      <h1>WHAT'S HAPPENING</h1>
+      <h1>WHAT'S HAPPENING IN THE HIDEOUT</h1>
       </div>
 
       <div class="row item item-1">
@@ -43,7 +43,7 @@
               </div>
           </div>
         </div>
-        
+
         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
           <div class="row item item-bottom">
 

@@ -3,7 +3,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-4 col-md-offset-4">
-        <em><h2>Kilcullen's Bar</h2></em>
+        <h2>Get to Know Your Local</h2>
       </div>
     </div>
 

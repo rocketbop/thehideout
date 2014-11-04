@@ -256,7 +256,7 @@ header {
 
 		.front-page-top-message {
 			text-align: center;
-			//position:	absolute;
+			//position: fixed;
 
 			.message {
 						//background-color: rgba(255,166,0,.4);
@@ -287,7 +287,7 @@ Front Page Introduction
 .introduction-module {
 	background-color:		$white;
 
-	h2, h3 {
+	p, h2, h3 {
 		text-align: 				center;
 	} 
 
@@ -312,14 +312,11 @@ Front Page News
 	background-color: $gold-3;
 	p, li, a, h1, h2, h3, h4, h5, h6 {
 		color: $white;
+
 	}
 
-
-
-	.container:first-child {
-		background-color: $off-white;
-
-
+	.row {
+		background-color: $gold-4;
 	}
 
 	.news-section {
@@ -337,13 +334,14 @@ Front Page News
 				opacity: .8;
 			}
 
+
 		}
 
 		.item.item-bottom {
 			background-color: $white;
 
 			p, li, a, h1, h2, h3, h4, h5, h6 {
-				color: $dark-grey;
+				color: $light-grey;
 			}
 
 		}
@@ -353,14 +351,14 @@ Front Page News
 				opacity: 1.0;
 			}
 
-			p {
-				color: black;
+			p, li, a, h1, h2, h3, h4, h5, h6 {
+				color: $off-white;
 			}
 		}
 
 		.item.item-bottom.hovered {
-			p {
-				color: grey;
+			p, li, a, h1, h2, h3, h4, h5, h6 {
+				color: black;
 			}
 
 		}

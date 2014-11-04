@@ -141,7 +141,7 @@ Front Page Introduction
 --------------------------------------------------------------*/
 .introduction-module {
   background-color: white; }
-  .introduction-module h2, .introduction-module h3 {
+  .introduction-module p, .introduction-module h2, .introduction-module h3 {
     text-align: center; }
   .introduction-module img {
     padding: 2em; }
@@ -155,8 +155,8 @@ Front Page News
   background-color: #a64b00; }
   .news-module p, .news-module li, .news-module a, .news-module h1, .news-module h2, .news-module h3, .news-module h4, .news-module h5, .news-module h6 {
     color: white; }
-  .news-module .container:first-child {
-    background-color: #dddddd; }
+  .news-module .row {
+    background-color: #ff9640; }
   .news-module .news-section {
     background-color: #ff9640; }
     .news-module .news-section .item {
@@ -168,13 +168,13 @@ Front Page News
     .news-module .news-section .item.item-bottom {
       background-color: white; }
       .news-module .news-section .item.item-bottom p, .news-module .news-section .item.item-bottom li, .news-module .news-section .item.item-bottom a, .news-module .news-section .item.item-bottom h1, .news-module .news-section .item.item-bottom h2, .news-module .news-section .item.item-bottom h3, .news-module .news-section .item.item-bottom h4, .news-module .news-section .item.item-bottom h5, .news-module .news-section .item.item-bottom h6 {
-        color: #1a1a1a; }
+        color: #434343; }
     .news-module .news-section .item.hovered img {
       opacity: 1.0; }
-    .news-module .news-section .item.hovered p {
+    .news-module .news-section .item.hovered p, .news-module .news-section .item.hovered li, .news-module .news-section .item.hovered a, .news-module .news-section .item.hovered h1, .news-module .news-section .item.hovered h2, .news-module .news-section .item.hovered h3, .news-module .news-section .item.hovered h4, .news-module .news-section .item.hovered h5, .news-module .news-section .item.hovered h6 {
+      color: #dddddd; }
+    .news-module .news-section .item.item-bottom.hovered p, .news-module .news-section .item.item-bottom.hovered li, .news-module .news-section .item.item-bottom.hovered a, .news-module .news-section .item.item-bottom.hovered h1, .news-module .news-section .item.item-bottom.hovered h2, .news-module .news-section .item.item-bottom.hovered h3, .news-module .news-section .item.item-bottom.hovered h4, .news-module .news-section .item.item-bottom.hovered h5, .news-module .news-section .item.item-bottom.hovered h6 {
       color: black; }
-    .news-module .news-section .item.item-bottom.hovered p {
-      color: grey; }
   .news-module .twitter-section {
     background-color: #dddddd; }
     .news-module .twitter-section h1 {
