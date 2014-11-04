@@ -103,6 +103,13 @@ body {
 
 header {
 
+	nav {
+		h2 {
+			font-size: 2.2em;
+			text-transform: uppercase;
+		}
+	}
+
 	.navbar-container {
 		//background-color: rgba(250,250,250,0.3);
 		//background-color: rgba(65,115,38,0.9);
@@ -252,7 +259,8 @@ header {
 			//position:	absolute;
 
 			.message {
-						background-color: rgba(255,166,0,.4);
+						//background-color: rgba(255,166,0,.4);
+						background-color: rgba(40,40,40,.4);
 						border-radius: 6px;
 			}
 
@@ -264,6 +272,7 @@ header {
 
 			h2 {
 				font-size: 2.5em;
+				color: $white;
 			}
 
 		}

@@ -17,7 +17,7 @@ jQuery(document).ready(function($) {
   function setSplash () {
     var windowHeight = $(window).get(0).innerHeight;
     $('.front-page-top-background').css('height', windowHeight)
-      .find('.front-page-top-message').css('margin-top', (windowHeight / 4));     
+      .find('.front-page-top-message').css('padding-top', (windowHeight / 3));     
   };
 
   $(window).scroll(function(i){

@@ -27,6 +27,9 @@ body {
   background: white; }
 
 /**** LAYOUT STYLES *****************/
+header nav h2 {
+  font-size: 2.2em;
+  text-transform: uppercase; }
 header .navbar-container {
   background-color: rgba(5, 5, 5, 0.9);
   height: 5em;
@@ -123,14 +126,15 @@ header .front-page-top-background {
   header .front-page-top-background .front-page-top-message {
     text-align: center; }
     header .front-page-top-background .front-page-top-message .message {
-      background-color: rgba(255, 166, 0, 0.4);
+      background-color: rgba(40, 40, 40, 0.4);
       border-radius: 6px; }
     header .front-page-top-background .front-page-top-message h1 {
       font-size: 5em;
       margin-bottom: 0.1em;
       color: white; }
     header .front-page-top-background .front-page-top-message h2 {
-      font-size: 2.5em; }
+      font-size: 2.5em;
+      color: white; }
 
 /*--------------------------------------------------------------
 Front Page Introduction
