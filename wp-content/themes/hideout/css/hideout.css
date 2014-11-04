@@ -129,27 +129,40 @@ Front Page Introduction
   background-color: white; }
   .introduction-module h2, .introduction-module h3 {
     text-align: center; }
+  .introduction-module img {
+    padding: 2em; }
+  .introduction-module p {
+    padding: 2em; }
 
 /*--------------------------------------------------------------
 Front Page News
 --------------------------------------------------------------*/
 .news-module {
-  background-color: white; }
+  background-color: #a64b00; }
+  .news-module p, .news-module li, .news-module a, .news-module h1, .news-module h2, .news-module h3, .news-module h4, .news-module h5, .news-module h6 {
+    color: white; }
   .news-module .container:first-child {
     background-color: #dddddd; }
   .news-module .news-section {
-    background-color: #dddddd; }
+    background-color: #ff9640; }
     .news-module .news-section .item {
-      margin-top: 1em;
-      margin-bottom: 1em; }
+      padding-top: 1em;
+      padding-bottom: 1em;
+      background-color: #ff7400; }
       .news-module .news-section .item img {
-        opacity: .5; }
+        opacity: .8; }
       .news-module .news-section .item img.hovered {
         opacity: 1.0; }
-    .news-module .news-section .item:hover {
+    .news-module .news-section .item.item-bottom {
       background-color: white; }
+      .news-module .news-section .item.item-bottom p, .news-module .news-section .item.item-bottom li, .news-module .news-section .item.item-bottom a, .news-module .news-section .item.item-bottom h1, .news-module .news-section .item.item-bottom h2, .news-module .news-section .item.item-bottom h3, .news-module .news-section .item.item-bottom h4, .news-module .news-section .item.item-bottom h5, .news-module .news-section .item.item-bottom h6 {
+        color: #1a1a1a; }
+    .news-module .news-section .item:hover {
+      background-color: #ffb273; }
   .news-module .twitter-section {
     background-color: #dddddd; }
+    .news-module .twitter-section h1 {
+      color: #1a1a1a; }
 
 /*--------------------------------------------------------------
 Front Page Music Module

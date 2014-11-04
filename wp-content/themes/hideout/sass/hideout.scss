@@ -36,6 +36,28 @@ $light-green: 	#569b31;
 $dark-grey:			#1a1a1a;
 $light-grey:		#434343;
 
+
+
+// gold yello red scheme
+
+$gold-1:   #ff7400;
+$gold-2:   #bf7130;
+$gold-3:   #a64b00;
+$gold-4:   #ff9640;
+$gold-5:   #ffb273;
+
+$yellow-1:  #ff9e00;
+$yellow-2:  #bf8830;
+$yellow-3:  #a66600;
+$yellow-4:  #ffb640;
+$yellow-5:  #ffc973;
+
+$red-1:     #ff2c00;
+$red-2:     #bf4930;
+$red-3:     #a61d00;
+$red-4:     #ff6140;
+$red-5:     #ff8b73; 
+
 /**** BASE STYLES **********************/
 /*--------------------------------------------------------------
 1.0 Typefaces and Decoration 
@@ -243,7 +265,11 @@ Front Page Introduction
 	} 
 
 	img {
-		//border: 1px solid black;
+		padding: 2em;
+	}
+
+	p {
+		padding: 2em;
 	}
 }
 
@@ -256,7 +282,12 @@ Front Page News
 
 .news-module {
 
-	background-color: $white;
+	background-color: $gold-3;
+	p, li, a, h1, h2, h3, h4, h5, h6 {
+		color: $white;
+	}
+
+
 
 	.container:first-child {
 		background-color: $off-white;
@@ -265,15 +296,18 @@ Front Page News
 	}
 
 	.news-section {
-		background-color: $off-white;
+		background-color: $gold-4;
 
 
 		.item {
-			margin-top: 1em;
-			margin-bottom: 1em;
+			padding-top: 1em;
+			padding-bottom: 1em;
+			// border-bottom: 1px solid $gold-4;
+			// border-top: 1px solid $gold-4;
+			background-color: $gold-1;
 
 			img {
-				opacity: .5;
+				opacity: .8;
 			}
 
 			img.hovered {
@@ -281,14 +315,29 @@ Front Page News
 			}
 		}
 
-		.item:hover {
+		.item.item-bottom {
 			background-color: $white;
+
+			p, li, a, h1, h2, h3, h4, h5, h6 {
+				color: $dark-grey;
+			}
+
+		}
+
+		.item:hover {
+			background-color: $gold-5;
 		}
 	}
+
+
 
 	.twitter-section {
 
 		background-color: $off-white;
+
+		h1 {
+			color: $dark-grey;
+		}
 
 	}
 
