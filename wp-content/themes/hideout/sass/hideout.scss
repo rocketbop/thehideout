@@ -596,9 +596,29 @@ Events Page
 --------------------------------------------------------------*/
 
 .events-page {
-	h1 {
 
+	.page-header {
+
+		border-bottom: none;
+		border-top: none;
+
+		 h1, h2, h3, h4, h5, h6 {
+			color: $white;
+		}
 	}
+	.page-header-top {
+
+		background-color: $red-3;
+		margin-top: 15em;
+		margin-bottom: 0;
+	}
+
+	.page-header-bottom {
+		background-color: $red-4;
+		margin-top: 0;
+	}
+
+
 }
 
 @media (min-width: 768px) {

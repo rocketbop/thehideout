@@ -1,4 +1,3 @@
-<!-- <div class="introduction-module">   -->
 
   <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 col-md-offset-1">
     <div class="row">
@@ -29,4 +28,3 @@
 
   </div>
 
-<!-- </div> -->
