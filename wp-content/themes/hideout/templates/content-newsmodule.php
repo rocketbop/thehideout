@@ -5,7 +5,7 @@
     
       <div class="news-section  col-md-8">
         <div class="section-title">
-        <h1>WHAT'S HAPPENING IN THE HIDEOUT</h1>
+          <h1>WHAT'S HAPPENING IN THE HIDEOUT</h1>
         </div>
 
         <div class="row item item-1 item-topstory">
@@ -62,7 +62,7 @@
 
 
         </div>
-              <div class="row">
+          <div class="row">
 
           <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
             <div class="row item item-bottom">
@@ -108,13 +108,13 @@
 
       <div class=" twitter-section col-md-4">
 
-        <div class="row">
+ 
           <!-- <h1>TWITTER</h1> -->
           <a class="twitter-timeline" href="https://twitter.com/paulbyrne" height="400" data-widget-id="527117394250964992">Tweets by @paulbyrne</a>
           <script>
             !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
           </script>
-        </div> <!-- row -->
+
           
         <div class="row coming-up">
           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">

@@ -125,14 +125,15 @@ header .front-page-top-background {
   header .front-page-top-background .front-page-top-message {
     text-align: center; }
     header .front-page-top-background .front-page-top-message .message {
-      background-color: rgba(40, 40, 40, 0.4);
-      border-radius: 6px; }
+      background-color: rgba(40, 40, 40, 0.7);
+      border-radius: 6px;
+      padding: 3em; }
     header .front-page-top-background .front-page-top-message h1 {
-      font-size: 5em;
+      font-size: 5.4em;
       margin-bottom: 0.1em;
       color: white; }
     header .front-page-top-background .front-page-top-message h2 {
-      font-size: 2.5em;
+      font-size: 2.7em;
       color: white; }
 
 /*--------------------------------------------------------------
@@ -299,9 +300,13 @@ Events Page
   background-color: #a61d00;
   margin-top: 15em;
   margin-bottom: 0; }
+  .events-page .page-header-top .page-inner {
+    background-color: #b52000; }
 .events-page .page-header-bottom {
   background-color: #ff6140;
   margin-top: 0; }
+  .events-page .page-header-bottom .page-inner {
+    background-color: #ff6e4f; }
 
 /*--------------------------------------------------------------
 Blog Page
@@ -315,9 +320,13 @@ Blog Page
   background-color: #a64b00;
   margin-top: 15em;
   margin-bottom: 0; }
+  .blog-page .page-header-top .page-inner {
+    background-color: #b55200; }
 .blog-page .page-header-bottom {
   background-color: #ff9640;
   margin-top: 0; }
+  .blog-page .page-header-bottom .page-inner {
+    background-color: #ff9e4f; }
 
 footer.site-footer {
   background-color: #171717;

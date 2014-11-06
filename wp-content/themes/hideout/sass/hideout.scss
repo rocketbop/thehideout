@@ -260,18 +260,19 @@ header {
 
 			.message {
 						//background-color: rgba(255,166,0,.4);
-						background-color: rgba(40,40,40,.4);
+						background-color: rgba(40,40,40,.7);
 						border-radius: 6px;
+						padding: 3em;
 			}
 
 			h1 {
-				font-size: 5em;
+				font-size: 5.4em;
 				margin-bottom: 0.1em;
 				color: $white;
 			}
 
 			h2 {
-				font-size: 2.5em;
+				font-size: 2.7em;
 				color: $white;
 			}
 
@@ -605,18 +606,31 @@ Events Page
 		 h1, h2, h3, h4, h5, h6 {
 			color: $white;
 		}
+
+
 	}
+
 	.page-header-top {
 
 		background-color: $red-3;
 		margin-top: 15em;
 		margin-bottom: 0;
+
+			.page-inner {
+				background-color: lighten($red-3, 3%);
+		}
 	}
 
 	.page-header-bottom {
 		background-color: $red-4;
 		margin-top: 0;
+
+			.page-inner {
+				background-color: lighten($red-4, 3%);
+		}
 	}
+
+
 
 
 }
@@ -641,11 +655,19 @@ Blog Page
 		background-color: $gold-3;
 		margin-top: 15em;
 		margin-bottom: 0;
+		
+		.page-inner {
+			background-color: lighten($gold-3, 3%);
+		}
 	}
 
 	.page-header-bottom {
 		background-color: $gold-4;
 		margin-top: 0;
+
+		.page-inner {
+			background-color: lighten($gold-4, 3%);
+		}
 	}
 
 

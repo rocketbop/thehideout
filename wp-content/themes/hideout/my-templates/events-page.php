@@ -8,7 +8,7 @@ get_header(); ?>
 <div id="primary" class="content-area events-page" ng-controller="eventCtrl">
   <div class="container-fluid">
     <div class="row page-header page-header-top">
-      <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 col-md-offset-1">
+      <div class="page-inner col-xs-10 col-sm-10 col-md-10 col-lg-10 col-md-offset-1">
 
           <h1>Upcoming Events</h1>
           <h3>Get the details on all upcoming music, poetry, and gettogethers at The Hideout.</h3>
@@ -19,7 +19,7 @@ get_header(); ?>
 
   <div class="container-fluid">
     <div class="row page-header page-header-bottom">
-      <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 col-md-offset-1">
+      <div class="page-inner col-xs-10 col-sm-10 col-md-10 col-lg-10 col-md-offset-1">
 
           <p>Chia selfies artisan Austin. Craft beer YOLO flannel, chillwave lomo gluten-free bespoke ugh fashion axe. Banksy mumblecore meggings gluten-free Shoreditch semiotics. Meggings plaid Tonx readymade actually direct trade. Pitchfork High Life umami DIY, quinoa freegan ugh Bushwick sustainable Thundercats irony kogi locavore church-key. Distillery bitters Thundercats meggings paleo semiotics pop-up. Pug crucifix YOLO letterpress, trust fund Blue Bottle Banksy Vice disrupt plaid semiotics before they sold out pop-up skateboard mustache.</p>
 
@@ -29,6 +29,7 @@ get_header(); ?>
 
   <div class="container-fluid">
     <div class="row page-body ">
+
       <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 col-md-offset-1">
         <div class="row">
           <div class="col-md-3">
