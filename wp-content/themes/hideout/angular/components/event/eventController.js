@@ -1,10 +1,10 @@
 angular.module("theHideoutApp")
   .constant('eventListPageCount', 2) // items per page
   .constant("eventListActiveClass", "btn-primary")
-  .controller("eventCtrl", ['$scope', '$filter', 'eventListPageCount', 'eventService', 'eventListActiveClass', function ($scope, $filter, eventListPageCount, eventService, eventListActiveClass) {
+  .controller("eventCtrl", ['$scope', '$filter', 'eventListPageCount', 'apiService', 'eventListActiveClass', function ($scope, $filter, eventListPageCount, apiService, eventListActiveClass) {
 
     // GET THE DATA
-    eventService.getAllEvents().success(function(events) {
+    apiService.getAllEvents().success(function(events) {
       $scope.events = events;
 
       //Convert the timestamp to millseconds
@@ -14,13 +14,6 @@ angular.module("theHideoutApp")
      
      console.log($scope.events);
     });
-
-   // GET THE NEWS DATA
-    // eventService.getAllBlogPosts().success(function(blogPosts) {
-    //   $scope.blogPosts = blogPosts;
-     
-    //  console.log($scope.blogPosts);
-    // });
 
 
   // FILTER BY CATEGORY

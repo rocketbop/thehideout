@@ -133,6 +133,8 @@ function hideout_scripts() {
 
 		wp_enqueue_script( 'event-controller', get_template_directory_uri() . '/angular/components/event/eventController.js', false, NULL);
 
+		wp_enqueue_script( 'blog-controller', get_template_directory_uri() . '/angular/components/blog/blogController.js', false, NULL);
+
 	wp_enqueue_script( 'test-controller', get_template_directory_uri() . '/angular/components/test/testController.js', false, NULL);
 
 	wp_enqueue_script( 'hideout-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
@@ -188,31 +190,14 @@ remove_filter('the_content', 'wpautop');
 */
 
 function wp_api_encode_acf($data,$post,$context){
-	$custom_fields_exist = get_fields($post['ID']);
-	ChromePhp::log("Myvar is : " . $myvar);
+	// check if custom fields exist for the post
+	$custom_fields_exist = get_fields($post['ID']); 
 	if ($custom_fields_exist) {
-		ChromePhp::log(1 + 1);
 		$data['meta'] = array_merge($data['meta'], get_fields($post['ID']));
 		$data = array_merge($data, $data['meta']);
 	}
-	
-	// $data = array_merge($data,get_fields($post['ID']));
 	return $data;
 }
-
-
-// function wp_api_encode_acf($data,$post,$context){
-// 	// $data['meta'] = array_merge($data['meta'],get_fields($post['ID']));
-// 	// $data = array_merge($data, $data['meta']);
-// 	ChromePhp::log("Hello");
-// 	if (get_fields($post['ID']) == NULL) {
-// 		ChromePhp::log("That's Null");
-// 	} else {
-// 		$data['meta'] = array_merge($data['meta'], get_fields($post['ID']));
-// 		$data = array_merge($data, $data['merge']);
-// 	}
-// 	return $data;
-// }
  
 if( function_exists('get_fields') ){
 	add_filter('json_prepare_post', 'wp_api_encode_acf', 10, 3);
