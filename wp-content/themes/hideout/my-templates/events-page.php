@@ -33,7 +33,7 @@ get_header(); ?>
         <div class="row">
           <div class="col-md-3">
          
-            <h1>Select Category</h1>
+            <h1 class="text-center">Category</h1>
             <a ng-click="selectCategory()"
               class="btn btn-block btn-default btn-lg">All</a>
               <!-- The unique filter will mean categories with more than one event will not be generated in duplicate -->

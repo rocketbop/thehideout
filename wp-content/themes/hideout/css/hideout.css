@@ -303,6 +303,22 @@ Events Page
   background-color: #ff6140;
   margin-top: 0; }
 
+/*--------------------------------------------------------------
+Blog Page
+--------------------------------------------------------------*/
+.blog-page .page-header {
+  border-bottom: none;
+  border-top: none; }
+  .blog-page .page-header h1, .blog-page .page-header h2, .blog-page .page-header h3, .blog-page .page-header h4, .blog-page .page-header h5, .blog-page .page-header h6 {
+    color: white; }
+.blog-page .page-header-top {
+  background-color: #a64b00;
+  margin-top: 15em;
+  margin-bottom: 0; }
+.blog-page .page-header-bottom {
+  background-color: #ff9640;
+  margin-top: 0; }
+
 footer.site-footer {
   background-color: #171717;
   min-height: 8em; }
