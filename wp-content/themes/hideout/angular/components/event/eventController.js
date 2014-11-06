@@ -3,9 +3,6 @@ angular.module("theHideoutApp")
   .constant("eventListActiveClass", "btn-primary")
   .controller("eventCtrl", ['$scope', '$filter', 'eventListPageCount', 'eventService', 'eventListActiveClass', function ($scope, $filter, eventListPageCount, eventService, eventListActiveClass) {
 
-
-
-
     // GET THE DATA
     eventService.getAllEvents().success(function(events) {
       $scope.events = events;
@@ -17,6 +14,13 @@ angular.module("theHideoutApp")
      
      console.log($scope.events);
     });
+
+   // GET THE NEWS DATA
+    // eventService.getAllBlogPosts().success(function(blogPosts) {
+    //   $scope.blogPosts = blogPosts;
+     
+    //  console.log($scope.blogPosts);
+    // });
 
 
   // FILTER BY CATEGORY

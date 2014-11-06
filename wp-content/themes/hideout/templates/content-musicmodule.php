@@ -52,7 +52,7 @@
       </div>
       <div class="music-module-upcoming-event-mini col-md-8">
         <div class="row">
-          <div class="unit col-md-5">
+          <div class="unit col-md-6">
             <div class="row">
               <div class="dark-text col-md-3">
                 <h3>Event: </h3>
@@ -67,7 +67,7 @@
             </div>
 
           </div>
-          <div class="unit unit-2 col-md-4 ">
+          <div class="unit unit-2 col-md-6 ">
             <div class="row">
               <div class="dark-text col-md-3">
                 <h4>Event: </h4>
@@ -82,22 +82,7 @@
 
             </div>
           </div>
-          <div class="unit unit-3 col-md-3">
-            <div class="row">
-              <div class="dark-text col-md-4">
-                <h4>Event: </h4>
-                <h5>Date: </h5>
-                <h5>Time: </h5> 
-              </div>
-              <div class="col-md-8">
-                <h4>Led Zeppelin</h4>
-                <h5>28 March 2015</h5>
-                <h5 class="dark-text">11:30PM</h5> 
-              </div>
 
-            </div>
-            
-          </div>
         </div>
 
 

@@ -5,6 +5,7 @@
  * @package Hideout
  */
 
+include 'ChromePhp.php';
 /**
  * Set the content width based on the theme's design and stylesheet.
  */
@@ -126,7 +127,7 @@ function hideout_scripts() {
 
 	wp_enqueue_script( 'ui-unique', get_template_directory_uri() . '/angular/bower_components/angular-ui-utils/unique.js', false, NULL);
 
-	wp_enqueue_script( 'event-model', get_template_directory_uri() . '/angular/components/event/eventModel.js', false, NULL);
+	wp_enqueue_script( 'app-model', get_template_directory_uri() . '/angular/models/appModel.js', false, NULL);
 
 	// wp_enqueue_script( 'test-model', get_template_directory_uri() . '/angular/components/test/testModel.js', false, NULL);
 
@@ -187,9 +188,31 @@ remove_filter('the_content', 'wpautop');
 */
 
 function wp_api_encode_acf($data,$post,$context){
-	$data = array_merge($data,get_fields($post['ID']));
+	$custom_fields_exist = get_fields($post['ID']);
+	ChromePhp::log("Myvar is : " . $myvar);
+	if ($custom_fields_exist) {
+		ChromePhp::log(1 + 1);
+		$data['meta'] = array_merge($data['meta'], get_fields($post['ID']));
+		$data = array_merge($data, $data['meta']);
+	}
+	
+	// $data = array_merge($data,get_fields($post['ID']));
 	return $data;
 }
+
+
+// function wp_api_encode_acf($data,$post,$context){
+// 	// $data['meta'] = array_merge($data['meta'],get_fields($post['ID']));
+// 	// $data = array_merge($data, $data['meta']);
+// 	ChromePhp::log("Hello");
+// 	if (get_fields($post['ID']) == NULL) {
+// 		ChromePhp::log("That's Null");
+// 	} else {
+// 		$data['meta'] = array_merge($data['meta'], get_fields($post['ID']));
+// 		$data = array_merge($data, $data['merge']);
+// 	}
+// 	return $data;
+// }
  
 if( function_exists('get_fields') ){
 	add_filter('json_prepare_post', 'wp_api_encode_acf', 10, 3);

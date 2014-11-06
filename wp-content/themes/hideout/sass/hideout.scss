@@ -321,20 +321,34 @@ Front Page News
 
 	.news-section {
 		background-color: $gold-4;
-
+		// max-height: 44em;
 
 		.item {
-			padding-top: 1em;
-			padding-bottom: 1em;
-			// border-bottom: 1px solid $gold-4;
-			// border-top: 1px solid $gold-4;
+			padding-top: 0.5em;
+			padding-bottom: 0.5em;
 			background-color: $gold-1;
 
 			img {
 				opacity: .8;
 			}
 
+			h3 {
+				text-align: justify;
+				font-size: 1.4em;
+			}
 
+			h6 {
+				text-align: right;
+			}
+
+
+		}
+
+		.item.item-topstory {
+			h3 {
+				font-size: 1.8em;
+				text-align: justify;
+			}
 		}
 
 		.item.item-bottom {
@@ -369,10 +383,22 @@ Front Page News
 	.twitter-section {
 
 		background-color: $off-white;
+		// max-height: 44em;
 
 		h1 {
 			color: $dark-grey;
 			text-align: center;
+		}
+
+		h2 {
+			color:		$white;
+			text-align: center;
+		}
+
+		.coming-up {
+			background-color: $dark-grey;
+			// padding-bottom: 100%;
+			// padding-top: 100%;
 		}
 
 	}
@@ -389,7 +415,7 @@ Front Page Music Module
 
 .music-module {
 	
-	background-color: $dark-brown;
+	background-color: $red-3;
 	color: $white;
 
 	h1, h2, h3, h4, h5, h6 {
@@ -415,11 +441,11 @@ Front Page Music Module
 	}
 
 	.medium-background-color {
-		background-color: $medium-brown;
+		background-color: $red-2;
 	}
 
 	.dark-text {
-		color: $dark-grey;
+		color: $red-3;
 	}
 
 	.light-text {
@@ -428,7 +454,7 @@ Front Page Music Module
 
 
 	.music-module-header {
-		background-color: $light-brown;
+		background-color: $red-4;
 		height: 8em;
 
 
@@ -448,11 +474,11 @@ Front Page Music Module
 		height: 5em;
 	}
 	.music-module-byline {
-		background-color: $medium-brown;
+		background-color: $red-3;
 		height: 5em;
 	}
 	.music-module-blurb {
-		background-color: $dark-grey;
+		background-color: $red-1;
 		height: 20em;
 
 		h2 {
@@ -484,7 +510,7 @@ Front Page Music Module
   content: "";
   background-image: url('../images/u2-band.jpg');
   background-size: cover;
-  opacity: 0.4;
+  opacity: 0.7;
   top: 0;
   left: 0;
   bottom: 0;
@@ -555,10 +581,10 @@ Front Page Food Module
 
 .food-module {
 
-	background-color: $dark-green;
-	color: $white;
+	background-color: $white;
+	//color: $white;
 	.module-header {
-		background-color: $medium-green;
+		background-color: $yellow-2;
 
 
 	}

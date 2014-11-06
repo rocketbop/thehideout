@@ -160,11 +160,19 @@ Front Page News
   .news-module .news-section {
     background-color: #ff9640; }
     .news-module .news-section .item {
-      padding-top: 1em;
-      padding-bottom: 1em;
+      padding-top: 0.5em;
+      padding-bottom: 0.5em;
       background-color: #ff7400; }
       .news-module .news-section .item img {
         opacity: .8; }
+      .news-module .news-section .item h3 {
+        text-align: justify;
+        font-size: 1.4em; }
+      .news-module .news-section .item h6 {
+        text-align: right; }
+    .news-module .news-section .item.item-topstory h3 {
+      font-size: 1.8em;
+      text-align: justify; }
     .news-module .news-section .item.item-bottom {
       background-color: white; }
       .news-module .news-section .item.item-bottom p, .news-module .news-section .item.item-bottom li, .news-module .news-section .item.item-bottom a, .news-module .news-section .item.item-bottom h1, .news-module .news-section .item.item-bottom h2, .news-module .news-section .item.item-bottom h3, .news-module .news-section .item.item-bottom h4, .news-module .news-section .item.item-bottom h5, .news-module .news-section .item.item-bottom h6 {
@@ -180,25 +188,30 @@ Front Page News
     .news-module .twitter-section h1 {
       color: #1a1a1a;
       text-align: center; }
+    .news-module .twitter-section h2 {
+      color: white;
+      text-align: center; }
+    .news-module .twitter-section .coming-up {
+      background-color: #1a1a1a; }
 
 /*--------------------------------------------------------------
 Front Page Music Module
 --------------------------------------------------------------*/
 .music-module {
-  background-color: #4c2f1a;
+  background-color: #a61d00;
   color: white; }
   .music-module h1, .music-module h2, .music-module h3, .music-module h4, .music-module h5, .music-module h6 {
     font-family: "Oswald"; }
   .music-module p, .music-module a {
     font-family: "Lato"; }
   .music-module .medium-background-color {
-    background-color: #734726; }
+    background-color: #bf4930; }
   .music-module .dark-text {
-    color: #1a1a1a; }
+    color: #a61d00; }
   .music-module .light-text {
     color: white; }
   .music-module .music-module-header {
-    background-color: #9b5e31;
+    background-color: #ff6140;
     height: 8em; }
     .music-module .music-module-header h1 {
       margin-top: 1em; }
@@ -209,10 +222,10 @@ Front Page Music Module
     background-color: white;
     height: 5em; }
   .music-module .music-module-byline {
-    background-color: #734726;
+    background-color: #a61d00;
     height: 5em; }
   .music-module .music-module-blurb {
-    background-color: #1a1a1a;
+    background-color: #ff2c00;
     height: 20em; }
     .music-module .music-module-blurb h2 {
       margin-bottom: 1em; }
@@ -229,7 +242,7 @@ Front Page Music Module
     content: "";
     background-image: url("../images/u2-band.jpg");
     background-size: cover;
-    opacity: 0.4;
+    opacity: 0.7;
     top: 0;
     left: 0;
     bottom: 0;
@@ -271,10 +284,9 @@ Front Page Music Module
 Front Page Food Module
 --------------------------------------------------------------*/
 .food-module {
-  background-color: #2b4c1a;
-  color: white; }
+  background-color: white; }
   .food-module .module-header {
-    background-color: #417326; }
+    background-color: #bf8830; }
 
 /*--------------------------------------------------------------
 Events Page
