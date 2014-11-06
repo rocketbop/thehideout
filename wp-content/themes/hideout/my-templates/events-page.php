@@ -5,8 +5,8 @@ Template Name: Events Page
 
 get_header(); ?>
 
-<div id="primary" class="content-area container events-page">
-  <div ng-controller="eventCtrl">
+<div id="primary" class="content-area events-page">
+  <div ng-controller="eventCtrl" class="col-xs-10 col-sm-10 col-md-10 col-lg-10 col-md-offset-1">
   	<div class="row">
 
     <div class ="col-md-3">

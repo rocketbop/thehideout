@@ -11,21 +11,21 @@ get_header(); ?>
 
 
 
-		<div class="row">
+		<div class="row news-module">
 			<?php get_template_part( 'templates/content', 'newsmodule' ); ?>
 		</div>
 
-		
-		<div class="row">
+
+		<div class="row music-module">
 			<?php get_template_part( 'templates/content', 'musicmodule' ); ?>
 		</div>
 
 
-		<div class="row">
+		<div class="row food-module">
 			<?php get_template_part( 'templates/content', 'foodmodule' ); ?>
 		</div>
 
-				<div class="row">
+				<div class="row introduction-module">
 			<?php get_template_part( 'templates/content', 'introductionmodule' ); ?>
 		</div>
 

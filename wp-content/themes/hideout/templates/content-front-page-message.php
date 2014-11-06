@@ -1,5 +1,5 @@
   <div class="front-page-top-message">
-    <div class="container">
+    <div class="col-md-10 col-md-offset-1">
       <div class="row">
         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-md-offset-3 message">
           <h1>KILCULLEN'S BAR</h1>

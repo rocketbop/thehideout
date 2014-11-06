@@ -1,7 +1,6 @@
-<div class="news-module">
-  
+<!-- <div class="news-module"> -->
 
-  <div class="container">
+  <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 col-md-offset-1">
     <div class="row">
     
       <div class="news-section  col-md-8">
@@ -179,4 +178,4 @@
     </div> <!-- row -->
   </div> <!-- container -->
 
-</div> <!-- news module -->
+<!-- </div> news module -->

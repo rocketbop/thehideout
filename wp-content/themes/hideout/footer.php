@@ -11,7 +11,7 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="container">
+		<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 col-md-offset-1">
 			<div class="site-info">
 				<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'hideout' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'hideout' ), 'WordPress' ); ?></a>
 				<span class="sep"> | </span>

@@ -1,6 +1,6 @@
-<div class="introduction-module">  
+<!-- <div class="introduction-module">   -->
 
-  <div class="container">
+  <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 col-md-offset-1">
     <div class="row">
       <div class="col-md-4 col-md-offset-4">
         <h2>Get to Know Your Local</h2>
@@ -29,4 +29,4 @@
 
   </div>
 
-</div>
+<!-- </div> -->
