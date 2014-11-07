@@ -1,15 +1,27 @@
 angular.module("theHideoutApp")
   .constant('blogListPageCount', 2) // items per page
   .constant("blogListActiveClass", "btn-primary")
-  .controller("blogCtrl", ['$scope', '$filter', 'blogListPageCount', 'apiService', 'blogListActiveClass', function ($scope, $filter, blogListPageCount, apiService, blogListActiveClass) {
+  .controller("blogCtrl", ['$scope', '$filter', '$log', 'blogListPageCount', 'apiService', 'blogListActiveClass', function ($scope, $filter, $log, blogListPageCount, apiService, blogListActiveClass) {
 
     // GET THE DATA
 
     apiService.getAllBlogPosts().success(function(blogPosts) {
       $scope.blogPosts = blogPosts;
      
-     console.log($scope.blogPosts);
+      console.log($scope.blogPosts);
+
+
+
+
     });
+
+    
+     // $scope.$log = $log;
+
+     $scope.stringToDate = function (message) {
+      var date = new Date(message);
+      return date;
+     };
 
 
   // FILTER BY CATEGORY

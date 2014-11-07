@@ -25,4 +25,10 @@ angular.module("customFilters", [])
             return data;
         }
     }
+})
+.filter("stringToDate", function () {
+    return function (data, string) {
+        var date = new Date(string);
+        return date;
+    }
 });
