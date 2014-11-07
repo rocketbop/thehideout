@@ -306,8 +306,6 @@ Front Page Introduction
 Front Page News
 --------------------------------------------------------------*/
 
-
-
 .news-module {
 
 	background-color: $gold-3;
@@ -379,8 +377,6 @@ Front Page News
 		}
 	}
 
-
-
 	.twitter-section {
 
 		background-color: $off-white;
@@ -404,11 +400,7 @@ Front Page News
 
 	}
 
-}
-
-
-
-	
+}	
 
 /*--------------------------------------------------------------
 Front Page Music Module
@@ -591,7 +583,6 @@ Front Page Food Module
 	}
 }
 
-
 /*--------------------------------------------------------------
 Events Page
 --------------------------------------------------------------*/
@@ -629,9 +620,6 @@ Events Page
 				background-color: lighten($red-4, 3%);
 		}
 	}
-
-
-
 
 }
 
@@ -673,14 +661,10 @@ Blog Page
 
 }
 
-
-
 @media (min-width: 768px) {
 
 }
 	
-
-
 footer.site-footer {
 	background-color: $black-dark;
 	min-height: 8em;

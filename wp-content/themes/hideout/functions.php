@@ -183,7 +183,8 @@ function my_register_fields()
     include_once('/wp-content/plugins/acf-date_time_picker/acf-date_time_picker.php');
 }
 
-remove_filter('the_content', 'wpautop');
+	// Uncommented the following as is filtering out html data on posts.
+// remove_filter('the_content', 'wpautop');
 
 /* Add custom fields to REST API
  * RESPECT to: https://gist.github.com/rileypaulsen
