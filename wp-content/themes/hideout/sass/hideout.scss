@@ -69,7 +69,7 @@ h1, h2, h3, h4, h5, h6 {
 
 p, li, a {
 	font-family: "Lato", san-serif;
-	line-height: 1.6em;
+	line-height: 2.5em;
 }
 
 li {
@@ -253,6 +253,7 @@ header {
 	  -o-background-size: cover;
 	  background-size: cover;
 		background-position: bottom;
+		background-attachment: fixed;
 
 		.front-page-top-message {
 			text-align: center;
@@ -658,6 +659,24 @@ Blog Page
 		}
 	}
 
+
+}
+
+/*--------------------------------------------------------------
+Sidebar
+--------------------------------------------------------------*/
+
+.sidebar.sidebar-events {
+	// background-color: $red-2;
+	.item {
+		margin-bottom: .5em;
+	}
+
+	> h4 {
+		margin-top: 5em;
+		margin-bottom: 3em;
+
+	}
 
 }
 

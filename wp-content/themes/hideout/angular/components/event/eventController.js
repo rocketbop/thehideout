@@ -4,15 +4,16 @@ angular.module("theHideoutApp")
   .controller("eventCtrl", ['$scope', '$filter', 'eventListPageCount', 'apiService', 'eventListActiveClass', function ($scope, $filter, eventListPageCount, apiService, eventListActiveClass) {
 
     // GET THE DATA
-    apiService.getAllEvents().success(function(events) {
-      $scope.events = events;
+    apiService.getAllEvents().success(function(data) {
+      $scope.data = {};
+      $scope.data.events = data;
 
       //Convert the timestamp to millseconds
-      for (var i = 0; i < $scope.events.length; i++) {
-        $scope.events[i].date_of_event = $scope.events[i].date_of_event * 1000;
+      for (var i = 0; i < $scope.data.events.length; i++) {
+        $scope.data.events[i].date_of_event = $scope.data.events[i].date_of_event * 1000;
       };
      
-     console.log($scope.events);
+     console.log($scope.data.events);
     });
 
 

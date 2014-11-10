@@ -38,13 +38,13 @@ get_header(); ?>
             <a ng-click="selectCategory()"
               class="btn btn-block btn-default btn-lg">All</a>
               <!-- The unique filter will mean categories with more than one event will not be generated in duplicate -->
-            <a ng-click="selectCategory(event.category)" ng-repeat="event in events | orderBy:'category' | unique:'category'"  class=" btn btn-block btn-default btn-lg" ng-class="getCategoryClass(event.category)">{{event.category}}</a>  
+            <a ng-click="selectCategory(event.category)" ng-repeat="event in data.events | orderBy:'category' | unique:'category'"  class=" btn btn-block btn-default btn-lg" ng-class="getCategoryClass(event.category)">{{event.category}}</a>  
 
           </div>
           <div class="col-md-7">
             
               <h1>{{selectedCategory}} Events</h1>
-              <div ng-repeat="event in events | orderBy: '-date_of_event' | filter:categoryFilterFn | range:selectedPage:pageSize">
+              <div ng-repeat="event in data.events | orderBy: '-date_of_event' | filter:categoryFilterFn | range:selectedPage:pageSize">
 
                 <!-- <p><strong>Date Created </strong>{{event.date | date:'EEEE, dd MM yyyy, h:mm'}}</p> -->
                 <p><strong>Date of Event: </strong>{{event.date_of_event | date: 'medium'}}</p>
@@ -59,7 +59,7 @@ get_header(); ?>
 
               <div class="pull-right btn-group">
                   <a ng-repeat=
-                     "page in events | filter:categoryFilterFn | pageCount:pageSize"
+                     "page in data.events | filter:categoryFilterFn | pageCount:pageSize"
                      ng-click="selectPage($index + 1)" class="btn btn-default"
                      ng-class="getPageClass($index + 1)">
                       {{$index + 1}}

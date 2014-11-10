@@ -27,7 +27,7 @@ angular.module("customFilters", [])
     }
 })
 .filter("stringToDate", function () {
-    return function (data, string) {
+    return function (string) {
         var date = new Date(string);
         return date;
     }

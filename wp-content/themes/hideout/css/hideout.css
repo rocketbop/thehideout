@@ -7,7 +7,7 @@ h1, h2, h3, h4, h5, h6 {
 
 p, li, a {
   font-family: "Lato", san-serif;
-  line-height: 1.6em; }
+  line-height: 2.5em; }
 
 li {
   list-style: none; }
@@ -121,7 +121,8 @@ header .front-page-top-background {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  background-position: bottom; }
+  background-position: bottom;
+  background-attachment: fixed; }
   header .front-page-top-background .front-page-top-message {
     text-align: center; }
     header .front-page-top-background .front-page-top-message .message {
@@ -327,6 +328,15 @@ Blog Page
   margin-top: 0; }
   .blog-page .page-header-bottom .page-inner {
     background-color: #ff9e4f; }
+
+/*--------------------------------------------------------------
+Sidebar
+--------------------------------------------------------------*/
+.sidebar.sidebar-events .item {
+  margin-bottom: .5em; }
+.sidebar.sidebar-events > h4 {
+  margin-top: 5em;
+  margin-bottom: 3em; }
 
 footer.site-footer {
   background-color: #171717;
