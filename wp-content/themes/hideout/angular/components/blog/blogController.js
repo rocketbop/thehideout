@@ -9,14 +9,18 @@ angular.module("theHideoutApp")
       $scope.data = {};
       $scope.data.blogPosts = blogPosts;
      
-      console.log($scope.data.blogPosts);
+     console.log($scope.data.blogPosts);
+     //console.log($scope.data.blogPosts[0].featured_image.attachment_meta.sizes.thumbnail.url)
 
 
 
 
     });
 
-    
+    $scope.logMe = function (message) {
+      console.log(message);
+      // console.log(message.large)
+    };
      // $scope.$log = $log;
 
      $scope.stringToDate = function (message) {
