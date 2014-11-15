@@ -7,7 +7,8 @@ get_header(); ?>
 
 
   <div id="primary" class="content-area blog-page" ng-controller="blogCtrl">
-  {{$scope.setTopBackgroundHeight("half", ".background-container");}}
+    <ng-include src="viewBlogPage()" scope="" onload=""></ng-include>
+
 
 
   <!-- page header top -->

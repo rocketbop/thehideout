@@ -22,7 +22,12 @@ angular.module("theHideoutApp")
       globalService.setTopBackgroundHeight(screenProportion, targetDiv);
     };
 
-    $scope.setTopBackgroundHeight("half", ".background-container");
+    // Set up the BlogPage view
+    $scope.viewBlogPage = function () {
+        
+        $scope.setTopBackgroundHeight("half", ".background-container");
+        jquery(window).resize($scope.setTopBackgroundHeight("full", ".front-page-top-background"));
+    };
 
     $scope.logMe = function (message) {
       console.log(message);
