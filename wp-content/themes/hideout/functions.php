@@ -41,7 +41,8 @@ function hideout_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 	  /** Register custom size */
-  add_image_size('sidebar-img', 210, 140, true);
+  add_image_size('sidebarimg', 210, 140, true);
+
   set_post_thumbnail_size( 200, 140, true ); // true is for crop mode
 
 	// This theme uses wp_nav_menu() in one location.

@@ -35,8 +35,9 @@
   <div ng-repeat="blogPost in data.blogPosts | orderBy: 'date' | limitTo: 5">
     <div class="row item">
       <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-        <img ng-if="blogPost.featured_image.source" src="{{logMe(blogPost.featured_image.attachment_meta.sizes)}}">
-        <img ng-if="!blogPost.featured_image.source" src="{{newsImageDefault}}">
+        <!-- If there is an image use its thumbnail, else use the default -->
+        <img ng-if="blogPost.featured_image.source" src="{{blogPost.featured_image.attachment_meta.sizes.sidebarimg.url}}">
+        <img ng-if="!blogPost.featured_image.source" src="{{newsImageDefault210X140}}">
       </div>
 
 

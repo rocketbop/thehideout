@@ -672,6 +672,22 @@ Sidebar
 		margin-bottom: .5em;
 	}
 
+
+	> h4 {
+		margin-top: 5em;
+		margin-bottom: 3em;
+
+	}
+
+}
+
+.sidebar.sidebar-blog {
+	// background-color: $red-2;
+	.item {
+		margin-bottom: .5em;
+	}
+
+
 	> h4 {
 		margin-top: 5em;
 		margin-bottom: 3em;

@@ -28,7 +28,8 @@ angular.module("theHideoutApp")
       return date;
      };
 
-    $scope.newsImageDefault = templateDirectory + 'images/design/news-default-image.png';
+    // $scope.newsImageDefault = templateDirectory + 'images/design/news-default-image.png';
+    $scope.newsImageDefault210X140 = templateDirectory + 'images/design/hideout-2005-210x140.jpg';
      
 
   // FILTER BY CATEGORY
