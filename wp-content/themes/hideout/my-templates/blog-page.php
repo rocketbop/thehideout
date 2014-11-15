@@ -5,10 +5,17 @@ Template Name: Blog Page
 
 get_header(); ?>
 
+
   <div id="primary" class="content-area blog-page" ng-controller="blogCtrl">
+  {{$scope.setTopBackgroundHeight("half", ".background-container");}}
+
 
   <!-- page header top -->
     <div class="container-fluid">
+      <div class="row">
+        <div class="background-container col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        </div>
+      </div>
       <div class="row page-header page-header-top">
         <div class="page-inner col-xs-10 col-sm-10 col-md-10 col-lg-10 col-md-offset-1">
         <div class="row">

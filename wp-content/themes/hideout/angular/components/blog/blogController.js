@@ -1,7 +1,7 @@
 angular.module("theHideoutApp")
   .constant('blogListPageCount', 2) // items per page
   .constant("blogListActiveClass", "btn-primary")
-  .controller("blogCtrl", ['$scope', '$filter', '$log', 'blogListPageCount', 'apiService', 'blogListActiveClass', 'templateDirectory', function ($scope, $filter, $log, blogListPageCount, apiService, blogListActiveClass, templateDirectory) {
+  .controller("blogCtrl", ['$scope', '$filter', '$log', 'blogListPageCount', 'apiService', 'globalService', 'blogListActiveClass', 'templateDirectory', function ($scope, $filter, $log, blogListPageCount, apiService, globalService, blogListActiveClass, templateDirectory) {
 
     // GET THE DATA
 
@@ -12,10 +12,17 @@ angular.module("theHideoutApp")
      console.log($scope.data.blogPosts);
      //console.log($scope.data.blogPosts[0].featured_image.attachment_meta.sizes.thumbnail.url)
 
-
-
-
     });
+
+    $scope.checkConsole = function () {
+      globalService.checkConsole();
+    };
+
+    $scope.setTopBackgroundHeight = function (screenProportion, targetDiv) {
+      globalService.setTopBackgroundHeight(screenProportion, targetDiv);
+    };
+
+    $scope.setTopBackgroundHeight("half", ".background-container");
 
     $scope.logMe = function (message) {
       console.log(message);

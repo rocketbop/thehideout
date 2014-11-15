@@ -133,11 +133,11 @@ function hideout_scripts() {
 
 	wp_enqueue_script( 'app-model', get_template_directory_uri() . '/angular/models/appModel.js', false, NULL);
 
-	// wp_enqueue_script( 'test-model', get_template_directory_uri() . '/angular/components/test/testModel.js', false, NULL);
+	wp_enqueue_script( 'global-services', get_template_directory_uri() . '/angular/globalServices.js', false, NULL);
 
-		wp_enqueue_script( 'event-controller', get_template_directory_uri() . '/angular/components/event/eventController.js', false, NULL);
+	wp_enqueue_script( 'event-controller', get_template_directory_uri() . '/angular/components/event/eventController.js', false, NULL);
 
-		wp_enqueue_script( 'blog-controller', get_template_directory_uri() . '/angular/components/blog/blogController.js', false, NULL);
+	wp_enqueue_script( 'blog-controller', get_template_directory_uri() . '/angular/components/blog/blogController.js', false, NULL);
 
 	wp_enqueue_script( 'test-controller', get_template_directory_uri() . '/angular/components/test/testController.js', false, NULL);
 

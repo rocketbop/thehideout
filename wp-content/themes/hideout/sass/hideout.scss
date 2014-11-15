@@ -1,5 +1,9 @@
 // VARIABLE DECLARATIONS
 
+
+// Locations
+
+$templateDirectory: "http://localhost:8888/wp-content/themes/hideout/";
 // Colors
 
 $black-dark:		#171717;
@@ -630,10 +634,23 @@ Blog Page
 
 .blog-page {
 
+	.background-container {
+			// background-image: url($templateDirectory + "images/backgrounds/man-in-coffeeshop-looking-out.jpg");
+		background-image: url("http://localhost:8888/wp-content/themes/hideout/images/backgrounds/man-in-coffeeshop-looking-out.jpg");
+
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+		  -o-background-size: cover;
+		  background-size: cover;
+			background-position: top;
+			background-attachment: fixed;
+	}
+
 	.page-header {
 
 		border-bottom: none;
 		border-top: none;
+
 
 		 h1, h2, h3, h4, h5, h6 {
 			color: $white;
@@ -642,7 +659,7 @@ Blog Page
 	.page-header-top {
 
 		background-color: $gold-3;
-		margin-top: 15em;
+		//margin-top: 15em;
 		margin-bottom: 0;
 		
 		.page-inner {

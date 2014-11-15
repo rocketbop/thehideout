@@ -312,6 +312,14 @@ Events Page
 /*--------------------------------------------------------------
 Blog Page
 --------------------------------------------------------------*/
+.blog-page .background-container {
+  background-image: url("http://localhost:8888/wp-content/themes/hideout/images/backgrounds/man-in-coffeeshop-looking-out.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: top;
+  background-attachment: fixed; }
 .blog-page .page-header {
   border-bottom: none;
   border-top: none; }
@@ -319,7 +327,6 @@ Blog Page
     color: white; }
 .blog-page .page-header-top {
   background-color: #a64b00;
-  margin-top: 15em;
   margin-bottom: 0; }
   .blog-page .page-header-top .page-inner {
     background-color: #b55200; }
