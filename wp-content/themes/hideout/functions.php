@@ -153,12 +153,15 @@ function hideout_scripts() {
 
 	wp_enqueue_style( 'hideout-custom-style', get_template_directory_uri() . '/css/hideout.css' );
 
-	
-	wp_register_script('front-page-scripts', get_template_directory_uri() . '/js/front-page-scripts.js');
+	// Load the global scripts first, as some of them are called from later scripts.
 
 	wp_register_script('global-scripts', get_template_directory_uri() . '/js/global-scripts.js');
    
 	wp_enqueue_script('global-scripts');
+	
+	wp_register_script('front-page-scripts', get_template_directory_uri() . '/js/front-page-scripts.js');
+
+
 
 	// Enqueue Home Page Scripts
 	if (is_page_template( 'my-templates/home-page.php' )) {

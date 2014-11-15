@@ -334,13 +334,13 @@ Sidebar
 --------------------------------------------------------------*/
 .sidebar.sidebar-events .item {
   margin-bottom: .5em; }
-.sidebar.sidebar-events > h4 {
+.sidebar.sidebar-events > h2 {
   margin-top: 5em;
   margin-bottom: 3em; }
 
 .sidebar.sidebar-blog .item {
   margin-bottom: .5em; }
-.sidebar.sidebar-blog > h4 {
+.sidebar.sidebar-blog > h2 {
   margin-top: 5em;
   margin-bottom: 3em; }
 

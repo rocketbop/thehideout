@@ -12,12 +12,13 @@
 
 <!-- EVENTS -->
 <div class="sidebar sidebar-events" ng-controller="eventCtrl">
-  <h4>Upcoming Events</h4>
+  <h2>Upcoming Events</h2>
 
   <div ng-repeat="event in data.events | orderBy: '-date_of_event' | limitTo: 5">
     <div class="row item">
       <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-        <img src="{{event.event_image.url}}">
+        <!-- <img src="{{event.event_image.url}}"> -->
+        <img src="{{event.featured_image.attachment_meta.sizes.sidebarimg.url}}">
       </div>
       <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
         <a href="{{event.link}}"><h4>{{event.event_name}}</h4></a>
@@ -30,14 +31,14 @@
 
 <!-- NEWS -->
 <div class="sidebar sidebar-blog" ng-controller="blogCtrl">
-  <h4>News</h4>
+  <h2>News</h2>
 
   <div ng-repeat="blogPost in data.blogPosts | orderBy: 'date' | limitTo: 5">
     <div class="row item">
       <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
         <!-- If there is an image use its thumbnail, else use the default -->
-        <img ng-if="blogPost.featured_image.source" src="{{blogPost.featured_image.attachment_meta.sizes.sidebarimg.url}}">
-        <img ng-if="!blogPost.featured_image.source" src="{{newsImageDefault210X140}}">
+        <a href="{{blogPost.link}}"><img ng-if="blogPost.featured_image.source" src="{{blogPost.featured_image.attachment_meta.sizes.sidebarimg.url}}"></a>
+       <a href="{{blogPost.link}}"><img ng-if="!blogPost.featured_image.source" src="{{newsImageDefault210X140}}"></a>
       </div>
 
 

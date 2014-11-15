@@ -9,3 +9,24 @@ jQuery( document ).ready(function( $ ) {
     }
   });
 });
+
+function setTopBackgroundHeight (screenProportion, backgroundDiv) {
+
+  var heightModifier,
+      windowHeight;
+
+  // check how much of the screen should take up
+  switch (screenProportion) {
+    case "full":
+    heightModifier = 1;
+    break;
+    case "half":
+    heightModifier = 0.5;
+    break
+    default:
+    heightModifier = 1;
+  }
+
+ windowHeight = jQuery(window).get(0).innerHeight * heightModifier;
+  jQuery(backgroundDiv).css('height', windowHeight);    
+};
