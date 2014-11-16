@@ -24,9 +24,9 @@ angular.module("theHideoutApp")
 
     // Set up the BlogPage view
     $scope.viewBlogPage = function () {
-        
+
         $scope.setTopBackgroundHeight("half", ".background-container");
-        jquery(window).resize($scope.setTopBackgroundHeight("full", ".front-page-top-background"));
+        jQuery(window).resize($scope.setTopBackgroundHeight("half", ".background-container"));
     };
 
     $scope.logMe = function (message) {

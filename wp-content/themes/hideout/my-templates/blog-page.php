@@ -12,7 +12,7 @@ get_header(); ?>
 
 
   <!-- page header top -->
-    <div class="container-fluid">
+    <div class="container-fluid" data-my-div-height>
       <div class="row">
         <div class="background-container col-xs-12 col-sm-12 col-md-12 col-lg-12">
         </div>
