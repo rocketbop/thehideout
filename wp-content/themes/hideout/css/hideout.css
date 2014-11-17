@@ -292,6 +292,14 @@ Front Page Food Module
 /*--------------------------------------------------------------
 Events Page
 --------------------------------------------------------------*/
+.events-page .background-container {
+  background-image: url("http://localhost:8888/wp-content/themes/hideout/images/backgrounds/tools.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: bottom;
+  background-attachment: fixed; }
 .events-page .page-header {
   border-bottom: none;
   border-top: none; }
@@ -299,7 +307,6 @@ Events Page
     color: white; }
 .events-page .page-header-top {
   background-color: #a61d00;
-  margin-top: 15em;
   margin-bottom: 0; }
   .events-page .page-header-top .page-inner {
     background-color: #b52000; }
