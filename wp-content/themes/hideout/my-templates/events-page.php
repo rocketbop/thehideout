@@ -76,7 +76,8 @@ get_header(); ?>
 
                   
                   <img src="{{event.event_image.url}}">
-                  <h4>{{event.date_of_event | date: 'h:mma, EEEE, d MMMM yyyy'}}, {{event.category}}.</h4>
+
+                  <div class="board board-block"><h4>{{event.date_of_event | date: 'h:mma, EEEE, d MMMM yyyy'}}, {{event.category}}.</h4></div>
                   <!-- <p>{{event.content}}</p> -->
                   <!-- Save to use below for content entered through WP backend -->
                   <div ng-bind-html="event.event_description"></div>

@@ -619,9 +619,18 @@ Events Page
 		.board {
 			height: 100%;
 
-			h3 {
+			h3, h4 {
 				padding: 1em;
 			}
+
+			h4 {
+				margin-top: 0;
+			}
+		}
+
+		.board-block {
+			background-color: $black-dark;
+			color: $white;
 		}
 
 
@@ -681,7 +690,7 @@ Events Page
 	}
 
 	.column-main {
-		
+
 		img {
 			width: 100%
 		}
