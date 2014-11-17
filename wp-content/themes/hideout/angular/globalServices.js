@@ -25,6 +25,7 @@ angular.module("theHideoutApp")
         }
 
         windowHeight = jQuery(window).get(0).innerHeight * heightModifier;
+        console.log(windowHeight);
         jQuery(targetDiv).css('height', windowHeight);    
       }
     };
