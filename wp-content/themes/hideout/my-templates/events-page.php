@@ -103,3 +103,5 @@ get_header(); ?>
   </div> <!-- container fluid -->
 
 </div> <!-- ng controller -->
+
+<?php get_footer(); ?>

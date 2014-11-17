@@ -681,9 +681,15 @@ Events Page
 	}
 
 	.column-main {
+		
 		img {
 			width: 100%
 		}
+
+		.btn-primary {
+				background-color: $red-3;
+				border-color: darken($red-3, 3%);
+			}
 	}
 
 }

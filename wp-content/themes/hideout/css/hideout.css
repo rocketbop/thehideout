@@ -342,6 +342,9 @@ Events Page
     background-color: #ff6e4f; }
 .events-page .column-main img {
   width: 100%; }
+.events-page .column-main .btn-primary {
+  background-color: #a61d00;
+  border-color: #971a00; }
 
 /*--------------------------------------------------------------
 Blog Page
