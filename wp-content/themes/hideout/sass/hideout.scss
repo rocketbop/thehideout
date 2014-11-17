@@ -86,6 +86,20 @@ h1 {
 		margin-bottom: 1em;
 	}
 
+.no-padding-left {
+	padding-left: 0 !important;
+}
+
+.no-padding-right {
+	padding-right: 0 !important;
+}
+.no-padding-top {
+	padding-top: 0 !important;
+}
+
+.no-padding-bottom {
+	padding-bottom: 0 !important;
+}
 /*--------------------------------------------------------------
 2.0 Design
 --------------------------------------------------------------*/
@@ -99,7 +113,6 @@ body {
 #primary {
 	background: $white;
 }
-
 
 
 /**** LAYOUT STYLES *****************/
@@ -594,6 +607,36 @@ Events Page
 
 .events-page {
 
+		.column-filter {
+
+
+
+			.btn-primary {
+				background-color: $red-3;
+				border-color: darken($red-3, 3%);
+			}
+		}
+		.board {
+			height: 100%;
+
+			h3 {
+				padding: 1em;
+			}
+		}
+
+
+
+		.right-board {
+			background-color: $black-dark;
+			color: $white;
+		}
+
+		.left-board {
+			background-color: darken($red-3, 0%);
+			color: $white;
+		}
+
+
 	.background-container {
 			background-image: url($templateDirectory + "images/backgrounds/tools.jpg");
 
@@ -634,6 +677,12 @@ Events Page
 
 			.page-inner {
 				background-color: lighten($red-4, 3%);
+		}
+	}
+
+	.column-main {
+		img {
+			width: 100%
 		}
 	}
 

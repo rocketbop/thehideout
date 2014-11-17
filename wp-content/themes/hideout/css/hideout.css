@@ -15,6 +15,18 @@ li {
 h1 {
   margin-bottom: 1em; }
 
+.no-padding-left {
+  padding-left: 0 !important; }
+
+.no-padding-right {
+  padding-right: 0 !important; }
+
+.no-padding-top {
+  padding-top: 0 !important; }
+
+.no-padding-bottom {
+  padding-bottom: 0 !important; }
+
 /*--------------------------------------------------------------
 2.0 Design
 --------------------------------------------------------------*/
@@ -292,6 +304,19 @@ Front Page Food Module
 /*--------------------------------------------------------------
 Events Page
 --------------------------------------------------------------*/
+.events-page .column-filter .btn-primary {
+  background-color: #a61d00;
+  border-color: #971a00; }
+.events-page .board {
+  height: 100%; }
+  .events-page .board h3 {
+    padding: 1em; }
+.events-page .right-board {
+  background-color: #171717;
+  color: white; }
+.events-page .left-board {
+  background-color: #a61d00;
+  color: white; }
 .events-page .background-container {
   background-image: url("http://localhost:8888/wp-content/themes/hideout/images/backgrounds/tools.jpg");
   -webkit-background-size: cover;
@@ -315,6 +340,8 @@ Events Page
   margin-top: 0; }
   .events-page .page-header-bottom .page-inner {
     background-color: #ff6e4f; }
+.events-page .column-main img {
+  width: 100%; }
 
 /*--------------------------------------------------------------
 Blog Page

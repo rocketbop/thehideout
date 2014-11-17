@@ -2737,7 +2737,7 @@ select[multiple].input-lg {
           user-select: none;
   background-image: none;
   border: 1px solid transparent;
-  border-radius: 4px;
+/*  border-radius: 4px;*/
 }
 .btn:focus,
 .btn:active:focus,
@@ -3050,9 +3050,9 @@ fieldset[disabled] .btn-link:focus {
 .btn-lg,
 .btn-group-lg > .btn {
   padding: 10px 16px;
-  font-size: 18px;
-  line-height: 1.33;
-  border-radius: 6px;
+  /*font-size: 18px;*/
+  /*line-height: 1.33;*/
+  /*border-radius: 6px;*/
 }
 .btn-sm,
 .btn-group-sm > .btn {
