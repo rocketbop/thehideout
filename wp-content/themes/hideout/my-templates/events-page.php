@@ -8,7 +8,7 @@ get_header(); ?>
 <div id="primary" class="content-area events-page" ng-controller="eventCtrl">
   <div class="container-fluid">
     <div class="row">
-        <div class="background-container col-xs-12 col-sm-12 col-md-12 col-lg-12" data-my-div-height="half">
+        <div class="background-container col-xs-12 col-sm-12 col-md-12 col-lg-12" data-my-div-height="full" minus-header="true">
         </div>
       </div>
     <div class="row page-header page-header-top">
@@ -16,7 +16,7 @@ get_header(); ?>
           <div class="row">
             <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7 col-md-offset-2">
               <h1>Upcoming Events</h1>
-              <h3>Get the details on all upcoming music, poetry, and gettogethers at The Hideout.</h3>
+              <!-- <h3>Get the details on all upcoming music, poetry, and gettogethers at The Hideout.</h3> -->
             </div>
           </div>
       </div>  <!-- page header -->
@@ -29,7 +29,7 @@ get_header(); ?>
                   <div class="row">
           <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7 col-md-offset-2">
 
-          <p>Chia selfies artisan Austin. Craft beer YOLO flannel, chillwave lomo gluten-free bespoke ugh fashion axe. Banksy mumblecore meggings gluten-free Shoreditch semiotics. Meggings plaid Tonx readymade actually direct trade. Pitchfork High Life umami DIY, quinoa freegan ugh Bushwick sustainable Thundercats irony kogi locavore church-key. Distillery bitters Thundercats meggings paleo semiotics pop-up. Pug crucifix YOLO letterpress, trust fund Blue Bottle Banksy Vice disrupt plaid semiotics before they sold out pop-up skateboard mustache.</p>
+          <h4>Get the details on all upcoming music, poetry, and gettogethers at The Hideout.</h4>
 
           </div>
           </div>
@@ -37,7 +37,7 @@ get_header(); ?>
     </div> <!-- row -->
   </div> <!-- fluid container -->
 
-  <div class="container-fluid">
+  <div id ="entries" class="container-fluid">
     <div class="row page-body ">
 
       <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 col-md-offset-1">
@@ -56,7 +56,7 @@ get_header(); ?>
           <div class="column-main">
             <div class="col-md-7">
               
-                <h3>{{selectedCategory}} Events</h3>
+                <!-- <h3>{{selectedCategory}} Events</h3> -->
                 <div ng-repeat="event in data.events | orderBy: '-date_of_event' | filter:categoryFilterFn | range:selectedPage:pageSize">
                   <div class="row ">
                     <div class="col-sm-6 col-md-6 col-lg-6 no-padding-right">

@@ -304,9 +304,11 @@ Front Page Food Module
 /*--------------------------------------------------------------
 Events Page
 --------------------------------------------------------------*/
-.events-page .column-filter .btn-primary {
-  background-color: #a61d00;
-  border-color: #971a00; }
+.events-page .column-filter {
+  margin-top: 5em; }
+  .events-page .column-filter .btn-primary {
+    background-color: #a61d00;
+    border-color: #971a00; }
 .events-page .board {
   height: 100%; }
   .events-page .board h3, .events-page .board h4 {
@@ -354,6 +356,8 @@ Events Page
 /*--------------------------------------------------------------
 Blog Page
 --------------------------------------------------------------*/
+.blog-page a {
+  color: black; }
 .blog-page .background-container {
   background-image: url("http://localhost:8888/wp-content/themes/hideout/images/backgrounds/man-in-coffeeshop-looking-out.jpg");
   -webkit-background-size: cover;
@@ -377,6 +381,14 @@ Blog Page
   margin-top: 0; }
   .blog-page .page-header-bottom .page-inner {
     background-color: #ff9e4f; }
+.blog-page .pagination > .active > a,
+.blog-page .pagination > .active > span,
+.blog-page .pagination > .active > a:hover,
+.blog-page .pagination > .active > span:hover,
+.blog-page .pagination > .active > a:focus,
+.blog-page .pagination > .active > span:focus {
+  background-color: #a64b00;
+  border-color: #974400; }
 
 /*--------------------------------------------------------------
 Sidebar
@@ -384,15 +396,46 @@ Sidebar
 .sidebar.sidebar-events .item {
   margin-bottom: .5em; }
 .sidebar.sidebar-events > h2 {
-  margin-top: 5em;
   margin-bottom: 3em; }
 
 .sidebar.sidebar-blog .item {
   margin-bottom: .5em; }
 .sidebar.sidebar-blog > h2 {
-  margin-top: 5em;
   margin-bottom: 3em; }
 
+/*--------------------------------------------------------------
+Footer
+--------------------------------------------------------------*/
+footer {
+  color: #eeeeee;
+  padding-bottom: 2em; }
+  footer p {
+    line-height: .5em; }
+  footer .background-container {
+    background-image: url("http://localhost:8888/wp-content/themes/hideout/images/backgrounds/machines-rust.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed; }
+  footer .social-icons {
+    text-align: center; }
+  footer .page-footer-top {
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    bottom: 0px;
+    width: 100%; }
+    footer .page-footer-top .page-inner {
+      background-color: rgba(8, 8, 8, 0.6); }
+  footer .page-footer-bottom {
+    background-color: #111111; }
+    footer .page-footer-bottom .page-inner {
+      background-color: #191919; }
+
+/*--------------------------------------------------------------
+Responsive styles, General
+--------------------------------------------------------------*/
 footer.site-footer {
   background-color: #171717;
   min-height: 8em; }

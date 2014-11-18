@@ -4,8 +4,18 @@ angular.module("theHideoutApp")
     function setDivHeight(element, attrs) {
       
       var screenProportion = attrs["myDivHeight"];
-      var windowHeight;
+      var windowHeight,
+          headerSize;
       
+      if (attrs["minusHeader"]) {
+        headerSize = jQuery(".page-header-top").height();
+        headerSize += jQuery(".page-header-bottom").height();
+      } else {
+        headerSize = false;
+      }
+
+
+
       switch (screenProportion) {
         case "fullScreen":
         heightModifier = 1;
@@ -18,13 +28,18 @@ angular.module("theHideoutApp")
       }
 
       windowHeight = $window.innerHeight * heightModifier;
+      console.log("wh before" + windowHeight);
+      if (headerSize != false) {
+        windowHeight = windowHeight - headerSize;
+      }
       element.css('height', windowHeight + "px");
 
     }
 
     return {
       link: function (scope, element, attrs) {
-        setDivHeight(element, attrs);
+        
+        jQuery(window).load(setDivHeight(element, attrs));
    
         angular.element($window).on('resize', function () {
           setDivHeight(element, attrs);

@@ -15,7 +15,7 @@ angular.module("theHideoutApp")
     });
 
     $scope.scrollTo = function (newPageNumber) {
-      jQuery('html,body').animate({scrollTop: jQuery("#content-top").offset().top},'slow');
+      jQuery('html,body').animate({scrollTop: jQuery("#content-top").offset().top-100},'slow');
     }
 
 

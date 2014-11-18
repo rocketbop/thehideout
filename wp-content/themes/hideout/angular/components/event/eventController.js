@@ -5,7 +5,7 @@ angular.module("theHideoutApp")
 
     // GET THE DATA
     apiService.getAllEvents().success(function(data) {
-      $scope.data = {};
+      $scope.data = {}; // create the data object
       $scope.data.events = data;
 
       //Convert the timestamp to millseconds
@@ -36,8 +36,11 @@ angular.module("theHideoutApp")
 
     }; 
 
+
+
     $scope.selectPage = function (newPage) {
       $scope.selectedPage = newPage;
+      $scope.scrollTo("entries");
     }
 
     $scope.categoryFilterFn = function (event) {
@@ -53,6 +56,10 @@ angular.module("theHideoutApp")
 
     $scope.getPageClass = function (page) {
       return $scope.selectedPage == page ? eventListActiveClass : "";
+    }
+
+    $scope.scrollTo = function (id) {
+      jQuery('html,body').animate({scrollTop: jQuery("#" + id).offset().top},'slow');
     }
 
 
