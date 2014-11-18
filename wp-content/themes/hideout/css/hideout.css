@@ -47,29 +47,29 @@ body {
 
 /**** LAYOUT STYLES *****************/
 header nav h2 {
-  font-size: 2.2em;
+  font-size: 1.5em;
   text-transform: uppercase; }
 header .navbar-container {
   background-color: rgba(5, 5, 5, 0.9);
   height: 5em;
-  transition: all 0.8s ease; }
+  transition: all 0.7s ease-in; }
   header .navbar-container ul li {
-    font-size: 1.5em;
+    font-size: 1.2em;
     margin-top: .5em;
     margin-left: 0.2em;
     margin-right: 0.2em;
-    transition: all 0.8s ease; }
+    transition: all 0.2s ease-in; }
     header .navbar-container ul li a {
       color: white;
       border-radius: 5px;
-      transition: all 0.8s ease; }
+      transition: all 0.7s ease-in; }
     header .navbar-container ul li a:hover,
     header .navbar-container ul li a:focus {
       text-decoration: none;
       background-color: rgba(255, 255, 255, 0.9);
       color: #1a1a1a;
       border-radius: 5px;
-      transition: all 0.1s ease; }
+      transition: all 0.1s ease-in; }
   header .navbar-container ul li.current-menu-item {
     /* Place an underline under active menu */ }
     header .navbar-container ul li.current-menu-item a:after {
@@ -80,35 +80,34 @@ header .navbar-container {
       left: 15%;
       height: 2px;
       width: 70%;
-      transition: all 0.8s ease; }
+      transition: all 0.7s ease-in; }
   header .navbar-container h2 {
     font-family: "Oswald";
     font-style: 1.9em;
     color: white;
-    margin-top: 0;
-    transition: all 0.8s ease; }
+    margin-top: .5em;
+    transition: all 0.7s ease-in; }
 header .navbar-container.opaque-thin {
   background-color: #fafafa;
   height: 3.5em;
   border-bottom: 1px solid black;
-  transition: all 0.8s ease; }
+  transition: all 0.7s ease-in; }
   header .navbar-container.opaque-thin ul li {
-    font-size: 1.2em;
     margin-top: 0.1em;
     color: black;
-    transition: all 0.8s ease; }
+    transition: all 0.7s ease-in; }
     header .navbar-container.opaque-thin ul li a {
       color: #1a1a1a;
       height: 2.5em;
       padding-top: 0.7em;
-      transition: all 0.8s ease; }
+      transition: all 0.7s ease-in; }
     header .navbar-container.opaque-thin ul li a:hover,
     header .navbar-container.opaque-thin ul li a:focus {
       text-decoration: none;
       background-color: rgba(0, 0, 0, 0.9);
       color: white;
       border-radius: 5px;
-      transition: all 0.1s ease; }
+      transition: all 0.1s ease-in; }
   header .navbar-container.opaque-thin ul li.current-menu-item {
     /* Place an underline under active menu */ }
     header .navbar-container.opaque-thin ul li.current-menu-item a:after {
@@ -119,11 +118,11 @@ header .navbar-container.opaque-thin {
       left: 15%;
       height: 2px;
       width: 70%;
-      transition: all 0.8s ease; }
+      transition: all 0.7s ease-in; }
   header .navbar-container.opaque-thin h2 {
-    font-size: 1.3em;
     color: #1a1a1a;
-    transition: all 0.8s ease; }
+    transition: all 0.7s ease-in;
+    margin-top: 0em; }
 header .navbar {
   margin-bottom: 0;
   background-color: rgba(1, 1, 1, 0);
@@ -272,9 +271,9 @@ Front Page Music Module
     z-index: 5; }
   .music-module .music-module-upcoming-event-maxi:hover::after {
     opacity: 0.7;
-    -webkit-transition: opacity 1.0s ease-in-out;
-    -moz-transition: opacity 1.0s ease-in-out;
-    transition: opacity 1.0s ease-in-out; }
+    -webkit-transition: opacity 1.0s ease-in-in-out;
+    -moz-transition: opacity 1.0s ease-in-in-out;
+    transition: opacity 1.0s ease-in-in-out; }
   .music-module .music-module-upcoming-banner {
     background-color: #434343;
     height: 8em; }
