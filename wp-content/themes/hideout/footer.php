@@ -16,7 +16,7 @@
 		<div class="container-fluid">
 
 		  <div class="row">
-        <div class="background-container col-xs-12 col-sm-12 col-md-12 col-lg-12" data-my-div-height="half">
+        <div class="background-container col-xs-12 col-sm-12 col-md-12 col-lg-12" data-my-div-height="full">
 
         	      <div  class="row page-footer page-footer-top">
         <div class="page-inner col-xs-10 col-sm-10 col-md-10 col-lg-10 col-md-offset-1">
@@ -46,7 +46,7 @@
         </div>  
       </div> <!-- row -->
 
-        
+
         </div>
       </div>
 
@@ -58,19 +58,13 @@
         <div class="page-inner col-xs-10 col-sm-10 col-md-10 col-lg-10 col-md-offset-1">
         <div class="row">
           <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7 col-md-offset-2">
-          <div class="row">
-          	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+          
+          	<div class="address">
           		<h3>The Hideout Bar</h3>
 	            <p>Main Street, Kilcullen, Co Kildare, Ireland</p>
 	            <p>045 xxxxxxx, email@thehideout.com</p>
-
           	</div>
-
-          	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-          		
-	            
-          	</div>
-          </div>
+    
             
 
           </div>

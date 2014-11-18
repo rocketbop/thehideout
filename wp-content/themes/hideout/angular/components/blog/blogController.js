@@ -18,6 +18,8 @@ angular.module("theHideoutApp")
       jQuery('html,body').animate({scrollTop: jQuery("#content-top").offset().top-100},'slow');
     }
 
+    $scope.templateDirectory = templateDirectory;
+
 
     // $scope.newsImageDefault = templateDirectory + 'images/design/news-default-image.png';
     $scope.newsImageDefault210X140 = templateDirectory + 'images/design/hideout-2005-210x140.jpg';
