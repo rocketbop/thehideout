@@ -9,6 +9,25 @@ get_header(); ?>
   <div class="container-fluid">
     <div class="row">
         <div class="background-container col-xs-12 col-sm-12 col-md-12 col-lg-12" data-my-div-height="full" minus-header="true">
+
+        <div class="row">
+          <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 col-md-offset-1">
+            <div class="row">
+              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                Images Go here
+              </div>
+              <div class=" blurb panel col-xs-6 col-sm-6 col-md-6 col-lg-6" data-my-vertical-center ext-function="getBannerHeight()">
+                <h2>We Love Live Music</h2>
+                <p>Some blurb about why there is music at the Hideout</p>
+                <p>Some more information about why you should come to the Hideout to see the live bands.</p>
+                <p>Some more information about why you should come to the Hideout to see the live bands.</p>
+                <p>Some more information about why you should come to the Hideout to see the live bands.</p>
+                <p>Some more information about why you should come to the Hideout to see the live bands.</p>
+                <p>Some more information about why you should come to the Hideout to see the live bands.</p>
+              </div>
+            </div>
+          </div>
+        </div>
         </div>
       </div>
     <div class="row page-header page-header-top">

@@ -4,17 +4,17 @@ angular.module("theHideoutApp")
     function setDivHeight(element, attrs) {
       
       var screenProportion = attrs["myDivHeight"];
+      
       var windowHeight,
           headerSize;
       
       if (attrs["minusHeader"]) {
         headerSize = jQuery(".page-header-top").height();
         headerSize += jQuery(".page-header-bottom").height();
+
       } else {
         headerSize = false;
       }
-
-
 
       switch (screenProportion) {
         case "fullScreen":
@@ -37,6 +37,8 @@ angular.module("theHideoutApp")
     }
 
     return {
+
+  
       link: function (scope, element, attrs) {
         
         jQuery(window).load(setDivHeight(element, attrs));
@@ -48,6 +50,28 @@ angular.module("theHideoutApp")
       }
     }
 
+  })
+  .directive("myVerticalCenter", function () {
+    function doSomething(bannerHeight, element) {
+      // do something
+      var margin = bannerHeight / 2;
+      element.css('margin-top', margin + "px")
+      element.css('margin-bottom', margin + "px")
+    }
+
+    return {
+
+      scope: {
+        fctn: '&extFunction'
+      },
+      link: function (scope, element, attrs) {
+        var bannerHeight = scope.fctn();
+        doSomething(bannerHeight, element);
+      }
+    }
+
   });
+
+
 
 
