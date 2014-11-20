@@ -638,8 +638,8 @@ Events Page
 
 .events-page {
 
-			.blurb {
-		background-color: white;
+	.blurb {
+		background-color: rgba($white-1, .6);
 	}
 		.column-filter {
 
@@ -824,6 +824,64 @@ Blog Page
 			p:first-child {
 				margin-top: 0.5em;
 			}
+		}
+	}
+
+
+}
+
+
+
+/*--------------------------------------------------------------
+Restuarant Page
+--------------------------------------------------------------*/
+
+.restaurant-page {
+
+	.background-container {
+			background-image: url($templateDirectory + "images/backgrounds/food-on-table.jpg");
+
+
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+		  -o-background-size: cover;
+		  background-size: cover;
+			background-position: top;
+			background-attachment: fixed;
+	}
+
+	.blurb {
+		background-color: rgba($white-1, .6);
+	}
+
+	.page-header {
+
+		border-bottom: none;
+		border-top: none;
+
+
+		 h1, h2, h3, h4, h5, h6 {
+			color: $white;
+		}
+	}
+	.page-header-top {
+
+		background-color: $yellow-3;
+		// margin-top: 15em;
+		margin-bottom: 0;
+
+		
+		.page-inner {
+			background-color: lighten($yellow-3, 3%);
+		}
+	}
+
+	.page-header-bottom {
+		background-color: $yellow-4;
+		margin-top: 0;
+
+		.page-inner {
+			background-color: lighten($yellow-4, 3%);
 		}
 	}
 

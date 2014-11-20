@@ -3,6 +3,8 @@ angular.module("theHideoutApp")
   
   $scope.templateDirectory = templateDirectory;
 
+  // $window.location.reload();
+
   $scope.getScreenHeight = function () {
     var screenHeight = 0;
     screenHeight = $window.innerHeight;
@@ -57,8 +59,8 @@ angular.module("theHideoutApp")
     var panelHeight = 0;
     var panel = jQuery('div#blurb');
 
-    panelHeight = jQuery(panel).height();
-    // panelHeight = document.getElementById('blurb').clientHeight;
+    // panelHeight = jQuery(panel).height();
+    panelHeight = document.getElementById('blurb').clientHeight;
       console.log("PanelHeight:"+panelHeight);
     return panelHeight;
 

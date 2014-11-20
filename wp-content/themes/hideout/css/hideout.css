@@ -312,7 +312,7 @@ Front Page Food Module
 Events Page
 --------------------------------------------------------------*/
 .events-page .blurb {
-  background-color: white; }
+  background-color: rgba(255, 255, 255, 0.6); }
 .events-page .column-filter {
   margin-top: 5em; }
   .events-page .column-filter .btn-primary {
@@ -404,6 +404,35 @@ Blog Page
   margin-top: 2em; }
   .blog-page .blog-section .blog-item p:first-child {
     margin-top: 0.5em; }
+
+/*--------------------------------------------------------------
+Restuarant Page
+--------------------------------------------------------------*/
+.restaurant-page .background-container {
+  background-image: url("http://localhost:8888/wp-content/themes/hideout/images/backgrounds/food-on-table.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: top;
+  background-attachment: fixed; }
+.restaurant-page .blurb {
+  background-color: rgba(255, 255, 255, 0.6); }
+.restaurant-page .page-header {
+  border-bottom: none;
+  border-top: none; }
+  .restaurant-page .page-header h1, .restaurant-page .page-header h2, .restaurant-page .page-header h3, .restaurant-page .page-header h4, .restaurant-page .page-header h5, .restaurant-page .page-header h6 {
+    color: white; }
+.restaurant-page .page-header-top {
+  background-color: #a66600;
+  margin-bottom: 0; }
+  .restaurant-page .page-header-top .page-inner {
+    background-color: #b56f00; }
+.restaurant-page .page-header-bottom {
+  background-color: #ffb640;
+  margin-top: 0; }
+  .restaurant-page .page-header-bottom .page-inner {
+    background-color: #ffbc4f; }
 
 /*--------------------------------------------------------------
 Sidebar
