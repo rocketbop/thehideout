@@ -638,6 +638,9 @@ Events Page
 
 .events-page {
 
+			.blurb {
+		background-color: white;
+	}
 		.column-filter {
 
 			margin-top: 5em;
@@ -746,9 +749,13 @@ Blog Page
 
 .blog-page {
 
+
+
 	a {
 		color: $black-1;
 	}
+
+
 
 	.background-container {
 			background-image: url($templateDirectory + "images/backgrounds/man-in-coffeeshop-looking-out.jpg");

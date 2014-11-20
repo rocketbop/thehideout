@@ -4,9 +4,10 @@ angular.module("theHideoutApp")
   $scope.templateDirectory = templateDirectory;
 
   $scope.getScreenHeight = function () {
-
-    return $window.innerHeight;
-
+    var screenHeight = 0;
+    screenHeight = $window.innerHeight;
+    console.log("Screenheight:"+screenHeight);
+    return screenHeight;
   }
 
   $scope.getPageHeaderHeight = function () {
@@ -17,7 +18,7 @@ angular.module("theHideoutApp")
     jQuery(pageHeaders).each(function () {
       pageHeaderHeight += jQuery(this).height();
     })
-
+    console.log("PageHeaderHeight:"+ pageHeaderHeight);
     return pageHeaderHeight;
 
   }
@@ -25,9 +26,10 @@ angular.module("theHideoutApp")
   $scope.getNavHeight = function () {
 
     var navHeight = 0;
-    var nav = jQuery('nav');
+    var nav = jQuery('div.navbar-container');
 
     navHeight = jQuery(nav).height();
+    console.log("NavHeight:"+navHeight);
 
     return navHeight;  
 
@@ -45,8 +47,40 @@ angular.module("theHideoutApp")
     console.log(navHeight);
 
     bannerHeight = screenHeight - (navHeight + pageHeaderHeight);
-
+    console.log("BannerHeight:"+bannerHeight);
     return bannerHeight;
+
+  }
+
+  $scope.getPanelHeight = function () {
+
+    var panelHeight = 0;
+    var panel = jQuery('div#blurb');
+
+    panelHeight = jQuery(panel).height();
+    // panelHeight = document.getElementById('blurb').clientHeight;
+      console.log("PanelHeight:"+panelHeight);
+    return panelHeight;
+
+
+  }
+
+  $scope.getPanelMargin = function () {
+    // get the margin-top to be applied to keep divs vertically centered in the banner
+    var bannerHeight = 0;
+    var panelHeight = 0;
+    var panelMargin = 0;
+    var navHeight = 0;
+    var nonPanelBannerHeight = 0;
+
+    bannerHeight = $scope.getBannerHeight();
+    panelHeight = $scope.getPanelHeight();
+    navHeight = $scope.getNavHeight();
+
+    nonPanelBannerHeight = bannerHeight - panelHeight;
+    panelMargin = (nonPanelBannerHeight / 2) + navHeight;
+    console.log("PanelMargin:"+panelMargin);
+    return panelMargin;
 
   }
 

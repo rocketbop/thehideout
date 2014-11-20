@@ -311,6 +311,8 @@ Front Page Food Module
 /*--------------------------------------------------------------
 Events Page
 --------------------------------------------------------------*/
+.events-page .blurb {
+  background-color: white; }
 .events-page .column-filter {
   margin-top: 5em; }
   .events-page .column-filter .btn-primary {

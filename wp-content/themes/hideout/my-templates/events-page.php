@@ -16,7 +16,7 @@ get_header(); ?>
               <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                 Images Go here
               </div>
-              <div class=" blurb panel col-xs-6 col-sm-6 col-md-6 col-lg-6" data-my-vertical-center ext-function="getBannerHeight()">
+              <div id="blurb" class="blurb col-xs-6 col-sm-6 col-md-6 col-lg-6" data-my-vertical-center ext-function="getPanelMargin()">
                 <h2>We Love Live Music</h2>
                 <p>Some blurb about why there is music at the Hideout</p>
                 <p>Some more information about why you should come to the Hideout to see the live bands.</p>
@@ -24,6 +24,7 @@ get_header(); ?>
                 <p>Some more information about why you should come to the Hideout to see the live bands.</p>
                 <p>Some more information about why you should come to the Hideout to see the live bands.</p>
                 <p>Some more information about why you should come to the Hideout to see the live bands.</p>
+            
               </div>
             </div>
           </div>

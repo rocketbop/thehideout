@@ -52,21 +52,27 @@ angular.module("theHideoutApp")
 
   })
   .directive("myVerticalCenter", function () {
-    function doSomething(bannerHeight, element) {
-      // do something
-      var margin = bannerHeight / 2;
-      element.css('margin-top', margin + "px")
-      element.css('margin-bottom', margin + "px")
+
+    function getPanelMargin(scope, element) {
+      var panelMargin = 0;
+      var panelMargin = scope.fctn();
+
+      doSomething(panelMargin, element);
+
+    }
+
+    function doSomething(panelMargin, element) {
+      var marginTop = panelMargin;
+      element.css('margin-top', marginTop + "px")
     }
 
     return {
-
       scope: {
         fctn: '&extFunction'
       },
       link: function (scope, element, attrs) {
-        var bannerHeight = scope.fctn();
-        doSomething(bannerHeight, element);
+        jQuery(document).ready(getPanelMargin(scope, element));
+        
       }
     }
 
