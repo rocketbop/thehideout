@@ -124,25 +124,42 @@ p:first-child {
 .no-padding-bottom {
 	padding-bottom: 0 !important;
 }
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
 /*--------------------------------------------------------------
 2.0 Design
 --------------------------------------------------------------*/
 
 body {
-	// background-color: $black-dark;
-/* 	background-image: url('../images/pw_pattern.png');
-	background-repeat: repeat; */
-}
 
-#primary {
-	background: $white-2;
-}
+	#primary {
+		background: $white-2;
+	}
 
-.separator {
+	.separator {
 	margin-top: 5em;
 	margin-bottom: 5em;
 	width: 100%
+	}
+
+	.body-inner {
+		background-color: $white-1;
+	}
+
+	.container-fluid {
+		max-width: 1600px;
+	}
+
+
 }
+
+
+
+
 
 
 /**** LAYOUT STYLES *****************/
@@ -749,7 +766,9 @@ Blog Page
 
 .blog-page {
 
-
+	.blurb {
+		background-color: rgba($white-1, .8);
+	}
 
 	a {
 		color: $black-1;
@@ -833,7 +852,7 @@ Blog Page
 
 
 /*--------------------------------------------------------------
-Restuarant Page
+Restaurant Page
 --------------------------------------------------------------*/
 
 .restaurant-page {
@@ -866,13 +885,13 @@ Restuarant Page
 	}
 	.page-header-top {
 
-		background-color: $yellow-3;
+		background-color: $yellow-2;
 		// margin-top: 15em;
 		margin-bottom: 0;
 
 		
 		.page-inner {
-			background-color: lighten($yellow-3, 3%);
+			background-color: lighten($yellow-2, 3%);
 		}
 	}
 
@@ -882,6 +901,22 @@ Restuarant Page
 
 		.page-inner {
 			background-color: lighten($yellow-4, 3%);
+		}
+	}
+
+	.page-body {
+		img {
+			margin-top: 2em;
+			margin-bottom: 2em;
+		}
+
+		h2 {
+			margin-top: 2em;
+			text-align: center;
+		}
+
+		p {
+			text-align: center;
 		}
 	}
 

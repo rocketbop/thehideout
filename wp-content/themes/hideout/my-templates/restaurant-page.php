@@ -17,8 +17,8 @@ get_header(); ?>
                 Images Go here
               </div>
               <div id="blurb" class="blurb col-xs-6 col-sm-6 col-md-6 col-lg-6" data-my-vertical-center ext-function="getPanelMargin()">
-                <h2>The Restauarant</h2>
-                <p>Some blurb about food the Hideout</p>
+                <h2>We love great food</h2>
+                <p>See what's new in the Hideout Restaurant</p>
                
                 
             
@@ -56,28 +56,25 @@ get_header(); ?>
 
   <div id ="entries" class="container-fluid">
     <div class="row page-body ">
-
-      <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 col-md-offset-1">
+      <div class=" body-outer col-xs-1 col-sm-1 col-md-1 col-lg-1">
+        
+      </div>
+      <div class=" body-inner col-xs-10 col-sm-10 col-md-10 col-lg-10">
         <div class="row">
-          <div class="sidebar-1">
-            <div class="col-md-2">
-         
-              <h4 class="text-center">Sidebar</h4>
-     
-            </div>
+          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+           
+              
+                <img ng-src="{{templateDirectory}}images/food/steak.jpg">
+            
+       
+            
 
           </div>
-
-          <div class="column-main">
-            <div class="col-md-7">
-            <h3>The Restaurant</h3>
-             </div>
-            <!-- </div>  -->
-
-            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-              <?php get_sidebar(); ?>
-            </div>
-         </div> <!-- row -->
+          <div class="col-xs-1 col-sm-8 col-md-8 col-lg-8">
+            <h2>Food at the Hideout</h2>
+            <p>Information about the food and the chef and the so on</p>
+          </div>
+        </div>
        </div> <!-- page body -->
     </div> <!-- row -->
   </div> <!-- container fluid -->

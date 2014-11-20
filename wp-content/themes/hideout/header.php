@@ -31,17 +31,14 @@
   <div class="container-fluid">
     <div class='row'>
       
-   
-      
+      <header id="masthead" class="site-header " role="banner">
 
-    <header id="masthead" class="site-header " role="banner">
-
-      <?php 
-      if (is_page_template( 'my-templates/home-page.php' )) {
-        get_template_part( 'templates/content', 'front-page-top-background' );
-      }
-      // else get the a template part for something else
-    ?>
+        <?php 
+          if (is_page_template( 'my-templates/home-page.php' )) {
+            get_template_part( 'templates/content', 'front-page-top-background' );
+          }
+          // else get the a template part for something else
+        ?>
         <div class="navbar-container navbar-fixed-top">
           <nav class="navbar navbar-default  col-xs-10 col-sm-10 col-md-10 col-lg-10 col-md-offset-1" role="navigation"> 
           <!-- Brand and toggle get grouped for better mobile display --> 
@@ -57,8 +54,6 @@
 
             </div> 
             <!-- Collect the nav links, forms, and other content for toggling --> 
-
-
 
             <div class="collapse navbar-collapse navbar-left"> 
               <?php /* Primary navigation */
@@ -91,11 +86,7 @@
                 );
               ?>
             </div>
-
-
           </nav>
-
-
         </div>
 
         <!-- Import the message div for the spash screen -->
@@ -106,10 +97,6 @@
           
         ?>
        
-
-        
-
-
       </div> <!-- .content-banner -->  
     </header><!-- #masthead -->
 

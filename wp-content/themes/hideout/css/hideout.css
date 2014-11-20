@@ -30,20 +30,24 @@ p:first-child {
 .no-padding-bottom {
   padding-bottom: 0 !important; }
 
+.vcenter {
+  display: inline-block;
+  vertical-align: middle;
+  float: none; }
+
 /*--------------------------------------------------------------
 2.0 Design
 --------------------------------------------------------------*/
-body {
-  /* 	background-image: url('../images/pw_pattern.png');
-  	background-repeat: repeat; */ }
-
-#primary {
+body #primary {
   background: #eeeeee; }
-
-.separator {
+body .separator {
   margin-top: 5em;
   margin-bottom: 5em;
   width: 100%; }
+body .body-inner {
+  background-color: white; }
+body .container-fluid {
+  max-width: 1600px; }
 
 /**** LAYOUT STYLES *****************/
 header nav h2 {
@@ -365,6 +369,8 @@ Events Page
 /*--------------------------------------------------------------
 Blog Page
 --------------------------------------------------------------*/
+.blog-page .blurb {
+  background-color: rgba(255, 255, 255, 0.8); }
 .blog-page a {
   color: black; }
 .blog-page .background-container {
@@ -406,7 +412,7 @@ Blog Page
     margin-top: 0.5em; }
 
 /*--------------------------------------------------------------
-Restuarant Page
+Restaurant Page
 --------------------------------------------------------------*/
 .restaurant-page .background-container {
   background-image: url("http://localhost:8888/wp-content/themes/hideout/images/backgrounds/food-on-table.jpg");
@@ -424,15 +430,23 @@ Restuarant Page
   .restaurant-page .page-header h1, .restaurant-page .page-header h2, .restaurant-page .page-header h3, .restaurant-page .page-header h4, .restaurant-page .page-header h5, .restaurant-page .page-header h6 {
     color: white; }
 .restaurant-page .page-header-top {
-  background-color: #a66600;
+  background-color: #bf8830;
   margin-bottom: 0; }
   .restaurant-page .page-header-top .page-inner {
-    background-color: #b56f00; }
+    background-color: #cb9133; }
 .restaurant-page .page-header-bottom {
   background-color: #ffb640;
   margin-top: 0; }
   .restaurant-page .page-header-bottom .page-inner {
     background-color: #ffbc4f; }
+.restaurant-page .page-body img {
+  margin-top: 2em;
+  margin-bottom: 2em; }
+.restaurant-page .page-body h2 {
+  margin-top: 2em;
+  text-align: center; }
+.restaurant-page .page-body p {
+  text-align: center; }
 
 /*--------------------------------------------------------------
 Sidebar

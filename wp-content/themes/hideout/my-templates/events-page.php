@@ -21,7 +21,7 @@ get_header(); ?>
                 <p>Some blurb about why there is music at the Hideout</p>
                 <p>Some more information about why you should come to the Hideout to see the live bands.</p>
                 <p>Some more information about why you should come to the Hideout to see the live bands.</p>
-                
+
             
               </div>
             </div>
@@ -57,8 +57,11 @@ get_header(); ?>
 
   <div id ="entries" class="container-fluid">
     <div class="row page-body ">
+       <div class=" body-outer col-xs-1 col-sm-1 col-md-1 col-lg-1">
+        
+      </div>
 
-      <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 col-md-offset-1">
+      <div class="body-inner col-xs-10 col-sm-10 col-md-10 col-lg-10">
         <div class="row">
           <div class="column-filter">
             <div class="col-md-2">
