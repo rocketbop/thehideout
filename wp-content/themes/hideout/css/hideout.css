@@ -138,27 +138,37 @@ header .navbar {
     left: 0;
     text-align: center;
     margin: auto; }
-header .front-page-top-background {
-  background-image: url("../images/stock-inside.jpg");
+
+/*--------------------------------------------------------------
+Front Page Header
+--------------------------------------------------------------*/
+.front-page .background-container {
+  background-image: url("http://localhost:8888/wp-content/themes/hideout/images/backgrounds/book-on-desk.jpg");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   background-position: bottom;
   background-attachment: fixed; }
-  header .front-page-top-background .front-page-top-message {
-    text-align: center; }
-    header .front-page-top-background .front-page-top-message .message {
-      background-color: rgba(40, 40, 40, 0.7);
-      border-radius: 6px;
-      padding: 3em; }
-    header .front-page-top-background .front-page-top-message h1 {
-      font-size: 5.4em;
-      margin-bottom: 0.1em;
-      color: white; }
-    header .front-page-top-background .front-page-top-message h2 {
-      font-size: 2.7em;
-      color: white; }
+  .front-page .background-container .blurb {
+    text-align: center;
+    background: rgba(238, 238, 238, 0.8);
+    color: #111111; }
+.front-page .page-header {
+  border-bottom: none;
+  border-top: none; }
+  .front-page .page-header h1, .front-page .page-header h2, .front-page .page-header h3, .front-page .page-header h4, .front-page .page-header h5, .front-page .page-header h6 {
+    color: #eeeeee; }
+.front-page .page-header-top {
+  background-color: black;
+  margin-bottom: 0; }
+  .front-page .page-header-top .page-inner {
+    background-color: #0f0f0f; }
+.front-page .page-header-bottom {
+  background-color: #111111;
+  margin-top: 0; }
+  .front-page .page-header-bottom .page-inner {
+    background-color: #202020; }
 
 /*--------------------------------------------------------------
 Front Page Introduction

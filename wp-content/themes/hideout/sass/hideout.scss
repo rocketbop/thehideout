@@ -175,12 +175,7 @@ header {
 	}
 
 	.navbar-container {
-		//background-color: rgba(250,250,250,0.3);
-		//background-color: rgba(65,115,38,0.9);
-		//background-color: $dark-grey;
 		background-color: rgba(5,5,5,.9);
-
-		
 		height: 5em;
 		transition: all 0.7s ease-in;
 
@@ -305,47 +300,72 @@ header {
 		  text-align: center;
 		  margin: auto;
 		}
-		
+	
 	}
+} 
+
+/*--------------------------------------------------------------
+Front Page Header
+--------------------------------------------------------------*/
+
+	.front-page {
+
+			.background-container {
+			background-image: url($templateDirectory + 'images/backgrounds/book-on-desk.jpg');
+			
+		  -webkit-background-size: cover;
+			-moz-background-size: cover;
+		  -o-background-size: cover;
+		  background-size: cover;
+			background-position: bottom;
+			background-attachment: fixed;
+
+				.blurb {
+					text-align: center;
+					background: rgba($white-2, 0.8);
+					color:			$black-2;
+				}
+		}
+
+		.page-header {
+
+			border-bottom: none;
+			border-top: none;
+
+			 h1, h2, h3, h4, h5, h6 {
+				color: $white-2;
+			}
 
 
+		}
 
-	.front-page-top-background {
-		background-image: url('../images/stock-inside.jpg');
+		.page-header-top {
+
+			background-color: $black-1;
+			// margin-top: 15em;
+			margin-bottom: 0;
+
+				.page-inner {
+					background-color: lighten($black-1, 6%);
+			}
+		}
+
+		.page-header-bottom {
+			background-color: $black-2;
+			margin-top: 0;
+
+			h4 {
+					// color: $black-1;
+			}
 		
-	  -webkit-background-size: cover;
-		-moz-background-size: cover;
-	  -o-background-size: cover;
-	  background-size: cover;
-		background-position: bottom;
-		background-attachment: fixed;
 
-		.front-page-top-message {
-			text-align: center;
-			//position: fixed;
-
-			.message {
-						//background-color: rgba(255,166,0,.4);
-						background-color: rgba(40,40,40,.7);
-						border-radius: 6px;
-						padding: 3em;
+			.page-inner {
+					background-color: lighten($black-2, 6%);
 			}
-
-			h1 {
-				font-size: 5.4em;
-				margin-bottom: 0.1em;
-				color: $white;
-			}
-
-			h2 {
-				font-size: 2.7em;
-				color: $white;
-			}
-
 		}
 	}
 
-} 
+
 
 /*--------------------------------------------------------------
 Front Page Introduction
