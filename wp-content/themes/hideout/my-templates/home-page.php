@@ -27,10 +27,6 @@ get_header(); ?>
         </div>
       </div>
 
-
-
-
-
 		<div class="container-fluid"> 
 			<div class="row news-module">
 				<?php get_template_part( 'templates/content', 'newsmodule' ); ?>
