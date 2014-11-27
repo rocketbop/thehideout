@@ -409,32 +409,42 @@ Front Page News
 		// max-height: 44em;
 
 		.item {
-			padding-top: 0.5em;
-			padding-bottom: 0.5em;
-			background-color: $gold-1;
 
-			img {
-				opacity: .8;
-			}
-
-			h3 {
-				text-align: justify;
-				font-size: 1.4em;
-			}
-
-			h6 {
-				text-align: right;
-			}
-
-
+			// -webkit-background-size: cover;
+			// -moz-background-size: cover;
+		 //  -o-background-size: cover;
+			height: 20em;
+		  background-size: cover;
+			background-position: top;
+			// background-attachment: fixed;
 		}
+		// .item {
+		// 	padding-top: 0.5em;
+		// 	padding-bottom: 0.5em;
+		// 	background-color: $gold-1;
 
-		.item.item-topstory {
-			h3 {
-				font-size: 1.8em;
-				text-align: justify;
-			}
-		}
+		// 	img {
+		// 		opacity: .8;
+		// 	}
+
+		// 	h3 {
+		// 		text-align: justify;
+		// 		font-size: 1.4em;
+		// 	}
+
+		// 	h6 {
+		// 		text-align: right;
+		// 	}
+
+
+		// }
+
+		// .item.item-topstory {
+		// 	h3 {
+		// 		font-size: 1.8em;
+		// 		text-align: justify;
+		// 	}
+		// }
 
 		.item.item-bottom {
 			background-color: $white;

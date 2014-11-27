@@ -57,11 +57,11 @@ angular.module("theHideoutApp")
       var panelMargin = 0;
       var panelMargin = scope.fctn();
 
-      doSomething(panelMargin, element);
+      applyCss(panelMargin, element);
 
     }
 
-    function doSomething(panelMargin, element) {
+    function applyCss(panelMargin, element) {
       var marginTop = panelMargin;
       element.css('margin-top', marginTop + "px")
     }
@@ -76,7 +76,36 @@ angular.module("theHideoutApp")
       }
     }
 
-  });
+  })
+  .directive("newsBackgroundImage", ['$filter', function ($filter) {
+
+    // get access to the controller scope. 
+
+    function applyCss(scope, element, attrs) {
+      var itemNumber = attrs["newsBackgroundImage"] - 1; // reduce by one for array logic
+      var url = scope.data.filteredBlogPosts[itemNumber].featured_image.attachment_meta.sizes.medium.url;
+      console.log(url);
+      var urlParam = 'url(' + url + ')';
+      console.log(urlParam);
+      console.log(itemNumber);
+      // console.log(scope.blogPosts[0]);
+      element.css('background-image', urlParam);
+      console.log(urlParam);
+
+    }
+
+    return {
+      link: function (scope, element, attrs) {
+        scope.dataPromise.success(function() {
+          scope.data.filteredBlogPosts = $filter('orderBy')(scope.data.blogPosts, 'date');
+          scope.data.filteredBlogPosts = $filter('limitTo')(scope.data.filteredBlogPosts, '3');
+          applyCss(scope, element, attrs);
+        })
+        
+
+      }
+    }
+  }]);
 
 
 

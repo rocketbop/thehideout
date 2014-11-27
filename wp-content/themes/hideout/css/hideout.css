@@ -194,19 +194,9 @@ Front Page News
   .news-module .news-section {
     background-color: #ff9640; }
     .news-module .news-section .item {
-      padding-top: 0.5em;
-      padding-bottom: 0.5em;
-      background-color: #ff7400; }
-      .news-module .news-section .item img {
-        opacity: .8; }
-      .news-module .news-section .item h3 {
-        text-align: justify;
-        font-size: 1.4em; }
-      .news-module .news-section .item h6 {
-        text-align: right; }
-    .news-module .news-section .item.item-topstory h3 {
-      font-size: 1.8em;
-      text-align: justify; }
+      height: 20em;
+      background-size: cover;
+      background-position: top; }
     .news-module .news-section .item.item-bottom {
       background-color: white; }
       .news-module .news-section .item.item-bottom p, .news-module .news-section .item.item-bottom li, .news-module .news-section .item.item-bottom a, .news-module .news-section .item.item-bottom h1, .news-module .news-section .item.item-bottom h2, .news-module .news-section .item.item-bottom h3, .news-module .news-section .item.item-bottom h4, .news-module .news-section .item.item-bottom h5, .news-module .news-section .item.item-bottom h6 {

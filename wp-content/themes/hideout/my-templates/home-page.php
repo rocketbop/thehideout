@@ -26,9 +26,10 @@ get_header(); ?>
 	        </div>
         </div>
       </div>
+    </div>  
 
 		<div class="container-fluid"> 
-			<div class="row news-module">
+			<div class="row news-module" ng-controller="blogCtrl">
 				<?php get_template_part( 'templates/content', 'newsmodule' ); ?>
 			</div>
 		</div>
