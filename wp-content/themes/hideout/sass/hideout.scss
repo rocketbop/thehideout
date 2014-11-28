@@ -394,30 +394,128 @@ Front Page News
 
 .news-module {
 
-	background-color: $gold-3;
-	p, li, a, h1, h2, h3, h4, h5, h6 {
-		color: $white;
+	// background-color: $gold-3;
+	// background-color: $gold-3;
+	// p, li, a, h1, h2, h3, h4, h5, h6 {
+	// 	color: $white;
 
+	// }
+
+	.module-header {
+		background-color: $gold-4;
+	}
+
+	.module-header-inner {
+		background-color: lighten($gold-4, 3%);
+	}
+
+
+	.module-body-inner {
+		background-color: $white-1;
 	}
 
 	.row {
-		background-color: $gold-4;
+		// background-color: $gold-4;
 	}
 
 	.news-section {
-		background-color: $gold-4;
-		// max-height: 44em;
+		// background-color: $gold-4;
+		
+		img {
+			opacity: .7;
+		}
 
 		.item {
 
-			// -webkit-background-size: cover;
-			// -moz-background-size: cover;
-		 //  -o-background-size: cover;
-			height: 20em;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+		  -o-background-size: cover;
 		  background-size: cover;
 			background-position: top;
-			// background-attachment: fixed;
+
+			margin-top: 1em;
+			margin-bottom: 1em;
+			position: relative; 
+
 		}
+
+		.item.item-top {
+			height: 20em;
+
+			.item-date {
+				padding-left: 1em;
+				padding-right: 1em;
+				padding-top: .5em;
+
+			}
+
+			.item-headline {
+				padding-left: 1em;
+				padding-right: 1em;
+				padding-top: .5em;
+			
+				bottom: 0;
+				right: 0;
+				width: 50%;
+
+				.content::after {
+					content: " ...";
+				}
+
+				p {
+					line-height: 1em;
+					margin-top: 1em;
+					display: inline;
+				}
+
+			}
+		}
+
+		.item.item-bottom {
+			height: 16.5em;
+
+			.item-date {
+				padding-left: 1em;
+				padding-right: 1em;
+				padding-top: .5em;
+
+			}
+
+			.item-headline {
+				padding-left: 1em;
+				padding-right: 1em;
+				padding-top: .5em;
+			
+				bottom: 0;
+				right: 0;
+				width: 50%;
+				height: 100%;
+
+
+				.content::after {
+					content: " ...";
+				}
+
+				p {
+					line-height: 1em;
+					margin-top: 1em;
+					display: inline;
+				}
+
+			}
+			
+
+		}
+
+		.item-box {
+			background-color: $white-2;
+			opacity: .7;
+			position: absolute;
+			display: inline-block;
+		}
+
+		
+
 		// .item {
 		// 	padding-top: 0.5em;
 		// 	padding-bottom: 0.5em;
@@ -449,9 +547,9 @@ Front Page News
 		.item.item-bottom {
 			background-color: $white;
 
-			p, li, a, h1, h2, h3, h4, h5, h6 {
-				color: $light-grey;
-			}
+			// p, li, a, h1, h2, h3, h4, h5, h6 {
+			// 	color: $light-grey;
+			// }
 
 		}
 
@@ -475,25 +573,19 @@ Front Page News
 
 	.twitter-section {
 
-		background-color: $off-white;
-		// max-height: 44em;
+		.twitter-widget {
+			margin-top: 1em;
+		}
 
-		h1 {
-			color: $dark-grey;
+
+	}
+
+	.image-section {
+		margin-top: 1em;
+		img {
 			text-align: center;
+			width:	100%
 		}
-
-		h2 {
-			color:		$white;
-			text-align: center;
-		}
-
-		.coming-up {
-			background-color: $dark-grey;
-			// padding-bottom: 100%;
-			// padding-top: 100%;
-		}
-
 	}
 
 }	

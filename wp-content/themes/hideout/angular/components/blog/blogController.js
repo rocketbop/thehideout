@@ -13,7 +13,7 @@ angular.module("theHideoutApp")
       $scope.data.blogPosts = blogPosts;
 
      
-     //  console.log($scope.data.blogPosts);
+      console.log($scope.data.blogPosts);
      //  $scope.data.filteredBlogPosts = $filter('orderBy')($scope.data.blogPosts, 'date');
      //  $scope.data.filteredBlogPosts = $filter('limitTo')($scope.data.filteredBlogPosts, '3');
       

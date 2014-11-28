@@ -97,7 +97,7 @@ angular.module("theHideoutApp")
     return {
       link: function (scope, element, attrs) {
         scope.dataPromise.success(function() {
-          scope.data.filteredBlogPosts = $filter('orderBy')(scope.data.blogPosts, 'date');
+          scope.data.filteredBlogPosts = $filter('orderBy')(scope.data.blogPosts, '-date');
           scope.data.filteredBlogPosts = $filter('limitTo')(scope.data.filteredBlogPosts, '3');
           applyCss(scope, element, attrs);
         })

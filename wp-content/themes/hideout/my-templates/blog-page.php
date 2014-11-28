@@ -50,7 +50,7 @@ get_header(); ?>
         <div class="row">
           <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7 col-md-offset-2">
             <h4>Recent news, and thoughts from your friends at The Hideout</h4>
- <!--              <p>YOLO Vice tilde, craft beer cornhole shabby chic roof party typewriter tote bag fixie lomo slow-carb. Street art church-key normcore farm-to-table, 8-bit flannel bespoke ennui Shoreditch. Meggings plaid Tonx readymade actually direct trade. Pitchfork High Life umami DIY, quinoa freegan ugh Bushwick sustainable Thundercats irony kogi locavore church-key. Distillery bitters Thundercats meggings paleo semiotics pop-up. Pug crucifix YOLO letterpress, trust fund Blue Bottle Banksy Vice disrupt plaid semiotics before they sold out pop-up skateboard mustache.</p> -->
+
           </div>
         </div>
           

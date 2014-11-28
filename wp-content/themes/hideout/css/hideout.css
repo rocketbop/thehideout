@@ -185,38 +185,82 @@ Front Page Introduction
 /*--------------------------------------------------------------
 Front Page News
 --------------------------------------------------------------*/
-.news-module {
-  background-color: #a64b00; }
-  .news-module p, .news-module li, .news-module a, .news-module h1, .news-module h2, .news-module h3, .news-module h4, .news-module h5, .news-module h6 {
-    color: white; }
-  .news-module .row {
-    background-color: #ff9640; }
-  .news-module .news-section {
-    background-color: #ff9640; }
-    .news-module .news-section .item {
-      height: 20em;
-      background-size: cover;
-      background-position: top; }
-    .news-module .news-section .item.item-bottom {
-      background-color: white; }
-      .news-module .news-section .item.item-bottom p, .news-module .news-section .item.item-bottom li, .news-module .news-section .item.item-bottom a, .news-module .news-section .item.item-bottom h1, .news-module .news-section .item.item-bottom h2, .news-module .news-section .item.item-bottom h3, .news-module .news-section .item.item-bottom h4, .news-module .news-section .item.item-bottom h5, .news-module .news-section .item.item-bottom h6 {
-        color: #434343; }
-    .news-module .news-section .item.hovered img {
-      opacity: 1.0; }
-    .news-module .news-section .item.hovered p, .news-module .news-section .item.hovered li, .news-module .news-section .item.hovered a, .news-module .news-section .item.hovered h1, .news-module .news-section .item.hovered h2, .news-module .news-section .item.hovered h3, .news-module .news-section .item.hovered h4, .news-module .news-section .item.hovered h5, .news-module .news-section .item.hovered h6 {
-      color: #dddddd; }
-    .news-module .news-section .item.item-bottom.hovered p, .news-module .news-section .item.item-bottom.hovered li, .news-module .news-section .item.item-bottom.hovered a, .news-module .news-section .item.item-bottom.hovered h1, .news-module .news-section .item.item-bottom.hovered h2, .news-module .news-section .item.item-bottom.hovered h3, .news-module .news-section .item.item-bottom.hovered h4, .news-module .news-section .item.item-bottom.hovered h5, .news-module .news-section .item.item-bottom.hovered h6 {
-      color: black; }
-  .news-module .twitter-section {
-    background-color: #dddddd; }
-    .news-module .twitter-section h1 {
-      color: #1a1a1a;
-      text-align: center; }
-    .news-module .twitter-section h2 {
-      color: white;
-      text-align: center; }
-    .news-module .twitter-section .coming-up {
-      background-color: #1a1a1a; }
+.news-module .module-header {
+  background-color: #ff9640; }
+.news-module .module-header-inner {
+  background-color: #ff9e4f; }
+.news-module .module-body-inner {
+  background-color: white; }
+.news-module .news-section img {
+  opacity: .7; }
+.news-module .news-section .item {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: top;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  position: relative; }
+.news-module .news-section .item.item-top {
+  height: 20em; }
+  .news-module .news-section .item.item-top .item-date {
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: .5em; }
+  .news-module .news-section .item.item-top .item-headline {
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: .5em;
+    bottom: 0;
+    right: 0;
+    width: 50%; }
+    .news-module .news-section .item.item-top .item-headline .content::after {
+      content: " ..."; }
+    .news-module .news-section .item.item-top .item-headline p {
+      line-height: 1em;
+      margin-top: 1em;
+      display: inline; }
+.news-module .news-section .item.item-bottom {
+  height: 16.5em; }
+  .news-module .news-section .item.item-bottom .item-date {
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: .5em; }
+  .news-module .news-section .item.item-bottom .item-headline {
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: .5em;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    height: 100%; }
+    .news-module .news-section .item.item-bottom .item-headline .content::after {
+      content: " ..."; }
+    .news-module .news-section .item.item-bottom .item-headline p {
+      line-height: 1em;
+      margin-top: 1em;
+      display: inline; }
+.news-module .news-section .item-box {
+  background-color: #eeeeee;
+  opacity: .7;
+  position: absolute;
+  display: inline-block; }
+.news-module .news-section .item.item-bottom {
+  background-color: white; }
+.news-module .news-section .item.hovered img {
+  opacity: 1.0; }
+.news-module .news-section .item.hovered p, .news-module .news-section .item.hovered li, .news-module .news-section .item.hovered a, .news-module .news-section .item.hovered h1, .news-module .news-section .item.hovered h2, .news-module .news-section .item.hovered h3, .news-module .news-section .item.hovered h4, .news-module .news-section .item.hovered h5, .news-module .news-section .item.hovered h6 {
+  color: #dddddd; }
+.news-module .news-section .item.item-bottom.hovered p, .news-module .news-section .item.item-bottom.hovered li, .news-module .news-section .item.item-bottom.hovered a, .news-module .news-section .item.item-bottom.hovered h1, .news-module .news-section .item.item-bottom.hovered h2, .news-module .news-section .item.item-bottom.hovered h3, .news-module .news-section .item.item-bottom.hovered h4, .news-module .news-section .item.item-bottom.hovered h5, .news-module .news-section .item.item-bottom.hovered h6 {
+  color: black; }
+.news-module .twitter-section .twitter-widget {
+  margin-top: 1em; }
+.news-module .image-section {
+  margin-top: 1em; }
+  .news-module .image-section img {
+    text-align: center;
+    width: 100%; }
 
 /*--------------------------------------------------------------
 Front Page Music Module
