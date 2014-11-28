@@ -516,33 +516,7 @@ Front Page News
 
 		
 
-		// .item {
-		// 	padding-top: 0.5em;
-		// 	padding-bottom: 0.5em;
-		// 	background-color: $gold-1;
-
-		// 	img {
-		// 		opacity: .8;
-		// 	}
-
-		// 	h3 {
-		// 		text-align: justify;
-		// 		font-size: 1.4em;
-		// 	}
-
-		// 	h6 {
-		// 		text-align: right;
-		// 	}
-
-
-		// }
-
-		// .item.item-topstory {
-		// 	h3 {
-		// 		font-size: 1.8em;
-		// 		text-align: justify;
-		// 	}
-		// }
+		
 
 		.item.item-bottom {
 			background-color: $white;
@@ -880,6 +854,17 @@ Events Page
 			}
 	}
 
+}
+
+
+/*--------------------------------------------------------------
+Single Post Event 
+--------------------------------------------------------------*/
+
+.single-post {
+	.page-inner {
+		background-color: $white-1;
+	}
 }
 
 /*--------------------------------------------------------------

@@ -13,25 +13,10 @@ angular.module("theHideoutApp")
     console.log($scope.singlePostCategory);
 
   }
-  $scope.sidebarUrl = templateDirectory + "sidebar.php";
+
   $scope.eventPartial = templateDirectory + "angular/partials/singlepostevent.php";
   $scope.blogPartial = templateDirectory + "angular/partials/singlepostblog.php";
 
-
-  $scope.getPartial = function () {
-    var partial;
-    console.log("Didn't match");
-    if ($scope.singlePostCategory == 'Events') {
-      partial = templateDirectory + "angular/partials/singlepostevent.html";
-      console.log("It matced");
-    }
-    else {
-      console.log("Didn't match");
-    }
-    return partial;
-  }
-
-  console.log($scope.singlePostCategory);
 
   $scope.getScreenHeight = function () {
     var screenHeight = 0;
