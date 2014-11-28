@@ -3,7 +3,16 @@ angular.module("theHideoutApp")
   
   $scope.templateDirectory = templateDirectory;
 
-  // $window.location.reload();
+  $scope.getSinglePostData = function (postCategory, postID) {
+    //$scope.singlePostCategory = postCategory;
+    $scope.singlePostCategory = postCategory;
+    $scope.singlePostID = postID;
+    console.log($scope.singlePostCategory);
+    console.log($scope.singlePostID);
+    return $scope.singlePostCategory;
+  }
+
+  // console.log $scope.singlePostCategory;
 
   $scope.getScreenHeight = function () {
     var screenHeight = 0;

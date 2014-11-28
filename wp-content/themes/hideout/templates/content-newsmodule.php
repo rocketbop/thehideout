@@ -27,15 +27,17 @@
           </div>
           <div class="row">
             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-              <div class="item item-bottom" data-news-background-image="2">
-                <div class="item-date item-box">
-                 <h5>{{data.blogPosts[1].date | date: 'medium' }}</h5>
+            <a href="{{data.blogPosts[1].link}}">
+                <div class="item item-bottom" data-news-background-image="2">
+                  <div class="item-date item-box">
+                   <h5>{{data.blogPosts[1].date | date: 'medium' }}</h5>
+                  </div>
+                  <div class="item-headline item-box">
+                    <h3>{{data.blogPosts[1].title}}</h3>
+                    <p><span class="content" ng-bind-html="data.blogPosts[1].content |limitTo: 80"></span><strong> READ MORE</strong></p>
+                  </div>
                 </div>
-                <div class="item-headline item-box">
-                  <h3>{{data.blogPosts[1].title}}</h3>
-                  <p><span class="content" ng-bind-html="data.blogPosts[1].content |limitTo: 80"></span><strong> READ MORE</strong></p>
-                </div>
-              </div>
+              </a>
             </div>
 
             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
