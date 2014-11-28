@@ -3,16 +3,35 @@ angular.module("theHideoutApp")
   
   $scope.templateDirectory = templateDirectory;
 
+  
+
+  // called by ng-init in templates/content-singlepost.php
   $scope.getSinglePostData = function (postCategory, postID) {
-    //$scope.singlePostCategory = postCategory;
+
     $scope.singlePostCategory = postCategory;
     $scope.singlePostID = postID;
     console.log($scope.singlePostCategory);
-    console.log($scope.singlePostID);
-    return $scope.singlePostCategory;
+
+  }
+  $scope.sidebarUrl = templateDirectory + "sidebar.php";
+  $scope.eventPartial = templateDirectory + "angular/partials/singlepostevent.php";
+  $scope.blogPartial = templateDirectory + "angular/partials/singlepostblog.php";
+
+
+  $scope.getPartial = function () {
+    var partial;
+    console.log("Didn't match");
+    if ($scope.singlePostCategory == 'Events') {
+      partial = templateDirectory + "angular/partials/singlepostevent.html";
+      console.log("It matced");
+    }
+    else {
+      console.log("Didn't match");
+    }
+    return partial;
   }
 
-  // console.log $scope.singlePostCategory;
+  console.log($scope.singlePostCategory);
 
   $scope.getScreenHeight = function () {
     var screenHeight = 0;

@@ -14,27 +14,17 @@ get_header(); ?>
 		<?php while ( have_posts() ) : the_post(); ?>
 
 			<?php 
-				// Get the category for this post
-
-			$category = get_the_category();
-			$thisCategory = $category[0]->cat_name;
-			$thisPostID = get_the_ID();
+				// Get the category and ID for this post
+				$category = get_the_category();
+				$thisCategory = $category[0]->cat_name;
+				$thisPostID = get_the_ID();
 			?>
 			
 			<?php 
 				// Prefer below to get_template_part, as need to pass a variable, to pass to Angular.
-				include(locate_template('templates/content-singlepost.php')); ?>
-		
-
-			<?php //get_template_part( 'content', 'single' );
-			
-			
-
+				include(locate_template('templates/content-singlepost.php'));
 			?>
-
-
-			<?php hideout_post_nav(); ?>
-
+		
 			<?php
 				// If comments are open or we have at least one comment, load up the comment template
 				// if ( comments_open() || '0' != get_comments_number() ) :
@@ -47,5 +37,5 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
+
 <?php get_footer(); ?>
