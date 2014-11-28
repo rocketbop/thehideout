@@ -3,6 +3,9 @@ angular.module("theHideoutApp")
   
   $scope.templateDirectory = templateDirectory;
 
+  // init these on each load so false unless called from the app
+  $scope.singlePostCategory = '';
+  $scope.singlePostID = '';
   
 
   // called by ng-init in templates/content-singlepost.php
@@ -11,11 +14,14 @@ angular.module("theHideoutApp")
     $scope.singlePostCategory = postCategory;
     $scope.singlePostID = postID;
     console.log($scope.singlePostCategory);
-
   }
-
+  
+  $scope.sidebarUrl = templateDirectory + "sidebar.php";
+  // used in ng-switch statement in templates/content-singlepost.php
   $scope.eventPartial = templateDirectory + "angular/partials/singlepostevent.php";
   $scope.blogPartial = templateDirectory + "angular/partials/singlepostblog.php";
+
+
 
 
   $scope.getScreenHeight = function () {

@@ -4,7 +4,7 @@ angular.module("theHideoutApp")
   .controller("eventCtrl", ['$scope', '$filter', 'eventListPageCount', 'apiService', 'eventListActiveClass', function ($scope, $filter, eventListPageCount, apiService, eventListActiveClass) {
 
     // GET THE DATA
-    apiService.getAllEvents().success(function(data) {
+    $scope.dataPromise = apiService.getAllEvents().success(function(data) {
       $scope.data = {}; // create the data object
       $scope.data.events = data;
 
@@ -64,8 +64,34 @@ angular.module("theHideoutApp")
 
 
   // PAGINATION
-     $scope.selectedPage = 1; // Initial, or on page reload
-     $scope.pageSize = eventListPageCount;
+    $scope.selectedPage = 1; // Initial, or on page reload
+    $scope.pageSize = eventListPageCount;
+
+  // SINGLE POSTS
+
+    $scope.getSinglePostArrayNumber = function () {
+
+      for (var i = 0; i < $scope.data.events.length; i++) {
+        if ($scope.data.events[i].ID == $scope.singlePostID) {
+          var arrayNumber = i;
+        }
+      }
+      return arrayNumber;
+    }
+
+    // Will only be a number on single app page calls
+    if (angular.isNumber($scope.singlePostID)) {
+      $scope.dataPromise.success(function () {
+        $scope.singlePostArrayNumber = $scope.getSinglePostArrayNumber();
+        console.log($scope.singlePostArrayNumber);
+        $scope.singlePostEventName = $scope.data.events[$scope.singlePostArrayNumber].event_name;
+      })
+      
+    } else {
+      console.log("Why me");
+    }
+    
+
 
   }]);
 
