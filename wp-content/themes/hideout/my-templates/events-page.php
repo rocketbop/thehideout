@@ -21,8 +21,6 @@ get_header(); ?>
                 <p>Some blurb about why there is music at the Hideout</p>
                 <p>Some more information about why you should come to the Hideout to see the live bands.</p>
                 <p>Some more information about why you should come to the Hideout to see the live bands.</p>
-                <a href="#">I am a link</a>
-
             
               </div>
             </div>

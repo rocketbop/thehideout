@@ -787,45 +787,45 @@ Events Page
 	.blurb {
 		background-color: rgba($white-1, .6);
 	}
-		.column-filter {
+	.column-filter {
 
-			margin-top: 5em;
+		margin-top: 5em;
 
 
-			.btn-primary {
-				background-color: $red-3;
-				border-color: darken($red-3, 3%);
-			}
+		.btn-primary {
+			background-color: $red-3;
+			border-color: darken($red-3, 3%);
+			color: $white-1;
 		}
-		.board {
-			height: 100%;
+	}
+	.board {
+		height: 100%;
 
-			h3, h4 {
-				padding: 1em;
-			}
-
-			h4 {
-				margin-top: 0;
-			}
+		h3, h4 {
+			padding: 1em;
 		}
 
-		.board-block {
-			background-color: $black-dark;
-			color: $white;
+		h4 {
+			margin-top: 0;
 		}
+	}
+
+	.board-block {
+		background-color: $black-dark;
+		color: $white;
+	}
 
 
 
-		.right-board {
-			background-color: $black-dark;
-			color: $white;
-		}
+	.right-board {
+		background-color: $black-dark;
+		color: $white;
+	}
 
-		.left-board {
-			background-color: darken($red-3, 0%);
-			color: $white;
-		}
-
+	.left-board {
+		background-color: darken($red-3, 0%);
+		color: $white;
+	}
 
 	.background-container {
 			background-image: url($templateDirectory + "images/backgrounds/tools.jpg");
@@ -981,7 +981,7 @@ Blog Page
 			margin-top: 2em;
 
 			p:first-child {
-				margin-top: 0.5em;
+				margin-top: 5em;
 			}
 		}
 	}
@@ -1067,32 +1067,41 @@ Restaurant Page
 Sidebar
 --------------------------------------------------------------*/
 
-.sidebar.sidebar-events {
-	// background-color: $red-2;
-	.item {
-		margin-bottom: .5em;
+.sidebar {
+
+	.section-header {
+		margin-top: 2em;
+		margin-bottom: 2em;
 	}
 
+	.item {
+		margin-bottom: .5em;
+		margin-top: 2em;
+	}
 
 	> h2 {
 		margin-top: 2em;
 		margin-bottom: 2em;
+	}
 
+	h5 {
+		color: $black-1
+	}
+
+}
+
+.sidebar.sidebar-events {
+	
+	a {
+		color: $red-3;
 	}
 
 }
 
 .sidebar.sidebar-blog {
-	// background-color: $red-2;
-	.item {
-		margin-bottom: .5em;
-	}
 
-
-	> h2 {
-		margin-top: 2em;
-		margin-bottom: 2em;
-
+	a {
+		color: $gold-3;
 	}
 
 }

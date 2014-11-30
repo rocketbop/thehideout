@@ -382,7 +382,8 @@ Events Page
   margin-top: 5em; }
   .events-page .column-filter .btn-primary {
     background-color: #a61d00;
-    border-color: #971a00; }
+    border-color: #971a00;
+    color: white; }
 .events-page .board {
   height: 100%; }
   .events-page .board h3, .events-page .board h4 {
@@ -474,7 +475,7 @@ Blog Page
 .blog-page .blog-section .blog-item {
   margin-top: 2em; }
   .blog-page .blog-section .blog-item p:first-child {
-    margin-top: 0.5em; }
+    margin-top: 5em; }
 
 /*--------------------------------------------------------------
 Restaurant Page
@@ -516,17 +517,23 @@ Restaurant Page
 /*--------------------------------------------------------------
 Sidebar
 --------------------------------------------------------------*/
-.sidebar.sidebar-events .item {
-  margin-bottom: .5em; }
-.sidebar.sidebar-events > h2 {
+.sidebar .section-header {
   margin-top: 2em;
   margin-bottom: 2em; }
+.sidebar .item {
+  margin-bottom: .5em;
+  margin-top: 2em; }
+.sidebar > h2 {
+  margin-top: 2em;
+  margin-bottom: 2em; }
+.sidebar h5 {
+  color: black; }
 
-.sidebar.sidebar-blog .item {
-  margin-bottom: .5em; }
-.sidebar.sidebar-blog > h2 {
-  margin-top: 2em;
-  margin-bottom: 2em; }
+.sidebar.sidebar-events a {
+  color: #a61d00; }
+
+.sidebar.sidebar-blog a {
+  color: #a64b00; }
 
 /*--------------------------------------------------------------
 Footer
