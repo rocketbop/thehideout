@@ -460,6 +460,8 @@ Blog Page
 .blog-page .page-header-bottom {
   background-color: #ff9640;
   margin-top: 0; }
+  .blog-page .page-header-bottom h4 {
+    font-family: "Lato"; }
   .blog-page .page-header-bottom .page-inner {
     background-color: #ff9e4f; }
 .blog-page .pagination > .active > a,
