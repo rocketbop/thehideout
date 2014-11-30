@@ -396,8 +396,23 @@ Events Page
   background-color: #a61d00;
   border-color: #971a00;
   color: white; }
+.events-page .crop-height {
+  /* max-width: 1200px; /* img src width (if known) */
+  max-height: 20em;
+  overflow: hidden; }
+.events-page img.scale {
+  /* corrects inline gap in enclosing div */
+  display: block;
+  max-width: 100%;
+  /* just in case, to force correct aspect ratio */
+  height: auto !important;
+  width: auto\9;
+  /* ie8+9 */
+  /* lt ie8 */
+  -ms-interpolation-mode: bicubic; }
 .events-page .board {
   height: 100%;
+  text-decoration: none;
   opacity: .9;
   transition: all 0.5s; }
   .events-page .board h3, .events-page .board h4 {
@@ -407,7 +422,7 @@ Events Page
   .events-page .board h4 {
     margin-top: 0; }
 .events-page .board-wrapper {
-  background-color: black; }
+  background-color: #111111; }
 .events-page .board:hover {
   opacity: 1.0; }
 .events-page .board-block {
@@ -442,8 +457,6 @@ Events Page
   margin-top: 0; }
   .events-page .page-header-bottom .page-inner {
     background-color: #e74624; }
-.events-page .column-main img.featured-image {
-  width: 100%; }
 .events-page .column-main .btn-primary {
   background-color: #a61d00;
   border-color: #971a00;

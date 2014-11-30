@@ -33,7 +33,7 @@ get_header(); ?>
           <div class="row">
             <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7 col-md-offset-2">
               <h1>Upcoming Events</h1>
-              <!-- <h3>Get the details on all upcoming music, poetry, and gettogethers at The Hideout.</h3> -->
+              
             </div>
           </div>
       </div>  <!-- page header -->
@@ -46,7 +46,7 @@ get_header(); ?>
                   <div class="row">
           <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7 col-md-offset-2">
 
-          <h4>Get the details on all upcoming music, poetry, and gettogethers at The Hideout.</h4>
+          <h4>Get the details on all upcoming music and events at The Hideout.</h4>
 
           </div>
           </div>
@@ -80,7 +80,7 @@ get_header(); ?>
                 <div ng-repeat="event in data.events | orderBy: '-date_of_event' | filter:categoryFilterFn | range:selectedPage:pageSize">
 
                   <a href="{{event.link}}">
-                    <div class="board board-wrapper">
+                    <div class="board board-wrapper ">
                       <div class="row ">
                         <div class="col-sm-6 col-md-6 col-lg-6 no-padding-right">
                           <div class="board left-board">
@@ -93,20 +93,20 @@ get_header(); ?>
                            </div>
                         </div>
                       </div>
-                      
-                      <img class="featured-image" src="{{event.event_image.url}}">
-
+                      <div class="crop-height">
+                      <img class="featured-image scale" src="{{event.event_image.url}}">
+                    </div>  
                       <div class="board board-block">
                         <h4>{{event.date_of_event | date: 'h:mma, EEEE, d MMMM yyyy'}}, {{event.category}}.
                         </h4>
                       </div>
                     </div>
                   </a>
-                  <!-- Save to use below for content entered through WP backend -->
-                  <div ng-bind-html="event.event_description"></div>
-                    <img class="separator" ng-src="{{templateDirectory}}images/design/guitar-separator.png">
+                <!-- Save to use below for content entered through WP backend -->
+                <div ng-bind-html="event.event_description"></div>
+                  <img class="separator" ng-src="{{templateDirectory}}images/design/guitar-separator.png">
 
-                  </div>
+                </div>
 
              
 

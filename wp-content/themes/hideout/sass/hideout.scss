@@ -157,6 +157,9 @@ a {
     vertical-align: middle;
     float: none;
 }
+
+
+
 /*--------------------------------------------------------------
 2.0 Design
 --------------------------------------------------------------*/
@@ -798,8 +801,27 @@ Events Page
 			color: $white-1;
 		}
 	}
+
+	.crop-height {
+  /* max-width: 1200px; /* img src width (if known) */
+  max-height: 20em;
+  overflow: hidden; 
+}
+
+img.scale {
+  /* corrects inline gap in enclosing div */
+  display: block;
+  max-width: 100%;
+  /* just in case, to force correct aspect ratio */
+  height: auto !important;
+  width: auto\9; /* ie8+9 */
+  /* lt ie8 */
+  -ms-interpolation-mode: bicubic; 
+}
+
 	.board {
 		height: 100%;
+		text-decoration: none;
 
 		h3, h4 {
 			padding: 1em;
@@ -812,12 +834,17 @@ Events Page
 		h4 {
 			margin-top: 0;
 		}
+
+		// img {
+		// 	max-height: 15em;
+		// 	min-width: 100%;
+		// }
 		opacity: .9;
 		transition: all 0.5s;
 	}
 
 	.board-wrapper {
-		background-color: $black-1;
+		background-color: $black-2;
 	}
 
 	.board:hover {
@@ -892,9 +919,9 @@ Events Page
 
 	.column-main {
 
-		img.featured-image {
-			width: 100%
-		}
+		// img.featured-image {
+		// 	width: 100%
+		// }
 
 		.btn-primary {
 				background-color: $red-3;
@@ -1102,6 +1129,10 @@ Sidebar
 		padding-top: 1em;
 		opacity: .9;
 		transition: all 0.5s;
+	}
+
+	.item:last-child {
+		// margin-bottom: 15em;
 	}
 
 	.item:hover {
