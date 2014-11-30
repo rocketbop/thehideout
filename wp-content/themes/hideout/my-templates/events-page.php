@@ -5,7 +5,7 @@ Template Name: Events Page
 
 get_header(); ?>
 
-<div id="primary" class="content-area events-page" ng-controller="eventCtrl">
+<div id="primary" class="content-area events-page visible-links visible-links-red" ng-controller="eventCtrl">
   <div class="container-fluid">
     <div class="row">
         <div class="background-container col-xs-12 col-sm-12 col-md-12 col-lg-12" data-my-div-height="full" minus-header="true">
@@ -21,6 +21,7 @@ get_header(); ?>
                 <p>Some blurb about why there is music at the Hideout</p>
                 <p>Some more information about why you should come to the Hideout to see the live bands.</p>
                 <p>Some more information about why you should come to the Hideout to see the live bands.</p>
+                <a href="#">I am a link</a>
 
             
               </div>
@@ -96,12 +97,13 @@ get_header(); ?>
                  
 
                   
-                  <img src="{{event.event_image.url}}">
+                  <img class="featured-image" src="{{event.event_image.url}}">
 
                   <div class="board board-block"><h4>{{event.date_of_event | date: 'h:mma, EEEE, d MMMM yyyy'}}, {{event.category}}.</h4></div>
                   <!-- <p>{{event.content}}</p> -->
                   <!-- Save to use below for content entered through WP backend -->
                   <div ng-bind-html="event.event_description"></div>
+                  <img class="separator" ng-src="{{templateDirectory}}images/design/guitar-separator.png">
 
                 </div>
 

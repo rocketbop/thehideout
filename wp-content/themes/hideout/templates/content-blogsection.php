@@ -6,7 +6,7 @@
       <h6>{{blogPost.date | date: 'medium' }}</h6>
       <!-- <h6>{{stringToDate(blogPost.date) | date: 'medium'}}</h6> <!-- Example of making a function call within angular -->
       <span  ng-bind-html="blogPost.content"></span>
-      <img class="separator" ng-src="{{templateDirectory}}images/design/vintage-separator-2.png">
+      <img class="separator" ng-src="{{templateDirectory}}images/design/pint-separator.png">
     </div>
 
 

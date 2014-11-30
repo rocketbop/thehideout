@@ -86,7 +86,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p, li, a {
-	font-family: "Lato", san-serif;
+	font-family: "Lato", sans-serif;
 	line-height: 2.5em;
 }
 
@@ -105,10 +105,37 @@ p:first-child {
 	margin-top: 4em;
 }
 
-// p:first-child::first-line {
-// 	font-weight: 700;
-// 	font-size: 120%;
-// }
+a {
+		color: inherit ;
+		line-height: inherit ;
+}
+
+.visible-links {
+	a {
+		font-weight: 700;
+	}
+	a:hover {
+		opacity: .7;
+	}
+}
+
+.visible-links-red {
+	a {
+		color: $red-3;
+	}
+}
+
+.visible-links-yellow {
+	a {
+		color: $yellow-1;
+	}
+}
+
+.visible-links-gold {
+	a {
+		color: $gold-3;
+	}
+}
 
 .no-padding-left {
 	padding-left: 0 !important;
@@ -141,9 +168,8 @@ body {
 	}
 
 	.separator {
-	margin-top: 5em;
-	margin-bottom: 5em;
-	width: 100%
+		display: block;
+		margin: 5em auto;
 	}
 
 	.body-inner {
@@ -422,8 +448,12 @@ Front Page News
 		// background-color: $gold-4;
 		
 		img {
-			opacity: .7;
+			opacity: .1;
 		}
+
+			
+
+			
 
 		.item {
 
@@ -436,6 +466,8 @@ Front Page News
 			margin-top: 1em;
 			margin-bottom: 1em;
 			position: relative; 
+
+		
 
 		}
 
@@ -462,7 +494,7 @@ Front Page News
 					content: " ...";
 				}
 
-				p {
+				p, a {
 					line-height: 1em;
 					margin-top: 1em;
 					display: inline;
@@ -472,7 +504,7 @@ Front Page News
 		}
 
 		.item.item-bottom {
-			height: 16.5em;
+			height: 20em;
 
 			.item-date {
 				padding-left: 1em;
@@ -488,8 +520,8 @@ Front Page News
 			
 				bottom: 0;
 				right: 0;
-				width: 50%;
-				height: 100%;
+				width: 100%;
+				height: 40%;
 
 
 				.content::after {
@@ -508,10 +540,11 @@ Front Page News
 		}
 
 		.item-box {
-			background-color: $white-2;
-			opacity: .7;
+			background-color: $gold-5;
+			opacity: .9;
 			position: absolute;
 			display: inline-block;
+			// color: $white-1
 		}
 
 		
@@ -844,7 +877,7 @@ Events Page
 
 	.column-main {
 
-		img {
+		img.featured-image {
 			width: 100%
 		}
 
@@ -877,9 +910,9 @@ Blog Page
 		background-color: rgba($white-1, .8);
 	}
 
-	a {
-		color: $black-1;
-	}
+	// a {
+	// 	color: $black-1;
+	// }
 
 
 

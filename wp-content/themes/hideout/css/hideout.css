@@ -6,7 +6,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Oswald", serif; }
 
 p, li, a {
-  font-family: "Lato", san-serif;
+  font-family: "Lato", sans-serif;
   line-height: 2.5em; }
 
 li {
@@ -17,6 +17,24 @@ h1 {
 
 p:first-child {
   margin-top: 4em; }
+
+a {
+  color: inherit;
+  line-height: inherit; }
+
+.visible-links a {
+  font-weight: 700; }
+.visible-links a:hover {
+  opacity: .7; }
+
+.visible-links-red a {
+  color: #a61d00; }
+
+.visible-links-yellow a {
+  color: #ff9e00; }
+
+.visible-links-gold a {
+  color: #a64b00; }
 
 .no-padding-left {
   padding-left: 0 !important; }
@@ -41,9 +59,8 @@ p:first-child {
 body #primary {
   background: #eeeeee; }
 body .separator {
-  margin-top: 5em;
-  margin-bottom: 5em;
-  width: 100%; }
+  display: block;
+  margin: 5em auto; }
 body .body-inner {
   background-color: white; }
 body .container-fluid {
@@ -192,7 +209,7 @@ Front Page News
 .news-module .module-body-inner {
   background-color: white; }
 .news-module .news-section img {
-  opacity: .7; }
+  opacity: .1; }
 .news-module .news-section .item {
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -217,12 +234,12 @@ Front Page News
     width: 50%; }
     .news-module .news-section .item.item-top .item-headline .content::after {
       content: " ..."; }
-    .news-module .news-section .item.item-top .item-headline p {
+    .news-module .news-section .item.item-top .item-headline p, .news-module .news-section .item.item-top .item-headline a {
       line-height: 1em;
       margin-top: 1em;
       display: inline; }
 .news-module .news-section .item.item-bottom {
-  height: 16.5em; }
+  height: 20em; }
   .news-module .news-section .item.item-bottom .item-date {
     padding-left: 1em;
     padding-right: 1em;
@@ -233,8 +250,8 @@ Front Page News
     padding-top: .5em;
     bottom: 0;
     right: 0;
-    width: 50%;
-    height: 100%; }
+    width: 100%;
+    height: 40%; }
     .news-module .news-section .item.item-bottom .item-headline .content::after {
       content: " ..."; }
     .news-module .news-section .item.item-bottom .item-headline p {
@@ -242,8 +259,8 @@ Front Page News
       margin-top: 1em;
       display: inline; }
 .news-module .news-section .item-box {
-  background-color: #eeeeee;
-  opacity: .7;
+  background-color: #ffb273;
+  opacity: .9;
   position: absolute;
   display: inline-block; }
 .news-module .news-section .item.item-bottom {
@@ -404,7 +421,7 @@ Events Page
   margin-top: 0; }
   .events-page .page-header-bottom .page-inner {
     background-color: #e74624; }
-.events-page .column-main img {
+.events-page .column-main img.featured-image {
   width: 100%; }
 .events-page .column-main .btn-primary {
   background-color: #a61d00;
@@ -421,8 +438,6 @@ Blog Page
 --------------------------------------------------------------*/
 .blog-page .blurb {
   background-color: rgba(255, 255, 255, 0.8); }
-.blog-page a {
-  color: black; }
 .blog-page .background-container {
   background-image: url("http://localhost:8888/wp-content/themes/hideout/images/backgrounds/man-in-coffeeshop-looking-out.jpg");
   -webkit-background-size: cover;

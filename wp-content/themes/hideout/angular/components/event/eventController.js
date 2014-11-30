@@ -26,7 +26,8 @@ angular.module("theHideoutApp")
     $scope.selectCategory = function (newCategory) {
 
       selectedCategory = newCategory;
-      $scope.selectedPage = 1; // Go to page 1 on new category selection
+      $scope.selectedPage = 1;
+      // Go to page 1 on new category selection
       // Make the current category available in the scope. Note $scope.selectedCategory != selectedCategory within the controller
       if (newCategory == undefined) {
         $scope.selectedCategory = "All";
@@ -35,8 +36,6 @@ angular.module("theHideoutApp")
       }
 
     }; 
-
-
 
     $scope.selectPage = function (newPage) {
       $scope.selectedPage = newPage;
@@ -81,9 +80,10 @@ angular.module("theHideoutApp")
 
     // Will only be a number on single app page calls
     if (angular.isNumber($scope.singlePostID)) {
+
       $scope.dataPromise.success(function () {
         $scope.singlePostArrayNumber = $scope.getSinglePostArrayNumber();
-        console.log($scope.singlePostArrayNumber);
+       
         $scope.singlePostEventName = $scope.data.events[$scope.singlePostArrayNumber].event_name;
       })
       
