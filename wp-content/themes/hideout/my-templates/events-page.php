@@ -78,34 +78,39 @@ get_header(); ?>
               
                 <!-- <h3>{{selectedCategory}} Events</h3> -->
                 <div ng-repeat="event in data.events | orderBy: '-date_of_event' | filter:categoryFilterFn | range:selectedPage:pageSize">
-                  <div class="row ">
-                    <div class="col-sm-6 col-md-6 col-lg-6 no-padding-right">
-                      <div class="board left-board">
-                        <h3>{{event.event_name}}</h3>
-                      </div>  
+
+                  <a href="{{event.link}}">
+                    <div class="board board-wrapper">
+                      <div class="row ">
+                        <div class="col-sm-6 col-md-6 col-lg-6 no-padding-right">
+                          <div class="board left-board">
+                            <h3>{{event.event_name}}</h3>
+                          </div>  
+                        </div>
+                        <div class=" col-sm-6 col-md-6 col-lg-6 no-padding-left">
+                          <div class=" board right-board no-padding-left">
+                             <h3>{{event.date_of_event | date: 'EEEE, d MMMM'}}</h3>
+                           </div>
+                        </div>
+                      </div>
+                      
+                      <img class="featured-image" src="{{event.event_image.url}}">
+
+                      <div class="board board-block">
+                        <h4>{{event.date_of_event | date: 'h:mma, EEEE, d MMMM yyyy'}}, {{event.category}}.
+                        </h4>
+                      </div>
                     </div>
-                    <div class=" col-sm-6 col-md-6 col-lg-6 no-padding-left">
-                      <div class=" board right-board no-padding-left">
-                         <h3>{{event.date_of_event | date: 'EEEE, d MMMM'}}</h3>
-                       </div>
-                    </div>
-                  </div>
-
-                  
-                 
-
-                  
-                  <img class="featured-image" src="{{event.event_image.url}}">
-
-                  <div class="board board-block"><h4>{{event.date_of_event | date: 'h:mma, EEEE, d MMMM yyyy'}}, {{event.category}}.</h4></div>
-                  <!-- <p>{{event.content}}</p> -->
+                  </a>
                   <!-- Save to use below for content entered through WP backend -->
                   <div ng-bind-html="event.event_description"></div>
-                  <img class="separator" ng-src="{{templateDirectory}}images/design/guitar-separator.png">
+                    <img class="separator" ng-src="{{templateDirectory}}images/design/guitar-separator.png">
 
-                </div>
+                  </div>
 
-                <div class="pull-right btn-group">
+             
+
+                <div class="pagination pull-left btn-group">
                     <a ng-repeat=
                        "page in data.events | filter:categoryFilterFn | pageCount:pageSize"
                        ng-click="selectPage($index + 1)" class="btn btn-default"

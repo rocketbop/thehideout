@@ -71,10 +71,10 @@ $black-4:		#333;
 $black-5:		#444;
 
 $white-1:		#fff;
-$white-2:		#eee;
-$white-3:		#ddd;
-$white-4:		#ccc;
-$white-5:		#bbb;
+$white-2:		#f8f8f8;
+$white-3:		#eee;
+$white-4:		#e8e8e8;
+$white-5:		#d8d8d8;
 
 /**** BASE STYLES **********************/
 /*--------------------------------------------------------------
@@ -181,6 +181,13 @@ body {
 	}
 
 
+	// Buttons
+
+	.btn-default {
+		background-color: $white-3;
+		border: $white-3;
+		margin-bottom: 1em;
+	}
 }
 
 /**** LAYOUT STYLES *****************/
@@ -759,9 +766,30 @@ Events Page
 	.blurb {
 		background-color: rgba($white-1, .6);
 	}
+
+	.page-header-bottom {
+		
+		margin-bottom: 2em;
+
+		h4 {
+			font-family: "Lato";
+		}
+
+	}
+
+	.body-inner {
+		padding-top: 30px;
+	}
+
 	.column-filter {
 
-		margin-top: 5em;
+		a {
+			color: lighten($black-2, 10%);
+		}
+
+		h4:first-child {
+			margin-top: 0;
+		}
 
 
 		.btn-primary {
@@ -777,9 +805,24 @@ Events Page
 			padding: 1em;
 		}
 
+		h3:first-child {
+			margin-top: 0;
+		}
+
 		h4 {
 			margin-top: 0;
 		}
+		opacity: .9;
+		transition: all 0.5s;
+	}
+
+	.board-wrapper {
+		background-color: $black-1;
+	}
+
+	.board:hover {
+		opacity: 1.0;
+		
 	}
 
 	.board-block {
@@ -856,6 +899,7 @@ Events Page
 		.btn-primary {
 				background-color: $red-3;
 				border-color: darken($red-3, 3%);
+				color: $white-1;
 			}
 	}
 
@@ -1043,9 +1087,27 @@ Sidebar
 		margin-bottom: 2em;
 	}
 
+	.section-header:first-child {
+		margin-top: 0;
+		h2:first-child {
+			margin-top: 0;
+		}
+	}
+
 	.item {
 		margin-bottom: .5em;
 		margin-top: 2em;
+		background-color: $white-2;
+		margin-right: .5em;
+		padding-top: 1em;
+		opacity: .9;
+		transition: all 0.5s;
+	}
+
+	.item:hover {
+		opacity: 1.0;
+		transition: all 0.5s;
+
 	}
 
 	> h2 {
@@ -1056,6 +1118,7 @@ Sidebar
 	h5 {
 		color: $black-1
 	}
+
 
 }
 
