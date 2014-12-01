@@ -57,7 +57,8 @@ $yellow-3:  #a66600;
 $yellow-4:  #ffb640;
 $yellow-5:  #ffc973;
 
-$red-1:     #ff2c00;
+// $red-1:     #ff2c00;
+$red-1:     #a2302a;
 $red-2:     #bf4930;
 $red-3:     #a61d00;
 $red-4:     #ff6140;
@@ -188,23 +189,23 @@ body {
 		max-width: 1600px;
 	}
 
-	.crop-height {
-	  max-width: 1200px;
-	  height: 25em;
-	  overflow: hidden; 
-	}
+	// .crop-height {
+	//   max-width: 1200px;
+	//   height: 22em;
+	//   overflow: hidden; 
+	// }
 
-	img.scale {
-	  /* corrects inline gap in enclosing div */
-	  display: block;
-	  max-width: 100%;
-	  /* just in case, to force correct aspect ratio */
-	  height: auto !important;
-	  width: auto\9; /* ie8+9 */
-	  /* lt ie8 */
-	  -ms-interpolation-mode: bicubic;
-	  margin: auto auto; // in case the image fails to reach 100% width 
-	}
+	// img.scale {
+	//   /* corrects inline gap in enclosing div */
+	//   display: block;
+	//   max-width: 100%;
+	//   /* just in case, to force correct aspect ratio */
+	//   height: auto !important;
+	//   width: auto\9; /* ie8+9 */
+	//   /* lt ie8 */
+	//   -ms-interpolation-mode: bicubic;
+	//   margin: auto auto; // in case the image fails to reach 100% width 
+	// }
 
 	// Buttons
 
@@ -546,8 +547,6 @@ Front Page News
 				}
 
 			}
-			
-
 		}
 
 		.item-box {
@@ -813,7 +812,13 @@ Secondary page styles General
 		margin-bottom: 2em;
 
 		h4 {
-			font-family: "Lato";
+			// font-family: "Lato";
+			// font-family: "Berkshire+Swash";
+			// font-family: "Merriweather";
+			// font-family: "Lato";
+			// font-family: "Playfair+Display";
+			font-family: "Oxygen";
+			// font-family: "Quattrocento";
 		}
 
 	}
@@ -835,7 +840,6 @@ Events Page
 	}
 
 	.page-header-top {
-
 		background-color: $red-3;
 		margin-bottom: 0;
 
@@ -848,7 +852,7 @@ Events Page
 		background-color: $red-4;
 
 		.page-inner {
-				background-color: lighten($red-4, 3%);
+			background-color: lighten($red-4, 3%);
 		}
 	}
 
@@ -876,7 +880,7 @@ Events Page
 	.board {
 		height: 100%;
 		text-decoration: none;
-		opacity: .9;
+		opacity: 1.0;
 		transition: all 0.5s;
 
 		h3, h4 {
@@ -891,25 +895,38 @@ Events Page
 			margin-top: 0;
 		}
 
+		img.featured-image {
+			width: 100%;
+			opacity: 0.9;
+			transition: all 0.5s;
+		}
 	}
 
-	.board:hover {
-		opacity: 1.0;
+	.board-wrapper:hover img.featured-image {
+		opacity: 0.7;
+		transition: all 0.5s;
 	}
+
+	.board-wrapper:active img.featured-image {
+		opacity: 1.0;
+		transition: all 0.5s;
+	}
+
+
 
 	.board-block {
 		color: $white-1;
 	}
 	.board-block-bottom {
-		background-color: $black-dark;
+		background-color: $black-4;
 	}
 
 	.board-block-right {
-		background-color: $black-dark;
+		background-color: $black-4;
 	}
 
 	.board-block-left {
-		background-color: darken($red-3, 0%);
+		background-color: $red-2;
 	}
 
 	.column-main {

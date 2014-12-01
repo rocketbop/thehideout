@@ -69,21 +69,6 @@ body .body-inner {
   background-color: white; }
 body .container-fluid {
   max-width: 1600px; }
-body .crop-height {
-  max-width: 1200px;
-  height: 25em;
-  overflow: hidden; }
-body img.scale {
-  /* corrects inline gap in enclosing div */
-  display: block;
-  max-width: 100%;
-  /* just in case, to force correct aspect ratio */
-  height: auto !important;
-  width: auto\9;
-  /* ie8+9 */
-  /* lt ie8 */
-  -ms-interpolation-mode: bicubic;
-  margin: auto auto; }
 body .btn-default {
   background-color: #eeeeee;
   border: #eeeeee;
@@ -333,7 +318,7 @@ Front Page Music Module
     background-color: #a61d00;
     height: 5em; }
   .music-module .music-module-blurb {
-    background-color: #ff2c00;
+    background-color: #a2302a;
     height: 20em; }
     .music-module .music-module-blurb h2 {
       margin-bottom: 1em; }
@@ -412,7 +397,7 @@ Secondary page styles General
 .secondary-page .page-header-bottom {
   margin-bottom: 2em; }
   .secondary-page .page-header-bottom h4 {
-    font-family: "Lato"; }
+    font-family: "Oxygen"; }
 .secondary-page .body-inner {
   padding-top: 30px; }
 
@@ -444,7 +429,7 @@ Events Page
 .events-page .board {
   height: 100%;
   text-decoration: none;
-  opacity: .9;
+  opacity: 1.0;
   transition: all 0.5s; }
   .events-page .board h3, .events-page .board h4 {
     padding: 1em; }
@@ -452,16 +437,24 @@ Events Page
     margin-top: 0; }
   .events-page .board h4 {
     margin-top: 0; }
-.events-page .board:hover {
-  opacity: 1.0; }
+  .events-page .board img.featured-image {
+    width: 100%;
+    opacity: 0.9;
+    transition: all 0.5s; }
+.events-page .board-wrapper:hover img.featured-image {
+  opacity: 0.7;
+  transition: all 0.5s; }
+.events-page .board-wrapper:active img.featured-image {
+  opacity: 1.0;
+  transition: all 0.5s; }
 .events-page .board-block {
   color: white; }
 .events-page .board-block-bottom {
-  background-color: #171717; }
+  background-color: #333333; }
 .events-page .board-block-right {
-  background-color: #171717; }
+  background-color: #333333; }
 .events-page .board-block-left {
-  background-color: #a61d00; }
+  background-color: #bf4930; }
 .events-page .column-main .btn-primary {
   background-color: #a61d00;
   border-color: #971a00;

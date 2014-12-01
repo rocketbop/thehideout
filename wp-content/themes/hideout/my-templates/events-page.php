@@ -93,8 +93,10 @@ get_header(); ?>
                            </div>
                         </div>
                       </div>
-                      <div class="crop-height">
-                      <img class="featured-image scale" src="{{event.event_image.url}}">
+                      <!-- <div class=" crop-height"> -->
+                      <div class="">
+                      <!-- <img class="featured-image scale" src="{{event.event_image.url}}"> -->
+                      <img class="featured-image" src="{{event.featured_image.attachment_meta.sizes.eventboard.url}}">
                     </div>  
                       <div class="board board-block board-block-bottom">
                         <h4>{{event.date_of_event | date: 'h:mma, EEEE, d MMMM yyyy'}}, {{event.category}}.
