@@ -1,5 +1,5 @@
 angular.module("theHideoutApp")
-  .constant('eventListPageCount', 2) // items per page
+  .constant('eventListPageCount', 4) // items per page
   .constant("eventListActiveClass", "btn-primary")
   .controller("eventCtrl", ['$scope', '$filter', 'eventListPageCount', 'apiService', 'eventListActiveClass', function ($scope, $filter, eventListPageCount, apiService, eventListActiveClass) {
 

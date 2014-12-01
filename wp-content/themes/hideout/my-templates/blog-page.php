@@ -6,7 +6,7 @@ Template Name: Blog Page
 get_header(); ?>
 
 
-  <div id="primary" class="content-area visible-links visible-links-gold blog-page" ng-controller="blogCtrl">
+  <div id="primary" class="content-area secondary-page visible-links visible-links-gold blog blog-page" ng-controller="blogCtrl">
 
   <!-- page header top -->
     <div class="container-fluid">
@@ -47,15 +47,12 @@ get_header(); ?>
     <div class="container-fluid">
       <div class="row page-header page-header-bottom">
         <div class="page-inner col-xs-10 col-sm-10 col-md-10 col-lg-10 col-md-offset-1">
-        <div class="row">
-          <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7 col-md-offset-2">
-            <h4>Recent news, and thoughts from your friends at The Hideout</h4>
+          <div class="row">
+            <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7 col-md-offset-2">
+              <h4>Recent news, and thoughts from your friends at The Hideout</h4>
 
+            </div>
           </div>
-        </div>
-          
-        
-
         </div> 
       </div> <!-- row -->
     </div> <!-- fluid container -->

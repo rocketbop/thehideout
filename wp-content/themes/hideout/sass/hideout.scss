@@ -110,6 +110,11 @@ a {
 		line-height: inherit ;
 }
 
+a:visited {
+		color: inherit ;
+		line-height: inherit ;
+}
+
 .visible-links {
 	a {
 		font-weight: 700;
@@ -183,6 +188,23 @@ body {
 		max-width: 1600px;
 	}
 
+	.crop-height {
+	  max-width: 1200px;
+	  height: 25em;
+	  overflow: hidden; 
+	}
+
+	img.scale {
+	  /* corrects inline gap in enclosing div */
+	  display: block;
+	  max-width: 100%;
+	  /* just in case, to force correct aspect ratio */
+	  height: auto !important;
+	  width: auto\9; /* ie8+9 */
+	  /* lt ie8 */
+	  -ms-interpolation-mode: bicubic;
+	  margin: auto auto; // in case the image fails to reach 100% width 
+	}
 
 	// Buttons
 
@@ -634,7 +656,7 @@ Front Page Music Module
 
 		h3 {
 			margin-top: 2em;
-			color: $dark-grey
+			color: $dark-grey;
 		}
 
 	}
@@ -760,14 +782,30 @@ Front Page Food Module
 	}
 }
 
-/*--------------------------------------------------------------
-Events Page
---------------------------------------------------------------*/
+/*-----------------
+Secondary page styles General
+--------------*/
 
-.events-page {
+.secondary-page {
 
 	.blurb {
-		background-color: rgba($white-1, .6);
+		background-color: rgba($white-1, .8);
+	}
+
+	.background-container {
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+		  -o-background-size: cover;
+		  background-size: cover;
+			background-attachment: fixed;
+	}
+
+	.page-header {
+		// border-bottom: none;
+		// border-top: none;
+		 h1, h2, h3, h4, h5, h6 {
+			color: $white;
+		}
 	}
 
 	.page-header-bottom {
@@ -783,6 +821,36 @@ Events Page
 	.body-inner {
 		padding-top: 30px;
 	}
+}
+
+/*--------------------------------------------------------------
+Events Page
+--------------------------------------------------------------*/
+
+.events-page {
+
+	.background-container {
+		background-image: url($templateDirectory + "images/backgrounds/tools.jpg");
+		background-position: bottom;
+	}
+
+	.page-header-top {
+
+		background-color: $red-3;
+		margin-bottom: 0;
+
+		.page-inner {
+			background-color: lighten($red-3, 3%);
+		}
+	}
+
+	.page-header-bottom {
+		background-color: $red-4;
+
+		.page-inner {
+				background-color: lighten($red-4, 3%);
+		}
+	}
 
 	.column-filter {
 
@@ -794,7 +862,6 @@ Events Page
 			margin-top: 0;
 		}
 
-
 		.btn-primary {
 			background-color: $red-3;
 			border-color: darken($red-3, 3%);
@@ -802,26 +869,15 @@ Events Page
 		}
 	}
 
-	.crop-height {
-  /* max-width: 1200px; /* img src width (if known) */
-  max-height: 20em;
-  overflow: hidden; 
-}
-
-img.scale {
-  /* corrects inline gap in enclosing div */
-  display: block;
-  max-width: 100%;
-  /* just in case, to force correct aspect ratio */
-  height: auto !important;
-  width: auto\9; /* ie8+9 */
-  /* lt ie8 */
-  -ms-interpolation-mode: bicubic; 
-}
+	.board-wrapper {
+		background-color: $black-2;
+	}
 
 	.board {
 		height: 100%;
 		text-decoration: none;
+		opacity: .9;
+		transition: all 0.5s;
 
 		h3, h4 {
 			padding: 1em;
@@ -835,99 +891,38 @@ img.scale {
 			margin-top: 0;
 		}
 
-		// img {
-		// 	max-height: 15em;
-		// 	min-width: 100%;
-		// }
-		opacity: .9;
-		transition: all 0.5s;
-	}
-
-	.board-wrapper {
-		background-color: $black-2;
 	}
 
 	.board:hover {
 		opacity: 1.0;
-		
 	}
 
 	.board-block {
+		color: $white-1;
+	}
+	.board-block-bottom {
 		background-color: $black-dark;
-		color: $white;
 	}
 
-
-
-	.right-board {
+	.board-block-right {
 		background-color: $black-dark;
-		color: $white;
 	}
 
-	.left-board {
+	.board-block-left {
 		background-color: darken($red-3, 0%);
-		color: $white;
-	}
-
-	.background-container {
-			background-image: url($templateDirectory + "images/backgrounds/tools.jpg");
-
-			-webkit-background-size: cover;
-			-moz-background-size: cover;
-		  -o-background-size: cover;
-		  background-size: cover;
-			background-position: bottom;
-			background-attachment: fixed;
-	}
-
-	.page-header {
-
-		border-bottom: none;
-		border-top: none;
-
-		 h1, h2, h3, h4, h5, h6 {
-			color: $white;
-		}
-
-
-	}
-
-	.page-header-top {
-
-		background-color: $red-3;
-		// margin-top: 15em;
-		margin-bottom: 0;
-
-			.page-inner {
-				background-color: lighten($red-3, 3%);
-		}
-	}
-
-	.page-header-bottom {
-		background-color: $red-4;
-		margin-top: 0;
-
-		h4 {
-				// color: $black-1;
-		}
-	
-
-		.page-inner {
-				background-color: lighten($red-4, 3%);
-		}
 	}
 
 	.column-main {
-
-		// img.featured-image {
-		// 	width: 100%
-		// }
 
 		.btn-primary {
 				background-color: $red-3;
 				border-color: darken($red-3, 3%);
 				color: $white-1;
 			}
+	}
+
+	.sidebar-events {
+		display: none;
 	}
 
 }
@@ -944,42 +939,20 @@ Single Post Event
 }
 
 /*--------------------------------------------------------------
-Blog Page
+News Blog Page 
 --------------------------------------------------------------*/
 
-.blog-page {
-
-	.blurb {
-		background-color: rgba($white-1, .8);
-	}
+.blog.blog-page {
 
 	.background-container {
-			background-image: url($templateDirectory + "images/backgrounds/man-in-coffeeshop-looking-out.jpg");
-
-			-webkit-background-size: cover;
-			-moz-background-size: cover;
-		  -o-background-size: cover;
-		  background-size: cover;
-			background-position: top;
-			background-attachment: fixed;
+		background-image: url($templateDirectory + "images/backgrounds/man-in-coffeeshop-looking-out.jpg");
+		background-position: top;
 	}
 
-	.page-header {
-
-		border-bottom: none;
-		border-top: none;
-
-
-		 h1, h2, h3, h4, h5, h6 {
-			color: $white;
-		}
-	}
 	.page-header-top {
 
 		background-color: $gold-3;
-		margin-bottom: 0;
 
-		
 		.page-inner {
 			background-color: lighten($gold-3, 3%);
 		}
@@ -987,12 +960,7 @@ Blog Page
 
 	.page-header-bottom {
 		background-color: $gold-4;
-		margin-top: 0;
-
-		h4 {
-			font-family: "Lato";
-		}
-		
+		// margin-top: 0;
 
 		.page-inner {
 			background-color: lighten($gold-4, 3%);
@@ -1026,10 +994,10 @@ Blog Page
 		}
 	}
 
-
+	.sidebar-blog {
+		display: none;
+	}
 }
-
-
 
 /*--------------------------------------------------------------
 Restaurant Page
@@ -1109,9 +1077,13 @@ Sidebar
 
 .sidebar {
 
+	margin-right: .5em;
+
 	.section-header {
-		margin-top: 2em;
-		margin-bottom: 2em;
+		margin-bottom: 1em;
+		text-align: center;
+		padding-top: 1em;
+
 	}
 
 	.section-header:first-child {
@@ -1123,9 +1095,8 @@ Sidebar
 
 	.item {
 		margin-bottom: .5em;
-		margin-top: 2em;
+		margin-top: 1.5em;
 		background-color: $white-2;
-		margin-right: .5em;
 		padding-top: 1em;
 		opacity: .9;
 		transition: all 0.5s;
@@ -1158,6 +1129,10 @@ Sidebar
 	a {
 		color: $red-3;
 	}
+	.section-header {
+		background-color: lighten($red-5, 25%);
+	}
+
 
 }
 
@@ -1165,6 +1140,10 @@ Sidebar
 
 	a {
 		color: $gold-3;
+	}
+
+	.section-header {
+		background-color: lighten($gold-5, 25%);
 	}
 
 }

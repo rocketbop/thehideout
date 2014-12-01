@@ -5,7 +5,7 @@ Template Name: Events Page
 
 get_header(); ?>
 
-<div id="primary" class="content-area events-page visible-links visible-links-red" ng-controller="eventCtrl">
+<div id="primary" class="content-area secondary-page events-page visible-links visible-links-red" ng-controller="eventCtrl">
   <div class="container-fluid">
     <div class="row">
         <div class="background-container col-xs-12 col-sm-12 col-md-12 col-lg-12" data-my-div-height="full" minus-header="true">
@@ -83,12 +83,12 @@ get_header(); ?>
                     <div class="board board-wrapper ">
                       <div class="row ">
                         <div class="col-sm-6 col-md-6 col-lg-6 no-padding-right">
-                          <div class="board left-board">
+                          <div class="board board-block board-block-left">
                             <h3>{{event.event_name}}</h3>
                           </div>  
                         </div>
                         <div class=" col-sm-6 col-md-6 col-lg-6 no-padding-left">
-                          <div class=" board right-board no-padding-left">
+                          <div class=" board board-block board-block-right no-padding-left">
                              <h3>{{event.date_of_event | date: 'EEEE, d MMMM'}}</h3>
                            </div>
                         </div>
@@ -96,7 +96,7 @@ get_header(); ?>
                       <div class="crop-height">
                       <img class="featured-image scale" src="{{event.event_image.url}}">
                     </div>  
-                      <div class="board board-block">
+                      <div class="board board-block board-block-bottom">
                         <h4>{{event.date_of_event | date: 'h:mma, EEEE, d MMMM yyyy'}}, {{event.category}}.
                         </h4>
                       </div>

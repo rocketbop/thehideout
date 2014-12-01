@@ -12,8 +12,8 @@
 
 <!-- EVENTS -->
 <div class="sidebar sidebar-events" ng-controller="eventCtrl">
-  <div class="row">
-    <div class="section-header col-lg-10 col-lg-offset-1">
+  <div class="row section-header">
+    <div class=" col-md-12 col-lg-10 col-lg-offset-1">
       <h2>Upcoming Events</h2>
     </div>
   </div>
@@ -38,8 +38,8 @@
 
 <!-- NEWS -->
 <div class="sidebar sidebar-blog" ng-controller="blogCtrl">
-  <div class="row">
-    <div class="section-header col-lg-10 col-lg-offset-1">
+  <div class="row section-header ">
+    <div class="col-lg-10 col-lg-offset-1">
       <h2>News</h2>
     </div>
   </div>

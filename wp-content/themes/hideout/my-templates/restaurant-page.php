@@ -5,7 +5,7 @@ Template Name: Restaurant Page
 
 get_header(); ?>
 
-<div id="primary" class="content-area restaurant-page">
+<div id="primary" class="content-area secondary-page restaurant-page">
   <div class="container-fluid">
     <div class="row">
         <div class="background-container col-xs-12 col-sm-12 col-md-12 col-lg-12" data-my-div-height="full" minus-header="true">
