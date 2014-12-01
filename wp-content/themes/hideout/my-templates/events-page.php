@@ -17,10 +17,11 @@ get_header(); ?>
                 Images Go here
               </div>
               <div id="blurb" class="blurb col-xs-6 col-sm-6 col-md-6 col-lg-6" data-my-vertical-center ext-function="getPanelMargin()">
-                <h2>We Love Live Music</h2>
-                <p>Some blurb about why there is music at the Hideout</p>
-                <p>Some more information about why you should come to the Hideout to see the live bands.</p>
-                <p>Some more information about why you should come to the Hideout to see the live bands.</p>
+                <strong><h2>We Love Music</h2></strong>
+                <p>We care about music at <strong>The Hideout</strong>.</p>
+                <p>That's why we have great equipment, great bands and singers, and great audiences.</p>
+                <strong><p>5 Nights a Week.</p></strong>
+               
             
               </div>
             </div>

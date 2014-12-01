@@ -60,7 +60,7 @@ $yellow-5:  #ffc973;
 // $red-1:     #ff2c00;
 $red-1:     #a2302a;
 $red-2:     #bf4930;
-$red-3:     #a61d00;
+$red-3:     #BF381B;
 $red-4:     #ff6140;
 $red-4:     #e33c19;
 $red-5:     #ff8b73; 
@@ -83,12 +83,20 @@ $white-5:		#d8d8d8;
 --------------------------------------------------------------*/
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: "Oswald", serif;
+	font-family: "Oswald", sans-serif;
+	font-weight: 300;
 }
+
 
 p, li, a {
 	font-family: "Lato", sans-serif;
 	line-height: 2.5em;
+}
+
+strong {
+	h1, h2, h3, h4, h5,  h6 {
+		font-weight: 400;
+	}
 }
 
 li {
@@ -229,7 +237,8 @@ header {
 	}
 
 	.navbar-container {
-		background-color: rgba(5,5,5,.9);
+		background-color: $black-3;
+		opacity: 0.9;
 		height: 5em;
 		transition: all 0.7s ease-in;
 
@@ -788,7 +797,18 @@ Secondary page styles General
 .secondary-page {
 
 	.blurb {
-		background-color: rgba($white-1, .8);
+		background-color: rgba($white-1, .7);
+		padding: 2em;
+
+		h2 {
+			margin-bottom: 1em;
+		}
+
+		strong p,
+		p {
+			line-height: 1.2em;
+		}
+
 	}
 
 	.background-container {
@@ -804,6 +824,7 @@ Secondary page styles General
 		// border-top: none;
 		 h1, h2, h3, h4, h5, h6 {
 			color: $white;
+			font-weight: 300;
 		}
 	}
 
@@ -819,6 +840,8 @@ Secondary page styles General
 			// font-family: "Playfair+Display";
 			font-family: "Oxygen";
 			// font-family: "Quattrocento";
+
+			font-weight: 300;
 		}
 
 	}
@@ -835,24 +858,25 @@ Events Page
 .events-page {
 
 	.background-container {
-		background-image: url($templateDirectory + "images/backgrounds/tools.jpg");
+		background-image: url($templateDirectory + "images/backgrounds/headphones.jpg");
 		background-position: bottom;
 	}
 
 	.page-header-top {
-		background-color: $red-3;
+		background-color: $red-2;
 		margin-bottom: 0;
 
 		.page-inner {
-			background-color: lighten($red-3, 3%);
+			background-color: lighten($red-2, 3%);
 		}
 	}
 
 	.page-header-bottom {
-		background-color: $red-4;
+		// background-color: $red-4;
+		background-color: desaturate($red-3, 15%);
 
 		.page-inner {
-			background-color: lighten($red-4, 3%);
+			background-color: lighten(desaturate($red-3, 15%), 3%);
 		}
 	}
 
@@ -882,6 +906,10 @@ Events Page
 		text-decoration: none;
 		opacity: 1.0;
 		transition: all 0.5s;
+
+		h3 {
+			text-align: center;
+		}
 
 		h3, h4 {
 			padding: 1em;
