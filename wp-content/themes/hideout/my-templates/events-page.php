@@ -68,9 +68,9 @@ get_header(); ?>
          
               <h4 class="text-center">Filter</h4>
               <a ng-click="selectCategory()"
-                class="btn btn-block btn-default btn-lg">All</a>
+                class="btn btn-block btn-default btn-lg"><h4>All</h4></a>
                 <!-- The unique filter will mean categories with more than one event will not be generated in duplicate -->
-              <a ng-click="selectCategory(event.category)" ng-repeat="event in data.events | orderBy:'category' | unique:'category'"  class=" btn btn-block btn-default btn-lg" ng-class="getCategoryClass(event.category)">{{event.category}}</a>  
+              <a ng-click="selectCategory(event.category)" ng-repeat="event in data.events | orderBy:'category' | unique:'category'"  class=" btn btn-block btn-default btn-lg" ng-class="getCategoryClass(event.category)"><h4>{{event.category}}</h4></a>  
 
             </div>
           </div>

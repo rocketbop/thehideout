@@ -14,7 +14,7 @@
 <div class="sidebar sidebar-events" ng-controller="eventCtrl">
   <div class="row section-header">
     <div class=" col-md-12 col-lg-10 col-lg-offset-1">
-      <h2>Upcoming Events</h2>
+      <h2>UPCOMING EVENTS</h2>
     </div>
   </div>
   
@@ -40,7 +40,7 @@
 <div class="sidebar sidebar-blog" ng-controller="blogCtrl">
   <div class="row section-header ">
     <div class="col-lg-10 col-lg-offset-1">
-      <h2>News</h2>
+      <h2>HIDEOUT NEWS</h2>
     </div>
   </div>
 
