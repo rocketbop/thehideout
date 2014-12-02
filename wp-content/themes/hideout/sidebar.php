@@ -12,14 +12,18 @@
 
 <!-- EVENTS -->
 <div class="sidebar sidebar-events" ng-controller="eventCtrl">
-  <div class="row section-header">
-    <div class=" col-md-12 col-lg-10 col-lg-offset-1">
-      <h2>UPCOMING EVENTS</h2>
+  <div class=" section-header background-container-sidebar-header">
+    
+    
+    <div class="row">
+      <div class="col-md-12 col-lg-10 col-lg-offset-1 ">
+        <h2>UPCOMING EVENTS</h2>
+      </div>
     </div>
   </div>
   
 
-  <div ng-repeat="event in data.events | orderBy: '-date_of_event' | limitTo: 5">
+  <div class="background-container-sidebar-item" ng-repeat="event in data.events | orderBy: '-date_of_event' | limitTo: 5">
     <a href="{{event.link}}">
       <div class="row item">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 col-lg-offset-1">
@@ -38,13 +42,17 @@
 
 <!-- NEWS -->
 <div class="sidebar sidebar-blog" ng-controller="blogCtrl">
-  <div class="row section-header ">
-    <div class="col-lg-10 col-lg-offset-1">
-      <h2>HIDEOUT NEWS</h2>
+  <div class="section-header background-container-sidebar-header">
+    
+ 
+    <div class="row  ">
+      <div class="col-lg-10 col-lg-offset-1">
+        <h2>HIDEOUT NEWS</h2>
+      </div>
     </div>
-  </div>
+   </div>
 
-  <div ng-repeat="blogPost in data.blogPosts | orderBy: '-date' | limitTo: 5">
+  <div class="background-container-sidebar-item" ng-repeat="blogPost in data.blogPosts | orderBy: '-date' | limitTo: 5">
     <a href="{{event.link}}">
       <div class="row item">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 col-lg-offset-1">

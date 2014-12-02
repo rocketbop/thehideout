@@ -434,8 +434,13 @@ Events Page
     background-color: #bb472e; }
 .events-page .column-filter a {
   color: #2b2b2b; }
-.events-page .column-filter h4:first-child {
-  margin-top: 0; }
+.events-page .column-filter h3:first-child {
+  margin-top: 0;
+  margin-bottom: 2em; }
+.events-page .column-filter h4 {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0.8em; }
 .events-page .column-filter .btn-primary {
   background-color: #bf381b;
   border-color: #b23419;
@@ -449,12 +454,12 @@ Events Page
   transition: all 0.5s; }
   .events-page .board h3 {
     text-align: center; }
-  .events-page .board h3, .events-page .board h4 {
-    padding: 1em; }
   .events-page .board h3:first-child {
     margin-top: 0; }
-  .events-page .board h4 {
-    margin-top: 0; }
+  .events-page .board h3, .events-page .board h4 {
+    padding: 1em;
+    margin-top: 0;
+    margin-bottom: 0; }
   .events-page .board img.featured-image {
     width: 100%;
     opacity: 0.9;
@@ -557,40 +562,41 @@ Restaurant Page
 /*--------------------------------------------------------------
 Sidebar
 --------------------------------------------------------------*/
-.sidebar {
-  margin-right: .5em; }
-  .sidebar .section-header {
-    margin-bottom: 1em;
-    text-align: center;
-    padding-top: 1em; }
-  .sidebar .section-header:first-child {
+.sidebar .section-header {
+  margin-bottom: 1em;
+  text-align: center;
+  padding-top: 1em; }
+.sidebar .section-header:first-child {
+  margin-top: 0; }
+  .sidebar .section-header:first-child h2:first-child {
     margin-top: 0; }
-    .sidebar .section-header:first-child h2:first-child {
-      margin-top: 0; }
-  .sidebar .item {
-    margin-bottom: .5em;
-    margin-top: 1.5em;
-    background-color: #f8f8f8;
-    padding-top: 1em;
-    opacity: .9;
-    transition: all 0.5s; }
-  .sidebar .item:hover {
-    opacity: 1.0;
-    transition: all 0.5s; }
-  .sidebar > h2 {
-    margin-top: 2em;
-    margin-bottom: 2em; }
-  .sidebar h5 {
-    color: black; }
+.sidebar .background-container-sidebar-item {
+  background-color: #f8f8f8; }
+.sidebar .item {
+  margin-bottom: .5em;
+  margin-top: 1.5em;
+  padding-top: 1em;
+  opacity: .9;
+  transition: all 0.5s; }
+  .sidebar .item img {
+    width: 100%; }
+.sidebar .item:hover {
+  opacity: 1.0;
+  transition: all 0.5s; }
+.sidebar > h2 {
+  margin-top: 2em;
+  margin-bottom: 2em; }
+.sidebar h5 {
+  color: black; }
 
 .sidebar.sidebar-events a {
   color: #bf381b; }
-.sidebar.sidebar-events .section-header {
-  background-color: #fff5f3; }
+.sidebar.sidebar-events .section-header.background-container-sidebar-header {
+  background-color: #ffe0d9; }
 
 .sidebar.sidebar-blog a {
   color: #a64b00; }
-.sidebar.sidebar-blog .section-header {
+.sidebar.sidebar-blog .section-header.background-container-sidebar-header {
   background-color: #fff8f3; }
 
 /*--------------------------------------------------------------

@@ -890,8 +890,15 @@ Events Page
 			color: lighten($black-2, 10%);
 		}
 
-		h4:first-child {
+		h3:first-child {
 			margin-top: 0;
+			margin-bottom: 2em;
+		}
+
+		h4 {
+			margin-top: 0;
+			margin-bottom: 0;
+			padding: 0.8em;
 		}
 
 		.btn-primary {
@@ -915,16 +922,14 @@ Events Page
 			text-align: center;
 		}
 
-		h3, h4 {
-			padding: 1em;
-		}
-
 		h3:first-child {
 			margin-top: 0;
 		}
 
-		h4 {
+		h3, h4 {
+			padding: 1em;
 			margin-top: 0;
+			margin-bottom: 0;
 		}
 
 		img.featured-image {
@@ -1126,7 +1131,7 @@ Sidebar
 
 .sidebar {
 
-	margin-right: .5em;
+	// margin-right: .5em;
 
 	.section-header {
 		margin-bottom: 1em;
@@ -1142,13 +1147,21 @@ Sidebar
 		}
 	}
 
+	.background-container-sidebar-item {
+		background-color: $white-2;
+	}
+
 	.item {
 		margin-bottom: .5em;
 		margin-top: 1.5em;
-		background-color: $white-2;
+		// background-color: $white-2;
 		padding-top: 1em;
 		opacity: .9;
 		transition: all 0.5s;
+
+		img {
+			width: 100%;
+		}
 	}
 
 	.item:last-child {
@@ -1178,9 +1191,10 @@ Sidebar
 	a {
 		color: $red-3;
 	}
-	.section-header {
-		background-color: lighten($red-5, 25%);
+	.section-header.background-container-sidebar-header {
+		background-color: lighten($red-5, 20%);
 	}
+
 
 
 }
@@ -1191,8 +1205,9 @@ Sidebar
 		color: $gold-3;
 	}
 
-	.section-header {
+	.section-header.background-container-sidebar-header {
 		background-color: lighten($gold-5, 25%);
+
 	}
 
 }

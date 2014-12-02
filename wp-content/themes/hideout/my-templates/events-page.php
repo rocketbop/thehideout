@@ -64,9 +64,9 @@ get_header(); ?>
       <div class="body-inner col-xs-10 col-sm-10 col-md-10 col-lg-10">
         <div class="row">
           <div class="column-filter">
-            <div class="col-md-2">
+            <div class="col-md-2 no-padding-right">
          
-              <h4 class="text-center">Filter</h4>
+              <h3 class="text-center">Filter</h3>
               <a ng-click="selectCategory()"
                 class="btn btn-block btn-default btn-lg"><h4>All</h4></a>
                 <!-- The unique filter will mean categories with more than one event will not be generated in duplicate -->
@@ -124,7 +124,7 @@ get_header(); ?>
              </div>
             <!-- </div>  -->
 
-            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 no-padding-left">
               <?php get_sidebar(); ?>
             </div>
          </div> <!-- row -->
