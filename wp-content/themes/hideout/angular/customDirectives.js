@@ -83,7 +83,7 @@ angular.module("theHideoutApp")
 
     function applyCss(scope, element, attrs) {
       var itemNumber = attrs["newsBackgroundImage"] - 1; // reduce by one for array logic
-      var url = scope.data.filteredBlogPosts[itemNumber].featured_image.attachment_meta.sizes.medium.url;
+      var url = scope.data.filteredBlogPosts[itemNumber].featured_image.attachment_meta.sizes.eventboard.url;
       console.log(url);
       var urlParam = 'url(' + url + ')';
       console.log(urlParam);
@@ -98,7 +98,7 @@ angular.module("theHideoutApp")
       link: function (scope, element, attrs) {
         scope.dataPromise.success(function() {
           scope.data.filteredBlogPosts = $filter('orderBy')(scope.data.blogPosts, '-date');
-          scope.data.filteredBlogPosts = $filter('limitTo')(scope.data.filteredBlogPosts, '3');
+          scope.data.filteredBlogPosts = $filter('limitTo')(scope.data.filteredBlogPosts, '4');
           applyCss(scope, element, attrs);
         })
         

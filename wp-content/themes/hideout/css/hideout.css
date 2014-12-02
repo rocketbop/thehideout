@@ -59,6 +59,12 @@ a:visited {
 .no-padding-bottom {
   padding-bottom: 0 !important; }
 
+.margin-left-15 {
+  margin-left: 15px; }
+
+.margin-right-15 {
+  margin-right: 15px; }
+
 .vcenter {
   display: inline-block;
   vertical-align: middle;
@@ -86,7 +92,7 @@ header nav h2 {
   font-size: 1.5em;
   text-transform: uppercase; }
 header .navbar-container {
-  background-color: #222222;
+  background-color: #111111;
   opacity: 0.9;
   height: 5em;
   transition: all 0.7s ease-in; }
@@ -172,11 +178,17 @@ header .navbar {
     text-align: center;
     margin: auto; }
 
+/*---------------
+Front Page General
+---------------------------------------*/
+.module-body-inner {
+  padding-top: 2em; }
+
 /*--------------------------------------------------------------
 Front Page Header
 --------------------------------------------------------------*/
 .front-page .background-container {
-  background-image: url("http://localhost:8888/wp-content/themes/hideout/images/backgrounds/book-on-desk.jpg");
+  background-image: url("http://localhost:8888/wp-content/themes/hideout/images/backgrounds/man-playing-banjo.jpg");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -219,76 +231,59 @@ Front Page Introduction
 Front Page News
 --------------------------------------------------------------*/
 .news-module .module-header {
-  background-color: #ff9640; }
+  background-color: #308ba0; }
 .news-module .module-header-inner {
-  background-color: #ff9e4f; }
+  background-color: #369cb4; }
 .news-module .module-body-inner {
   background-color: white; }
-.news-module .news-section img {
-  opacity: .1; }
-.news-module .news-section .item {
+.news-module .item-wrapper {
+  margin-bottom: 1em; }
+.news-module .item-image {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
-  background-position: top;
+  background-size: cover; }
+.news-module .item-wrapper.item-1 {
+  background-color: #369cb4; }
+  .news-module .item-wrapper.item-1 .item-text {
+    padding-left: 2em; }
+  .news-module .item-wrapper.item-1 .item-image {
+    height: 18em;
+    background-position: bottom; }
+.news-module .item-wrapper.item-2 {
+  background-color: #f8f8f8; }
+  .news-module .item-wrapper.item-2 .item-text {
+    padding-left: 1em; }
+  .news-module .item-wrapper.item-2 .item-image {
+    height: 10em;
+    background-position: bottom;
+    border-bottom: #2a7a8c 1px solid;
+    margin-bottom: -1px; }
+.news-module .item-wrapper.item-3 {
+  background-color: #308ba0;
+  border-top: #2a7a8c 1px solid; }
+  .news-module .item-wrapper.item-3 .item-text {
+    padding-right: 2em; }
+  .news-module .item-wrapper.item-3 .item-image {
+    height: 7em;
+    margin-bottom: 0.5em;
+    background-position: bottom; }
+.news-module .item-wrapper.item-4 {
+  background-color: white-2;
+  border-bottom: #2a7a8c 1px solid; }
+  .news-module .item-wrapper.item-4 .item-text h4 {
+    margin-bottom: 1em; }
+  .news-module .item-wrapper.item-4 .item-text p {
+    line-height: 1em;
+    margin-top: 0; }
+  .news-module .item-wrapper.item-4 .item-image {
+    height: 12em;
+    margin-bottom: 0.5em;
+    background-position: bottom; }
+.news-module .item p, .news-module .item a {
+  line-height: 1em;
   margin-top: 1em;
-  margin-bottom: 1em;
-  position: relative; }
-.news-module .news-section .item.item-top {
-  height: 20em; }
-  .news-module .news-section .item.item-top .item-date {
-    padding-left: 1em;
-    padding-right: 1em;
-    padding-top: .5em; }
-  .news-module .news-section .item.item-top .item-headline {
-    padding-left: 1em;
-    padding-right: 1em;
-    padding-top: .5em;
-    bottom: 0;
-    right: 0;
-    width: 50%; }
-    .news-module .news-section .item.item-top .item-headline .content::after {
-      content: " ..."; }
-    .news-module .news-section .item.item-top .item-headline p, .news-module .news-section .item.item-top .item-headline a {
-      line-height: 1em;
-      margin-top: 1em;
-      display: inline; }
-.news-module .news-section .item.item-bottom {
-  height: 20em; }
-  .news-module .news-section .item.item-bottom .item-date {
-    padding-left: 1em;
-    padding-right: 1em;
-    padding-top: .5em; }
-  .news-module .news-section .item.item-bottom .item-headline {
-    padding-left: 1em;
-    padding-right: 1em;
-    padding-top: .5em;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 40%; }
-    .news-module .news-section .item.item-bottom .item-headline .content::after {
-      content: " ..."; }
-    .news-module .news-section .item.item-bottom .item-headline p {
-      line-height: 1em;
-      margin-top: 1em;
-      display: inline; }
-.news-module .news-section .item-box {
-  background-color: #ffb273;
-  opacity: .9;
-  position: absolute;
-  display: inline-block; }
-.news-module .news-section .item.item-bottom {
-  background-color: white; }
-.news-module .news-section .item.hovered img {
-  opacity: 1.0; }
-.news-module .news-section .item.hovered p, .news-module .news-section .item.hovered li, .news-module .news-section .item.hovered a, .news-module .news-section .item.hovered h1, .news-module .news-section .item.hovered h2, .news-module .news-section .item.hovered h3, .news-module .news-section .item.hovered h4, .news-module .news-section .item.hovered h5, .news-module .news-section .item.hovered h6 {
-  color: #dddddd; }
-.news-module .news-section .item.item-bottom.hovered p, .news-module .news-section .item.item-bottom.hovered li, .news-module .news-section .item.item-bottom.hovered a, .news-module .news-section .item.item-bottom.hovered h1, .news-module .news-section .item.item-bottom.hovered h2, .news-module .news-section .item.item-bottom.hovered h3, .news-module .news-section .item.item-bottom.hovered h4, .news-module .news-section .item.item-bottom.hovered h5, .news-module .news-section .item.item-bottom.hovered h6 {
-  color: black; }
-.news-module .twitter-section .twitter-widget {
-  margin-top: 1em; }
+  display: inline; }
 .news-module .image-section {
   margin-top: 1em; }
   .news-module .image-section img {
@@ -404,8 +399,7 @@ Secondary page styles General
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
-  background-attachment: fixed; }
+  background-size: cover; }
 .secondary-page .page-header h1, .secondary-page .page-header h2, .secondary-page .page-header h3, .secondary-page .page-header h4, .secondary-page .page-header h5, .secondary-page .page-header h6 {
   color: white;
   font-weight: 300; }
@@ -580,6 +574,8 @@ Sidebar
   transition: all 0.5s; }
   .sidebar .item img {
     width: 100%; }
+  .sidebar .item h4 {
+    line-height: 1.8em; }
 .sidebar .item:hover {
   opacity: 1.0;
   transition: all 0.5s; }

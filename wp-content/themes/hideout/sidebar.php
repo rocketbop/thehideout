@@ -62,7 +62,7 @@
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 col-lg-offset-1">
-          <h4>{{blogPost.title}}</h4>
+          <h4 ng-bind-html="blogPost.title"></h4>
           <h5>{{blogPost.date | date: 'EEEE, d MMMM yyyy'  }}</h5>
            
         </div>
