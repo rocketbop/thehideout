@@ -110,7 +110,8 @@ add_action( 'widgets_init', 'hideout_widgets_init' );
 
 function load_fonts() {
 
-        wp_register_style('googleFonts', 'http://fonts.googleapis.com/css?family=Oswald:400,300,700|Quattrocento:400,700|Oxygen:300,400,700|Playfair+Display:400,700,900|Lato:400,700,900|Merriweather:400,300,700|Berkshire+Swash');
+        wp_register_style('googleFonts', 'http://fonts.googleapis.com/css?family=Oswald:400,300,700|Quattrocento:400,700|Oxygen:300,400,700|Playfair+Display:400,700,900|Lato:300,400,700,900|Merriweather:400,300,700|Berkshire+Swash|Halant:300,400,500,600,700');
+        
 
         wp_enqueue_style( 'googleFonts');
     }
