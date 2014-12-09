@@ -141,6 +141,8 @@ function hideout_scripts() {
 
 	wp_enqueue_script( 'global-services', get_template_directory_uri() . '/angular/globalServices.js', false, NULL);
 
+	wp_enqueue_script( 'flickr-provider', get_template_directory_uri() . '/angular/components/gallery/flickrProvider.js', false, NULL);
+
 	wp_enqueue_script( 'main-controller', get_template_directory_uri() . '/angular/components/main/mainController.js', false, NULL);
 
 	wp_enqueue_script( 'event-controller', get_template_directory_uri() . '/angular/components/event/eventController.js', false, NULL);

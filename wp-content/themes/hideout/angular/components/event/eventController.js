@@ -88,7 +88,7 @@ angular.module("theHideoutApp")
       })
       
     } else {
-      console.log("Why me");
+      // console.log("Why me");
     }
     
 

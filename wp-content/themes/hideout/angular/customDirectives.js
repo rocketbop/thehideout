@@ -28,7 +28,7 @@ angular.module("theHideoutApp")
       }
 
       windowHeight = $window.innerHeight * heightModifier;
-      console.log("wh before" + windowHeight);
+      // console.log("wh before" + windowHeight);
       if (headerSize != false) {
         windowHeight = windowHeight - headerSize;
       }
@@ -86,11 +86,11 @@ angular.module("theHideoutApp")
       var url = scope.data.filteredBlogPosts[itemNumber].featured_image.attachment_meta.sizes.eventboard.url;
       console.log(url);
       var urlParam = 'url(' + url + ')';
-      console.log(urlParam);
-      console.log(itemNumber);
+      // console.log(urlParam);
+      // console.log(itemNumber);
       // console.log(scope.blogPosts[0]);
       element.css('background-image', urlParam);
-      console.log(urlParam);
+      // console.log(urlParam);
 
     }
 

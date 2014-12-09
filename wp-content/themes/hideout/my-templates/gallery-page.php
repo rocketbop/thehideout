@@ -7,7 +7,7 @@ get_header(); ?>
 
 <div id="primary" class="content-area secondary-page gallery-page visible-links visible-links-blue" ng-controller="galleryCtrl">
   <div class="container-fluid">
-    <div class="row">
+<!--     <div class="row">
         <div class="background-container col-xs-12 col-sm-12 col-md-12 col-lg-12" data-my-div-height="full" minus-header="true">
 
         <div class="row">
@@ -28,7 +28,16 @@ get_header(); ?>
           </div>
         </div>
         </div>
-      </div>
+      </div> -->
+
+
+
+
+
+
+
+
+
     <div class="row page-header page-header-top">
       <div class="page-inner col-xs-10 col-sm-10 col-md-10 col-lg-10 col-md-offset-1">
           <div class="row">
@@ -64,51 +73,20 @@ get_header(); ?>
       <div class="body-inner col-xs-10 col-sm-10 col-md-10 col-lg-10">
         <div class="row">
           <div class="column-filter">
-            <div class="col-md-2 no-padding-right">
+            <div class="col-md-3 no-padding-right">
          
-              <h3 class="text-center">Filter</h3>
-              <a ng-click="selectCategory()"
-                class="btn btn-block btn-default btn-lg"><h4>All</h4></a>
+              <h3 class="text-center">Albums</h3>
                 <!-- The unique filter will mean categories with more than one event will not be generated in duplicate -->
-              <a ng-click="selectCategory(event.category)" ng-repeat="event in data.events | orderBy:'category' | unique:'category'"  class=" btn btn-block btn-default btn-lg" ng-class="getCategoryClass(event.category)"><h4>{{event.category}}</h4></a>  
+              <a ng-click="selectAlbum(photoset.id)" ng-repeat="photoset in data.photosetList.photosets.photoset"  class=" btn btn-block btn-default btn-lg" ng-class="getCategoryClass(event.category)"><h4>{{photoset.title._content}}</h4></a>  
 
             </div>
           </div>
           <div class="column-main">
-            <div class="col-md-7">
+            <div class="col-md-9">
               
-                <!-- <h3>{{selectedCategory}} Events</h3> -->
-                <div ng-repeat="event in data.events | orderBy: '-date_of_event' | filter:categoryFilterFn | range:selectedPage:pageSize">
-
-                  <a href="{{event.link}}">
-                    <div class="board board-wrapper ">
-                      <div class="row ">
-                        <div class="col-sm-6 col-md-6 col-lg-6 no-padding-right">
-                          <div class="board board-block board-block-left">
-                            <h3>{{event.event_name}}</h3>
-                          </div>  
-                        </div>
-                        <div class=" col-sm-6 col-md-6 col-lg-6 no-padding-left">
-                          <div class=" board board-block board-block-right no-padding-left">
-                             <h3>{{event.date_of_event | date: 'EEEE, d MMMM'}}</h3>
-                           </div>
-                        </div>
-                      </div>
-                      <!-- <div class=" crop-height"> -->
-                      <div class="">
-                      <!-- <img class="featured-image scale" src="{{event.event_image.url}}"> -->
-                      <img class="featured-image" src="{{event.featured_image.attachment_meta.sizes.eventboard.url}}">
-                    </div>  
-                      <div class="board board-block board-block-bottom">
-                        <h4>{{event.date_of_event | date: 'h:mma, EEEE, d MMMM yyyy'}}, {{event.category}}.
-                        </h4>
-                      </div>
-                    </div>
-                  </a>
-                <!-- Save to use below for content entered through WP backend -->
-                <div ng-bind-html="event.event_description"></div>
-                  <img class="separator" ng-src="{{templateDirectory}}images/design/guitar-separator.png">
-
+                <div ng-repeat="photo in data.selectedAlbumPhotos.photoset.photo">
+                  <img src="https://farm{{photo.farm}}.staticflickr.com/{{photo.server}}/{{photo.id}}_{{photo.secret}}.jpg">
+                  <p>Hi</p>
                 </div>
 
              
@@ -124,14 +102,20 @@ get_header(); ?>
              </div>
             <!-- </div>  -->
 
-            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 no-padding-left">
-              <?php get_sidebar(); ?>
-            </div>
+
          </div> <!-- row -->
        </div> <!-- page body -->
     </div> <!-- row -->
   </div> <!-- container fluid -->
 
+
+
+
+
+
+
+
 </div> <!-- ng controller -->
+
 
 <?php get_footer(); ?>

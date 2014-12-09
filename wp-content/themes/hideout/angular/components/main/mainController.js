@@ -13,10 +13,11 @@ angular.module("theHideoutApp")
 
     $scope.singlePostCategory = postCategory;
     $scope.singlePostID = postID;
-    console.log($scope.singlePostCategory);
+    // console.log($scope.singlePostCategory);
   }
   
   $scope.sidebarUrl = templateDirectory + "sidebar.php";
+  
   // used in ng-switch statement in templates/content-singlepost.php
   $scope.eventPartial = templateDirectory + "angular/partials/singlepostevent.php";
   $scope.blogPartial = templateDirectory + "angular/partials/singlepostblog.php";
@@ -27,7 +28,7 @@ angular.module("theHideoutApp")
   $scope.getScreenHeight = function () {
     var screenHeight = 0;
     screenHeight = $window.innerHeight;
-    console.log("Screenheight:"+screenHeight);
+    // console.log("Screenheight:"+screenHeight);
     return screenHeight;
   }
 
@@ -39,7 +40,7 @@ angular.module("theHideoutApp")
     jQuery(pageHeaders).each(function () {
       pageHeaderHeight += jQuery(this).height();
     })
-    console.log("PageHeaderHeight:"+ pageHeaderHeight);
+    // console.log("PageHeaderHeight:"+ pageHeaderHeight);
     return pageHeaderHeight;
 
   }
@@ -50,7 +51,7 @@ angular.module("theHideoutApp")
     var nav = jQuery('div.navbar-container');
 
     navHeight = jQuery(nav).height();
-    console.log("NavHeight:"+navHeight);
+    // console.log("NavHeight:"+navHeight);
 
     return navHeight;  
 
@@ -63,12 +64,12 @@ angular.module("theHideoutApp")
     var pageHeaderHeight = $scope.getPageHeaderHeight();
     var navHeight = $scope.getNavHeight();
 
-    console.log(screenHeight);
-    console.log(pageHeaderHeight);
-    console.log(navHeight);
+    // console.log(screenHeight);
+    // console.log(pageHeaderHeight);
+    // console.log(navHeight);
 
     bannerHeight = screenHeight - (navHeight + pageHeaderHeight);
-    console.log("BannerHeight:"+bannerHeight);
+    // console.log("BannerHeight:"+bannerHeight);
     return bannerHeight;
 
   }
@@ -80,7 +81,7 @@ angular.module("theHideoutApp")
 
     // panelHeight = jQuery(panel).height();
     panelHeight = document.getElementById('blurb').clientHeight;
-      console.log("PanelHeight:"+panelHeight);
+      // console.log("PanelHeight:"+panelHeight);
     return panelHeight;
 
 
@@ -100,7 +101,7 @@ angular.module("theHideoutApp")
 
     nonPanelBannerHeight = bannerHeight - panelHeight;
     panelMargin = (nonPanelBannerHeight / 2) + navHeight;
-    console.log("PanelMargin:"+panelMargin);
+    // console.log("PanelMargin:"+panelMargin);
     return panelMargin;
 
   }
