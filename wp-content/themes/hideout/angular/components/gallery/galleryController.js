@@ -10,11 +10,19 @@ angular.module('theHideoutApp')
 
         // Select most recent gallery as init
         $scope.selectedAlbumID = $scope.data.photosetList.photosets.photoset[0].id;
-        Flickr.getPhotosetPhotos($scope.selectedAlbumID)
-          .success(function (data) {
-            $scope.data.selectedAlbumPhotos = data;
-            console.log($scope.data.selectedAlbumPhotos);
-          })
+
+        $scope.getPhotosetPhotos = function (selectedAlbumID) {
+          Flickr.getPhotosetPhotos(selectedAlbumID)
+            .success(function (data) {
+              $scope.data.selectedAlbumPhotos = data;
+              console.log($scope.data.selectedAlbumPhotos);
+            })
+            .error(function (error) {
+              console.log(error);
+            }) 
+          }
+        $scope.getPhotosetPhotos($scope.selectedAlbumID);
+
         // console.log($scope.selectedAlbumID);
         console.log($scope.data.photosetList);
 
@@ -22,10 +30,15 @@ angular.module('theHideoutApp')
       .error(function (error) {
         console.log("That did not work.");
       });
-      
+
       $scope.selectAlbum = function (albumID) {
         // select the gallery
-        $scope.selectedAlbumID = albumID;
+        if ($scope.selectedAlbumID != albumID) {
+          $scope.selectedAlbumID = albumID;
+          $scope.getPhotosetPhotos($scope.selectedAlbumID);
+
+        }
+        
       }
 
     }])

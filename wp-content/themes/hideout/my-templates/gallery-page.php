@@ -86,7 +86,6 @@ get_header(); ?>
               
                 <div ng-repeat="photo in data.selectedAlbumPhotos.photoset.photo">
                   <img src="https://farm{{photo.farm}}.staticflickr.com/{{photo.server}}/{{photo.id}}_{{photo.secret}}.jpg">
-                  <p>Hi</p>
                 </div>
 
              
