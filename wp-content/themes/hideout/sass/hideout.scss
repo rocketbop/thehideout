@@ -398,7 +398,17 @@ Front Page General
 
 .module-body-inner {
 	padding-top: 2em;
+	padding-bottom: 2em;
+	margin-top: 1em;
+	margin-bottom: 1em;
 }
+
+.module-header-inner {
+	color: $white-2;
+	padding-left: 2em;
+}
+
+
 /*--------------------------------------------------------------
 Front Page Header
 --------------------------------------------------------------*/
@@ -481,23 +491,18 @@ Front Page Introduction
 
 
 /*--------------------------------------------------------------
-Front Page News
+Front Page News Module
 --------------------------------------------------------------*/
 
 .news-module {
 
 	.module-header {
-		// background-color: $gold-4;
 		background-color: darken($color-aqua, 10%);
 	}
 
 	.module-header-inner {
 		background-color: darken($color-aqua, 5%);
-		// background-color: lighten($gold-4, 3%);
-		color: $white-2;
-		padding-left: 2em;
 	}
-
 
 	.module-body-inner {
 		background-color: $white-1;
@@ -507,10 +512,10 @@ Front Page News
 		margin-bottom: 1em;
 
 		.item-text {
+			
 			p, a {
 				line-height: 1em;
 				margin-top: 1em;
-				// display: inline;
 			}
 		}
 
@@ -615,155 +620,14 @@ Front Page News
 		background-color: darken($white-2, 10%);
 	}
 
-	.item {
-
-			// -webkit-background-size: scale;
-			// -moz-background-size: scale;
-		 //  -o-background-size: scale;
-		 //  background-size: scale;
-			// background-position: bottom;
-		
-
-
-
-	}
-
-	// .news-section {
-	// 	// background-color: $gold-4;
-		
-	// 	img {
-	// 		opacity: .1;
-	// 	}
-
-	// 	.item {
-
-			// -webkit-background-size: cover;
-			// -moz-background-size: cover;
-		 //  -o-background-size: cover;
-		 //  background-size: cover;
-			// background-position: top;
-
-	// 		margin-top: 1em;
-	// 		margin-bottom: 1em;
-	// 		position: relative; 
-
-	// 	}
-
-	// 	.item.item-top {
-	// 		height: 20em;
-
-	// 		.item-date {
-	// 			padding-left: 1em;
-	// 			padding-right: 1em;
-	// 			padding-top: .5em;
-
-	// 		}
-
-	// 		.item-headline {
-	// 			padding-left: 1em;
-	// 			padding-right: 1em;
-	// 			padding-top: .5em;
-			
-	// 			bottom: 0;
-	// 			right: 0;
-	// 			width: 50%;
-
-	// 			.content::after {
-	// 				content: " ...";
-	// 			}
-
-				// p, a {
-				// 	line-height: 1em;
-				// 	margin-top: 1em;
-				// 	display: inline;
-				// }
-
-	// 		}
-	// 	}
-
-	// 	.item.item-bottom {
-	// 		height: 20em;
-
-	// 		.item-date {
-	// 			padding-left: 1em;
-	// 			padding-right: 1em;
-	// 			padding-top: .5em;
-
-	// 		}
-
-	// 		.item-headline {
-	// 			padding-left: 1em;
-	// 			padding-right: 1em;
-	// 			padding-top: .5em;
-			
-	// 			bottom: 0;
-	// 			right: 0;
-	// 			width: 100%;
-	// 			height: 40%;
-
-
-	// 			.content::after {
-	// 				content: " ...";
-	// 			}
-
-	// 			p {
-	// 				line-height: 1em;
-	// 				margin-top: 1em;
-	// 				display: inline;
-	// 			}
-
-	// 		}
-	// 	}
-
-	// 	.item-box {
-	// 		background-color: $gold-5;
-	// 		opacity: .9;
-	// 		position: absolute;
-	// 		display: inline-block;
-	// 		// color: $white-1
-	// 	}
-
-
-	// 	.item.item-bottom {
-	// 		background-color: $white;
-
-	// 	}
-
-	// 	.item.hovered {
-	// 		img {
-	// 			opacity: 1.0;
-	// 		}
-
-	// 		p, li, a, h1, h2, h3, h4, h5, h6 {
-	// 			color: $off-white;
-	// 		}
-	// 	}
-
-	// 	.item.item-bottom.hovered {
-	// 		p, li, a, h1, h2, h3, h4, h5, h6 {
-	// 			color: black;
-	// 		}
-
-	// 	}
-	// }
-
-	.twitter-section {
-
-		.twitter-widget {
-			// margin-top: 1em;
-		}
-
-
-	}
-
 	.image-section {
 		margin-top: 1em;
+
 		img {
 			text-align: center;
 			width:	100%
 		}
 	}
-
 }	
 
 /*--------------------------------------------------------------
@@ -771,166 +635,181 @@ Front Page Music Module
 --------------------------------------------------------------*/
 
 .music-module {
-	
-	background-color: $red-3;
-	color: $white;
+	.module-header {
+		background-color: $color-cherry;
+		color: $white-2;
 
-	h1, h2, h3, h4, h5, h6 {
-			font-family: "Oswald";
-			//font-family: "Berkshire+Swash";
-			// font-family: "Merriweather";
-			// font-family: "Lato";
-			// font-family: "Playfair+Display";
-			// font-family: "Oxygen";
-			// font-family: "Quattrocento";
-
-	}
-
-	p, a, {
-					// font-family: "Oswald";
-			//font-family: "Berkshire+Swash";
-			// font-family: "Merriweather";
-			font-family: "Lato";
-			// font-family: "Playfair+Display";
-			// font-family: "Oxygen";
-			// font-family: "Quattrocento";
-
-	}
-
-	.medium-background-color {
-		background-color: $red-2;
-	}
-
-	.dark-text {
-		color: $red-3;
-	}
-
-	.light-text {
-		color: $white;
-	}
-
-
-	.music-module-header {
-		background-color: $red-4;
-		height: 8em;
-
-
-		h1 {
-			margin-top: 1em;
-		}
-
-		h3 {
-			margin-top: 2em;
-			color: $dark-grey;
-		}
-
-	}
-
-	.music-module-icon {
-		background-color: $white;
-		height: 5em;
-	}
-	.music-module-byline {
-		background-color: $red-3;
-		height: 5em;
-	}
-	.music-module-blurb {
-		background-color: $red-1;
-		height: 20em;
-
-		h2 {
-			margin-bottom: 1em;
-		}
-
-	}
-
-	.music-module-upcoming-event-maxi {
-
-	  height: 25em;
-  	display: block;
-  	position: relative;
-
-
-	
-		h1, h5 {
-			text-align: center;
-
-		}
-
-		h1 {
-			margin-top: 1em;
-			font-size: 6em;
+		.module-header-inner {
+			background-color: darken($color-cherry, 5%);
 		}
 	}
 
-	.music-module-upcoming-event-maxi::after {
-  content: "";
-  background-image: url('../images/u2-band.jpg');
-  background-size: cover;
-  opacity: 0.7;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: 5;  
+	.module-body-inner {
+		background-color: $white-1;
 	}
-
-	.music-module-upcoming-event-maxi:hover::after {
-
-	opacity: 0.7;
-  -webkit-transition: opacity 1.0s ease-in-in-out;
-  -moz-transition: opacity 1.0s ease-in-in-out;
-  transition: opacity 1.0s ease-in-in-out;
-
-	}
-
-	.music-module-upcoming-banner {
-		// background-color: $light-grey;
-		background-color: $light-grey;
-		height: 8em;
-
-		h2 {
-			margin-top: 1.2em;
-			
-		}
-
-	}	
-
-	.music-module-upcoming-event-mini {
-		// border: 1px solid $dark-grey;
-		height: 8em;
-		max-height: 8em;
-		overflow: hidden;
-		// color: $dark-grey;
-
-		h3 {
-			margin-top: .5em;
-		}
-
-		.unit {
-			height: 8em;
-		}
-
-		.unit::after {
-			content: "MORE";
-			font-size: 1.5em;
-			font-family: "Oswald";
-			padding: .4em .1em 0 .4em;
-			position: absolute;
-			background-color: $dark-grey;
-			bottom: 0;
-			right: 0;
-
-		}
-
-		.unit.unit-2 h4,
-		.unit.unit-3 h4 {
-			margin-top: .8em;
-		}
-	}
-
 }
+
+// .music-module {
+	
+// 	background-color: $red-3;
+// 	color: $white;
+
+// 	h1, h2, h3, h4, h5, h6 {
+// 			font-family: "Oswald";
+// 			//font-family: "Berkshire+Swash";
+// 			// font-family: "Merriweather";
+// 			// font-family: "Lato";
+// 			// font-family: "Playfair+Display";
+// 			// font-family: "Oxygen";
+// 			// font-family: "Quattrocento";
+
+// 	}
+
+// 	p, a, {
+// 					// font-family: "Oswald";
+// 			//font-family: "Berkshire+Swash";
+// 			// font-family: "Merriweather";
+// 			font-family: "Lato";
+// 			// font-family: "Playfair+Display";
+// 			// font-family: "Oxygen";
+// 			// font-family: "Quattrocento";
+
+// 	}
+
+// 	.medium-background-color {
+// 		background-color: $red-2;
+// 	}
+
+// 	.dark-text {
+// 		color: $red-3;
+// 	}
+
+// 	.light-text {
+// 		color: $white;
+// 	}
+
+
+// 	.music-module-header {
+// 		background-color: $red-4;
+// 		height: 8em;
+
+
+// 		h1 {
+// 			margin-top: 1em;
+// 		}
+
+// 		h3 {
+// 			margin-top: 2em;
+// 			color: $dark-grey;
+// 		}
+
+// 	}
+
+// 	.music-module-icon {
+// 		background-color: $white;
+// 		height: 5em;
+// 	}
+// 	.music-module-byline {
+// 		background-color: $red-3;
+// 		height: 5em;
+// 	}
+// 	.music-module-blurb {
+// 		background-color: $red-1;
+// 		height: 20em;
+
+// 		h2 {
+// 			margin-bottom: 1em;
+// 		}
+
+// 	}
+
+// 	.music-module-upcoming-event-maxi {
+
+// 	  height: 25em;
+//   	display: block;
+//   	position: relative;
+
+
+	
+// 		h1, h5 {
+// 			text-align: center;
+
+// 		}
+
+// 		h1 {
+// 			margin-top: 1em;
+// 			font-size: 6em;
+// 		}
+// 	}
+
+// 	.music-module-upcoming-event-maxi::after {
+//   content: "";
+//   background-image: url('../images/u2-band.jpg');
+//   background-size: cover;
+//   opacity: 0.7;
+//   top: 0;
+//   left: 0;
+//   bottom: 0;
+//   right: 0;
+//   position: absolute;
+//   z-index: 5;  
+// 	}
+
+// 	.music-module-upcoming-event-maxi:hover::after {
+
+// 	opacity: 0.7;
+//   -webkit-transition: opacity 1.0s ease-in-in-out;
+//   -moz-transition: opacity 1.0s ease-in-in-out;
+//   transition: opacity 1.0s ease-in-in-out;
+
+// 	}
+
+// 	.music-module-upcoming-banner {
+// 		// background-color: $light-grey;
+// 		background-color: $light-grey;
+// 		height: 8em;
+
+// 		h2 {
+// 			margin-top: 1.2em;
+			
+// 		}
+
+// 	}	
+
+// 	.music-module-upcoming-event-mini {
+// 		// border: 1px solid $dark-grey;
+// 		height: 8em;
+// 		max-height: 8em;
+// 		overflow: hidden;
+// 		// color: $dark-grey;
+
+// 		h3 {
+// 			margin-top: .5em;
+// 		}
+
+// 		.unit {
+// 			height: 8em;
+// 		}
+
+// 		.unit::after {
+// 			content: "MORE";
+// 			font-size: 1.5em;
+// 			font-family: "Oswald";
+// 			padding: .4em .1em 0 .4em;
+// 			position: absolute;
+// 			background-color: $dark-grey;
+// 			bottom: 0;
+// 			right: 0;
+
+// 		}
+
+// 		.unit.unit-2 h4,
+// 		.unit.unit-3 h4 {
+// 			margin-top: .8em;
+// 		}
+// 	}
+
+// }
 
 /*--------------------------------------------------------------
 Front Page Food Module

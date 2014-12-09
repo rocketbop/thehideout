@@ -1,4 +1,19 @@
+<div class="container-fluid">
+  <div class="row module-header">
 
+    <div class="module-header-inner col-xs-10 col-sm-10 col-md-10 col-lg-10 col-md-offset-1">
+      <h3>Music at The Hideout</h3>
+    </div>
+  </div>
+</div> <!-- container-fluid -->
+
+<div class="container-fluid">
+  <div class="row module-body">
+    <div class="module-body-inner col-xs-10 col-sm-10 col-md-10 col-lg-10 col-md-offset-1">
+    This
+    </div> <!-- module body inner -->
+  </div> <!-- module body -->
+</div> <!-- container fluid -->  
 
 
   <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 col-md-offset-1">

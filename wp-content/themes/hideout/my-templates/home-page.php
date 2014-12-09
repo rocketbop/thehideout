@@ -34,11 +34,11 @@ get_header(); ?>
 			</div>
 	
 
-				<div class="container-fluid"> 
-		<div class="row music-module">
+
+		<div class="music-module" ng-controller="eventCtrl">
 			<?php get_template_part( 'templates/content', 'musicmodule' ); ?>
 		</div>
-		</div>
+
 
 		<div class="container-fluid"> 
 		<div class="row food-module">
