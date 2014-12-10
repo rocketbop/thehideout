@@ -3,7 +3,8 @@ angular.module("theHideoutApp")
 
     function setDivHeight(element, attrs) {
       
-      var screenProportion = attrs["myDivHeight"];
+      var topBackgroundSize = attrs["myDivHeight"];
+
       
       var windowHeight,
           headerSize;
@@ -16,22 +17,19 @@ angular.module("theHideoutApp")
         headerSize = false;
       }
 
-      switch (screenProportion) {
-        case "fullScreen":
-        heightModifier = 1;
-        break;
-        case "half":
-        heightModifier = 0.5;
-        break
-          default:
-          heightModifier = 1;
+       var setTopBackgroundSize = function (topBackgroundSize) {
+        if (topBackgroundSize == 'full') {
+          windowHeight = $window.innerHeight;
+          if (headerSize != false) {
+            windowHeight = windowHeight - headerSize;
+          }
+        }
+        if (topBackgroundSize == 'navbar') {
+          windowHeight = headerSize;
+        }
       }
 
-      windowHeight = $window.innerHeight * heightModifier;
-      // console.log("wh before" + windowHeight);
-      if (headerSize != false) {
-        windowHeight = windowHeight - headerSize;
-      }
+      setTopBackgroundSize(topBackgroundSize);
       element.css('height', windowHeight + "px");
 
     }

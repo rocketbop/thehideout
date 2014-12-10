@@ -7,28 +7,10 @@ get_header(); ?>
 
 <div id="primary" class="content-area secondary-page gallery-page visible-links visible-links-blue" ng-controller="galleryCtrl">
   <div class="container-fluid">
-<!--     <div class="row">
-        <div class="background-container col-xs-12 col-sm-12 col-md-12 col-lg-12" data-my-div-height="full" minus-header="true">
-
-        <div class="row">
-          <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 col-md-offset-1">
-            <div class="row">
-              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                Images Go here
-              </div>
-              <div id="blurb" class="blurb col-xs-6 col-sm-6 col-md-6 col-lg-6" data-my-vertical-center ext-function="getPanelMargin()">
-                <strong><h2>We Love Music</h2></strong>
-                <p>We care about music at <strong>The Hideout</strong>.</p>
-                <p>That's why we have great equipment, great bands and singers, and great audiences.</p>
-                <strong><p>5 Nights a Week.</p></strong>
-               
-            
-              </div>
-            </div>
-          </div>
+    <div class="row">
+        <div class="background-container col-xs-12 col-sm-12 col-md-12 col-lg-12" data-my-div-height="navbar" minus-header="true">
         </div>
-        </div>
-      </div> -->
+      </div>
 
 
 
