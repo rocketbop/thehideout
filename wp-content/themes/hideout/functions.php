@@ -137,6 +137,19 @@ function hideout_scripts() {
 
 	wp_enqueue_script( 'dir-pagination', get_template_directory_uri() . '/angular/bower_components/angular-utils-pagination/dirPagination.js', false, NULL);
 
+
+	  wp_enqueue_style( 'angular-loading-bar-css', get_template_directory_uri() . '/angular/bower_components/angular-loading-bar/build/loading-bar.css');
+
+	  wp_enqueue_style( 'angular-bootstrap-lightbox-css', get_template_directory_uri() . '/angular/bower_components/angular-bootstrap-lightbox/dist/angular-bootstrap-lightbox.css');
+
+	  wp_enqueue_script( 'angular-touch', get_template_directory_uri() . '/angular/bower_components/angular-touch/angular-touch.js', false, NULL);
+
+	  wp_enqueue_script( 'ui-bootstrap-tpls', get_template_directory_uri() . '/angular/bower_components/angular-bootstrap/ui-bootstrap-tpls.js', false, NULL);
+
+	  wp_enqueue_script( 'angular-loading-bar', get_template_directory_uri() . '/angular/bower_components/angular-loading-bar/build/loading-bar.js', false, NULL);
+
+	  wp_enqueue_script( 'angular-bootstrap-lightbox', get_template_directory_uri() . '/angular/bower_components/angular-bootstrap-lightbox/dist/angular-bootstrap-lightbox.js', false, NULL);
+
 	wp_enqueue_script( 'custom-directives', get_template_directory_uri() . '/angular/customDirectives.js', false, NULL);
 
 	wp_enqueue_script( 'app-model', get_template_directory_uri() . '/angular/models/appModel.js', false, NULL);
@@ -182,22 +195,8 @@ function hideout_scripts() {
 	  wp_enqueue_script('front-page-scripts');
 	}
 
-		// Enqueue Gallery Scripts/stylesheets
-	if (is_page_template( 'my-templates/gallery-page.php' )) {
-	  wp_enqueue_script('front-page-scripts');
 
-	  wp_enqueue_style( 'angular-loading-bar-css', get_template_directory_uri() . '/angular/bower_components/angular-loading-bar/build/loading-bar.css');
-
-	  wp_enqueue_style( 'angular-bootstrap-lightbox-css', get_template_directory_uri() . '/angular/bower_components/angular-bootstrap-lightbox/dist/angular-bootstrap-lightbox.css');
-
-	  wp_enqueue_script( 'angular-touch', get_template_directory_uri() . '/angular/bower_components/angular-touch/angular-touch.js', false, NULL);
-
-	  wp_enqueue_script( 'ui-bootstrap-tpls', get_template_directory_uri() . '/angular/bower_components/angular-bootstrap/ui-bootstrap-tpls.js', false, NULL);
-
-	  wp_enqueue_script( 'angular-loading-bar', get_template_directory_uri() . '/angular/bower_components/angular-loading-bar/build/loading-bar.js', false, NULL);
-
-	  wp_enqueue_script( 'angular-boostrap-lightbox', get_template_directory_uri() . '/angular/bower_components/angular-bootstrap-lightbox/dist/angular-bootstrap-lightbox.js', false, NULL);
-	}  
+	
 
 
 
