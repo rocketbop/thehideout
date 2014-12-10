@@ -1,5 +1,5 @@
 angular.module('theHideoutApp')
-  .controller('galleryCtrl', ['$scope', 'Flickr', function ($scope, Flickr) {
+  .controller('galleryCtrl', ['$scope', 'Flickr', 'Lightbox', function ($scope, Flickr, Lightbox) {
 
     $scope.data = {};
     $scope.selectedAlbumID = '';
@@ -23,20 +23,23 @@ angular.module('theHideoutApp')
           }
         $scope.getPhotosetPhotos($scope.selectedAlbumID);
 
-        // console.log($scope.selectedAlbumID);
         console.log($scope.data.photosetList);
 
       })
       .error(function (error) {
-        console.log("That did not work.");
+        console.log(error);
       });
 
+      $scope.openLightboxModal = function (index) {
+        console.log($scope.data.selectedAlbumPhotos.photoset.photo);
+        Lightbox.openModal($scope.data.selectedAlbumPhotos.photoset.photo, index);
+      };
+
       $scope.selectAlbum = function (albumID) {
-        // select the gallery
+        // if the album id doesn't match refetch the data
         if ($scope.selectedAlbumID != albumID) {
           $scope.selectedAlbumID = albumID;
           $scope.getPhotosetPhotos($scope.selectedAlbumID);
-
         }
         
       }

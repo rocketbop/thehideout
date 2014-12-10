@@ -1159,6 +1159,40 @@ Restaurant Page
 }
 
 /*--------------------------------------------------------------
+Gallery Page
+--------------------------------------------------------------*/
+
+.gallery-page {
+
+	.flickr {
+
+		.item {
+			text-align: center;
+			height: 15em;
+			position: relative;
+
+		}
+
+		.item-image {
+			max-height: 15em;
+			margin: 0 auto;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			clear: both;
+		}
+
+		.info {
+			 text-transform: capitalize;
+		}
+	}
+
+
+
+}
+
+/*--------------------------------------------------------------
 Sidebar
 --------------------------------------------------------------*/
 

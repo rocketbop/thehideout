@@ -1,6 +1,14 @@
-angular.module("theHideoutApp", [, "customFilters", "ui.unique", "ngSanitize", "angularUtils.directives.dirPagination"])
+angular.module("theHideoutApp", [, "customFilters", "ui.unique", "angular.filter", "ngSanitize", "angularUtils.directives.dirPagination", "bootstrapLightbox"])
   .constant('templateDirectory', "http://localhost:8888/wp-content/themes/hideout/")
   .config(function(FlickrProvider) {
-  FlickrProvider.setApiKey('a731f843f7585f4100829dd08d796574');
-  FlickrProvider.setUserID('129749000@N03');
-});
+    FlickrProvider.setApiKey('a731f843f7585f4100829dd08d796574');
+    FlickrProvider.setUserID('129749000@N03');
+  })
+  .config(function (LightboxProvider) {
+    LightboxProvider.getImageUrl = function (image) {
+    // return '/base/dir/' + image.getName();
+
+
+    return 'https://farm' + image.farm + '.staticflickr.com/' + image.server + '/' + image.id + '_' + image.secret + '_b.jpg';
+    }
+  });

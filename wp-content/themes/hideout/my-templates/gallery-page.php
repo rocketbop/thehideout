@@ -84,11 +84,21 @@ get_header(); ?>
           <div class="column-main">
             <div class="col-md-9">
               
-                <div ng-repeat="photo in data.selectedAlbumPhotos.photoset.photo">
-                  <img src="https://farm{{photo.farm}}.staticflickr.com/{{photo.server}}/{{photo.id}}_{{photo.secret}}.jpg">
-                </div>
+                
 
-             
+                <div class="row" ng-repeat="photos in data.selectedAlbumPhotos.photoset.photo | groupBy:3">
+                <div class=" flickr col-md-4" ng-repeat="photo in photos" >
+                  <div class="item">
+                    <a ng-click="openLightboxModal($index)">
+                       <img class="item-image img-thumbnail" ng-src="https://farm{{photo.farm}}.staticflickr.com/{{photo.server}}/{{photo.id}}_{{photo.secret}}_n.jpg" alt="">
+                     </a>
+                  </div>
+                  <div class="info">
+                    <h5>{{photo.title}}</h5>
+                  </div>
+                </div>
+              </div>
+                           
 
                 <div class="pagination pull-left btn-group">
                     <a ng-repeat=
