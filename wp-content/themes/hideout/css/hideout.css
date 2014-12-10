@@ -515,6 +515,14 @@ Restaurant Page
 /*--------------------------------------------------------------
 Gallery Page
 --------------------------------------------------------------*/
+.gallery-page .page-header-top {
+  background-color: #308ba0; }
+  .gallery-page .page-header-top .page-inner {
+    background-color: #369cb4; }
+.gallery-page .page-header-bottom {
+  background-color: #2b7d90; }
+  .gallery-page .page-header-bottom .page-inner {
+    background-color: #308ba0; }
 .gallery-page .flickr .item {
   text-align: center;
   height: 15em;

@@ -25,7 +25,7 @@ angular.module("theHideoutApp")
           }
         }
         if (topBackgroundSize == 'navbar') {
-          windowHeight = headerSize;
+          windowHeight = jQuery(".navbar-container").height();
         }
       }
 

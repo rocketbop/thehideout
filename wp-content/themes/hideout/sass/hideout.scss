@@ -1164,6 +1164,24 @@ Gallery Page
 
 .gallery-page {
 
+	.page-header-top {
+
+		background-color: $color-aqua;
+
+		.page-inner {
+			background-color: lighten($color-aqua, 5%);
+		}
+	}
+
+	.page-header-bottom {
+		background-color: darken($color-aqua, 4%);
+		// margin-top: 0;
+
+		.page-inner {
+			background-color: darken($color-aqua, 0%);
+		}
+	}
+
 	.flickr {
 
 		.item {
@@ -1184,6 +1202,7 @@ Gallery Page
 		}
 
 		.info {
+
 			 text-transform: capitalize;
 		}
 	}

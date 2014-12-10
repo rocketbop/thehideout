@@ -8,7 +8,7 @@ get_header(); ?>
 <div id="primary" class="content-area secondary-page gallery-page visible-links visible-links-blue" ng-controller="galleryCtrl">
   <div class="container-fluid">
     <div class="row">
-        <div class="background-container col-xs-12 col-sm-12 col-md-12 col-lg-12" data-my-div-height="navbar" minus-header="true">
+        <div class="background-container col-xs-12 col-sm-12 col-md-12 col-lg-12" data-my-div-height="navbar" minus-header="false">
         </div>
       </div>
 
