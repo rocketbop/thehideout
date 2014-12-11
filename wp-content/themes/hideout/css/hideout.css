@@ -49,14 +49,14 @@ a:visited {
 .visible-links a:hover {
   opacity: .7; }
 
-.visible-links-red a {
-  color: #bf381b; }
+.visible-links-cherry a {
+  color: #ba4a30; }
 
-.visible-links-yellow a {
-  color: #ff9e00; }
+.visible-links-lilac a {
+  color: #8630ad; }
 
-.visible-links-gold a {
-  color: #a64b00; }
+.visible-links-aqua a {
+  color: #308ba0; }
 
 .no-padding-left {
   padding-left: 0 !important; }
@@ -370,7 +370,8 @@ Secondary page styles General
     font-family: "Lato";
     font-weight: 300; }
 .secondary-page .body-inner {
-  padding-top: 30px; }
+  padding-top: 30px;
+  margin-bottom: 2em; }
 
 /*--------------------------------------------------------------
 Events
@@ -441,6 +442,9 @@ Events
 .events-page .sidebar-events {
   display: none; }
 
+.events-single-page .featured-image {
+  margin-top: 2em; }
+
 /*--------------------------------------------------------------
 Single Post Event 
 --------------------------------------------------------------*/
@@ -448,34 +452,35 @@ Single Post Event
   background-color: white; }
 
 /*--------------------------------------------------------------
-News Blog Page 
+News Blog 
 --------------------------------------------------------------*/
-.blog.blog-page .background-container {
+.blog .page-header-top {
+  background-color: #308ba0; }
+  .blog .page-header-top .page-inner {
+    background-color: #369cb4; }
+.blog .page-header-bottom {
+  background-color: #2b7d90; }
+  .blog .page-header-bottom .page-inner {
+    background-color: #308ba0; }
+.blog .pagination > .active > a,
+.blog .pagination > .active > span,
+.blog .pagination > .active > a:hover,
+.blog .pagination > .active > span:hover,
+.blog .pagination > .active > a:focus,
+.blog .pagination > .active > span:focus {
+  background-color: #308ba0;
+  border-color: #2b7d90; }
+
+.blog-page .background-container {
   background-image: url("http://localhost:8888/wp-content/themes/hideout/images/backgrounds/people-on-street-evening.jpg");
   background-position: top; }
-.blog.blog-page .page-header-top {
-  background-color: #308ba0; }
-  .blog.blog-page .page-header-top .page-inner {
-    background-color: #369cb4; }
-.blog.blog-page .page-header-bottom {
-  background-color: #2b7d90; }
-  .blog.blog-page .page-header-bottom .page-inner {
-    background-color: #308ba0; }
-.blog.blog-page .pagination > .active > a,
-.blog.blog-page .pagination > .active > span,
-.blog.blog-page .pagination > .active > a:hover,
-.blog.blog-page .pagination > .active > span:hover,
-.blog.blog-page .pagination > .active > a:focus,
-.blog.blog-page .pagination > .active > span:focus {
-  background-color: #a64b00;
-  border-color: #974400; }
-.blog.blog-page .blog-section img.featured-image {
+.blog-page .blog-section img.featured-image {
   width: 100%; }
-.blog.blog-page .blog-section .blog-item {
+.blog-page .blog-section .blog-item {
   margin-top: 2em; }
-  .blog.blog-page .blog-section .blog-item p:first-child {
+  .blog-page .blog-section .blog-item p:first-child {
     margin-top: 5em; }
-.blog.blog-page .sidebar-blog {
+.blog-page .sidebar-blog {
   display: none; }
 
 /*--------------------------------------------------------------
@@ -545,13 +550,12 @@ Gallery Page
 Sidebar
 --------------------------------------------------------------*/
 .sidebar .section-header {
-  margin-bottom: 1em;
+  margin-top: 2em;
+  margin-bottom: 2em;
   text-align: center;
   padding-top: 1em; }
-.sidebar .section-header:first-child {
+.sidebar .section-header:first-child h3:first-child {
   margin-top: 0; }
-  .sidebar .section-header:first-child h2:first-child {
-    margin-top: 0; }
 .sidebar .background-container-sidebar-item {
   background-color: #f8f8f8; }
 .sidebar .item {
@@ -573,15 +577,11 @@ Sidebar
 .sidebar h5 {
   color: black; }
 
-.sidebar.sidebar-events a {
-  color: #bf381b; }
 .sidebar.sidebar-events .section-header.background-container-sidebar-header {
-  background-color: #ffe0d9; }
+  background-color: #fbf1ee; }
 
-.sidebar.sidebar-blog a {
-  color: #a64b00; }
 .sidebar.sidebar-blog .section-header.background-container-sidebar-header {
-  background-color: #fff8f3; }
+  background-color: #dbeff4; }
 
 /*--------------------------------------------------------------
 Footer
@@ -618,6 +618,9 @@ footer {
 /*--------------------------------------------------------------
 Responsive styles, General
 --------------------------------------------------------------*/
+@media (min-width: 992px) {
+  .gallery-page .body-inner {
+    min-height: 50em; } }
 footer.site-footer {
   background-color: #171717;
   min-height: 8em; }

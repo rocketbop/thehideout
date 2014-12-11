@@ -6,7 +6,7 @@ Template Name: Blog Page
 get_header(); ?>
 
 
-  <div id="primary" class="content-area secondary-page visible-links visible-links-gold blog blog-page" ng-controller="blogCtrl">
+  <div id="primary" class="content-area secondary-page visible-links visible-links-aqua blog blog-page" ng-controller="blogCtrl">
 
   <!-- page header top -->
     <div class="container-fluid">

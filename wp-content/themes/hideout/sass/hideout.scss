@@ -168,21 +168,21 @@ a:visited {
 	}
 }
 
-.visible-links-red {
+.visible-links-cherry {
 	a {
-		color: $red-3;
+		color: $color-cherry;
 	}
 }
 
-.visible-links-yellow {
+.visible-links-lilac {
 	a {
-		color: $yellow-1;
+		color: $color-lilac;
 	}
 }
 
-.visible-links-gold {
+.visible-links-aqua {
 	a {
-		color: $gold-3;
+		color: $color-aqua;
 	}
 }
 
@@ -889,6 +889,7 @@ Secondary page styles General
 
 	.body-inner {
 		padding-top: 30px;
+		margin-bottom: 2em;
 	}
 }
 
@@ -1020,6 +1021,13 @@ Events
 
 }
 
+.events-single-page {
+
+	.featured-image {
+		margin-top: 2em;
+	}
+}
+
 
 /*--------------------------------------------------------------
 Single Post Event 
@@ -1032,15 +1040,10 @@ Single Post Event
 }
 
 /*--------------------------------------------------------------
-News Blog Page 
+News Blog 
 --------------------------------------------------------------*/
 
-.blog.blog-page {
-
-	.background-container {
-		background-image: url($templateDirectory + "images/backgrounds/people-on-street-evening.jpg");
-		background-position: top;
-	}
+.blog {
 
 	.page-header-top {
 
@@ -1067,10 +1070,21 @@ News Blog Page
 	.pagination > .active > a:focus,
 	.pagination > .active > span:focus {
 
-	  background-color: $gold-3;
-	  border-color: darken($gold-3, 3%);
+	  background-color: $color-aqua;
+	  border-color: darken($color-aqua, 4%);
 
 	}
+
+}
+
+.blog-page {
+
+	.background-container {
+		background-image: url($templateDirectory + "images/backgrounds/people-on-street-evening.jpg");
+		background-position: top;
+	}
+
+
 
 	.blog-section {
 
@@ -1226,15 +1240,16 @@ Sidebar
 	// margin-right: .5em;
 
 	.section-header {
-		margin-bottom: 1em;
+		margin-top: 2em;
+		margin-bottom: 2em;
 		text-align: center;
 		padding-top: 1em;
 
 	}
 
 	.section-header:first-child {
-		margin-top: 0;
-		h2:first-child {
+		// margin-top: 0;
+		h3:first-child {
 			margin-top: 0;
 		}
 	}
@@ -1284,28 +1299,16 @@ Sidebar
 
 .sidebar.sidebar-events {
 	
-	a {
-		color: $red-3;
-	}
 	.section-header.background-container-sidebar-header {
-		background-color: lighten($red-5, 20%);
+		background-color: lighten($color-cherry, 50%);
 	}
-
-
-
 }
 
 .sidebar.sidebar-blog {
 
-	a {
-		color: $gold-3;
-	}
-
 	.section-header.background-container-sidebar-header {
-		background-color: lighten($gold-5, 25%);
-
+		background-color: lighten($color-aqua, 50%);
 	}
-
 }
 
 /*--------------------------------------------------------------
@@ -1370,6 +1373,16 @@ Responsive styles, General
 
 @media (min-width: 768px) {
 
+}
+
+@media (min-width: 992px) {
+
+	.gallery-page {
+
+		.body-inner {
+			min-height: 50em;
+		}
+	}
 }
 	
 footer.site-footer {
