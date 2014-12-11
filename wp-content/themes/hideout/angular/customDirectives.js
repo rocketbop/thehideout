@@ -3,16 +3,13 @@ angular.module("theHideoutApp")
 
     function setDivHeight(element, attrs) {
       
-      var topBackgroundSize = attrs["myDivHeight"];
-
-      
-      var windowHeight,
-          headerSize;
+      var topBackgroundSize = attrs["myDivHeight"],
+          windowHeight = '',
+          headerSize = '';
       
       if (attrs["minusHeader"]) {
         headerSize = jQuery(".page-header-top").height();
         headerSize += jQuery(".page-header-bottom").height();
-
       } else {
         headerSize = false;
       }
@@ -36,15 +33,12 @@ angular.module("theHideoutApp")
 
     return {
 
-  
       link: function (scope, element, attrs) {
         
         jQuery(window).load(setDivHeight(element, attrs));
-   
         angular.element($window).on('resize', function () {
           setDivHeight(element, attrs);
         });
-
       }
     }
 

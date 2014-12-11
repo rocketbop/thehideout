@@ -5,7 +5,7 @@ Template Name: Events Page
 
 get_header(); ?>
 
-<div id="primary" class="content-area secondary-page events-page visible-links visible-links-red" ng-controller="eventCtrl">
+<div id="primary" class="content-area secondary-page events events-page visible-links visible-links-red" ng-controller="eventCtrl">
   <div class="container-fluid">
     <div class="row">
         <div class="background-container col-xs-12 col-sm-12 col-md-12 col-lg-12" data-my-div-height="full" minus-header="true">
@@ -102,6 +102,7 @@ get_header(); ?>
                       <div class="board board-block board-block-bottom">
                         <h4>{{event.date_of_event | date: 'h:mma, EEEE, d MMMM yyyy'}}, {{event.category}}.
                         </h4>
+                        <h4>{{event.category}}.</h4>
                       </div>
                     </div>
                   </a>

@@ -78,20 +78,21 @@ angular.module("theHideoutApp")
       return arrayNumber;
     }
 
-    // Will only be a number on single app page calls
-    if (angular.isNumber($scope.singlePostID)) {
-
+    $scope.getSinglePost = function () {
+      
+      // expose the singlepost object to the view
       $scope.dataPromise.success(function () {
         $scope.singlePostArrayNumber = $scope.getSinglePostArrayNumber();
-       
-        $scope.singlePostEventName = $scope.data.events[$scope.singlePostArrayNumber].event_name;
+        $scope.singlePost = $scope.data.events[$scope.singlePostArrayNumber]; 
       })
-      
-    } else {
-      // console.log("Why me");
     }
-    
 
+    // Will only be a number on single app page calls
+    if (angular.isNumber($scope.singlePostID)) {
+      $scope.getSinglePost();
+    } else {
+      // console.log("single post ID not received");
+    }
 
   }]);
 

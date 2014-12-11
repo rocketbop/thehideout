@@ -371,20 +371,21 @@ Secondary page styles General
   padding-top: 30px; }
 
 /*--------------------------------------------------------------
-Events Page
+Events
 --------------------------------------------------------------*/
-.events-page .background-container {
+.events .background-container {
   background-image: url("http://localhost:8888/wp-content/themes/hideout/images/backgrounds/headphones.jpg");
   background-position: bottom; }
-.events-page .page-header-top {
+.events .page-header-top {
   background-color: #bf4930;
   margin-bottom: 0; }
-  .events-page .page-header-top .page-inner {
+  .events .page-header-top .page-inner {
     background-color: #cb4e33; }
-.events-page .page-header-bottom {
+.events .page-header-bottom {
   background-color: #af432b; }
-  .events-page .page-header-bottom .page-inner {
+  .events .page-header-bottom .page-inner {
     background-color: #bb472e; }
+
 .events-page .column-filter a {
   color: #2b2b2b; }
 .events-page .column-filter h3:first-child {
@@ -410,7 +411,7 @@ Events Page
   .events-page .board h3:first-child {
     margin-top: 0; }
   .events-page .board h3, .events-page .board h4 {
-    padding: 1em;
+    padding: 0.5em;
     margin-top: 0;
     margin-bottom: 0; }
   .events-page .board img.featured-image {

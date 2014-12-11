@@ -889,10 +889,10 @@ Secondary page styles General
 }
 
 /*--------------------------------------------------------------
-Events Page
+Events
 --------------------------------------------------------------*/
 
-.events-page {
+.events {
 
 	.background-container {
 		background-image: url($templateDirectory + "images/backgrounds/headphones.jpg");
@@ -917,7 +917,11 @@ Events Page
 		}
 	}
 
-	.column-filter {
+}
+
+.events-page {
+
+  .column-filter {
 
 		a {
 			color: lighten($black-2, 10%);
@@ -960,7 +964,7 @@ Events Page
 		}
 
 		h3, h4 {
-			padding: 1em;
+			padding: 0.5em;
 			margin-top: 0;
 			margin-bottom: 0;
 		}
@@ -981,8 +985,6 @@ Events Page
 		opacity: 1.0;
 		transition: all 0.5s;
 	}
-
-
 
 	.board-block {
 		color: $white-1;

@@ -23,8 +23,8 @@ get_header(); ?>
     <div class="row page-header page-header-top">
       <div class="page-inner col-xs-10 col-sm-10 col-md-10 col-lg-10 col-md-offset-1">
           <div class="row">
-            <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7 col-md-offset-2">
-              <h1>Upcoming Events</h1>
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-md-offset-3">
+              <h1>Gallery</h1>
               
             </div>
           </div>
@@ -36,9 +36,9 @@ get_header(); ?>
     <div class="row page-header page-header-bottom">
       <div class="page-inner col-xs-10 col-sm-10 col-md-10 col-lg-10 col-md-offset-1">
                   <div class="row">
-          <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7 col-md-offset-2">
+          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-md-offset-3">
 
-          <h4>Get the details on all upcoming music and events at The Hideout.</h4>
+          <h4>Check out our photos.</h4>
 
           </div>
           </div>
