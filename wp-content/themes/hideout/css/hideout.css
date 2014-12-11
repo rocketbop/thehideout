@@ -346,6 +346,8 @@ Front Page Food Module
 /*-----------------
 Secondary page styles General
 --------------*/
+.secondary-page .fb-like {
+  margin-top: 1em; }
 .secondary-page .blurb {
   background-color: rgba(255, 255, 255, 0.7);
   padding: 2em; }

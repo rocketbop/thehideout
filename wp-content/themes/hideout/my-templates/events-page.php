@@ -106,11 +106,15 @@ get_header(); ?>
                       </div>
                     </div>
                   </a>
+                  <!-- Below used as test while on local host
+                Substitute with event.link when moving onto live server. -->
+                <div class="fb-like" data-href="{{data.myTestURL}}" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
                 <!-- Save to use below for content entered through WP backend -->
                 <div ng-bind-html="event.event_description"></div>
                   <img class="separator" ng-src="{{templateDirectory}}images/design/guitar-separator.png">
 
                 </div>
+
 
              
 

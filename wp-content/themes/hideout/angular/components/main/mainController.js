@@ -1,5 +1,5 @@
 angular.module("theHideoutApp")
-.controller("mainCtrl", ['$scope', '$filter', '$window', '$log', 'apiService', 'globalService', 'templateDirectory', function ($scope, $filter, $window, $log, apiService, globalService, templateDirectory) {
+.controller("mainCtrl", ['$scope', '$filter', '$window', '$log', 'apiService', 'globalService', 'templateDirectory', 'Facebook', function ($scope, $filter, $window, $log, apiService, globalService, templateDirectory, Facebook) {
   
   $scope.templateDirectory = templateDirectory;
 
@@ -105,6 +105,24 @@ angular.module("theHideoutApp")
     return panelMargin;
 
   }
+
+   $scope.login = function() {
+      // From now on you can use the Facebook service just as Facebook api says
+      Facebook.login(function(response) {
+        // Do something with response.
+        console.log(response);
+      });
+    };
+
+    Facebook.getLoginStatus(function(response) {
+      console.log(response);
+    });
+
+    $scope.login();
+
+    $scope.data = {};
+    $scope.data.myTestURL= 'http://www.theguardian.com';
+    console.log($scope.data.myTestURL);
 
   
   

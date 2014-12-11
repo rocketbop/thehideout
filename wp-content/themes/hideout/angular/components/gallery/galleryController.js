@@ -1,7 +1,7 @@
 angular.module('theHideoutApp')
   .controller('galleryCtrl', ['$scope', 'Flickr', 'Lightbox', function ($scope, Flickr, Lightbox) {
 
-    $scope.data = {};
+    // $scope.data = {}; This is now created in the MainCtrl
     $scope.selectedAlbumID = '';
 
     $scope.dataPromise = Flickr.getPhotosetList()

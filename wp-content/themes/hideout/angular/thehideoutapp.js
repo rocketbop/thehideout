@@ -1,4 +1,4 @@
-angular.module("theHideoutApp", [, "customFilters", "ui.unique", "angular.filter", "ngSanitize", "angularUtils.directives.dirPagination", "bootstrapLightbox"])
+angular.module("theHideoutApp", [, "customFilters", "ui.unique", "angular.filter", "ngSanitize", "angularUtils.directives.dirPagination", "bootstrapLightbox", 'facebook'])
   .constant('templateDirectory', "http://localhost:8888/wp-content/themes/hideout/")
   .config(function(FlickrProvider) {
     FlickrProvider.setApiKey('a731f843f7585f4100829dd08d796574');
@@ -15,4 +15,9 @@ angular.module("theHideoutApp", [, "customFilters", "ui.unique", "angular.filter
     // Create the url to be fetched for the lightbox: the letter at the end sets the image size, see: https://www.flickr.com/services/api/misc.urls.html
     return 'https://farm' + image.farm + '.staticflickr.com/' + image.server + '/' + image.id + '_' + image.secret + '_b.jpg';
     }
+  })
+  .config(function(FacebookProvider) {
+     // Set your appId through the setAppId method or
+     // use the shortcut in the initialize method directly.
+     FacebookProvider.init('1475877715985153');
   });

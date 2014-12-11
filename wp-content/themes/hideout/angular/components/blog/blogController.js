@@ -9,7 +9,6 @@ angular.module("theHideoutApp")
     // GET THE DATA
 
       $scope.dataPromise = apiService.getAllBlogPosts().success(function(blogPosts) {
-      $scope.data = {};
       $scope.data.blogPosts = blogPosts;
 
      

@@ -45,7 +45,9 @@
 
             <div class="row">
               <div class="col-xs-1 col-sm-1 col-md-3 col-lg-3">
-                Sidebar
+                <!-- Below used as test while on local host
+                Substitute with singlepost.link when moving onto live server. -->
+                <div class="fb-like" data-href="{{data.myTestURL}}" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
               </div>
               <div class="col-xs-1 col-sm-1 col-md-9 col-lg-9">
                 <div ng-bind-html="singlePost.event_description"></div>

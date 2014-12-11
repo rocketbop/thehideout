@@ -5,7 +5,7 @@ angular.module("theHideoutApp")
 
     // GET THE DATA
     $scope.dataPromise = apiService.getAllEvents().success(function(data) {
-      $scope.data = {}; // create the data object
+      // $scope.data = {}; // create the data object
       $scope.data.events = data;
 
       //Convert the timestamp to millseconds
