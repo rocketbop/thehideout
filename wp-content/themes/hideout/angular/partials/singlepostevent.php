@@ -45,9 +45,25 @@
 
             <div class="row">
               <div class="col-xs-1 col-sm-1 col-md-3 col-lg-3">
-                <!-- Below used as test while on local host
-                Substitute with singlepost.link when moving onto live server. -->
-                <div class="fb-like" data-href="{{data.myTestURL}}" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
+                <div class="social-buttons">
+                <div class="row">
+                  <div class="col-xs-1 col-sm-6 col-md-6 col-lg-6">
+                   <!-- Below used as test while on local host
+                  Substitute with singlepost.link when moving onto live server. -->
+                    <div class="fb-like" data-href="{{data.myTestURL}}" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
+                  </div>
+                  <div class="col-xs-1 col-sm-6 col-md-6 col-lg-6">
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-via="paulbyrne">Tweet</a>
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                  </div>
+                </div>
+                 
+                </div>
+                <div class="date-published">
+                  <h6>Posted: {{singlePost.date | date: 'EEEE, d MMMM yyyy, h:mm' }}</h6>
+                </div>
+                
+                
               </div>
               <div class="col-xs-1 col-sm-1 col-md-9 col-lg-9">
                 <div ng-bind-html="singlePost.event_description"></div>

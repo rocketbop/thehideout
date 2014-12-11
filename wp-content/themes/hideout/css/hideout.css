@@ -377,7 +377,7 @@ Secondary page styles General
 Events
 --------------------------------------------------------------*/
 .events .background-container {
-  background-image: url("http://localhost:8888/wp-content/themes/hideout/images/backgrounds/headphones.jpg");
+  background-image: url("http://localhost:8888/wp-content/themes/hideout/images/backgrounds/hand-playing-guitar.jpg");
   background-position: bottom; }
 .events .page-header-top {
   background-color: #bf4930;
@@ -388,6 +388,9 @@ Events
   background-color: #af432b; }
   .events .page-header-bottom .page-inner {
     background-color: #bb472e; }
+.events .social-buttons {
+  border-bottom: #4d4d4d 1px dotted;
+  padding-bottom: 1em; }
 
 .events-page .column-filter a {
   color: #2b2b2b; }

@@ -82,6 +82,7 @@ $white-5:		#d8d8d8;
 
 // Colors
 
+$color-black-1: #000;
 $color-cherry: #ba4a30;
 $color-cherry-off: #c74c2f;
 $color-lilac: #8630ad;
@@ -900,7 +901,7 @@ Events
 .events {
 
 	.background-container {
-		background-image: url($templateDirectory + "images/backgrounds/headphones.jpg");
+		background-image: url($templateDirectory + "images/backgrounds/hand-playing-guitar.jpg");
 		background-position: bottom;
 	}
 
@@ -920,6 +921,11 @@ Events
 		.page-inner {
 			background-color: lighten(desaturate($red-3, 15%), 3%);
 		}
+	}
+
+	.social-buttons {
+		border-bottom: lighten($color-black-1, 30%) 1px dotted;
+		padding-bottom: 1em;
 	}
 
 }

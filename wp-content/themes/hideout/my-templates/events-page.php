@@ -14,7 +14,7 @@ get_header(); ?>
           <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 col-md-offset-1">
             <div class="row">
               <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                Images Go here
+                
               </div>
               <div id="blurb" class="blurb col-xs-6 col-sm-6 col-md-6 col-lg-6" data-my-vertical-center ext-function="getPanelMargin()">
                 <strong><h2>We Love Music</h2></strong>
@@ -33,7 +33,7 @@ get_header(); ?>
       <div class="page-inner col-xs-10 col-sm-10 col-md-10 col-lg-10 col-md-offset-1">
           <div class="row">
             <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7 col-md-offset-2">
-              <h1>Upcoming Events</h1>
+              <h1>The Hideout Events</h1>
               
             </div>
           </div>
