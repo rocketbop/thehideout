@@ -1,26 +1,26 @@
 angular.module("theHideoutApp")
-  .constant('blogPostListPageCount', 2) // items per page
-  .constant("blogPostListActiveClass", "btn-primary")
-  .controller("blogCtrl", ['$scope', '$filter', '$q', '$log', 'blogPostListPageCount', 'apiService', 'globalService', 'blogPostListActiveClass', 'templateDirectory', function ($scope, $filter, $q, $log, blogPostListPageCount, apiService, globalService, blogPostListActiveClass, templateDirectory) {
+  .constant('newsPostListPageCount', 2) // items per page
+  .constant("newsPostListActiveClass", "btn-primary")
+  .controller("newsCtrl", ['$scope', '$filter', '$q', '$log', 'newsPostListPageCount', 'apiService', 'globalService', 'newsPostListActiveClass', 'templateDirectory', function ($scope, $filter, $q, $log, newsPostListPageCount, apiService, globalService, newsPostListActiveClass, templateDirectory) {
 
 
 
     
     // GET THE DATA
 
-      $scope.dataPromise = apiService.getAllBlogPosts().success(function(blogPosts) {
-      $scope.data.blogPosts = blogPosts;
+      $scope.dataPromise = apiService.getAllNewsPosts().success(function(newsPosts) {
+      $scope.data.newsPosts = newsPosts;
 
      
-      console.log($scope.data.blogPosts);
-     //  $scope.data.filteredBlogPosts = $filter('orderBy')($scope.data.blogPosts, 'date');
-     //  $scope.data.filteredBlogPosts = $filter('limitTo')($scope.data.filteredBlogPosts, '3');
+      console.log($scope.data.newsPosts);
+     //  $scope.data.filterednewsPosts = $filter('orderBy')($scope.data.newsPosts, 'date');
+     //  $scope.data.filterednewsPosts = $filter('limitTo')($scope.data.filterednewsPosts, '3');
       
 
     
 
         
-     // console.log($scope.data.filteredBlogPosts);
+     // console.log($scope.data.filterednewsPosts);
 
     });
 
@@ -28,8 +28,8 @@ angular.module("theHideoutApp")
     // $scope.getPromise = function () {
     //     var promise = $q.defer();
 
-    //     if ($scope.data.filteredBlogPosts) {
-    //       promise.resolve($scope.data.filteredBlogPosts)
+    //     if ($scope.data.filterednewsPosts) {
+    //       promise.resolve($scope.data.filterednewsPosts)
     //       console.log("Did resolve");
     //     } else {
     //       promise.reject("Didn't resolve");

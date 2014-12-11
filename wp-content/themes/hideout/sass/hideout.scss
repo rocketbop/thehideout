@@ -1046,10 +1046,10 @@ Single Post Event
 }
 
 /*--------------------------------------------------------------
-News Blog 
+News  
 --------------------------------------------------------------*/
 
-.blog {
+.news {
 
 	.page-header-top {
 
@@ -1083,7 +1083,7 @@ News Blog
 
 }
 
-.blog-page {
+.news-page {
 
 	.background-container {
 		background-image: url($templateDirectory + "images/backgrounds/people-on-street-evening.jpg");
@@ -1092,13 +1092,13 @@ News Blog
 
 
 
-	.blog-section {
+	.news-section {
 
 		img.featured-image {
 			width: 100%;
 		}
 
-		.blog-item {
+		.news-item {
 			margin-top: 2em;
 
 			p:first-child {
@@ -1107,7 +1107,7 @@ News Blog
 		}
 	}
 
-	.sidebar-blog {
+	.sidebar-news {
 		display: none;
 	}
 }
@@ -1310,7 +1310,7 @@ Sidebar
 	}
 }
 
-.sidebar.sidebar-blog {
+.sidebar.sidebar-news {
 
 	.section-header.background-container-sidebar-header {
 		background-color: lighten($color-aqua, 50%);

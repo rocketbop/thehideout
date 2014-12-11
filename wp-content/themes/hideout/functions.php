@@ -163,7 +163,7 @@ function hideout_scripts() {
 
 	wp_enqueue_script( 'event-controller', get_template_directory_uri() . '/angular/components/event/eventController.js', false, NULL);
 
-	wp_enqueue_script( 'blog-controller', get_template_directory_uri() . '/angular/components/blog/blogController.js', false, NULL);
+	wp_enqueue_script( 'news-controller', get_template_directory_uri() . '/angular/components/news/newsController.js', false, NULL);
 
 	wp_enqueue_script( 'gallery-controller', get_template_directory_uri() . '/angular/components/gallery/galleryController.js', false, NULL);
 

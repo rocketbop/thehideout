@@ -1,12 +1,12 @@
 <?php
 /*
-Template Name: Blog Page
+Template Name: News Page
 */
 
 get_header(); ?>
 
 
-  <div id="primary" class="content-area secondary-page visible-links visible-links-aqua blog blog-page" ng-controller="blogCtrl">
+  <div id="primary" class="content-area secondary-page visible-links visible-links-aqua news news-page" ng-controller="newsCtrl">
 
   <!-- page header top -->
     <div class="container-fluid">
@@ -34,8 +34,7 @@ get_header(); ?>
         <div class="page-inner col-xs-10 col-sm-10 col-md-10 col-lg-10 col-md-offset-1">
         <div class="row">
           <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7 col-md-offset-2">
-            <h1>The Blog</h1>
-            <h3><!-- Recent news, and thoughts from your friends at The Hideout --></h3>
+            <h1>The Hideout News</h1>
             </div>
         </div>
 
@@ -68,7 +67,7 @@ get_header(); ?>
 
           <div  class="row">
             <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7 col-md-offset-2">
-               <?php get_template_part( 'templates/content', 'blogsection' ); ?>
+               <?php get_template_part( 'templates/content', 'newssection' ); ?>
             </div>
             <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
               <?php get_sidebar(); ?>

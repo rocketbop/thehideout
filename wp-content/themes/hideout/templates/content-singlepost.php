@@ -7,8 +7,8 @@
     </div>
   </div>
 
-  <div ng-switch-when="Blog">
-    <div ng-include src="blogPartial">
+  <div ng-switch-when="News">
+    <div ng-include src="newsPartial">
     </div>
   </div>
   

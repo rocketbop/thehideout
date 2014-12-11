@@ -30,7 +30,7 @@ get_header(); ?>
     </div>  <!-- end continer-fluid -->
 
 		
-			<div class="news-module" ng-controller="blogCtrl">
+			<div class="news-module" ng-controller="newsCtrl">
 				<?php get_template_part( 'templates/content', 'newsmodule' ); ?>
 			</div>
 	

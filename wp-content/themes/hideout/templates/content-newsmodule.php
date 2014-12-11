@@ -16,15 +16,15 @@
         <div class="news-section col-xs-9 col-sm-9 col-md-9 col-lg-9">
 
           <div class="item item-1">
-            <a class="item-link" href="{{data.blogPosts[0].link}}">
+            <a class="item-link" href="{{data.newsPosts[0].link}}">
               <div class="row">
                 <div class="item-text col-xs-12 col-sm-4 col-md-4 col-lg-4">
                    <div class="item-date item-box">
-                     <h5>{{data.blogPosts[0].date | date: 'medium' }}</h5>
+                     <h5>{{data.newsPosts[0].date | date: 'medium' }}</h5>
                     </div>
                     <div class="item-headline item-box">
-                      <h3>{{data.blogPosts[0].title}}</h3>
-                      <p><span class="content" ng-bind-html="data.blogPosts[0].content |limitTo: 80"></span><strong> READ MORE</strong></p>
+                      <h3>{{data.newsPosts[0].title}}</h3>
+                      <p><span class="content" ng-bind-html="data.newsPosts[0].content |limitTo: 80"></span><strong> READ MORE</strong></p>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
@@ -41,7 +41,7 @@
             <div class="col-xs-6 col-sm-6 col-md-8 col-lg-8">
 
               <div class="item item-2">
-                <a class="item-link" href="{{data.blogPosts[1].link}}">
+                <a class="item-link" href="{{data.newsPosts[1].link}}">
                   <div class="item-image-wrapper">
                     <div class="item-image" data-news-background-image="2">
                     </div>
@@ -49,12 +49,12 @@
                   <div class="item-text row">
                     <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
                       <div class="item-headline item-box">
-                        <strong><h4>{{data.blogPosts[1].title}}</h4></strong>
+                        <strong><h4>{{data.newsPosts[1].title}}</h4></strong>
                       </div>
                     </div>
                     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
                        <div class="item-date item-box">
-                        <h5>{{data.blogPosts[1].date | date: 'medium' }}</h5>
+                        <h5>{{data.newsPosts[1].date | date: 'medium' }}</h5>
                       </div>
                     </div>
                   </div>      
@@ -62,7 +62,7 @@
               </div>
 
               <div class="item item-3">
-                <a class="item-link" href="{{data.blogPosts[2].link}}">
+                <a class="item-link" href="{{data.newsPosts[2].link}}">
                   <div class="row">
                     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
                       <div class="item-image-wrapper">
@@ -70,9 +70,9 @@
                       </div>
                     </div>
                     <div class=" item-text col-xs-8 col-sm-8 col-md-8 col-lg-8">
-                      <p><h4>{{data.blogPosts[2].title}}</h4></p>
-                      <!-- <p><span class="content" ng-bind-html="data.blogPosts[2].content |limitTo: 80"></span><strong> READ MORE</strong></p> -->
-                      <h5>{{data.blogPosts[1].date | date: 'medium' }}</h5>
+                      <p><h4>{{data.newsPosts[2].title}}</h4></p>
+                      
+                      <h5>{{data.newsPosts[1].date | date: 'medium' }}</h5>
                     </div>
                   </div>
                 </a>
@@ -87,13 +87,13 @@
             <div class="no-padding-left col-xs-4 col-sm-4 col-md-4 col-lg-4">
 
               <div class="item item-4">
-                <a class="item-link" href="{{data.blogPosts[3].link}}">
+                <a class="item-link" href="{{data.newsPosts[3].link}}">
                   <div class="item-image-wrapper">
                     <div class="item-image" data-news-background-image="4"></div>
                   </div>
                   <div class="item-text">
-                    <strong><h4>{{data.blogPosts[3].title}}</h4></strong>
-                    <p><span class="content" ng-bind-html="data.blogPosts[2].content |limitTo: 80"></span><strong> READ MORE</strong></p>
+                    <strong><h4>{{data.newsPosts[3].title}}</h4></strong>
+                    <p><span class="content" ng-bind-html="data.newsPosts[2].content |limitTo: 80"></span><strong> READ MORE</strong></p>
                   </div>
                 </a>
               </div>

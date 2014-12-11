@@ -455,35 +455,35 @@ Single Post Event
   background-color: white; }
 
 /*--------------------------------------------------------------
-News Blog 
+News  
 --------------------------------------------------------------*/
-.blog .page-header-top {
+.news .page-header-top {
   background-color: #308ba0; }
-  .blog .page-header-top .page-inner {
+  .news .page-header-top .page-inner {
     background-color: #369cb4; }
-.blog .page-header-bottom {
+.news .page-header-bottom {
   background-color: #2b7d90; }
-  .blog .page-header-bottom .page-inner {
+  .news .page-header-bottom .page-inner {
     background-color: #308ba0; }
-.blog .pagination > .active > a,
-.blog .pagination > .active > span,
-.blog .pagination > .active > a:hover,
-.blog .pagination > .active > span:hover,
-.blog .pagination > .active > a:focus,
-.blog .pagination > .active > span:focus {
+.news .pagination > .active > a,
+.news .pagination > .active > span,
+.news .pagination > .active > a:hover,
+.news .pagination > .active > span:hover,
+.news .pagination > .active > a:focus,
+.news .pagination > .active > span:focus {
   background-color: #308ba0;
   border-color: #2b7d90; }
 
-.blog-page .background-container {
+.news-page .background-container {
   background-image: url("http://localhost:8888/wp-content/themes/hideout/images/backgrounds/people-on-street-evening.jpg");
   background-position: top; }
-.blog-page .blog-section img.featured-image {
+.news-page .news-section img.featured-image {
   width: 100%; }
-.blog-page .blog-section .blog-item {
+.news-page .news-section .news-item {
   margin-top: 2em; }
-  .blog-page .blog-section .blog-item p:first-child {
+  .news-page .news-section .news-item p:first-child {
     margin-top: 5em; }
-.blog-page .sidebar-blog {
+.news-page .sidebar-news {
   display: none; }
 
 /*--------------------------------------------------------------
@@ -583,7 +583,7 @@ Sidebar
 .sidebar.sidebar-events .section-header.background-container-sidebar-header {
   background-color: #fbf1ee; }
 
-.sidebar.sidebar-blog .section-header.background-container-sidebar-header {
+.sidebar.sidebar-news .section-header.background-container-sidebar-header {
   background-color: #dbeff4; }
 
 /*--------------------------------------------------------------

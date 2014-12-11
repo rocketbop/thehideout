@@ -1,15 +1,15 @@
 angular.module("theHideoutApp")
   .constant("eventUrl", "http://localhost:8888/wp-json/posts?filter[category_name]=events")
-  .constant("blogUrl", "http://localhost:8888/wp-json/posts?filter[category_name]=blog")
-  .factory("apiService", function ( $http, eventUrl, blogUrl) {
+  .constant("newsUrl", "http://localhost:8888/wp-json/posts?filter[category_name]=news")
+  .factory("apiService", function ( $http, eventUrl, newsUrl) {
    
     return {
         getAllEvents: function() {
           return $http.get(eventUrl);
         },
 
-        getAllBlogPosts: function() {
-          return $http.get(blogUrl);
+        getAllNewsPosts: function() {
+          return $http.get(newsUrl);
         }
 
    };

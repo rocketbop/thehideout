@@ -20,7 +20,7 @@ angular.module("theHideoutApp")
   
   // used in ng-switch statement in templates/content-singlepost.php
   $scope.eventPartial = templateDirectory + "angular/partials/singlepostevent.php";
-  $scope.blogPartial = templateDirectory + "angular/partials/singlepostblog.php";
+  $scope.newsPartial = templateDirectory + "angular/partials/singlepostnews.php";
 
 
 

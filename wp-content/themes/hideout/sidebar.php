@@ -41,7 +41,7 @@
 </div>
 
 <!-- NEWS -->
-<div class="sidebar sidebar-blog visible-links visible-links-aqua" ng-controller="blogCtrl">
+<div class="sidebar sidebar-news visible-links visible-links-aqua" ng-controller="newsCtrl">
   <div class="section-header background-container-sidebar-header">
     
  
@@ -52,18 +52,18 @@
     </div>
    </div>
 
-  <div class="background-container-sidebar-item" ng-repeat="blogPost in data.blogPosts | orderBy: '-date' | limitTo: 5">
+  <div class="background-container-sidebar-item" ng-repeat="newsPost in data.newsPosts | orderBy: '-date' | limitTo: 5">
     <a href="{{event.link}}">
       <div class="row item">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 col-lg-offset-1">
           <!-- If there is an image use its thumbnail, else use the default -->
-          <img ng-if="blogPost.featured_image.source" src="{{blogPost.featured_image.attachment_meta.sizes.sidebarimg.url}}">
-         <img ng-if="!blogPost.featured_image.source" src="{{newsImageDefault210X140}}">
+          <img ng-if="newsPost.featured_image.source" src="{{newsPost.featured_image.attachment_meta.sizes.sidebarimg.url}}">
+         <img ng-if="!newsPost.featured_image.source" src="{{newsImageDefault210X140}}">
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 col-lg-offset-1">
-          <h3 ng-bind-html="blogPost.title"></h3>
-          <h5>{{blogPost.date | date: 'EEEE, d MMMM yyyy'  }}</h5>
+          <h3 ng-bind-html="newsPost.title"></h3>
+          <h5>{{newsPost.date | date: 'EEEE, d MMMM yyyy'  }}</h5>
            
         </div>
       </div> <!-- end item -->
