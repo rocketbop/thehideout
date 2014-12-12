@@ -23,7 +23,7 @@
   </div>
   
 
-  <div class="background-container-sidebar-item" ng-repeat="event in data.events | omitEndedEvents | orderBy: '-date_of_event' | limitTo: 5">
+  <div class="background-container-sidebar-item" ng-repeat="event in data.events | filter: futureEvents | orderBy: '-date_of_event' | limitTo: 5">
     <a href="{{event.link}}">
       <div class="row item">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 col-lg-offset-1">

@@ -31,19 +31,4 @@ angular.module("customFilters", [])
       var date = new Date(string);
       return date;
     }
-  })
-  .filter('omitEndedEvents', function () {
-
-    // check if the date of the item is earlier than today, and omit it if so
-    return function (data) {
-      var today = new Date().getTime();
-      if (angular.isArray(data)) {
-        for (var i = 0; i < data.length; i++) {
-          if (today > data[i].date_of_event) {
-            data.splice([i], 1);
-          }
-        }        
-      }      
-      return data;
-    }
   });

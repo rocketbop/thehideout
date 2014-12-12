@@ -5,7 +5,6 @@ angular.module("theHideoutApp")
 
     // GET THE DATA
     $scope.dataPromise = apiService.getAllEvents().success(function(data) {
-      // $scope.data = {}; // create the data object
       $scope.data.events = data;
 
       //Convert the timestamp to millseconds
@@ -62,6 +61,15 @@ angular.module("theHideoutApp")
     }
 
 
+    $scope.futureEvents = function (event) {
+      var today = new Date().getTime();
+       if (event.date_of_event >= today) {
+        return true;
+       } else {
+        return false;
+       }
+    }
+    
   // PAGINATION
     $scope.selectedPage = 1; // Initial, or on page reload
     $scope.pageSize = eventListPageCount;
@@ -79,7 +87,7 @@ angular.module("theHideoutApp")
     }
 
     $scope.getSinglePost = function () {
-      
+
       // expose the singlepost object to the view
       $scope.dataPromise.success(function () {
         $scope.singlePostArrayNumber = $scope.getSinglePostArrayNumber();
