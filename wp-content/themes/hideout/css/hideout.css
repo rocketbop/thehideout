@@ -2,6 +2,9 @@
 /*--------------------------------------------------------------
 1.0 Typefaces and Decoration 
 --------------------------------------------------------------*/
+p {
+  font-size: 1.4em; }
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "Oswald", sans-serif;
   font-weight: 300;
@@ -28,9 +31,6 @@ li {
 
 h1 {
   margin-bottom: 1em; }
-
-p:first-child {
-  margin-top: 4em; }
 
 a {
   color: inherit;
@@ -202,6 +202,10 @@ Front Page General
   color: #f8f8f8;
   padding-left: 2em; }
 
+p, a {
+  font-size: 1.03em;
+  line-height: 1.3em; }
+
 /*--------------------------------------------------------------
 Front Page Header
 --------------------------------------------------------------*/
@@ -257,7 +261,6 @@ Front Page News Module
 .news-module .item {
   margin-bottom: 1em; }
   .news-module .item .item-text p, .news-module .item .item-text a {
-    line-height: 1em;
     margin-top: 1em; }
   .news-module .item .item-image-wrapper {
     background-color: #111111; }
@@ -279,7 +282,8 @@ Front Page News Module
 .news-module .item.item-1:hover {
   background-color: #246979; }
 .news-module .item.item-2 {
-  background-color: #eeeeee; }
+  background-color: #eeeeee;
+  border-bottom: #2a7a8c 1px solid; }
   .news-module .item.item-2 .item-text {
     padding-left: 1em; }
   .news-module .item.item-2 .item-image {
@@ -309,7 +313,6 @@ Front Page News Module
     .news-module .item.item-4 .item-text h4 {
       margin-bottom: 1em; }
     .news-module .item.item-4 .item-text p {
-      line-height: 1em;
       margin-top: 0;
       font-weight: 400; }
   .news-module .item.item-4 .item-image {
@@ -327,6 +330,7 @@ Front Page News Module
 /*--------------------------------------------------------------
 Front Page Music Module
 --------------------------------------------------------------*/
+/* All Screens */
 .music-module .module-header {
   background-color: #ba4a30;
   color: #f8f8f8; }
@@ -334,7 +338,54 @@ Front Page Music Module
     background-color: #a6422b; }
 .music-module .module-body-inner {
   background-color: white; }
+.music-module .item-upcoming-sidebar {
+  background-color: #eeeeee;
+  padding-right: 1em; }
+.music-module .item-next-event {
+  background-color: #a6422b;
+  color: white; }
+  .music-module .item-next-event .item-description {
+    padding-left: 1em; }
+.music-module .item-facilities-header {
+  text-align: center; }
+.music-module .item-facilities-items {
+  padding-bottom: 1em;
+  border-bottom: 1px solid #a6422b; }
+  .music-module .item-facilities-items .item {
+    background-color: #eeeeee;
+    padding-bottom: 2em; }
+    .music-module .item-facilities-items .item h4 {
+      text-align: center; }
+.music-module .contact-section {
+  margin-top: 2em; }
+  .music-module .contact-section .item h4 {
+    display: inline-block; }
+  .music-module .contact-section .item button {
+    float: right; }
 
+/* Reponsive Styles */
+@media (max-width: 767px) {
+  .music-module .item-next-event {
+    height: 18em; }
+    .music-module .item-next-event .item-image {
+      float: none; } }
+@media (min-width: 768px) {
+  .music-module .item-next-event {
+    height: 23em; }
+    .music-module .item-next-event .item-image {
+      float: right; } }
+@media (min-width: 992px) {
+  .music-module .item-next-event {
+    height: 18em; }
+    .music-module .item-next-event .item-image {
+      float: right; } }
+@media (min-width: 1200px) {
+  .music-module .item-upcoming-sidebar .description p {
+    font-weight: 400; }
+  .music-module .item-next-event {
+    height: 21em; }
+    .music-module .item-next-event .item-image {
+      float: none; } }
 /*--------------------------------------------------------------
 Front Page Food Module
 --------------------------------------------------------------*/
@@ -346,6 +397,11 @@ Front Page Food Module
 /*-----------------
 Secondary page styles General
 --------------*/
+.secondary-page p {
+  font-size: 1.4em;
+  line-height: 2.5em; }
+.secondary-page p:first-child {
+  margin-top: 4em; }
 .secondary-page .fb-like {
   margin-top: 1em; }
 .secondary-page .blurb {
@@ -355,7 +411,7 @@ Secondary page styles General
     margin-bottom: 1em; }
   .secondary-page .blurb strong p,
   .secondary-page .blurb p {
-    line-height: 1.2em; }
+    line-height: 1.1em; }
 .secondary-page .background-container {
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -621,6 +677,9 @@ footer {
 /*--------------------------------------------------------------
 Responsive styles, General
 --------------------------------------------------------------*/
+div {
+  transition: 2.0s; }
+
 @media (min-width: 992px) {
   .gallery-page .body-inner {
     min-height: 50em; } }

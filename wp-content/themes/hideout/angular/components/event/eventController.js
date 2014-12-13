@@ -69,6 +69,7 @@ angular.module("theHideoutApp")
         return false;
        }
     }
+
     
   // PAGINATION
 

@@ -10,99 +10,132 @@
 <div class="container-fluid">
   <div class="row module-body">
     <div class="module-body-inner col-xs-10 col-sm-10 col-md-10 col-lg-10 col-md-offset-1">
-    This
+      <div class="row">
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-5">
+
+          <div class="item-upcoming-header">
+            Coming Up:
+          </div>
+          <div class="item-upcoming-sidebar">
+            <div ng-repeat="event in data.events | orderBy:'date' | filter: futureEvents " ng-if="$index != 0" class="item">
+
+              <div class="hidden-lg">
+              <a href="{{event.link}}">
+                <img src="{{event.featured_image.attachment_meta.sizes.sidebarimg.url}}">
+                <h4>{{event.event_name}}</h4>
+                <h5>{{event.date_of_event | date: 'EEEE, d MMMM yyyy'}}</h5>
+              </a>
+              </div> <!-- hidden lg -->
+
+              <div class="visible-lg">
+                <div class="row">
+                  <div class="col-lg-7">
+                    <img src="{{event.featured_image.attachment_meta.sizes.medium.url}}">
+      
+                  </div>
+                  <div class="description col-lg-5">
+                     <h3>{{event.event_name}}</h3>
+                    <h4>{{event.date_of_event | date: 'EEEE, d MMMM yyyy'}}</h4>
+                    <div ng-bind-html="event.event_description | limitTo: '100' "></div>
+                  </div>
+                </div>
+              </div> <!-- visible lg -->
+
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-7">
+
+          <div ng-repeat="event in data.events | orderBy:'date' |  filter: futureEvents | limitTo: '1' " class="item-next-event">
+            <div class="row">
+             
+              <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                <div class="item-description">
+                  <h4>Next Event:</h4>
+                  <h3>{{event.event_name}}</h3>
+                   <h5>{{event.date_of_event | date: 'EEEE, d MMMM yyyy'}}</h5>
+                </div>
+              </div>
+
+               <div class="col-xs-8 col-sm-9 col-md-9 col-lg-9">
+                <img class="item-image" ng-src="{{event.featured_image.attachment_meta.sizes.eventboard.url}}">
+              </div>
+
+            </div>
+            
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-md-offset-3">
+              <div class="item-facilities-header">
+                <h3>Facilities</h3>
+              </div>
+              
+            </div>
+          </div>
+
+          <div class="item-facilities-items">
+            <div class="row">
+              <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                <div class="item item-sound">
+                  <img class="featured-image" ng-src="{{templateDirectory}}images/facilities/design-speakers-250x150.jpg">
+                  <h4>Great Sound</h4>
+                </div>
+              </div>
+               <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                <div class="item item-stage">
+                  <img class="featured-image" ng-src="{{templateDirectory}}images/facilities/design-stage-250x150.jpg">
+                  <h4>Our Stage</h4>
+                </div>
+              </div>
+               <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                <div class="item item-smoking">
+                  <img class="featured-image" ng-src="{{templateDirectory}}images/facilities/design-smoking-area-250x150.jpg">
+                  <h4>Refurbished Smoking Area</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+          <div class="item-welcome">
+             <div class="row">
+               <div class="col-md-6 col-lg-6">
+                 <img class="featured-image" ng-src="{{templateDirectory}}images/singer-stock-600x450.jpg">
+               </div>
+                <div class="col-md-6 col-lg-6">
+                 <h2>The Hideout Loves Live Music</h2>
+                 <h4>Find out about upcoming events, check out our social networks, or get in touch if you want to enquire about holding an gig or some other kind of event in The Hideout.</h4>
+               </div>
+             </div>
+          </div>
+         
+        </div>
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+          <div class="contact-section">
+           <div class="item item-events-page">
+            <h4>See our Events Page for full details</h4>
+            <button>EVENTS PAGE</button>
+          </div>
+          <div class="item item-contact">
+             <h4>Get in touch to book an event</h4>
+            <button>Contact Us</button>
+   
+          </div>
+          <div class="item social-buttons">
+            <h4>Follow Us on Facebook or Twitter</h4>
+          </div>
+          </div> <!-- contact section -->
+        </div>
+
+      </div>
     </div> <!-- module body inner -->
   </div> <!-- module body -->
 </div> <!-- container fluid -->  
 
 
-  <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 col-md-offset-1">
-    <div class="row">
-        <div class=" music-module-header col-md-4">
-          <h1>MUSIC</h1>
-        </div>
-        <div class=" music-module-header col-md-8">
-          <h3>Live Events at <strong>The Hideout</strong></h3>
-        </div>
-    </div>
-    <div class="row">
-      <div class="col-md-4">
-        <div class="row">
-
-          <div class="music-module-icon col-md-4">
-          </div>
-          <div class="music-module-byline col-md-8">
-          <h3>Soul of Life</h3>
-          </div>
-          
-        </div>
-        <div class="row">
-          <div class="music-module-blurb col-md-12">
-            <h2>Music at The Hideout</h2>
-            <p>The Hideout has been supporting live food for years.</p>
-            <p>Hashtag kitsch single-origin coffee artisan gentrify, tattooed kogi biodiesel Tumblr beard retro Intelligentsia. Godard ethical umami semiotics.</p>
-            <p>Slow-carb scenester swag, banjo meh Tumblr Godard Helvetica.</p>
-          </div>
-          
-        </div>
-        
-      </div>
-      <div class="col-md-8 music-module-upcoming-event-maxi">
-
-        <h4>NEXT UP:</h4>
-        <h1>U2</h1>
-        <h5>14 12 2014</h5>
-
-
-        
-      </div>
-      
-    </div>
-    <div class="row">
-      <div class='music-module-upcoming-banner col-md-4'>
-        <h2>
-          THEN:
-        </h2>
-        
-      </div>
-      <div class="music-module-upcoming-event-mini col-md-8">
-        <div class="row">
-          <div class="unit col-md-6">
-            <div class="row">
-              <div class="dark-text col-md-3">
-                <h3>Event: </h3>
-                <h4>Date: </h4>
-                <h4>Time: </h4>
-              </div>
-              <div class="col-md-9">
-                <h3>Snow Patrol</h3>
-                <h4>18 January 2015</h4>
-                <h4 class="dark-text">8PM</h4>
-              </div>
-            </div>
-
-          </div>
-          <div class="unit unit-2 col-md-6 ">
-            <div class="row">
-              <div class="dark-text col-md-3">
-                <h4>Event: </h4>
-                <h5>Date: </h5>
-                <h5>Time: </h5>
-              </div>
-              <div class="col-md-9">
-                <h4>The Frames</h4>
-                <h5>21 January 2015</h5>
-                <h5 class="dark-text">9PM</h5>
-              </div>
-
-            </div>
-          </div>
-
-        </div>
-
-
-        
-      </div>
-      
-    </div>
-  </div>
+  

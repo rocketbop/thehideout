@@ -36,7 +36,7 @@ get_header(); ?>
 	
 
 
-		<div class="music-module" ng-controller="eventCtrl">
+		<div class="events music-module" ng-controller="eventCtrl">
 			<?php get_template_part( 'templates/content', 'musicmodule' ); ?>
 		</div>
 
