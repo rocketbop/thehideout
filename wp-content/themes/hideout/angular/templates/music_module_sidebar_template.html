@@ -1,0 +1,23 @@
+              <div class="hidden-lg">
+              <a href="{{event.link}}">
+                <img src="{{event.featured_image.attachment_meta.sizes.sidebarimg.url}}">
+                <h4>{{event.event_name}}</h4>
+                <h5>{{event.date_of_event | date: 'EEEE, d MMMM yyyy'}}</h5>
+              </a>
+              </div> <!-- hidden lg -->
+
+              <div class="visible-lg">
+              <a href="{{event.link}}">
+                <div class="row">
+                  <div class="col-lg-7">
+                    <img src="{{event.featured_image.attachment_meta.sizes.sidebarimg.url}}">
+      
+                  </div>
+                  <div class="description col-lg-5">
+                     <h3>{{event.event_name}}</h3>
+                    <h4>{{event.date_of_event | date: 'EEEE, d MMMM yyyy'}}</h4>
+                    <div ng-bind-html="event.event_description | limitTo: '100' "></div>
+                  </div>
+                </div>
+                </a>
+              </div> <!-- visible lg -->

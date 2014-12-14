@@ -14,6 +14,10 @@ angular.module("theHideoutApp")
      console.log($scope.data.events);
     });
 
+    $scope.primaryTemplateMessages = {
+      'welcomeMessage': 'Music at The Hideout'
+    };
+
   // FILTER BY CATEGORY
 
     var selectedCategory = null; // no filtering applied until one of the category buttons is clicked: see categoryFilterFn

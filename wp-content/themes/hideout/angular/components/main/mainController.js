@@ -2,6 +2,7 @@ angular.module("theHideoutApp")
 .controller("mainCtrl", ['$scope', '$filter', '$window', '$log', 'apiService', 'globalService', 'templateDirectory', 'Facebook', function ($scope, $filter, $window, $log, apiService, globalService, templateDirectory, Facebook) {
   
   $scope.templateDirectory = templateDirectory;
+  $scope.htmlTemplatesDirectory = templateDirectory + 'angular/templates/';
 
   // init these on each load so false unless called from the app
   $scope.singlePostCategory = '';
@@ -85,7 +86,7 @@ angular.module("theHideoutApp")
 
     $scope.data = {};
     $scope.data.myTestURL= 'http://www.theguardian.com';
-    
+
   }]);
 
 

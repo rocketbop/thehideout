@@ -1,11 +1,5 @@
-<div class="container-fluid">
-  <div class="row module-header">
 
-    <div class="module-header-inner col-xs-10 col-sm-10 col-md-10 col-lg-10 col-md-offset-1">
-      <h3>Music at The Hideout</h3>
-    </div>
-  </div>
-</div> <!-- container-fluid -->
+<div ng-include src="htmlTemplatesDirectory + 'module_header_inner_template.html'"></div>
 
 <div class="container-fluid">
   <div class="row module-body">
@@ -53,29 +47,27 @@
         <div class="events-sidebar">
           
           <div ng-if="numberOfFutureEvents > 1" class="item-upcoming-header">
-            Coming Up:
+            <h3>Coming Up:</h3>
           </div>
 
           <div class="item-upcoming-sidebar">
             <div ng-repeat="event in data.events | orderBy:'date' | filter: futureEvents | limitTo: 3 " ng-if="$index != 0" class="item">
-              <div ng-include src="templateDirectory + 'angular/templates/music_module_sidebar_template.html'"></div>
+              <!-- <div ng-include src="templateDirectory + 'angular/templates/music_module_sidebar_template.html'"></div> -->
+              <div ng-include src="htmlTemplatesDirectory + 'music_module_sidebar_template.html'"></div>
             </div>
           </div>
 
           <div ng-if="numberOfFutureEvents < 4" class="item-upcoming-header">
-           Previous:
+           <h3>Previous:</h3>
           </div>
           <div class="item-previous-sidebar">
             <div ng-repeat="event in data.events | orderBy:'date' | filter: pastEvents | limitTo: 2  " ng-if="numberOfFutureEvents == 2" class="item">
-              <div ng-include src="templateDirectory + 'angular/templates/music_module_sidebar_template.html'"></div>
+              <div ng-include src="htmlTemplatesDirectory + 'music_module_sidebar_template.html'"></div>
             </div>
           </div>
             
           
         </div>
-
-
-
 
         </div>
 

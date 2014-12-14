@@ -340,9 +340,13 @@ Front Page Music Module
   background-color: white; }
 .music-module .item-welcome .description {
   text-align: center; }
-.music-module .item-upcoming-sidebar {
-  background-color: #eeeeee;
-  padding-right: 1em; }
+.music-module .events-sidebar .item {
+  padding-right: 1em;
+  margin-bottom: 1em; }
+.music-module .item-upcoming-sidebar .item {
+  background-color: #eeeeee; }
+.music-module .item-previous-sidebar .item {
+  background-color: #fbf1ee; }
 .music-module .item-next-event {
   background-color: #a6422b;
   color: white; }

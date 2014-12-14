@@ -668,10 +668,21 @@ Front Page Music Module
 
 		}
 	}
+	.events-sidebar {
+		.item {
+			padding-right: 1em;
+			margin-bottom: 1em;
+		}
+	}
 	.item-upcoming-sidebar {
-		background-color: $color-white-3;
-		padding-right: 1em;
-
+		.item {
+			background-color: $color-white-3;
+		}
+	}
+	.item-previous-sidebar {
+		.item {
+			background-color: lighten($color-cherry, 50%);
+		}
 	}
 	.item-next-event {
 		background-color: darken($color-cherry, 5%);
