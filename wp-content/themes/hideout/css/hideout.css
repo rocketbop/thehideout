@@ -338,6 +338,8 @@ Front Page Music Module
     background-color: #a6422b; }
 .music-module .module-body-inner {
   background-color: white; }
+.music-module .item-welcome .description {
+  text-align: center; }
 .music-module .item-upcoming-sidebar {
   background-color: #eeeeee;
   padding-right: 1em; }

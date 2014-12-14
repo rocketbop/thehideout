@@ -662,6 +662,12 @@ Front Page Music Module
 	.module-body-inner {
 		background-color: $white-1;
 	}
+	.item-welcome {
+		.description {
+			text-align: center;
+
+		}
+	}
 	.item-upcoming-sidebar {
 		background-color: $color-white-3;
 		padding-right: 1em;

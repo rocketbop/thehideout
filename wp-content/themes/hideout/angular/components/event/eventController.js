@@ -70,6 +70,29 @@ angular.module("theHideoutApp")
        }
     }
 
+    $scope.pastEvents = function (event) {
+
+      // check that the date of the input is in the past
+      var today = new Date().getTime();
+       if (event.date_of_event < today) {
+        return true;
+       } else {
+        return false;
+       }
+    }
+
+
+    $scope.dataPromise.success(function () {
+      $scope.numberOfFutureEvents = $scope.getNumberOfEvents($filter, $scope.futureEvents);
+      console.log($scope.numberOfFutureEvents);
+    })
+
+    $scope.getNumberOfEvents = function ($filter, callback) {
+      var numberEvents = 0;
+      numberEvents = $filter('filter')($scope.data.events, callback).length;
+      return numberEvents;
+    }
+
     
   // PAGINATION
 
