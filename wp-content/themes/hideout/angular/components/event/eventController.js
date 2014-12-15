@@ -1,7 +1,7 @@
 angular.module("theHideoutApp")
   .constant('eventListPageCount', 4) // items per page
   .constant("eventListActiveClass", "btn-primary")
-  .controller("eventCtrl", ['$scope', '$filter', 'eventListPageCount', 'apiService', 'eventListActiveClass', function ($scope, $filter, eventListPageCount, apiService, eventListActiveClass) {
+  .controller("eventCtrl", ['$scope', '$timeout', '$filter', 'eventListPageCount', 'apiService', 'eventListActiveClass', function ($scope, $timeout, $filter, eventListPageCount, apiService, eventListActiveClass) {
 
     // GET THE DATA
     $scope.dataPromise = apiService.getAllEvents().success(function(data) {

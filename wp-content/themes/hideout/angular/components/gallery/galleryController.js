@@ -1,5 +1,5 @@
 angular.module('theHideoutApp')
-  .controller('galleryCtrl', ['$scope', 'Flickr', 'Lightbox', function ($scope, Flickr, Lightbox) {
+  .controller('galleryCtrl', ['$scope', '$timeout', 'Flickr', 'Lightbox', function ($scope, $timeout, Flickr, Lightbox) {
 
     // $scope.data = {}; This is now created in the MainCtrl
     $scope.selectedAlbumID = '';
@@ -21,14 +21,23 @@ angular.module('theHideoutApp')
               console.log(error);
             }) 
           }
-        $scope.getPhotosetPhotos($scope.selectedAlbumID);
 
+        $scope.getPhotosetPhotos($scope.selectedAlbumID);
         console.log($scope.data.photosetList);
 
       })
       .error(function (error) {
         console.log(error);
       });
+
+
+      //$scope.sliderSets = $scope.getSliderSets();
+
+      $scope.getSliderSets = function ($filter) {
+        
+        numberEvents = $filter('limitTo')($scope.data.photosetList, 3);
+        return numberEvents;
+      }
 
       $scope.openLightboxModal = function (index) {
         console.log($scope.data.selectedAlbumPhotos.photoset.photo);
@@ -40,8 +49,7 @@ angular.module('theHideoutApp')
         if ($scope.selectedAlbumID != albumID) {
           $scope.selectedAlbumID = albumID;
           $scope.getPhotosetPhotos($scope.selectedAlbumID);
-        }
-        
+        } 
       }
 
     }])

@@ -119,7 +119,8 @@
         </div>
       </div> <!-- end row -->
 
-      <div class="row image-section">
+
+      <div ng-controller="galleryCtrl" class="row image-section">
         <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
           <img src="http://placehold.it/350x150">
         </div>
