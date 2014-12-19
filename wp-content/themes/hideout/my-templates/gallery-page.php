@@ -12,14 +12,6 @@ get_header(); ?>
         </div>
       </div>
 
-
-
-
-
-
-
-
-
     <div class="row page-header page-header-top">
       <div class="page-inner col-xs-10 col-sm-10 col-md-10 col-lg-10 col-md-offset-1">
           <div class="row">
@@ -99,13 +91,6 @@ get_header(); ?>
        </div> <!-- page body -->
     </div> <!-- row -->
   </div> <!-- container fluid -->
-
-
-
-
-
-
-
 
 </div> <!-- ng controller -->
 

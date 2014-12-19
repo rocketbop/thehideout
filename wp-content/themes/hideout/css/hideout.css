@@ -652,10 +652,7 @@ Sidebar
 Footer
 --------------------------------------------------------------*/
 footer {
-  color: #f8f8f8;
-  padding-bottom: 2em; }
-  footer p {
-    line-height: .5em; }
+  color: #e7e7e7; }
   footer .address {
     text-align: center; }
   footer .background-container {
@@ -664,28 +661,27 @@ footer {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    background-position: top;
-    background-attachment: fixed; }
+    background-position: top; }
   footer .social-icons {
     text-align: center; }
+    footer .social-icons img {
+      margin-top: 1em;
+      margin-bottom: 1em; }
   footer .page-footer-top {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.9);
     position: absolute;
     bottom: 0px;
     width: 100%; }
     footer .page-footer-top .page-inner {
       background-color: rgba(8, 8, 8, 0.6); }
   footer .page-footer-bottom {
-    background-color: #111111; }
+    background-color: white; }
     footer .page-footer-bottom .page-inner {
-      background-color: #191919; }
+      background-color: white; }
 
 /*--------------------------------------------------------------
 Responsive styles, General
 --------------------------------------------------------------*/
-div {
-  transition: 2.0s; }
-
 @media (min-width: 992px) {
   .gallery-page .body-inner {
     min-height: 50em; } }
