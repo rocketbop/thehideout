@@ -35,9 +35,9 @@
                 </div>
 
                 <div class="col-xs-3 col-xs-offset-3">
-                  <a href="https://www.flickr.com/photos/129749000@N03/" 
+                  <a href="https://www.flickr.com/photos/129749000@N03/"> 
                     <div class="social-icons">
-                      <img ng-src="{{templateDirectory}}images/social-icons/flickr-3.png" alt-"Flickr Gallery">>
+                      <img ng-src="{{templateDirectory}}images/social-icons/flickr-3.png" alt-"Flickr Gallery">
                     </div>
                   </a>
                 </div>
@@ -87,7 +87,7 @@
                 <div class="col-sm-1  col-md-1 col-lg-1">
                   <a href="https://www.flickr.com/photos/129749000@N03/">
                     <div class="social-icons">
-                      <img ng-src="{{templateDirectory}}images/social-icons/flickr-3.png" alt-"Flickr Gallery">>
+                      <img ng-src="{{templateDirectory}}images/social-icons/flickr-3.png" alt-"Flickr Gallery">
                     </div>
                   </a>
                 </div>
