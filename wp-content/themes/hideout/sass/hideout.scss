@@ -105,7 +105,6 @@ $color-apple: #4e942f;
 1.0 Typefaces and Decoration 
 --------------------------------------------------------------*/
 
-
 p {
 	font-size: 1.4em;
 }
@@ -114,7 +113,6 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 300;
 	color: inherit;
 }
-
 h1:hover,
 h2:hover,
 h3:hover,
@@ -123,50 +121,37 @@ h5:hover,
 h6:hover {
 	color: inherit;
 }
-
-
 p, li, a {
-	font-family: "Lato", sans-serif;
-	// font-family: "Halant", 'Georgia', sans-serif;
-	font-weight: 300;
-	// font-size: 1.2em;
-	line-height: 2.5em;
+font-family: "Lato", sans-serif;
+// font-family: "Halant", 'Georgia', sans-serif;
+font-weight: 300;
+// font-size: 1.2em;
+line-height: 2.5em;
 }
-
 strong {
 	h1, h2, h3, h4, h5,  h6 {
 		font-weight: 400;
 	}
 }
-
 li {
 	list-style: none;
 }
-
 // Margins
-
 h1 {
 		margin-bottom: 1em;
 	}
-
-
-
-
 a {
-		color: inherit ;
-		line-height: inherit ;
+	color: inherit ;
+	line-height: inherit ;
 }
-
 a:hover {
 	color: inherit;
 	text-decoration: none;
 }
-
 a:visited {
 		color: inherit ;
 		line-height: inherit ;
 }
-
 .visible-links {
 	a {
 		font-weight: 700;
@@ -175,81 +160,64 @@ a:visited {
 		opacity: .7;
 	}
 }
-
 .visible-links-cherry {
 	a {
 		color: $color-cherry;
 	}
 }
-
 .visible-links-lilac {
 	a {
 		color: $color-lilac;
 	}
 }
-
 .visible-links-aqua {
 	a {
 		color: $color-aqua;
 	}
 }
-
 .no-padding-left {
 	padding-left: 0 !important;
 }
-
 .no-padding-right {
 	padding-right: 0 !important;
 }
 .no-padding-top {
 	padding-top: 0 !important;
 }
-
 .no-padding-bottom {
 	padding-bottom: 0 !important;
 }
-
 .margin-left-15 {
 	margin-left: 15px;
 }
-
 .margin-right-15 {
 	margin-right: 15px;
 }
-
 .vcenter {
     display: inline-block;
     vertical-align: middle;
     float: none;
 }
 
-
-
 /*--------------------------------------------------------------
 2.0 Design
 --------------------------------------------------------------*/
 
 body {
-
 	#primary {
 		background: $white-2;
 	}
-
 	.separator {
 		display: block;
 		margin: 5em auto;
 	}
-
 	.body-inner {
 		background-color: $white-1;
 	}
-
 	.container-fluid {
 		max-width: 1600px;
 	}
-
 	// Buttons
-
 	.btn-default {
 		background-color: $white-3;
 		border: $white-3;
@@ -259,9 +227,7 @@ body {
 
 /**** LAYOUT STYLES *****************/
 
-
 header {
-
 	.navbar-container {
 		background-color: $color-black-2;
 		opacity: 0.9;
@@ -269,6 +235,9 @@ header {
 		transition: all 0.7s ease-in;
 	}
 	nav {
+		.icon-bar {
+			background-color: $color-white-1;
+		}
 		h2 {
 			color: $color-white-1;
 			font-size: 1.5em;
@@ -287,83 +256,74 @@ header {
 				border-radius: 5px;
 				transition: all 0.3s ease-in;
 			}
-			a:hover,
-			a:focus {
-			  text-decoration: none;
-			  background-color: rgba($color-white-1, .9);
-			  color: lighten($color-black-1, 15%);
-			  border-radius: 5px;
-			  transition: all 0.1s ease-in;
-			}
 			a:visited {
 				color: $color-white-1;
 			}
+			a:hover,
+			a:focus {
+			  text-decoration: none;
+			  background-color: darken($color-white-2, 10%);
+			  color: lighten($color-black-1, 15%);
+			  // border-radius: 5px;
+			  border: $color-white-1 solid 1px;
+			  // transition: all 0.1s ease-in;
+			}
+
 		}
 		ul li.current-menu-item {
-			/* Place an underline under active menu */
-			a:after {
-				content:""; 
-			  background: $color-white-1; 
-			  position: absolute; 
-			  bottom: 0; 
-			  left: 15%; 
-			  height: 1px; 
-			  width: 70%;
-			  transition: all 0.9s ease-in;
+			a {
+				border: $color-white-1 solid 1px;
 			}
 		}
 	} // nav
 
 	.navbar-container.opaque-thin {
-		background-color: rgba(250,250,250,1.0);
-		height: 3.5em;
+		background-color: darken($color-white-1, 5%);
+		height: 3.2em;
 		border-bottom: 1px solid black;
 		transition: all 0.7s ease-in;
-		h2 {
-			font-size: 1.2em;
-			padding-top: 0.5em;
-			color: $dark-grey;
-			transition: all 0.7s ease-in;
-			margin-top: 0em;
-		}
-		ul li {
-			// font-size: 1.2em;
-			margin-top: 0.1em;
-			color: black;
-			transition: all 0.7s ease-in;
-			a {
-				color: $dark-grey;
-				height: 2.5em;
-				padding-top: 0.7em;
+		nav {
+			h2 {
+				font-size: 1em;
+				padding-bottom: 0;
+				padding-top: 0.4em;
+				margin: 0;
+				margin-top: 0.4em;
+				color: $color-black-1;
 				transition: all 0.7s ease-in;
 			}
-			a:hover,
-			a:focus {
-			  background-color: rgba(0,0,0,0.9);
-			  color: $white;
-			  transition: all 0.1s ease-in;
+			ul li {
+				font-size: 1.0em;
+				margin-left: 0.2em;
+				margin-right:	0.2em;
+				padding-top: 0em;
+				a {
+					padding-top: 0 !important;
+					padding-bottom: 0 !important;
+					color: lighten($color-black-1, 15%);
+					transition: all 0.7s ease-in;
+				}
+				a:hover,
+				a:focus {
+				  background-color: lighten($color-black-1, 25%);
+				  border: $color-black-1 solid 1px;
+				  color: $white;
+				  transition: all 0.1s ease-in;
+				}
 			}
-		}
-		ul li.current-menu-item {
-			/* Place an underline under active menu */
-			a:after {
-				// content:""; 
-			  background: lighten($color-black-2, 40%); 
-			  // top: 30%; 
+			ul li.current-menu-item {
+				a { 
+				  border: lighten($color-black-1, 15%) solid 1px; 
+				}
 			}
 		}
 	}
 	nav.navbar {
-		margin-bottom: 0;
-		background-color: rgba(1,1,1,0.0);
-		border:	none;
 		.navbar-header {
 			width: 100%;
 		}
-		/*Put Brand in the center*/
 		.navbar-brand {
 		  text-align: center;
-		  margin: auto;
 		  padding-left: 0;
 		  padding-right: 0;
 		  padding-top: 0;
@@ -376,21 +336,14 @@ header {
 		.collapse.navbar-collapse.in {
 			background-color: black;
 			position: relative !important;
-
 		}
-
 	@media (max-width: 767px) {
 		.background-container-header {
 			display: none;
 		}
 		h2 {
 			float: left;
-		}
-    ul li.current-menu-item {
-			/* Remove underline on XS */
-			a:after {
-				display: none;
-			}
+			padding-left: 0.4em;
 		}
 		.navbar-fixed-top {
       position: relative;
@@ -409,12 +362,10 @@ header {
     	display: none;
     }
     nav.navbar {
-    	    a.navbar-brand {
-    	width: initial ;
-
+    	a.navbar-brand {
+    		width: initial ;
+   		}
     }
-    }
-
     button.navbar-collapse,
     button.navbar-toggle {
     	margin-top: 1.3em;
@@ -422,12 +373,17 @@ header {
 	}
 
 	@media (min-width: 768px) and (max-width: 992px) {
+		.navbar-container {
+			height: 6em;
+		}
 		nav {
 			h2 {
-				font-size: 1em;
-				padding-bottom: 0;
-				padding-top: 0.4em;
+				font-size: 1.2em;
+				padding-bottom: 0.5em;
+				padding-top: 0.1em;
 				margin: 0;
+				margin-top: 0.4em;
+				border-bottom: 1px solid white;
 			}
 			a.navbar-brand {
 				padding-bottom: 0;
@@ -435,31 +391,30 @@ header {
 			}
 			ul li {
 				font-size: 1.0em;
-				margin-left: 0em;
-				margin-right:	0em;
-				padding-top: 1.3em;
+				margin-left: 0.2em;
+				margin-right:	0.2em;
+				padding-top: 1.9em;
 				a {
+					margin-top: 1em;
 					padding-top: 0 !important;
 					padding-bottom: 0 !important;
 				}
 			}
 		}
-		.navbar-container {
-			height: 6em;
-		}
 		.navbar-container.opaque-thin {
-			height: 6em;
+			// height: 6em;
 			h2 {
 				font-size: 1em;
 				color: $color-black-2;
+				display: none;
 			}
 			ul li {
 				font-size: 1.0em;
 				margin-left: 0em;
 				margin-right:	0em;
-				padding-top: 1.3em;
 				transition:			all 0.3s ease-in;
 				a {
+					margin-top: 0;
 					color: $color-black-2;
 					border-radius: 5px;
 					transition: all 0.3s ease-in;
@@ -475,24 +430,39 @@ header {
 			}
 		}
 	}
-
+	@media (min-width: 992px) {
+		.navbar-container.opaque-thin {
+			background-color: darken($color-white-1, 5%);
+			height: 3.0em;
+			border-bottom: 1px solid black;
+			transition: all 0.7s ease-in;
+			nav {
+				ul li {
+					a {
+						margin-top: 0.2em;
+						transition: all 0.7s ease-in;
+					}
+				}
+			}
+		}
+	} // min width 992
 } // header
-
-
-
-
-
 
 /*---------------
 Front Page General
 ---------------------------------------*/
 
+.module-body {
+	background-color: darken($color-white-1, 5%);
+}
 .module-body-inner {
 	padding-top: 2em;
 	padding-bottom: 2em;
 	margin-top: 1em;
 	margin-bottom: 1em;
+	background-color: $white-1;
 }
+
 
 .module-header-inner {
 	color: $white-2;
@@ -729,6 +699,16 @@ Front Page News Module
 		}
 	}
 }	
+  /* Reponsive Styles */
+
+
+@media (max-width: 767px) {
+	.news-module {
+		.twitter-section {
+			display:	none;
+		}
+	}
+}
 
 /*--------------------------------------------------------------
 Front Page Music Module

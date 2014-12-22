@@ -3,7 +3,7 @@
 
 <div class="container-fluid">
   <div class="row module-body">
-    <div class="module-body-inner col-xs-10 col-sm-10 col-md-10 col-lg-10 col-md-offset-1">
+    <div class="module-body-inner col-md-10 col-md-offset-1">
 
 
 

@@ -104,6 +104,8 @@ header .navbar-container {
   opacity: 0.9;
   height: 5em;
   transition: all 0.7s ease-in; }
+header nav .icon-bar {
+  background-color: white; }
 header nav h2 {
   color: white;
   font-size: 1.5em;
@@ -120,70 +122,56 @@ header nav ul li {
     color: white;
     border-radius: 5px;
     transition: all 0.3s ease-in; }
+  header nav ul li a:visited {
+    color: white; }
   header nav ul li a:hover,
   header nav ul li a:focus {
     text-decoration: none;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: #cecece;
     color: #262626;
-    border-radius: 5px;
-    transition: all 0.1s ease-in; }
-  header nav ul li a:visited {
-    color: white; }
-header nav ul li.current-menu-item {
-  /* Place an underline under active menu */ }
-  header nav ul li.current-menu-item a:after {
-    content: "";
-    background: white;
-    position: absolute;
-    bottom: 0;
-    left: 15%;
-    height: 1px;
-    width: 70%;
-    transition: all 0.9s ease-in; }
+    border: white solid 1px; }
+header nav ul li.current-menu-item a {
+  border: white solid 1px; }
 header .navbar-container.opaque-thin {
-  background-color: #fafafa;
-  height: 3.5em;
+  background-color: #f2f2f2;
+  height: 3.2em;
   border-bottom: 1px solid black;
   transition: all 0.7s ease-in; }
-  header .navbar-container.opaque-thin h2 {
-    font-size: 1.2em;
-    padding-top: 0.5em;
-    color: #1a1a1a;
-    transition: all 0.7s ease-in;
-    margin-top: 0em; }
-  header .navbar-container.opaque-thin ul li {
-    margin-top: 0.1em;
+  header .navbar-container.opaque-thin nav h2 {
+    font-size: 1em;
+    padding-bottom: 0;
+    padding-top: 0.4em;
+    margin: 0;
+    margin-top: 0.4em;
     color: black;
     transition: all 0.7s ease-in; }
-    header .navbar-container.opaque-thin ul li a {
-      color: #1a1a1a;
-      height: 2.5em;
-      padding-top: 0.7em;
+  header .navbar-container.opaque-thin nav ul li {
+    font-size: 1.0em;
+    margin-left: 0.2em;
+    margin-right: 0.2em;
+    padding-top: 0em; }
+    header .navbar-container.opaque-thin nav ul li a {
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+      color: #262626;
       transition: all 0.7s ease-in; }
-    header .navbar-container.opaque-thin ul li a:hover,
-    header .navbar-container.opaque-thin ul li a:focus {
-      background-color: rgba(0, 0, 0, 0.9);
+    header .navbar-container.opaque-thin nav ul li a:hover,
+    header .navbar-container.opaque-thin nav ul li a:focus {
+      background-color: #404040;
+      border: black solid 1px;
       color: white;
       transition: all 0.1s ease-in; }
-  header .navbar-container.opaque-thin ul li.current-menu-item {
-    /* Place an underline under active menu */ }
-    header .navbar-container.opaque-thin ul li.current-menu-item a:after {
-      background: #777777; }
-header nav.navbar {
-  margin-bottom: 0;
-  background-color: rgba(1, 1, 1, 0);
-  border: none;
-  /*Put Brand in the center*/ }
-  header nav.navbar .navbar-header {
-    width: 100%; }
-  header nav.navbar .navbar-brand {
-    text-align: center;
-    margin: auto;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0; }
-  header nav.navbar a.navbar-brand {
-    width: 100%; }
+  header .navbar-container.opaque-thin nav ul li.current-menu-item a {
+    border: #262626 solid 1px; }
+header nav.navbar .navbar-header {
+  width: 100%; }
+header nav.navbar .navbar-brand {
+  text-align: center;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0; }
+header nav.navbar a.navbar-brand {
+  width: 100%; }
 header .collapse.navbar-collapse.in {
   background-color: black;
   position: relative !important; }
@@ -191,11 +179,8 @@ header .collapse.navbar-collapse.in {
   header .background-container-header {
     display: none; }
   header h2 {
-    float: left; }
-  header ul li.current-menu-item {
-    /* Remove underline on XS */ }
-    header ul li.current-menu-item a:after {
-      display: none; }
+    float: left;
+    padding-left: 0.4em; }
   header .navbar-fixed-top {
     position: relative;
     top: auto; }
@@ -213,55 +198,70 @@ header .collapse.navbar-collapse.in {
   header button.navbar-toggle {
     margin-top: 1.3em; } }
 @media (min-width: 768px) and (max-width: 992px) {
+  header .navbar-container {
+    height: 6em; }
   header nav h2 {
-    font-size: 1em;
-    padding-bottom: 0;
-    padding-top: 0.4em;
-    margin: 0; }
+    font-size: 1.2em;
+    padding-bottom: 0.5em;
+    padding-top: 0.1em;
+    margin: 0;
+    margin-top: 0.4em;
+    border-bottom: 1px solid white; }
   header nav a.navbar-brand {
     padding-bottom: 0;
     height: 0.3em; }
   header nav ul li {
     font-size: 1.0em;
-    margin-left: 0em;
-    margin-right: 0em;
-    padding-top: 1.3em; }
+    margin-left: 0.2em;
+    margin-right: 0.2em;
+    padding-top: 1.9em; }
     header nav ul li a {
+      margin-top: 1em;
       padding-top: 0 !important;
       padding-bottom: 0 !important; }
-  header .navbar-container {
-    height: 6em; }
-  header .navbar-container.opaque-thin {
-    height: 6em; }
-    header .navbar-container.opaque-thin h2 {
-      font-size: 1em;
-      color: #111111; }
-    header .navbar-container.opaque-thin ul li {
-      font-size: 1.0em;
-      margin-left: 0em;
-      margin-right: 0em;
-      padding-top: 1.3em;
+  header .navbar-container.opaque-thin h2 {
+    font-size: 1em;
+    color: #111111;
+    display: none; }
+  header .navbar-container.opaque-thin ul li {
+    font-size: 1.0em;
+    margin-left: 0em;
+    margin-right: 0em;
+    transition: all 0.3s ease-in; }
+    header .navbar-container.opaque-thin ul li a {
+      margin-top: 0;
+      color: #111111;
+      border-radius: 5px;
       transition: all 0.3s ease-in; }
-      header .navbar-container.opaque-thin ul li a {
-        color: #111111;
-        border-radius: 5px;
-        transition: all 0.3s ease-in; }
-      header .navbar-container.opaque-thin ul li a:hover,
-      header .navbar-container.opaque-thin ul li a:focus {
-        text-decoration: none;
-        background-color: rgba(255, 255, 255, 0.9);
-        color: #262626;
-        border-radius: 5px;
-        transition: all 0.1s ease-in; } }
+    header .navbar-container.opaque-thin ul li a:hover,
+    header .navbar-container.opaque-thin ul li a:focus {
+      text-decoration: none;
+      background-color: rgba(255, 255, 255, 0.9);
+      color: #262626;
+      border-radius: 5px;
+      transition: all 0.1s ease-in; } }
+@media (min-width: 992px) {
+  header .navbar-container.opaque-thin {
+    background-color: #f2f2f2;
+    height: 3.0em;
+    border-bottom: 1px solid black;
+    transition: all 0.7s ease-in; }
+    header .navbar-container.opaque-thin nav ul li a {
+      margin-top: 0.2em;
+      transition: all 0.7s ease-in; } }
 
 /*---------------
 Front Page General
 ---------------------------------------*/
+.module-body {
+  background-color: #f2f2f2; }
+
 .module-body-inner {
   padding-top: 2em;
   padding-bottom: 2em;
   margin-top: 1em;
-  margin-bottom: 1em; }
+  margin-bottom: 1em;
+  background-color: white; }
 
 .module-header-inner {
   color: #f8f8f8;
@@ -392,6 +392,10 @@ Front Page News Module
     text-align: center;
     width: 100%; }
 
+/* Reponsive Styles */
+@media (max-width: 767px) {
+  .news-module .twitter-section {
+    display: none; } }
 /*--------------------------------------------------------------
 Front Page Music Module
 --------------------------------------------------------------*/
