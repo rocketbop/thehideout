@@ -15,7 +15,7 @@
 				    <!-- page footer top -->
 		<div class="container-fluid">
 		  <div class="row">
-        <div class="background-container col-xs-12" data-my-div-height="full">
+        <div class="background-container col-xs-12" data-my-div-height="full" data-my-section='footer'>
           <div class="row page-footer page-footer-top">
             <div class="page-inner col-md-10 col-lg-10 col-md-offset-1">
             

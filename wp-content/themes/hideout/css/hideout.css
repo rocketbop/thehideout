@@ -188,6 +188,8 @@ header .collapse.navbar-collapse.in {
   background-color: black;
   position: relative !important; }
 @media (max-width: 767px) {
+  header .background-container-header {
+    display: none; }
   header h2 {
     float: left; }
   header ul li.current-menu-item {
@@ -235,10 +237,10 @@ header .collapse.navbar-collapse.in {
       font-size: 1em;
       color: #111111; }
     header .navbar-container.opaque-thin ul li {
-      font-size: 1.1em;
-      margin-top: .5em;
-      margin-left: 0.2em;
-      margin-right: 0.2em;
+      font-size: 1.0em;
+      margin-left: 0em;
+      margin-right: 0em;
+      padding-top: 1.3em;
       transition: all 0.3s ease-in; }
       header .navbar-container.opaque-thin ul li a {
         color: #111111;

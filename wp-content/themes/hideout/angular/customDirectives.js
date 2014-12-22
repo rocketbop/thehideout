@@ -6,7 +6,7 @@ angular.module("theHideoutApp")
       var topBackgroundSize = attrs["myDivHeight"],
           windowHeight = '',
           headerSize = '';
-      
+         
       if (attrs["minusHeader"]) {
         headerSize = jQuery(".page-header-top").height();
         headerSize += jQuery(".page-header-bottom").height();
@@ -27,8 +27,16 @@ angular.module("theHideoutApp")
       }
 
       setTopBackgroundSize(topBackgroundSize);
-      element.css('height', windowHeight + "px");
+      // Check if the footer, and if not hide on XS devices
+      if ($window.innerWidth < 768 && attrs['mySection'] !== 'footer') {
+        console.log('Hey');
+        element.css('display', 'None');
+      } else {
+        element.css('display', 'Initial');
+      }
 
+      element.css('height', windowHeight + "px");
+      console.log($window.innerWidth);
     }
 
     return {

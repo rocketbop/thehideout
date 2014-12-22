@@ -261,6 +261,7 @@ body {
 
 
 header {
+
 	.navbar-container {
 		background-color: $color-black-2;
 		opacity: 0.9;
@@ -379,6 +380,9 @@ header {
 		}
 
 	@media (max-width: 767px) {
+		.background-container-header {
+			display: none;
+		}
 		h2 {
 			float: left;
 		}
@@ -450,10 +454,10 @@ header {
 				color: $color-black-2;
 			}
 			ul li {
-				font-size: 			1.1em;
-				margin-top:			.5em;
-				margin-left:		0.2em;
-				margin-right:		0.2em;
+				font-size: 1.0em;
+				margin-left: 0em;
+				margin-right:	0em;
+				padding-top: 1.3em;
 				transition:			all 0.3s ease-in;
 				a {
 					color: $color-black-2;
