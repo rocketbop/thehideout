@@ -16,7 +16,7 @@ get_header(); ?>
               <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                 Images Go here
               </div>
-              <div id="blurb" class="blurb col-xs-6 col-sm-6 col-md-6 col-lg-6" data-my-vertical-center ext-function="getPanelMargin()">
+              <div id="blurb" class="blurb hidden-xs col-xs-6 col-sm-6 col-md-6 col-lg-6" data-my-vertical-center ext-function="getPanelMargin()">
                 <h2>We love great food</h2>
                 <p>See what's new in the Hideout Restaurant</p>
                

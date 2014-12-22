@@ -31,52 +31,75 @@
         <header id="masthead" class="site-header " role="banner">
 
           <div class="navbar-container navbar-fixed-top">
-            <nav class="navbar navbar-default  col-xs-10 col-sm-10 col-md-10 col-lg-10 col-md-offset-1" role="navigation"> 
+            <nav class="navbar navbar-default col-md-12" role="navigation"> 
             <!-- Brand and toggle get grouped for better mobile display --> 
-              <div class="navbar-header"> 
+            <div class="row">
 
-                <a class="navbar-brand" href="<?php bloginfo('url') ?>"><h2><?php bloginfo('name') ?> Bar</h2></a>
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> 
-                  <span class="sr-only">Toggle navigation</span> 
-                  <span class="icon-bar"></span> 
-                  <span class="icon-bar"></span> 
-                  <span class="icon-bar"></span> 
-                </button>
+              <div class=" visible-xs visible-sm col-sm-4 col-sm-offset-4">
+                <div class="navbar-header"> 
+                  <a class="navbar-brand" href="<?php bloginfo('url') ?>"><h2><?php bloginfo('name') ?></h2></a>
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> 
+                    <span class="sr-only">Toggle navigation</span> 
+                    <span class="icon-bar"></span> 
+                    <span class="icon-bar"></span> 
+                    <span class="icon-bar"></span> 
+                  </button>
+                </div> 
+              </div>
 
-              </div> 
+              <div class="col-xs-12 col-sm-6 col-md-5">
+                <div class="collapse navbar-collapse navbar-right"> 
+                  <?php /* Primary navigation */
+                    wp_nav_menu( array(
+                      'menu'              => 'primary',
+                      'theme_location'    => 'primary',
+                      'depth'             => 2,
+                      'container'         => 'div',
+                      'container_class'   => 'collapse navbar-collapse',
+                      'container_id'      => '',
+                      'menu_class'        => 'nav navbar-nav',
+                      'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+                      'walker'            => new wp_bootstrap_navwalker())
+                    );
+                  ?>
+                </div>
+              </div>
+
+              <!-- visible on md and above -->
+              <div class=" visible-md visible-lg col-sm-2 col-lg-2">
+                <div class="navbar-header"> 
+                  <a class="navbar-brand" href="<?php bloginfo('url') ?>"><h2><?php bloginfo('name') ?></h2></a>
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> 
+                    <span class="sr-only">Toggle navigation</span> 
+                    <span class="icon-bar"></span> 
+                    <span class="icon-bar"></span> 
+                    <span class="icon-bar"></span> 
+                  </button>
+                </div> 
+              </div>
               <!-- Collect the nav links, forms, and other content for toggling --> 
 
-              <div class="collapse navbar-collapse navbar-left"> 
-                <?php /* Primary navigation */
-                  wp_nav_menu( array(
-                    'menu'              => 'primary',
-                    'theme_location'    => 'primary',
-                    'depth'             => 2,
-                    'container'         => 'div',
-                    'container_class'   => 'collapse navbar-collapse',
-                    'container_id'      => '',
-                    'menu_class'        => 'nav navbar-nav',
-                    'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
-                    'walker'            => new wp_bootstrap_navwalker())
-                  );
-                ?>
+              <div class="col-xs-12 col-sm-6 col-md-5">
+                <div class="collapse navbar-collapse navbar-left"> 
+                  <?php /* Primary navigation */
+                    wp_nav_menu( array(
+                      'menu'              => 'secondary',
+                      'theme_location'    => 'secondary',
+                      'depth'             => 2,
+                      'container'         => 'div',
+                      'container_class'   => 'collapse navbar-collapse',
+                      'container_id'      => '',
+                      'menu_class'        => 'nav navbar-nav',
+                      'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+                      'walker'            => new wp_bootstrap_navwalker())
+                    );
+                  ?>
+                </div>
               </div>
+              
+            </div>
 
-              <div class="collapse navbar-collapse navbar-right"> 
-                <?php /* Primary navigation */
-                  wp_nav_menu( array(
-                    'menu'              => 'secondary',
-                    'theme_location'    => 'secondary',
-                    'depth'             => 2,
-                    'container'         => 'div',
-                    'container_class'   => 'collapse navbar-collapse',
-                    'container_id'      => '',
-                    'menu_class'        => 'nav navbar-nav',
-                    'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
-                    'walker'            => new wp_bootstrap_navwalker())
-                  );
-                ?>
-              </div>
+
             </nav>
           </div>
         </header><!-- #masthead -->

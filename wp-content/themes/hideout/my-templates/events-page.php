@@ -16,11 +16,11 @@ get_header(); ?>
               <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                 
               </div>
-              <div id="blurb" class="blurb col-xs-6 col-sm-6 col-md-6 col-lg-6" data-my-vertical-center ext-function="getPanelMargin()">
+              <div id="blurb" class="blurb hidden-xs col-xs-6 col-sm-6 col-md-6 col-lg-6" data-my-vertical-center ext-function="getPanelMargin()">
                 <strong><h2>We Love Music</h2></strong>
                 <p>We care about music at <strong>The Hideout</strong>.</p>
                 <p>That's why we have great equipment, great bands and singers, and great audiences.</p>
-                <strong><p>5 Nights a Week.</p></strong>
+            
                
             
               </div>

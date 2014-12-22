@@ -83,6 +83,7 @@ $white-5:		#d8d8d8;
 // Colors
 
 $color-black-1: #000;
+$color-black-2: #111;
 $color-white-1: #fff;
 $color-white-2: #e7e7e7;
 $color-white-3: #eee;
@@ -260,144 +261,223 @@ body {
 
 
 header {
-
-	nav {
-		h2 {
-			font-size: 1.5em;
-			text-transform: uppercase;
-		}
-	}
-
 	.navbar-container {
-		background-color: $black-2;
+		background-color: $color-black-2;
 		opacity: 0.9;
 		height: 5em;
 		transition: all 0.7s ease-in;
-
+	}
+	nav {
+		h2 {
+			color: $color-white-1;
+			font-size: 1.5em;
+			text-transform: uppercase;
+			padding-top: 0.1em;
+			transition: all 0.3s ease-in;
+		}
 		ul li {
-			font-size: 			1.2em;
+			font-size: 			1.1em;
 			margin-top:			.5em;
 			margin-left:		0.2em;
 			margin-right:		0.2em;
-			transition:			all 0.2s ease-in;
-
+			transition:			all 0.3s ease-in;
 			a {
-				color: $white;
+				color: $color-white-1;
 				border-radius: 5px;
-
-				transition: all 0.7s ease-in;
-
+				transition: all 0.3s ease-in;
 			}
-
 			a:hover,
 			a:focus {
 			  text-decoration: none;
-			  background-color: rgba(255,255,255,0.9);
-			  color: $dark-grey;
+			  background-color: rgba($color-white-1, .9);
+			  color: lighten($color-black-1, 15%);
 			  border-radius: 5px;
 			  transition: all 0.1s ease-in;
 			}
-
+			a:visited {
+				color: $color-white-1;
+			}
 		}
-
 		ul li.current-menu-item {
 			/* Place an underline under active menu */
-
 			a:after {
 				content:""; 
-			  background: $white; 
+			  background: $color-white-1; 
 			  position: absolute; 
 			  bottom: 0; 
 			  left: 15%; 
-			  height: 2px; 
+			  height: 1px; 
 			  width: 70%;
-			  transition: all 0.7s ease-in;
-
+			  transition: all 0.9s ease-in;
 			}
 		}
-
-		h2 {
-			font-family: "Oswald";
-			font-style: 1.9em;
-			color: $white;
-			margin-top: .5em;
-			transition: all 0.7s ease-in;
-		}
-
-	}
+	} // nav
 
 	.navbar-container.opaque-thin {
 		background-color: rgba(250,250,250,1.0);
 		height: 3.5em;
 		border-bottom: 1px solid black;
 		transition: all 0.7s ease-in;
-
+		h2 {
+			font-size: 1.2em;
+			padding-top: 0.5em;
+			color: $dark-grey;
+			transition: all 0.7s ease-in;
+			margin-top: 0em;
+		}
 		ul li {
 			// font-size: 1.2em;
 			margin-top: 0.1em;
 			color: black;
 			transition: all 0.7s ease-in;
-
 			a {
 				color: $dark-grey;
 				height: 2.5em;
 				padding-top: 0.7em;
 				transition: all 0.7s ease-in;
 			}
-
 			a:hover,
 			a:focus {
-			  text-decoration: none;
 			  background-color: rgba(0,0,0,0.9);
 			  color: $white;
-			  border-radius: 5px;
 			  transition: all 0.1s ease-in;
 			}
-
 		}
-
 		ul li.current-menu-item {
 			/* Place an underline under active menu */
-
 			a:after {
-				content:""; 
-			  background: $dark-grey; 
-			  position: absolute; 
-			  bottom: 10%; 
-			  left: 15%; 
-			  height: 2px; 
-			  width: 70%;
-			  transition: all 0.7s ease-in;
-
+				// content:""; 
+			  background: lighten($color-black-2, 40%); 
+			  // top: 30%; 
 			}
 		}
-
-		h2 {
-			// font-size: 1.3em;
-			color: $dark-grey;
-			transition: all 0.7s ease-in;
-			margin-top: 0em;
-		}
-		
 	}
-
-	.navbar {
+	nav.navbar {
 		margin-bottom: 0;
 		background-color: rgba(1,1,1,0.0);
 		border:	none;
-
-
+		.navbar-header {
+			width: 100%;
+		}
 		/*Put Brand in the center*/
 		.navbar-brand {
-			position: absolute;
-		  width: 100%;
-		  left: 0;
 		  text-align: center;
 		  margin: auto;
+		  padding-left: 0;
+		  padding-right: 0;
+		  padding-top: 0;
 		}
-	
+		a.navbar-brand {
+			width: 100%;
+		}
 	}
-} 
+		// Collapsed
+		.collapse.navbar-collapse.in {
+			background-color: black;
+			position: relative !important;
+
+		}
+
+	@media (max-width: 767px) {
+		h2 {
+			float: left;
+		}
+    ul li.current-menu-item {
+			/* Remove underline on XS */
+			a:after {
+				display: none;
+			}
+		}
+		.navbar-fixed-top {
+      position: relative;
+      top: auto;
+    }
+    .navbar-collapse {
+      max-height: none;
+    }
+    body {
+      margin: 0;
+    }
+    .navbar-container {
+    	background-color: $color-black-1;
+    }
+    .blurb {
+    	display: none;
+    }
+    nav.navbar {
+    	    a.navbar-brand {
+    	width: initial ;
+
+    }
+    }
+
+    button.navbar-collapse,
+    button.navbar-toggle {
+    	margin-top: 1.3em;
+    }
+	}
+
+	@media (min-width: 768px) and (max-width: 992px) {
+		nav {
+			h2 {
+				font-size: 1em;
+				padding-bottom: 0;
+				padding-top: 0.4em;
+				margin: 0;
+			}
+			a.navbar-brand {
+				padding-bottom: 0;
+				height: 0.3em;
+			}
+			ul li {
+				font-size: 1.0em;
+				margin-left: 0em;
+				margin-right:	0em;
+				padding-top: 1.3em;
+				a {
+					padding-top: 0 !important;
+					padding-bottom: 0 !important;
+				}
+			}
+		}
+		.navbar-container {
+			height: 6em;
+		}
+		.navbar-container.opaque-thin {
+			height: 6em;
+			h2 {
+				font-size: 1em;
+				color: $color-black-2;
+			}
+			ul li {
+				font-size: 			1.1em;
+				margin-top:			.5em;
+				margin-left:		0.2em;
+				margin-right:		0.2em;
+				transition:			all 0.3s ease-in;
+				a {
+					color: $color-black-2;
+					border-radius: 5px;
+					transition: all 0.3s ease-in;
+				}
+				a:hover,
+				a:focus {
+				  text-decoration: none;
+				  background-color: rgba($color-white-1, .9);
+				  color: lighten($color-black-1, 15%);
+				  border-radius: 5px;
+				  transition: all 0.1s ease-in;
+				}
+			}
+		}
+	}
+
+} // header
+
+
+
+
+
 
 /*---------------
 Front Page General
@@ -723,9 +803,6 @@ Front Page Music Module
 
   /* Reponsive Styles */
 
-@media (max-width: 479px) {
-
-}
 
 @media (max-width: 767px) {
 	.music-module {
@@ -829,7 +906,10 @@ Secondary page styles General
 		strong p,
 		p {
 			line-height: 1.1em;
+			font-size: 1.2em;
 		}
+
+
 
 	}
 

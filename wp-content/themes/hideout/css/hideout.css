@@ -99,53 +99,58 @@ body .btn-default {
   margin-bottom: 1em; }
 
 /**** LAYOUT STYLES *****************/
-header nav h2 {
-  font-size: 1.5em;
-  text-transform: uppercase; }
 header .navbar-container {
   background-color: #111111;
   opacity: 0.9;
   height: 5em;
   transition: all 0.7s ease-in; }
-  header .navbar-container ul li {
-    font-size: 1.2em;
-    margin-top: .5em;
-    margin-left: 0.2em;
-    margin-right: 0.2em;
-    transition: all 0.2s ease-in; }
-    header .navbar-container ul li a {
-      color: white;
-      border-radius: 5px;
-      transition: all 0.7s ease-in; }
-    header .navbar-container ul li a:hover,
-    header .navbar-container ul li a:focus {
-      text-decoration: none;
-      background-color: rgba(255, 255, 255, 0.9);
-      color: #1a1a1a;
-      border-radius: 5px;
-      transition: all 0.1s ease-in; }
-  header .navbar-container ul li.current-menu-item {
-    /* Place an underline under active menu */ }
-    header .navbar-container ul li.current-menu-item a:after {
-      content: "";
-      background: white;
-      position: absolute;
-      bottom: 0;
-      left: 15%;
-      height: 2px;
-      width: 70%;
-      transition: all 0.7s ease-in; }
-  header .navbar-container h2 {
-    font-family: "Oswald";
-    font-style: 1.9em;
+header nav h2 {
+  color: white;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  padding-top: 0.1em;
+  transition: all 0.3s ease-in; }
+header nav ul li {
+  font-size: 1.1em;
+  margin-top: .5em;
+  margin-left: 0.2em;
+  margin-right: 0.2em;
+  transition: all 0.3s ease-in; }
+  header nav ul li a {
     color: white;
-    margin-top: .5em;
-    transition: all 0.7s ease-in; }
+    border-radius: 5px;
+    transition: all 0.3s ease-in; }
+  header nav ul li a:hover,
+  header nav ul li a:focus {
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #262626;
+    border-radius: 5px;
+    transition: all 0.1s ease-in; }
+  header nav ul li a:visited {
+    color: white; }
+header nav ul li.current-menu-item {
+  /* Place an underline under active menu */ }
+  header nav ul li.current-menu-item a:after {
+    content: "";
+    background: white;
+    position: absolute;
+    bottom: 0;
+    left: 15%;
+    height: 1px;
+    width: 70%;
+    transition: all 0.9s ease-in; }
 header .navbar-container.opaque-thin {
   background-color: #fafafa;
   height: 3.5em;
   border-bottom: 1px solid black;
   transition: all 0.7s ease-in; }
+  header .navbar-container.opaque-thin h2 {
+    font-size: 1.2em;
+    padding-top: 0.5em;
+    color: #1a1a1a;
+    transition: all 0.7s ease-in;
+    margin-top: 0em; }
   header .navbar-container.opaque-thin ul li {
     margin-top: 0.1em;
     color: black;
@@ -157,37 +162,95 @@ header .navbar-container.opaque-thin {
       transition: all 0.7s ease-in; }
     header .navbar-container.opaque-thin ul li a:hover,
     header .navbar-container.opaque-thin ul li a:focus {
-      text-decoration: none;
       background-color: rgba(0, 0, 0, 0.9);
       color: white;
-      border-radius: 5px;
       transition: all 0.1s ease-in; }
   header .navbar-container.opaque-thin ul li.current-menu-item {
     /* Place an underline under active menu */ }
     header .navbar-container.opaque-thin ul li.current-menu-item a:after {
-      content: "";
-      background: #1a1a1a;
-      position: absolute;
-      bottom: 10%;
-      left: 15%;
-      height: 2px;
-      width: 70%;
-      transition: all 0.7s ease-in; }
-  header .navbar-container.opaque-thin h2 {
-    color: #1a1a1a;
-    transition: all 0.7s ease-in;
-    margin-top: 0em; }
-header .navbar {
+      background: #777777; }
+header nav.navbar {
   margin-bottom: 0;
   background-color: rgba(1, 1, 1, 0);
   border: none;
   /*Put Brand in the center*/ }
-  header .navbar .navbar-brand {
-    position: absolute;
-    width: 100%;
-    left: 0;
+  header nav.navbar .navbar-header {
+    width: 100%; }
+  header nav.navbar .navbar-brand {
     text-align: center;
-    margin: auto; }
+    margin: auto;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0; }
+  header nav.navbar a.navbar-brand {
+    width: 100%; }
+header .collapse.navbar-collapse.in {
+  background-color: black;
+  position: relative !important; }
+@media (max-width: 767px) {
+  header h2 {
+    float: left; }
+  header ul li.current-menu-item {
+    /* Remove underline on XS */ }
+    header ul li.current-menu-item a:after {
+      display: none; }
+  header .navbar-fixed-top {
+    position: relative;
+    top: auto; }
+  header .navbar-collapse {
+    max-height: none; }
+  header body {
+    margin: 0; }
+  header .navbar-container {
+    background-color: black; }
+  header .blurb {
+    display: none; }
+  header nav.navbar a.navbar-brand {
+    width: initial; }
+  header button.navbar-collapse,
+  header button.navbar-toggle {
+    margin-top: 1.3em; } }
+@media (min-width: 768px) and (max-width: 992px) {
+  header nav h2 {
+    font-size: 1em;
+    padding-bottom: 0;
+    padding-top: 0.4em;
+    margin: 0; }
+  header nav a.navbar-brand {
+    padding-bottom: 0;
+    height: 0.3em; }
+  header nav ul li {
+    font-size: 1.0em;
+    margin-left: 0em;
+    margin-right: 0em;
+    padding-top: 1.3em; }
+    header nav ul li a {
+      padding-top: 0 !important;
+      padding-bottom: 0 !important; }
+  header .navbar-container {
+    height: 6em; }
+  header .navbar-container.opaque-thin {
+    height: 6em; }
+    header .navbar-container.opaque-thin h2 {
+      font-size: 1em;
+      color: #111111; }
+    header .navbar-container.opaque-thin ul li {
+      font-size: 1.1em;
+      margin-top: .5em;
+      margin-left: 0.2em;
+      margin-right: 0.2em;
+      transition: all 0.3s ease-in; }
+      header .navbar-container.opaque-thin ul li a {
+        color: #111111;
+        border-radius: 5px;
+        transition: all 0.3s ease-in; }
+      header .navbar-container.opaque-thin ul li a:hover,
+      header .navbar-container.opaque-thin ul li a:focus {
+        text-decoration: none;
+        background-color: rgba(255, 255, 255, 0.9);
+        color: #262626;
+        border-radius: 5px;
+        transition: all 0.1s ease-in; } }
 
 /*---------------
 Front Page General
@@ -417,7 +480,8 @@ Secondary page styles General
     margin-bottom: 1em; }
   .secondary-page .blurb strong p,
   .secondary-page .blurb p {
-    line-height: 1.1em; }
+    line-height: 1.1em;
+    font-size: 1.2em; }
 .secondary-page .background-container {
   -webkit-background-size: cover;
   -moz-background-size: cover;

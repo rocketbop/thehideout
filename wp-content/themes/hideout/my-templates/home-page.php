@@ -16,7 +16,7 @@ get_header(); ?>
 	          <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 col-md-offset-1">
 	            <div class="row">
 	             
-	              <div id="blurb" class="blurb col-xs-6 col-sm-6 col-md-6 col-lg-6 col-md-offset-3" data-my-vertical-center ext-function="getPanelMargin()">
+	              <div id="blurb" class="blurb hidden-xs col-xs-6 col-sm-6 col-md-6 col-lg-6 col-md-offset-3" data-my-vertical-center ext-function="getPanelMargin()">
 	                <h1>KILCULLEN'S BAR</h1>
 				          <h3>Music, Good Foods, and Friends</h3>
 				         <div class="fb-like" data-href="http://www.theguardian.com/" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
@@ -47,11 +47,11 @@ get_header(); ?>
 		</div>
 		</div>
 
-		<div class="container-fluid"> 
+<!-- 		<div class="container-fluid"> 
 			<div class="row introduction-module">
-				<?php get_template_part( 'templates/content', 'introductionmodule' ); ?>
+				<?php //get_template_part( 'templates/content', 'introductionmodule' ); ?>
 			</div>
-		</div>
+		</div> -->
 
 
 			
