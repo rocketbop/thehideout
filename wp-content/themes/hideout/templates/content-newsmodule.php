@@ -72,7 +72,7 @@
                     <div class=" item-text col-xs-8 col-sm-8 col-md-8 col-lg-8">
                       <p><h4>{{data.newsPosts[2].title}}</h4></p>
                       
-                      <h5>{{data.newsPosts[1].date | date: 'medium' }}</h5>
+                      <h5>{{data.newsPosts[2].date | date: 'medium' }}</h5>
                     </div>
                   </div>
                 </a>
@@ -93,6 +93,7 @@
                   </div>
                   <div class="item-text">
                     <strong><h4>{{data.newsPosts[3].title}}</h4></strong>
+                    <h5>{{data.newsPosts[3].date | date: 'medium' }}</h5>
                     <p><span class="content" ng-bind-html="data.newsPosts[2].content |limitTo: 80"></span><strong> READ MORE</strong></p>
                   </div>
                 </a>

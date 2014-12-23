@@ -85,7 +85,7 @@ $white-5:		#d8d8d8;
 $color-black-1: #000;
 $color-black-2: #111;
 $color-white-1: #fff;
-$color-white-2: #e7e7e7;
+$color-white-2: #f2f2f2;
 $color-white-3: #eee;
 
 $color-cherry: #ba4a30;
@@ -223,6 +223,53 @@ body {
 		border: $white-3;
 		margin-bottom: 1em;
 	}
+
+	.btn-primary {
+	  color: $color-white-3;
+	  background-color: $color-cherry;
+	  border-color: darken($color-cherry, 20%);
+	}
+	.btn-primary:hover,
+	.btn-primary:focus,
+	.btn-primary:active,
+	.btn-primary.active {
+	  color: $color-white-1;
+	  background-color: lighten($color-cherry, 10%);
+	  border-color: $color-cherry;
+	}
+	.btn-secondary {
+	  color: $white-3;
+	  background-color: $color-aqua;
+	  border-color: darken($color-aqua, 20%);
+	}
+	.btn-secondary:hover,
+	.btn-secondary:focus,
+	.btn-secondary:active,
+	.btn-secondary.active {
+	  color: $color-white-1;
+	  background-color: lighten($color-aqua, 10%);
+	  border-color: $color-aqua;
+	}
+	.btn-tertiary {
+	  color: $color-white-3;
+	  background-color: $color-lilac;
+	  border-color: darken($color-lilac, 20%);
+	}
+	.btn-tertiary:hover,
+	.btn-tertiary:focus,
+	.btn-tertiary:active,
+	.btn-tertiary.active {
+	  color: $color-white-1;
+	  background-color: lighten($color-lilac, 10%);
+	  border-color: $color-lilac;
+	}
+
+	.btn {
+		margin-top: 1em;
+		margin-bottom: 1em;
+	}
+
+
 }
 
 /**** LAYOUT STYLES *****************/
@@ -331,14 +378,10 @@ header {
 		}
 	}
 	@media (max-width: 767px) {
-		.blurb {
-			div.fb-like {
-				display: none;
-			}
-		}
 		.collapse.navbar-collapse.in {
 			position: relative !important;
 			background-color: $color-black-1;
+			transition:	2s;
 		}
 		.background-container-header {
 			display: none;
@@ -506,97 +549,33 @@ Front Page Header
 				}
 		}
 
-		// .page-header {
-
-		// 	border-bottom: none;
-		// 	border-top: none;
-
-		// 	 h1, h2, h3, h4, h5, h6 {
-		// 		color: $white-2;
-		// 	}
-
-
-		// }
-
-		// .page-header-top {
-
-		// 	background-color: $black-1;
-		// 	margin-bottom: 0;
-
-		// 		.page-inner {
-		// 			background-color: lighten($black-1, 6%);
-		// 	}
-		// }
-
-		// .page-header-bottom {
-		// 	background-color: $black-2;
-		// 	margin-top: 0;
-
-		// 	h4 {
-		// 			// color: $black-1;
-		// 	}
-		
-		// 	.page-inner {
-		// 			background-color: lighten($black-2, 6%);
-		// 	}
-		// }
+	
 	}
-
-
-/*--------------------------------------------------------------
-Front Page Introduction
---------------------------------------------------------------*/
-
-.introduction-module {
-	background-color:		$white;
-
-	p, h2, h3 {
-		text-align: 				center;
-	} 
-
-	img {
-		padding: 2em;
-	}
-
-	p {
-		padding: 2em;
-	}
-}
-
 
 /*--------------------------------------------------------------
 Front Page News Module
 --------------------------------------------------------------*/
 
 .news-module {
-
 	.module-header {
-		background-color: darken($color-aqua, 10%);
-	}
-
-	.module-header-inner {
 		background-color: darken($color-aqua, 5%);
 	}
-
+	.module-header-inner {
+		background-color: darken($color-aqua, 10%);
+	}
 	.module-body-inner {
 		background-color: $white-1;
 	}
-
 	.item {
 		margin-bottom: 1em;
-
 		.item-text {
-			
 			p, a {
-				// line-height: 1em;
 				margin-top: 1em;
 			}
 		}
-
 		.item-image-wrapper {
 			background-color: $black-2;
 		}
-
 		.item-image {
 			-webkit-background-size: cover;
 			-moz-background-size: cover;
@@ -604,15 +583,12 @@ Front Page News Module
 		  background-size: cover;
 		}
 	}
-
 	.item:hover .item-image{
 		opacity: 0.7;
 	}
-
 	.item.item-1 {
 		background-color: darken($color-aqua, 5%);
 		color: $white-2;
-
 		.item-text {
 			padding-left: 2em;
 		}
@@ -621,7 +597,6 @@ Front Page News Module
 			background-position: bottom;
 		}
 	}
-
 	.item.item-1:hover {
 		background-color: darken($color-aqua, 10%);
 	}
@@ -683,18 +658,15 @@ Front Page News Module
 				font-weight: 400;
 			}
 		}
-
 		.item-image {
 			height: 12em;
 			margin-bottom: 0.5em;
 			background-position: bottom;
 		}
 	}
-
 	.item.item-4:hover {
 		background-color: darken($white-2, 10%);
 	}
-
 	.image-section {
 		margin-top: 1em;
 
@@ -730,11 +702,19 @@ Front Page Music Module
 		}
 	}
 	.module-body-inner {
-		background-color: $white-1;
+		background-color: $color-white-1;
 	}
+	.item-image-wrapper {
+		background-color: $black-2;
+		display: inline-block;
+	}
+	.item:hover img {
+			opacity: 0.7;
+		}
 	.item-welcome {
 		.description {
 			text-align: center;
+			// color: white;
 		}
 	}
 	.events-sidebar {
@@ -742,15 +722,37 @@ Front Page Music Module
 			padding-right: 1em;
 			margin-bottom: 1em;
 		}
-	}
+		.item:hover img {
+			opacity: 0.7;
+		}
+		.item-header {
+			h3 {
+				margin-top: 0;
+				padding-top: 0.5em;
+				padding-bottom: 0.5em;
+				background-color: $color-white-2;
+			}
+		}
+		.item-header.previous {
+			h3 {
+				background-color: lighten($color-cherry, 50%);
+			}
+		}
+	}	
 	.item-upcoming-sidebar {
 		.item {
-			background-color: $color-white-3;
+			background-color: $color-white-2;
+		}
+		.item:hover {
+			background-color: darken($color-white-2, 10%);
 		}
 	}
 	.item-previous-sidebar {
 		.item {
 			background-color: lighten($color-cherry, 50%);
+		}
+		.item:hover {
+			background-color: lighten($color-cherry, 40%);
 		}
 	}
 	.item-next-event {
@@ -758,16 +760,11 @@ Front Page Music Module
 		color: $color-white-1;
 		.item-description {
 			padding-left: 1em;
+			padding-top: 2em;
 		}
-		.item-image-wrapper {
-					position: relative;
-		}
-		.item-image {
-			position: absolute;
-			right: 15px;
-			top: 0;
-			overflow: hidden;
-		}
+	}
+	.item-next-event:hover {
+		background-color: darken($color-cherry, 15%);
 	}
 	.item-facilities-header {
 		text-align: center;
@@ -776,23 +773,38 @@ Front Page Music Module
 		padding-bottom: 1em;
 		border-bottom: 1px solid darken($color-cherry, 5%);
 		.item {
-			background-color: $color-white-3;
-			padding-bottom: 2em;
+			background-color: $color-white-2;
+			padding-bottom: 0.5em;
 			h4 {
 				text-align: center;
 			}
 		}
+		.item:hover {
+			background-color: darken($color-white-2, 10%);
+		}
 	}
 	.contact-section {
 		margin-top: 2em;
+		background-color: $color-white-2;
+		padding:	1em;
+		margin-bottom: 1em;
+		text-align: center;
 		.item {
 			h4 {
 				display: inline-block;
 			}
 			button {
 				float: right;
+				width: 100%;
+				font-weight: 300;
 			}
 		}
+	}
+	.contact-section:hover {
+		background-color: darken($color-white-2, 10%);
+	}
+	.social-buttons {
+		text-align: center;
 	}
 }
 
@@ -806,6 +818,11 @@ Front Page Music Module
 			.item-image {
 				// height: 20em;
 				float: none;
+			}
+		}
+		.item-facilities-items {
+			.item {
+				min-height: 12em;
 			}
 		}
 	}
@@ -830,6 +847,36 @@ Front Page Music Module
 			.item-image {
 				// height: 20em;
 				float: right;
+			}
+		}
+	}
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+	.music-module {
+		.item-upcoming-sidebar,
+		.item-previous-sidebar {
+			.description {
+				padding-left: 1em;
+				padding-bottom: 1em;
+				padding-top: 1em;
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	.music-module {
+		.item-next-event {
+			.item-description {
+				h3 {
+					font-size: 2.4em;
+				}
+				h4 {
+					font-size: 1.9em;
+				}
+				h5 {
+					font-size: 1.6em;
+				}
 			}
 		}
 	}
@@ -1005,11 +1052,11 @@ Events
 			padding: 0.8em;
 		}
 
-		.btn-primary {
-			background-color: $red-3;
-			border-color: darken($red-3, 3%);
-			color: $white-1;
-		}
+		// .btn-primary {
+		// 	background-color: $red-3;
+		// 	border-color: darken($red-3, 3%);
+		// 	color: $white-1;
+		// }
 	}
 
 	.board-wrapper {
