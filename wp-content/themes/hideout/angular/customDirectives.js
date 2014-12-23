@@ -2,14 +2,14 @@ angular.module("theHideoutApp")
   .directive("myDivHeight", function ($window) {
 
     function setDivHeight(element, attrs) {
-      
       var topBackgroundSize = attrs["myDivHeight"],
           windowHeight = '',
           headerSize = '';
-         
+      
       if (attrs["minusHeader"]) {
         headerSize = jQuery(".page-header-top").height();
         headerSize += jQuery(".page-header-bottom").height();
+        console.log(headerSize);
       } else {
         headerSize = false;
       }
@@ -18,31 +18,24 @@ angular.module("theHideoutApp")
         if (topBackgroundSize == 'full') {
           windowHeight = $window.innerHeight;
           if (headerSize != false) {
+            console.log("All ood");
             windowHeight = windowHeight - headerSize;
           }
         }
         if (topBackgroundSize == 'navbar') {
           windowHeight = jQuery(".navbar-container").height();
         }
+        return windowHeight;
       }
 
-      setTopBackgroundSize(topBackgroundSize);
-      // Check if the footer, and if not hide on XS devices
-      if ($window.innerWidth < 768 && attrs['mySection'] !== 'footer') {
-        console.log('Hey');
-        element.css('display', 'None');
-      } else {
-        element.css('display', 'Initial');
-      }
-
-      element.css('height', windowHeight + "px");
-      console.log($window.innerWidth);
+      var imageHeight = setTopBackgroundSize(topBackgroundSize);
+      console.log(imageHeight);
+      element.css('height', imageHeight + "px");
     }
 
     return {
 
-      link: function (scope, element, attrs) {
-        
+      link: function (scope, element, attrs) {        
         jQuery(window).load(setDivHeight(element, attrs));
         angular.element($window).on('resize', function () {
           setDivHeight(element, attrs);
@@ -106,7 +99,3 @@ angular.module("theHideoutApp")
       }
     }
   }]);
-
-
-
-

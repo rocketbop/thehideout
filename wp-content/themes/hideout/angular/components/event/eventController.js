@@ -89,7 +89,33 @@ angular.module("theHideoutApp")
     $scope.dataPromise.success(function () {
       $scope.numberOfFutureEvents = $scope.getNumberOfEvents($filter, $scope.futureEvents);
       console.log($scope.numberOfFutureEvents);
+      $scope.previousLimit = $scope.getPreviousLimit($scope.numberOfFutureEvents);
+      console.log($scope.previousLimit);
+
     })
+
+    $scope.getPreviousLimit = function (numberOfFutureEvents) {
+      var limit = 0,
+          futureEvents = numberOfFutureEvents;
+
+      switch (futureEvents) {
+        case 1:
+        limit = 3;
+        break;
+        case 2:
+        limit = 2;
+        break;
+        case 3:
+        limit = 1;
+        break;
+        case 4:
+        limit = 0;
+        break
+        default:
+        limit = 0;
+      }
+      return limit;
+    }
 
     $scope.getNumberOfEvents = function ($filter, callback) {
       var numberEvents = 0;

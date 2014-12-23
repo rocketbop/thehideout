@@ -1,7 +1,7 @@
 
 
 <div class="container-fluid">
-  <div class="row module-header">
+  <div class="row module-header page-header-top">
 
     <div class="module-header-inner col-md-10 col-md-offset-1">
       <h3>Hideout News</h3>
@@ -13,7 +13,7 @@
   <div class="row module-body">
     <div class="module-body-inner col-md-10 col-md-offset-1">
       <div class="row">
-        <div class="news-section col-sm-9 col-md-9 col-lg-9">
+        <div class="news-section col-sm-8 col-md-9">
 
           <div class="item item-1">
             <a class="item-link" href="{{data.newsPosts[0].link}}">
@@ -108,7 +108,7 @@
 
 
 
-        <div class="twitter-section no-padding-left col-xs-12 col-sm-3 col-md-3 col-lg-3">
+        <div class="twitter-section no-padding-left col-xs-12 col-sm-4 col-md-3">
           <div class="twitter-widget">
             <a class="twitter-timeline" href="https://twitter.com/paulbyrne" height="540px" width="100%" data-widget-id="527117394250964992">Tweets by @paulbyrne</a>
             <script>
@@ -121,8 +121,8 @@
 
 
       <div controller="galleryCtrl">
-        <div ng-repeat></div>
-      </div>
+<!--         <div ng-repeat></div>
+      </div> -->
 
 
 <!--             <div  class="row image-section">

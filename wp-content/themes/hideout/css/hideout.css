@@ -120,7 +120,7 @@ header nav ul li {
   transition: all 0.3s ease-in; }
   header nav ul li a {
     color: white;
-    border-radius: 5px;
+    border-radius: 4px;
     transition: all 0.3s ease-in; }
   header nav ul li a:visited {
     color: white; }
@@ -129,7 +129,8 @@ header nav ul li {
     text-decoration: none;
     background-color: #cecece;
     color: #262626;
-    border: white solid 1px; }
+    border: white solid 1px;
+    font-weight: 400; }
 header nav ul li.current-menu-item a {
   border: white solid 1px; }
 header .navbar-container.opaque-thin {
@@ -162,7 +163,7 @@ header .navbar-container.opaque-thin {
       color: white;
       transition: all 0.1s ease-in; }
   header .navbar-container.opaque-thin nav ul li.current-menu-item a {
-    border: #262626 solid 1px; }
+    border: #404040 solid 1px; }
 header nav.navbar .navbar-header {
   width: 100%; }
 header nav.navbar .navbar-brand {
@@ -172,10 +173,12 @@ header nav.navbar .navbar-brand {
   padding-top: 0; }
 header nav.navbar a.navbar-brand {
   width: 100%; }
-header .collapse.navbar-collapse.in {
-  background-color: black;
-  position: relative !important; }
 @media (max-width: 767px) {
+  header .blurb div.fb-like {
+    display: none; }
+  header .collapse.navbar-collapse.in {
+    position: relative !important;
+    background-color: black; }
   header .background-container-header {
     display: none; }
   header h2 {
@@ -190,8 +193,6 @@ header .collapse.navbar-collapse.in {
     margin: 0; }
   header .navbar-container {
     background-color: black; }
-  header .blurb {
-    display: none; }
   header nav.navbar a.navbar-brand {
     width: initial; }
   header button.navbar-collapse,
@@ -202,7 +203,7 @@ header .collapse.navbar-collapse.in {
     height: 6em; }
   header nav h2 {
     font-size: 1.2em;
-    padding-bottom: 0.5em;
+    padding-bottom: 0.4em;
     padding-top: 0.1em;
     margin: 0;
     margin-top: 0.4em;
@@ -231,14 +232,13 @@ header .collapse.navbar-collapse.in {
     header .navbar-container.opaque-thin ul li a {
       margin-top: 0;
       color: #111111;
-      border-radius: 5px;
+      border-radius: 4px;
       transition: all 0.3s ease-in; }
     header .navbar-container.opaque-thin ul li a:hover,
     header .navbar-container.opaque-thin ul li a:focus {
       text-decoration: none;
       background-color: rgba(255, 255, 255, 0.9);
       color: #262626;
-      border-radius: 5px;
       transition: all 0.1s ease-in; } }
 @media (min-width: 992px) {
   header .navbar-container.opaque-thin {
@@ -255,6 +255,9 @@ Front Page General
 ---------------------------------------*/
 .module-body {
   background-color: #f2f2f2; }
+
+.background-container {
+  position: relative; }
 
 .module-body-inner {
   padding-top: 2em;
@@ -275,7 +278,7 @@ p, a {
 Front Page Header
 --------------------------------------------------------------*/
 .front-page .background-container {
-  background-image: url("http://localhost:8888/wp-content/themes/hideout/images/backgrounds/man-playing-banjo.jpg");
+  background-image: url("http://localhost:8888/wp-content/themes/hideout/images/backgrounds/joeys-snug-1-sepia.jpg");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -285,22 +288,9 @@ Front Page Header
   .front-page .background-container .blurb {
     text-align: center;
     background: rgba(248, 248, 248, 0.8);
-    color: #111111; }
-.front-page .page-header {
-  border-bottom: none;
-  border-top: none; }
-  .front-page .page-header h1, .front-page .page-header h2, .front-page .page-header h3, .front-page .page-header h4, .front-page .page-header h5, .front-page .page-header h6 {
-    color: #f8f8f8; }
-.front-page .page-header-top {
-  background-color: black;
-  margin-bottom: 0; }
-  .front-page .page-header-top .page-inner {
-    background-color: #0f0f0f; }
-.front-page .page-header-bottom {
-  background-color: #111111;
-  margin-top: 0; }
-  .front-page .page-header-bottom .page-inner {
-    background-color: #202020; }
+    color: #111111;
+    border: #5e5e5e solid 1px;
+    border-radius: 3px; }
 
 /*--------------------------------------------------------------
 Front Page Introduction
@@ -421,6 +411,13 @@ Front Page Music Module
   color: white; }
   .music-module .item-next-event .item-description {
     padding-left: 1em; }
+  .music-module .item-next-event .item-image-wrapper {
+    position: relative; }
+  .music-module .item-next-event .item-image {
+    position: absolute;
+    right: 15px;
+    top: 0;
+    overflow: hidden; }
 .music-module .item-facilities-header {
   text-align: center; }
 .music-module .item-facilities-items {

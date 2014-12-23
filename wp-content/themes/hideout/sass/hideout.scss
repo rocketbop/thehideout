@@ -253,7 +253,7 @@ header {
 			transition:			all 0.3s ease-in;
 			a {
 				color: $color-white-1;
-				border-radius: 5px;
+				border-radius: 4px;
 				transition: all 0.3s ease-in;
 			}
 			a:visited {
@@ -264,19 +264,17 @@ header {
 			  text-decoration: none;
 			  background-color: darken($color-white-2, 10%);
 			  color: lighten($color-black-1, 15%);
-			  // border-radius: 5px;
-			  border: $color-white-1 solid 1px;
-			  // transition: all 0.1s ease-in;
+			  border: lighten($color-white-1, 30%) solid 1px;
+			  font-weight: 400;
 			}
 
 		}
 		ul li.current-menu-item {
 			a {
-				border: $color-white-1 solid 1px;
+				border: lighten($color-white-1, 30%) solid 1px;
 			}
 		}
 	} // nav
-
 	.navbar-container.opaque-thin {
 		background-color: darken($color-white-1, 5%);
 		height: 3.2em;
@@ -307,13 +305,13 @@ header {
 				a:focus {
 				  background-color: lighten($color-black-1, 25%);
 				  border: $color-black-1 solid 1px;
-				  color: $white;
+				  color: $color-white-1;
 				  transition: all 0.1s ease-in;
 				}
 			}
 			ul li.current-menu-item {
 				a { 
-				  border: lighten($color-black-1, 15%) solid 1px; 
+				  border: lighten($color-black-1, 25%) solid 1px; 
 				}
 			}
 		}
@@ -332,12 +330,16 @@ header {
 			width: 100%;
 		}
 	}
-		// Collapsed
-		.collapse.navbar-collapse.in {
-			background-color: black;
-			position: relative !important;
-		}
 	@media (max-width: 767px) {
+		.blurb {
+			div.fb-like {
+				display: none;
+			}
+		}
+		.collapse.navbar-collapse.in {
+			position: relative !important;
+			background-color: $color-black-1;
+		}
 		.background-container-header {
 			display: none;
 		}
@@ -358,9 +360,6 @@ header {
     .navbar-container {
     	background-color: $color-black-1;
     }
-    .blurb {
-    	display: none;
-    }
     nav.navbar {
     	a.navbar-brand {
     		width: initial ;
@@ -379,7 +378,7 @@ header {
 		nav {
 			h2 {
 				font-size: 1.2em;
-				padding-bottom: 0.5em;
+				padding-bottom: 0.4em;
 				padding-top: 0.1em;
 				margin: 0;
 				margin-top: 0.4em;
@@ -416,7 +415,7 @@ header {
 				a {
 					margin-top: 0;
 					color: $color-black-2;
-					border-radius: 5px;
+					border-radius: 4px;
 					transition: all 0.3s ease-in;
 				}
 				a:hover,
@@ -424,7 +423,6 @@ header {
 				  text-decoration: none;
 				  background-color: rgba($color-white-1, .9);
 				  color: lighten($color-black-1, 15%);
-				  border-radius: 5px;
 				  transition: all 0.1s ease-in;
 				}
 			}
@@ -454,6 +452,10 @@ Front Page General
 
 .module-body {
 	background-color: darken($color-white-1, 5%);
+}
+
+.background-container {
+	position: relative;
 }
 .module-body-inner {
 	padding-top: 2em;
@@ -485,7 +487,8 @@ Front Page Header
 	.front-page {
 
 			.background-container {
-			background-image: url($templateDirectory + 'images/backgrounds/man-playing-banjo.jpg');
+			// background-image: url($templateDirectory + 'images/backgrounds/man-playing-banjo.jpg');
+			background-image: url($templateDirectory + 'images/backgrounds/joeys-snug-1-sepia.jpg');
 			
 		  -webkit-background-size: cover;
 			-moz-background-size: cover;
@@ -498,43 +501,45 @@ Front Page Header
 					text-align: center;
 					background: rgba($white-2, 0.8);
 					color:			$black-2;
+					border: lighten($color-black-2, 30%) solid 1px;
+					border-radius: 3px;
 				}
 		}
 
-		.page-header {
+		// .page-header {
 
-			border-bottom: none;
-			border-top: none;
+		// 	border-bottom: none;
+		// 	border-top: none;
 
-			 h1, h2, h3, h4, h5, h6 {
-				color: $white-2;
-			}
+		// 	 h1, h2, h3, h4, h5, h6 {
+		// 		color: $white-2;
+		// 	}
 
 
-		}
+		// }
 
-		.page-header-top {
+		// .page-header-top {
 
-			background-color: $black-1;
-			margin-bottom: 0;
+		// 	background-color: $black-1;
+		// 	margin-bottom: 0;
 
-				.page-inner {
-					background-color: lighten($black-1, 6%);
-			}
-		}
+		// 		.page-inner {
+		// 			background-color: lighten($black-1, 6%);
+		// 	}
+		// }
 
-		.page-header-bottom {
-			background-color: $black-2;
-			margin-top: 0;
+		// .page-header-bottom {
+		// 	background-color: $black-2;
+		// 	margin-top: 0;
 
-			h4 {
-					// color: $black-1;
-			}
+		// 	h4 {
+		// 			// color: $black-1;
+		// 	}
 		
-			.page-inner {
-					background-color: lighten($black-2, 6%);
-			}
-		}
+		// 	.page-inner {
+		// 			background-color: lighten($black-2, 6%);
+		// 	}
+		// }
 	}
 
 
@@ -730,7 +735,6 @@ Front Page Music Module
 	.item-welcome {
 		.description {
 			text-align: center;
-
 		}
 	}
 	.events-sidebar {
@@ -755,7 +759,14 @@ Front Page Music Module
 		.item-description {
 			padding-left: 1em;
 		}
+		.item-image-wrapper {
+					position: relative;
+		}
 		.item-image {
+			position: absolute;
+			right: 15px;
+			top: 0;
+			overflow: hidden;
 		}
 	}
 	.item-facilities-header {

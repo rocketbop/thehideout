@@ -42,41 +42,41 @@
       </div>
 
       <div class="row">
-        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-5">
+        <div class="col-sm-8 col-sm-offset-2 col-md-offset-0 col-md-4 col-lg-5">
 
-        <div class="events-sidebar">
-          
-          <div ng-if="numberOfFutureEvents > 1" class="item-upcoming-header">
-            <h3>Coming Up:</h3>
-          </div>
-
-          <div class="item-upcoming-sidebar">
-            <div ng-repeat="event in data.events | orderBy:'date' | filter: futureEvents | limitTo: 3 " ng-if="$index != 0" class="item">
-              <!-- <div ng-include src="templateDirectory + 'angular/templates/music_module_sidebar_template.html'"></div> -->
-              <div ng-include src="htmlTemplatesDirectory + 'music_module_sidebar_template.html'"></div>
-            </div>
-          </div>
-
-          <div ng-if="numberOfFutureEvents < 4" class="item-upcoming-header">
-           <h3>Previous:</h3>
-          </div>
-          <div class="item-previous-sidebar">
-            <div ng-repeat="event in data.events | orderBy:'date' | filter: pastEvents | limitTo: 2  " ng-if="numberOfFutureEvents == 2" class="item">
-              <div ng-include src="htmlTemplatesDirectory + 'music_module_sidebar_template.html'"></div>
-            </div>
-          </div>
+          <div class="events-sidebar">
             
-          
-        </div>
+            <div ng-if="numberOfFutureEvents > 1" class="item-upcoming-header">
+              <h3>Coming Up:</h3>
+            </div>
+
+            <div class="item-upcoming-sidebar">
+              <div ng-repeat="event in data.events | orderBy:'date' | filter: futureEvents | limitTo: 3 " ng-if="$index != 0" class="item">
+                <!-- <div ng-include src="templateDirectory + 'angular/templates/music_module_sidebar_template.html'"></div> -->
+                <div ng-include src="htmlTemplatesDirectory + 'music_module_sidebar_template.html'"></div>
+              </div>
+            </div>
+
+            <div ng-if="numberOfFutureEvents < 4" class="item-upcoming-header">
+             <h3>Previous:</h3>
+            </div>
+            <div class="item-previous-sidebar">
+              <div ng-repeat="event in data.events | orderBy:'date' | filter: pastEvents | limitTo:previousLimit " class="item">
+                <div ng-include src="htmlTemplatesDirectory + 'music_module_sidebar_template.html'"></div>
+              </div>
+            </div>
+              
+            
+          </div>
 
         </div>
 
-        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-7">
+        <div class="col-sm-12 col-md-8 col-lg-7">
 
           <div ng-repeat="event in data.events | orderBy:'date' |  filter: futureEvents | limitTo: '1' " class="item-next-event">
             <div class="row">
              
-              <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+              <div class="col-xs-4 col-sm-5 col-md-3 col-lg-3">
                 <div class="item-description">
                   <h4>Next Event:</h4>
                   <h3>{{event.event_name}}</h3>
@@ -84,7 +84,7 @@
                 </div>
               </div>
 
-               <div class="col-xs-8 col-sm-9 col-md-9 col-lg-9">
+               <div class="item-image-wrapper col-xs-8 col-sm-7 col-md-9 col-lg-9">
                 <img class="item-image" ng-src="{{event.featured_image.attachment_meta.sizes.eventboard.url}}">
               </div>
 
