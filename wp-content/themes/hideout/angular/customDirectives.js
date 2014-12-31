@@ -30,6 +30,7 @@ angular.module("theHideoutApp")
 
       var imageHeight = setTopBackgroundSize(topBackgroundSize);
       console.log(imageHeight);
+      
       element.css('height', imageHeight + "px");
     }
 

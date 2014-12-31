@@ -302,7 +302,7 @@ Front Page General
   background-color: white; }
 
 .module-header-inner {
-  color: #f8f8f8;
+  color: #f2f2f2;
   padding-left: 2em; }
 
 p, a {
@@ -534,7 +534,7 @@ Front Page Food Module
 Secondary page styles General
 --------------*/
 .secondary-page p {
-  font-size: 1.4em;
+  font-size: 1.3em;
   line-height: 2.5em; }
 .secondary-page p:first-child {
   margin-top: 4em; }
@@ -554,17 +554,32 @@ Secondary page styles General
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; }
+.secondary-page .module-body-inner {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  background-color: white; }
 .secondary-page .page-header h1, .secondary-page .page-header h2, .secondary-page .page-header h3, .secondary-page .page-header h4, .secondary-page .page-header h5, .secondary-page .page-header h6 {
   color: white;
   font-weight: 300; }
-.secondary-page .page-header-bottom {
-  margin-bottom: 2em; }
-  .secondary-page .page-header-bottom h4 {
-    font-family: "Lato";
-    font-weight: 300; }
+.secondary-page .item-image-wrapper {
+  background-color: #111111;
+  display: inline-block; }
+.secondary-page a img:hover {
+  opacity: 0.8; }
+.secondary-page .page-header-bottom h4 {
+  font-family: "Lato";
+  font-weight: 300; }
 .secondary-page .body-inner {
   padding-top: 30px;
   margin-bottom: 2em; }
+@media (max-width: 991px) {
+  .secondary-page p {
+    font-size: 1.2em; } }
+@media (max-width: 767px) {
+  .secondary-page p {
+    font-size: 1.1em; } }
 
 /*--------------------------------------------------------------
 Events
@@ -647,31 +662,39 @@ Single Post Event
 News  
 --------------------------------------------------------------*/
 .news .page-header-top {
-  background-color: #308ba0; }
+  background-color: #2a7a8c; }
   .news .page-header-top .page-inner {
-    background-color: #369cb4; }
+    background-color: #246979; }
 .news .page-header-bottom {
-  background-color: #2b7d90; }
+  background-color: #246979; }
   .news .page-header-bottom .page-inner {
-    background-color: #308ba0; }
+    background-color: #1e5865; }
 .news .pagination > .active > a,
 .news .pagination > .active > span,
 .news .pagination > .active > a:hover,
 .news .pagination > .active > span:hover,
 .news .pagination > .active > a:focus,
 .news .pagination > .active > span:focus {
-  background-color: #308ba0;
-  border-color: #2b7d90; }
+  background-color: #2a7a8c;
+  border-color: #246979; }
+.news .news-item {
+  margin-top: 2em; }
+  .news .news-item p:first-child {
+    margin-top: 3em; }
+  .news .news-item .title {
+    background-color: #2a7a8c; }
+    .news .news-item .title h2 {
+      color: white; }
+  .news .news-item div.image-title:hover .title {
+    background: #246979; }
+  .news .news-item div.image-title:hover img {
+    opacity: 0.7; }
 
 .news-page .background-container {
   background-image: url("http://localhost:8888/wp-content/themes/hideout/images/backgrounds/people-on-street-evening.jpg");
   background-position: top; }
 .news-page .news-section img.featured-image {
   width: 100%; }
-.news-page .news-section .news-item {
-  margin-top: 2em; }
-  .news-page .news-section .news-item p:first-child {
-    margin-top: 5em; }
 .news-page .sidebar-news {
   display: none; }
 

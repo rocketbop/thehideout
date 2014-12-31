@@ -505,12 +505,11 @@ Front Page General
 	padding-bottom: 2em;
 	margin-top: 1em;
 	margin-bottom: 1em;
-	background-color: $white-1;
+	background-color: $color-white-1;
 }
 
-
 .module-header-inner {
-	color: $white-2;
+	color: $color-white-2;
 	padding-left: 2em;
 }
 
@@ -528,18 +527,14 @@ Front Page Header
 --------------------------------------------------------------*/
 
 	.front-page {
-
 			.background-container {
-			// background-image: url($templateDirectory + 'images/backgrounds/man-playing-banjo.jpg');
 			background-image: url($templateDirectory + 'images/backgrounds/joeys-snug-1-sepia.jpg');
-			
 		  -webkit-background-size: cover;
 			-moz-background-size: cover;
 		  -o-background-size: cover;
 		  background-size: cover;
 			background-position: bottom;
 			background-attachment: fixed;
-
 				.blurb {
 					text-align: center;
 					background: rgba($white-2, 0.8);
@@ -547,9 +542,7 @@ Front Page Header
 					border: lighten($color-black-2, 30%) solid 1px;
 					border-radius: 3px;
 				}
-		}
-
-	
+		}	
 	}
 
 /*--------------------------------------------------------------
@@ -923,44 +916,42 @@ Secondary page styles General
 --------------*/
 
 .secondary-page {
-
 	p {
-		font-size: 1.4em;
+		font-size: 1.3em;
 		line-height: 2.5em;
 	}
-
 	p:first-child {
 		margin-top: 4em;
 	}
-
 	.fb-like {
 		margin-top: 1em;
 	}
-
 	.blurb {
 		background-color: rgba($white-1, .7);
 		padding: 2em;
-
 		h2 {
 			margin-bottom: 1em;
 		}
-
 		strong p,
 		p {
 			line-height: 1.1em;
 			font-size: 1.2em;
 		}
-
-
-
 	}
-
 	.background-container {
 			-webkit-background-size: cover;
 			-moz-background-size: cover;
 		  -o-background-size: cover;
 		  background-size: cover;
 			// background-attachment: fixed;
+	}
+
+	.module-body-inner {
+		padding-top: 2em;
+		padding-bottom: 2em;
+		margin-top: 1em;
+		margin-bottom: 1em;
+		background-color: $color-white-1;
 	}
 
 	.page-header {
@@ -971,11 +962,14 @@ Secondary page styles General
 			font-weight: 300;
 		}
 	}
-
+	.item-image-wrapper {
+		background-color: $black-2;
+		display: inline-block;
+	}
+	a img:hover {
+		opacity: 0.8;
+	}
 	.page-header-bottom {
-		
-		margin-bottom: 2em;
-
 		h4 {
 			font-family: "Lato";
 			// font-family: "Berkshire+Swash";
@@ -985,16 +979,25 @@ Secondary page styles General
 			// font-family: "Oxygen";
 			// font-family: "Halant", 'Georgia', sans-serif;
 			// font-family: "Quattrocento";
-
 			font-weight: 300;
 		}
-
 	}
 
 	.body-inner {
 		padding-top: 30px;
 		margin-bottom: 2em;
 	}
+
+	@media (max-width: 991px) {
+		p {
+			font-size: 1.2em;
+		}
+	}	
+	@media (max-width: 767px) {
+		p {
+			font-size: 1.1em;
+		}
+	}	
 }
 
 /*--------------------------------------------------------------
@@ -1051,12 +1054,6 @@ Events
 			margin-bottom: 0;
 			padding: 0.8em;
 		}
-
-		// .btn-primary {
-		// 	background-color: $red-3;
-		// 	border-color: darken($red-3, 3%);
-		// 	color: $white-1;
-		// }
 	}
 
 	.board-wrapper {
@@ -1153,60 +1150,55 @@ News
 --------------------------------------------------------------*/
 
 .news {
-
 	.page-header-top {
-
-		background-color: $color-aqua;
-
+		background-color: darken($color-aqua, 5%);
 		.page-inner {
-			background-color: lighten($color-aqua, 5%);
+			background-color: darken($color-aqua, 10%);
 		}
 	}
-
 	.page-header-bottom {
-		background-color: darken($color-aqua, 4%);
-		// margin-top: 0;
-
+		background-color: darken($color-aqua, 10%);
 		.page-inner {
-			background-color: darken($color-aqua, 0%);
+			background-color: darken($color-aqua, 15%);
 		}
 	}
-
 	.pagination > .active > a,
 	.pagination > .active > span,
 	.pagination > .active > a:hover,
 	.pagination > .active > span:hover,
 	.pagination > .active > a:focus,
 	.pagination > .active > span:focus {
-
-	  background-color: $color-aqua;
-	  border-color: darken($color-aqua, 4%);
-
+	  background-color: darken($color-aqua, 5%);
+	  border-color: darken($color-aqua, 10%);
 	}
-
+	.news-item {
+		margin-top: 2em;
+		p:first-child {
+			margin-top: 3em;
+		}
+		.title {
+			background-color: darken($color-aqua, 5%); 
+			h2 {
+				color: white;
+			}	
+		}
+		div.image-title:hover .title {
+			background: darken($color-aqua, 10%);
+		}
+		div.image-title:hover img {
+			opacity: 0.7;
+		}
+	}
 }
 
 .news-page {
-
 	.background-container {
 		background-image: url($templateDirectory + "images/backgrounds/people-on-street-evening.jpg");
 		background-position: top;
 	}
-
-
-
 	.news-section {
-
 		img.featured-image {
 			width: 100%;
-		}
-
-		.news-item {
-			margin-top: 2em;
-
-			p:first-child {
-				margin-top: 5em;
-			}
 		}
 	}
 
