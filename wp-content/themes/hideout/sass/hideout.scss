@@ -107,6 +107,7 @@ $color-apple: #4e942f;
 
 p {
 	font-size: 1.4em;
+	color: lighten($color-black-1, 25%);
 }
 h1, h2, h3, h4, h5, h6 {
 	font-family: "Oswald", sans-serif;
@@ -122,7 +123,7 @@ h6:hover {
 	color: inherit;
 }
 p, li, a {
-font-family: "Lato", sans-serif;
+font-family: "PT Serif", sans-serif;
 // font-family: "Halant", 'Georgia', sans-serif;
 font-weight: 300;
 // font-size: 1.2em;
@@ -162,7 +163,7 @@ a:visited {
 }
 .visible-links-cherry {
 	a {
-		color: $color-cherry;
+		color: darken($color-cherry, 5%);
 	}
 }
 .visible-links-lilac {
@@ -172,7 +173,7 @@ a:visited {
 }
 .visible-links-aqua {
 	a {
-		color: $color-aqua;
+		color: $color-aqua ;
 	}
 }
 .no-padding-left {
@@ -300,8 +301,10 @@ header {
 			transition:			all 0.3s ease-in;
 			a {
 				color: $color-white-1;
+				font-family: 		'Lato';
 				border-radius: 4px;
 				transition: all 0.3s ease-in;
+				border: rgba($color-white-1, 0.0) solid 1px;
 			}
 			a:visited {
 				color: $color-white-1;
@@ -312,7 +315,7 @@ header {
 			  background-color: darken($color-white-2, 10%);
 			  color: lighten($color-black-1, 15%);
 			  border: lighten($color-white-1, 30%) solid 1px;
-			  font-weight: 400;
+			  // font-weight: 400;
 			}
 
 		}
@@ -537,10 +540,8 @@ Front Page Header
 			background-attachment: fixed;
 				.blurb {
 					text-align: center;
-					background: rgba($white-2, 0.8);
-					color:			$black-2;
-					border: lighten($color-black-2, 30%) solid 1px;
-					border-radius: 3px;
+					background: rgba($color-white-2, 0.8);
+					
 				}
 		}	
 	}
@@ -923,6 +924,10 @@ Secondary page styles General
 	p:first-child {
 		margin-top: 4em;
 	}
+	p:first-child:first-letter {
+		font-size: 3.0em;
+		vertical-align: text-bottom;
+	}
 	.fb-like {
 		margin-top: 1em;
 	}
@@ -971,15 +976,16 @@ Secondary page styles General
 	}
 	.page-header-bottom {
 		h4 {
-			font-family: "Lato";
+			// font-family: "Lato";
 			// font-family: "Berkshire+Swash";
 			// font-family: "Merriweather";
 			// font-family: "Lato";
 			// font-family: "Playfair+Display";
 			// font-family: "Oxygen";
 			// font-family: "Halant", 'Georgia', sans-serif;
-			// font-family: "Quattrocento";
-			font-weight: 300;
+			font-family: "Source Sans Pro";
+			font-weight: 200;
+			// font-size: 1.5em;
 		}
 	}
 
@@ -1005,30 +1011,18 @@ Events
 --------------------------------------------------------------*/
 
 .events {
-
-	.background-container {
-		background-image: url($templateDirectory + "images/backgrounds/hand-playing-guitar.jpg");
-		background-position: bottom;
-	}
-
 	.page-header-top {
-		background-color: $red-2;
-		margin-bottom: 0;
-
+		background-color: darken($color-cherry, 0%);
 		.page-inner {
-			background-color: lighten($red-2, 3%);
+			background-color: darken($color-cherry, 5%);
 		}
 	}
-
 	.page-header-bottom {
-		// background-color: $red-4;
-		background-color: desaturate($red-3, 15%);
-
+		background-color: darken($color-cherry, 5%);
 		.page-inner {
-			background-color: lighten(desaturate($red-3, 15%), 3%);
+			background-color: darken($color-cherry, 10%);
 		}
 	}
-
 	.social-buttons {
 		border-bottom: lighten($color-black-1, 30%) 1px dotted;
 		padding-bottom: 1em;
@@ -1037,9 +1031,11 @@ Events
 }
 
 .events-page {
-
-  .column-filter {
-
+	.background-container {
+		background-image: url($templateDirectory + "images/backgrounds/hand-playing-guitar.jpg");
+		background-position: bottom;
+	}
+	.column-filter {
 		a {
 			color: lighten($black-2, 10%);
 		}
@@ -1173,20 +1169,34 @@ News
 	}
 	.news-item {
 		margin-top: 2em;
+		p {
+			padding-left: 15px; 
+			padding-right: 15px;
+		}
 		p:first-child {
 			margin-top: 3em;
 		}
 		.title {
-			background-color: darken($color-aqua, 5%); 
+			background-color: darken($color-aqua, 10%); 
 			h2 {
 				color: white;
+				padding-left: 15px;
 			}	
 		}
+		h5.date {
+			background-color: darken($white-1, 5%);
+			margin-top: 0;
+			margin-bottom: 0;
+			padding-top: 2em;
+			padding-bottom: 2em;
+			padding-left: 15px;
+			border-bottom: darken($color-aqua, 5%) solid 1px;
+		}
 		div.image-title:hover .title {
-			background: darken($color-aqua, 10%);
+			background: darken($color-aqua, 15%);
 		}
 		div.image-title:hover img {
-			opacity: 0.7;
+			opacity: 0.9;
 		}
 	}
 }
@@ -1336,15 +1346,15 @@ Sidebar
 --------------------------------------------------------------*/
 
 .sidebar {
-
-	// margin-right: .5em;
-
+	.social-icons {
+		display: inline-block;
+	}
 	.section-header {
 		margin-top: 2em;
 		margin-bottom: 2em;
 		text-align: center;
 		padding-top: 1em;
-
+		border-top: lighten($color-black-1, 40%) solid 1px;
 	}
 
 	.section-header:first-child {
@@ -1400,8 +1410,16 @@ Sidebar
 .sidebar.sidebar-events {
 	
 	.section-header.background-container-sidebar-header {
-		background-color: lighten($color-cherry, 50%);
+		background-color: darken($color-white-1, 5%);
 	}
+	.background-container-sidebar-item {
+		border-bottom: darken($color-cherry, 5%) solid 1px;
+		}
+		.item {
+			h3 {
+				color: darken($color-cherry, 5%);
+			}
+		}
 }
 
 .sidebar.sidebar-news {

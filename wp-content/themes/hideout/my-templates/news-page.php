@@ -16,7 +16,7 @@ get_header(); ?>
             <div class="col-sm-10 col-md-10 col-lg-10 col-sm-offset-1">
               <div class="row">
 
-                <div id="blurb" class="blurb col-xs-6 col-xs-offset-3 col-sm-6 col-sm-offset-6 col-md-6 col-lg-6" data-my-vertical-center ext-function="getPanelMargin()">
+                <div id="blurb" class="blurb col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-6 col-md-6 col-lg-6" data-my-vertical-center ext-function="getPanelMargin()">
                   <h2>News from The Hideout</h2>
                   <p>Keep up to date with happenings in the bar.</p>  
                 </div>

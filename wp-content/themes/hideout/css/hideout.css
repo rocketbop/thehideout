@@ -3,7 +3,8 @@
 1.0 Typefaces and Decoration 
 --------------------------------------------------------------*/
 p {
-  font-size: 1.4em; }
+  font-size: 1.4em;
+  color: #404040; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Oswald", sans-serif;
@@ -19,7 +20,7 @@ h6:hover {
   color: inherit; }
 
 p, li, a {
-  font-family: "Lato", sans-serif;
+  font-family: "PT Serif", sans-serif;
   font-weight: 300;
   line-height: 2.5em; }
 
@@ -50,7 +51,7 @@ a:visited {
   opacity: .7; }
 
 .visible-links-cherry a {
-  color: #ba4a30; }
+  color: #a6422b; }
 
 .visible-links-lilac a {
   color: #8630ad; }
@@ -156,8 +157,10 @@ header nav ul li {
   transition: all 0.3s ease-in; }
   header nav ul li a {
     color: white;
+    font-family: 'Lato';
     border-radius: 4px;
-    transition: all 0.3s ease-in; }
+    transition: all 0.3s ease-in;
+    border: rgba(255, 255, 255, 0) solid 1px; }
   header nav ul li a:visited {
     color: white; }
   header nav ul li a:hover,
@@ -165,8 +168,7 @@ header nav ul li {
     text-decoration: none;
     background-color: #d8d8d8;
     color: #262626;
-    border: white solid 1px;
-    font-weight: 400; }
+    border: white solid 1px; }
 header nav ul li.current-menu-item a {
   border: white solid 1px; }
 header .navbar-container.opaque-thin {
@@ -322,10 +324,7 @@ Front Page Header
   background-attachment: fixed; }
   .front-page .background-container .blurb {
     text-align: center;
-    background: rgba(248, 248, 248, 0.8);
-    color: #111111;
-    border: #5e5e5e solid 1px;
-    border-radius: 3px; }
+    background: rgba(242, 242, 242, 0.8); }
 
 /*--------------------------------------------------------------
 Front Page News Module
@@ -538,6 +537,9 @@ Secondary page styles General
   line-height: 2.5em; }
 .secondary-page p:first-child {
   margin-top: 4em; }
+.secondary-page p:first-child:first-letter {
+  font-size: 3.0em;
+  vertical-align: text-bottom; }
 .secondary-page .fb-like {
   margin-top: 1em; }
 .secondary-page .blurb {
@@ -569,8 +571,8 @@ Secondary page styles General
 .secondary-page a img:hover {
   opacity: 0.8; }
 .secondary-page .page-header-bottom h4 {
-  font-family: "Lato";
-  font-weight: 300; }
+  font-family: "Source Sans Pro";
+  font-weight: 200; }
 .secondary-page .body-inner {
   padding-top: 30px;
   margin-bottom: 2em; }
@@ -584,22 +586,21 @@ Secondary page styles General
 /*--------------------------------------------------------------
 Events
 --------------------------------------------------------------*/
-.events .background-container {
-  background-image: url("http://localhost:8888/wp-content/themes/hideout/images/backgrounds/hand-playing-guitar.jpg");
-  background-position: bottom; }
 .events .page-header-top {
-  background-color: #bf4930;
-  margin-bottom: 0; }
+  background-color: #ba4a30; }
   .events .page-header-top .page-inner {
-    background-color: #cb4e33; }
+    background-color: #a6422b; }
 .events .page-header-bottom {
-  background-color: #af432b; }
+  background-color: #a6422b; }
   .events .page-header-bottom .page-inner {
-    background-color: #bb472e; }
+    background-color: #913a26; }
 .events .social-buttons {
   border-bottom: #4d4d4d 1px dotted;
   padding-bottom: 1em; }
 
+.events-page .background-container {
+  background-image: url("http://localhost:8888/wp-content/themes/hideout/images/backgrounds/hand-playing-guitar.jpg");
+  background-position: bottom; }
 .events-page .column-filter a {
   color: #2b2b2b; }
 .events-page .column-filter h3:first-child {
@@ -679,16 +680,28 @@ News
   border-color: #246979; }
 .news .news-item {
   margin-top: 2em; }
+  .news .news-item p {
+    padding-left: 15px;
+    padding-right: 15px; }
   .news .news-item p:first-child {
     margin-top: 3em; }
   .news .news-item .title {
-    background-color: #2a7a8c; }
+    background-color: #246979; }
     .news .news-item .title h2 {
-      color: white; }
+      color: white;
+      padding-left: 15px; }
+  .news .news-item h5.date {
+    background-color: #f2f2f2;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    padding-left: 15px;
+    border-bottom: #2a7a8c solid 1px; }
   .news .news-item div.image-title:hover .title {
-    background: #246979; }
+    background: #1e5865; }
   .news .news-item div.image-title:hover img {
-    opacity: 0.7; }
+    opacity: 0.9; }
 
 .news-page .background-container {
   background-image: url("http://localhost:8888/wp-content/themes/hideout/images/backgrounds/people-on-street-evening.jpg");
@@ -764,11 +777,14 @@ Gallery Page
 /*--------------------------------------------------------------
 Sidebar
 --------------------------------------------------------------*/
+.sidebar .social-icons {
+  display: inline-block; }
 .sidebar .section-header {
   margin-top: 2em;
   margin-bottom: 2em;
   text-align: center;
-  padding-top: 1em; }
+  padding-top: 1em;
+  border-top: #666666 solid 1px; }
 .sidebar .section-header:first-child h3:first-child {
   margin-top: 0; }
 .sidebar .background-container-sidebar-item {
@@ -793,7 +809,11 @@ Sidebar
   color: black; }
 
 .sidebar.sidebar-events .section-header.background-container-sidebar-header {
-  background-color: #fbf1ee; }
+  background-color: #f2f2f2; }
+.sidebar.sidebar-events .background-container-sidebar-item {
+  border-bottom: #a6422b solid 1px; }
+.sidebar.sidebar-events .item h3 {
+  color: #a6422b; }
 
 .sidebar.sidebar-news .section-header.background-container-sidebar-header {
   background-color: #dbeff4; }

@@ -9,7 +9,7 @@
       </div>
       <div class="title">
         <div class="row">
-          <div class="col-md-8 col-md-offset-4 col-lg-8">
+          <div class="col-md-9 col-md-offset-3 col-lg-9">
           <a href="{{newsPost.link}}"><h2>{{newsPost.title | date: 'medium' }}</h2></a>
         </div>
         </div>
@@ -18,15 +18,20 @@
 
       </a>
       <div class="row">
-        <div class="col-sm-8 col-sm-offset-4 col-md-8 col-md-offset-4 col-lg-8">
+        <div class="col-sm-9 col-sm-offset-3 col-md-9 col-md-offset-3 col-lg-9">
           
-          <h5>Posted: {{newsPost.date | date: 'medium' }}</h5>
+          <strong><h5 class="date">Posted: {{newsPost.date | date: 'medium' }}</h5></strong>
           <span  ng-bind-html="newsPost.content"></span>
           <img class="separator" ng-src="{{templateDirectory}}images/design/pint-separator.png">
         </div>
       </div>
     </div>
+    <div class="row">
+      <div class="col-xs-9 col-xs-offset-3">
+        <dir-pagination-controls on-page-change="scrollTo(newPageNumber)"></dir-pagination-controls>
+        
+      </div>
+    </div>
 
-    <dir-pagination-controls on-page-change="scrollTo(newPageNumber)"></dir-pagination-controls>
   
 </div>
