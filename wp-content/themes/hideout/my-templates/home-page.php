@@ -44,8 +44,8 @@ get_header(); ?>
 
 
 		<div class="container-fluid"> 
-		<div class="row food-module">
-			<?php get_template_part( 'templates/content', 'foodmodule' ); ?>
+		<div class="row restaurant-module" ng-controller="restaurantCtrl">
+			<?php get_template_part( 'templates/content', 'restaurantmodule' ); ?>
 		</div>
 		</div>
 

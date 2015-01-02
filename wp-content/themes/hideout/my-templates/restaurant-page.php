@@ -31,7 +31,7 @@ get_header(); ?>
     <div class="row page-header page-header-top">
       <div class="page-inner col-xs-10 col-sm-10 col-md-10 col-lg-10 col-md-offset-1">
           <div class="row">
-            <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7 col-md-offset-2">
+            <div class="title col-xs-7 col-sm-7 col-md-7 col-lg-7 col-md-offset-2">
               <h1>The Restaurant</h1>
               <!-- <h3>Get the details on all upcoming music, poetry, and gettogethers at The Hideout.</h3> -->
             </div>

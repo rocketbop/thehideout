@@ -15,8 +15,10 @@ angular.module("theHideoutApp")
     });
 
     $scope.primaryTemplateMessages = {
-      'welcomeMessage': 'Music at The Hideout'
+      'welcomeMessage': 'Music at The Hideout',
+      'location': 'events'
     };
+
 
   // FILTER BY CATEGORY
 

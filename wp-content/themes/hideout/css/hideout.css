@@ -81,16 +81,11 @@ a:visited {
 .margin-right-15 {
   margin-right: 15px; }
 
-.vcenter {
-  display: inline-block;
-  vertical-align: middle;
-  float: none; }
-
 /*--------------------------------------------------------------
 2.0 Design
 --------------------------------------------------------------*/
 body #primary {
-  background: #f8f8f8; }
+  background: #f2f2f2; }
 body .separator {
   display: block;
   margin: 5em auto; }
@@ -308,7 +303,7 @@ Front Page General
   background-color: white; }
 
 .module-header-inner {
-  color: #f2f2f2;
+  color: white;
   padding-left: 2em; }
 
 p, a {
@@ -353,8 +348,9 @@ Front Page News Module
 .news-module .item:hover .item-image {
   opacity: 0.7; }
 .news-module .item.item-1 {
-  background-color: #2a7a8c;
-  color: #f8f8f8; }
+  background-color: #2a7a8c; }
+  .news-module .item.item-1 p, .news-module .item.item-1 h1, .news-module .item.item-1 h2, .news-module .item.item-1 h3, .news-module .item.item-1 h4, .news-module .item.item-1 h5, .news-module .item.item-1 h6 {
+    color: white; }
   .news-module .item.item-1 .item-text {
     padding-left: 2em; }
   .news-module .item.item-1 .item-image {
@@ -423,9 +419,6 @@ Front Page Music Module
     background-color: #a6422b; }
 .music-module .module-body-inner {
   background-color: white; }
-.music-module .item-image-wrapper {
-  background-color: #111111;
-  display: inline-block; }
 .music-module .item:hover img {
   opacity: 0.7; }
 .music-module .item-welcome .description {
@@ -526,12 +519,12 @@ Front Page Music Module
     .music-module .item-next-event .item-image {
       float: none; } }
 /*--------------------------------------------------------------
-Front Page Food Module
+Front Page Restaurant Module
 --------------------------------------------------------------*/
-.food-module {
-  background-color: white; }
-  .food-module .module-header {
-    background-color: #bf8830; }
+.restaurant-module .module-header {
+  background-color: #8630ad; }
+  .restaurant-module .module-header .module-header-inner {
+    background-color: #772a99; }
 
 /*-----------------
 Secondary page styles General
@@ -569,6 +562,8 @@ Secondary page styles General
 .secondary-page .page-header h1, .secondary-page .page-header h2, .secondary-page .page-header h3, .secondary-page .page-header h4, .secondary-page .page-header h5, .secondary-page .page-header h6 {
   color: white;
   font-weight: 300; }
+.secondary-page .page-header .title h1 {
+  margin-bottom: 0.2em; }
 .secondary-page .item-image-wrapper {
   background-color: #111111;
   display: inline-block; }
@@ -609,6 +604,8 @@ Events
   color: #2b2b2b; }
 .events-page .event-filter a:first-child {
   margin-top: 0; }
+.events-page .event-filter a:last-child {
+  border-bottom: #a6422b solid 1px; }
 .events-page .event-filter h3:first-child {
   margin-top: 0;
   margin-bottom: 2em; }
@@ -650,9 +647,6 @@ Events
 /*--------------------------------------------------------------
 Single Post Event 
 --------------------------------------------------------------*/
-.single-post .page-inner {
-  background-color: white; }
-
 /*--------------------------------------------------------------
 News  
 --------------------------------------------------------------*/

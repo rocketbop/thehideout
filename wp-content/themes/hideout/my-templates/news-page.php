@@ -28,7 +28,7 @@ get_header(); ?>
       <div class="row page-header page-header-top">
         <div class="page-inner col-md-10 col-lg-10 col-md-offset-1">
           <div class="row">
-            <div class="col-md-7 col-lg-7 col-md-offset-2">
+            <div class="title col-md-7 col-lg-7 col-md-offset-2">
               <h1>The Hideout News</h1>
             </div>
           </div>
@@ -52,12 +52,12 @@ get_header(); ?>
     <!-- The main body -->
     <div class="container-fluid">
       <div class="row module-body">
-        <div class="module-body-inner col-md-10 col-md-offset-1 col-lg-10">
+        <div class="module-body-inner col-md-10 col-md-offset-1">
           <div  class="row">
-            <div class="col-md-9 col-lg-9">
+            <div ng-cloak class="col-md-9 col-lg-9">
                <?php get_template_part( 'templates/content', 'newssection' ); ?>
             </div>
-            <div class="hidden-xs hidden-sm col-md-3 col-lg-3 no-padding-left">
+            <div ng-cloak class="hidden-xs hidden-sm col-md-3 col-lg-3 no-padding-left">
               <?php get_sidebar(); ?>
             </div>
           </div> <!-- row -->

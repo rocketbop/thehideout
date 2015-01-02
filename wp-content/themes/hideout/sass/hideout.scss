@@ -77,9 +77,6 @@ $white-3:		#eee;
 $white-4:		#e8e8e8;
 $white-5:		#d8d8d8;
 
-
-// Starty again
-
 // Colors
 
 $color-black-1: #000;
@@ -94,11 +91,7 @@ $color-lilac: #8630ad;
 $color-aqua: #308ba0;
 $color-apple: #4e942f;
 
-
-
 // Purposes
-
-
 
 /**** BASE STYLES **********************/
 /*--------------------------------------------------------------
@@ -130,7 +123,7 @@ font-weight: 300;
 line-height: 2.5em;
 }
 strong {
-	h1, h2, h3, h4, h5,  h6 {
+	h1, h2, h3, h4, h5, h6 {
 		font-weight: 400;
 	}
 }
@@ -150,8 +143,8 @@ a:hover {
 	text-decoration: none;
 }
 a:visited {
-		color: inherit ;
-		line-height: inherit ;
+	color: inherit ;
+	line-height: inherit ;
 }
 .visible-links {
 	a {
@@ -202,11 +195,6 @@ a:visited {
 .margin-right-15 {
 	margin-right: 15px;
 }
-.vcenter {
-    display: inline-block;
-    vertical-align: middle;
-    float: none;
-}
 
 /*--------------------------------------------------------------
 2.0 Design
@@ -214,7 +202,7 @@ a:visited {
 
 body {
 	#primary {
-		background: $white-2;
+		background: $color-white-2;
 	}
 	.separator {
 		display: block;
@@ -232,7 +220,6 @@ body {
 		border: $white-3;
 		margin-bottom: 1em;
 	}
-
 	.btn-primary {
 	  color: $color-white-3;
 	  background-color: $color-cherry;
@@ -272,13 +259,10 @@ body {
 	  background-color: darken($color-lilac, 10%);
 	  border-color: $color-lilac;
 	}
-
 	.btn {
 		margin-top: 1em;
 		margin-bottom: 1em;
 	}
-
-
 }
 
 /**** LAYOUT STYLES *****************/
@@ -507,7 +491,6 @@ Front Page General
 .module-body {
 	background-color: darken($color-white-1, 5%);
 }
-
 .background-container {
 	position: relative;
 }
@@ -520,18 +503,14 @@ Front Page General
 }
 
 .module-header-inner {
-	color: $color-white-2;
+	color: $color-white-1;
 	padding-left: 2em;
 }
-
 p, a {
 		// font-family: "Lato", sans-serif;
 	font-size: 1.03em;
 	line-height: 1.3em;
 }
-
-
-
 
 /*--------------------------------------------------------------
 Front Page Header
@@ -546,11 +525,10 @@ Front Page Header
 		  background-size: cover;
 			background-position: bottom;
 			background-attachment: fixed;
-				.blurb {
-					text-align: center;
-					background: rgba($color-white-2, 0.8);
-					
-				}
+			.blurb {
+				text-align: center;
+				background: rgba($color-white-2, 0.8);
+			}
 		}	
 	}
 
@@ -590,7 +568,9 @@ Front Page News Module
 	}
 	.item.item-1 {
 		background-color: darken($color-aqua, 5%);
-		color: $white-2;
+		p, h1, h2, h3, h4, h5, h6 {
+			color: $color-white-1;
+		}
 		.item-text {
 			padding-left: 2em;
 		}
@@ -706,10 +686,10 @@ Front Page Music Module
 	.module-body-inner {
 		background-color: $color-white-1;
 	}
-	.item-image-wrapper {
-		background-color: $black-2;
-		display: inline-block;
-	}
+	// .item-image-wrapper {
+	// 	background-color: $black-2;
+	// 	display: inline-block;
+	// }
 	.item:hover img {
 			opacity: 0.7;
 		}
@@ -906,17 +886,15 @@ Front Page Music Module
 
 
 /*--------------------------------------------------------------
-Front Page Food Module
+Front Page Restaurant Module
 --------------------------------------------------------------*/
 
-.food-module {
-
-	background-color: $white;
-	//color: $white;
+.restaurant-module {
 	.module-header {
-		background-color: $yellow-2;
-
-
+		background-color: $color-lilac;
+		.module-header-inner {
+			background-color: darken($color-lilac, 5%);
+		}
 	}
 }
 
@@ -940,7 +918,7 @@ Secondary page styles General
 		margin-top: 1em;
 	}
 	.blurb {
-		background-color: rgba($white-1, .7);
+		background-color: rgba($color-white-1, .7);
 		padding: 2em;
 		h2 {
 			margin-bottom: 1em;
@@ -958,7 +936,6 @@ Secondary page styles General
 		  background-size: cover;
 			// background-attachment: fixed;
 	}
-
 	.module-body-inner {
 		padding-top: 2em;
 		padding-bottom: 2em;
@@ -966,13 +943,15 @@ Secondary page styles General
 		margin-bottom: 1em;
 		background-color: $color-white-1;
 	}
-
 	.page-header {
-		// border-bottom: none;
-		// border-top: none;
 		 h1, h2, h3, h4, h5, h6 {
 			color: $white;
 			font-weight: 300;
+		}
+		.title {
+			h1 {
+				margin-bottom: 0.2em;
+			}
 		}
 	}
 	.item-image-wrapper {
@@ -984,24 +963,14 @@ Secondary page styles General
 	}
 	.page-header-bottom {
 		h4 {
-			// font-family: "Lato";
-			// font-family: "Berkshire+Swash";
-			// font-family: "Merriweather";
-			// font-family: "Lato";
-			// font-family: "Playfair+Display";
-			// font-family: "Oxygen";
-			// font-family: "Halant", 'Georgia', sans-serif;
 			font-family: "Source Sans Pro";
 			font-weight: 200;
-			// font-size: 1.5em;
 		}
 	}
-
 	.body-inner {
 		padding-top: 30px;
 		margin-bottom: 2em;
 	}
-
 	@media (max-width: 991px) {
 		p {
 			font-size: 1.2em;
@@ -1048,6 +1017,9 @@ Events
 		a:first-child {
 			margin-top: 0;
 		}
+		a:last-child {
+			border-bottom: darken($color-cherry, 5%) solid 1px;
+		}
 		h3:first-child {
 			margin-top: 0;
 			margin-bottom: 2em;
@@ -1069,7 +1041,6 @@ Events
 }
 .events-section{
 	.item {
-		// margin-top: 2em;
 		p {
 			padding-left: 15px; 
 			padding-right: 15px;
@@ -1112,11 +1083,6 @@ Events
 Single Post Event 
 --------------------------------------------------------------*/
 
-.single-post {
-	.page-inner {
-		background-color: $white-1;
-	}
-}
 
 /*--------------------------------------------------------------
 News  
@@ -1177,7 +1143,6 @@ News
 		}
 	}
 }
-
 .news-page {
 	.background-container {
 		background-image: url($templateDirectory + "images/backgrounds/people-on-street-evening.jpg");
@@ -1188,7 +1153,6 @@ News
 			width: 100%;
 		}
 	}
-
 	.sidebar-news {
 		display: none;
 	}
@@ -1202,8 +1166,6 @@ Restaurant Page
 
 	.background-container {
 			background-image: url($templateDirectory + "images/backgrounds/food-on-table.jpg");
-
-
 			-webkit-background-size: cover;
 			-moz-background-size: cover;
 		  -o-background-size: cover;
@@ -1211,42 +1173,30 @@ Restaurant Page
 			background-position: top;
 			background-attachment: fixed;
 	}
-
 	.blurb {
 		background-color: rgba($white-1, .6);
 	}
-
 	.page-header {
-
 		border-bottom: none;
 		border-top: none;
-
-
 		 h1, h2, h3, h4, h5, h6 {
 			color: $white;
 		}
 	}
 	.page-header-top {
-
 		background-color: lighten($color-lilac, 3%);
-		// margin-top: 15em;
 		margin-bottom: 0;
-
-		
 		.page-inner {
 			background-color: $color-lilac;
 		}
 	}
-
 	.page-header-bottom {
 		background-color: darken($color-lilac, 5%);
 		margin-top: 0;
-
 		.page-inner {
 			background-color: darken($color-lilac, 10%);
 		}
 	}
-
 	.page-body {
 		img {
 			margin-top: 2em;
@@ -1262,8 +1212,6 @@ Restaurant Page
 			text-align: center;
 		}
 	}
-
-
 }
 
 /*--------------------------------------------------------------
@@ -1271,19 +1219,15 @@ Gallery Page
 --------------------------------------------------------------*/
 
 .gallery-page {
-
 	.page-header-top {
 		background-color: $color-aqua;
-
 		.page-inner {
 			background-color: lighten($color-aqua, 5%);
 		}
 	}
-
 	.page-header-bottom {
 		background-color: darken($color-aqua, 4%);
 		// margin-top: 0;
-
 		.page-inner {
 			background-color: darken($color-aqua, 0%);
 		}

@@ -4,7 +4,7 @@
   <div class="row module-header page-header-top">
 
     <div class="module-header-inner col-md-10 col-md-offset-1">
-      <h3>Hideout News</h3>
+      <a href="{{rootDirectory}}thenews"><h3>Hideout News</h3></a>
     </div>
   </div>
 </div> <!-- container-fluid -->

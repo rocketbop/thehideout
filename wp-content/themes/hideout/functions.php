@@ -167,7 +167,7 @@ function hideout_scripts() {
 
 	wp_enqueue_script( 'gallery-controller', get_template_directory_uri() . '/angular/components/gallery/galleryController.js', false, NULL);
 
-	wp_enqueue_script( 'test-controller', get_template_directory_uri() . '/angular/components/test/testController.js', false, NULL);
+	wp_enqueue_script( 'restaurant-controller', get_template_directory_uri() . '/angular/components/restaurant/restaurantController.js', false, NULL);
 
 	wp_enqueue_script( 'hideout-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
