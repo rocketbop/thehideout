@@ -25,25 +25,6 @@ angular.module("theHideoutApp")
     });
 
       
-    // $scope.getPromise = function () {
-    //     var promise = $q.defer();
-
-    //     if ($scope.data.filterednewsPosts) {
-    //       promise.resolve($scope.data.filterednewsPosts)
-    //       console.log("Did resolve");
-    //     } else {
-    //       promise.reject("Didn't resolve");
-
-    //     }
-        
-    //     return promise.promise;
-      
-    //    }
-
-    //    $scope.promise = $scope.getPromise();
-
-
-
 
     $scope.scrollTo = function (newPageNumber) {
       jQuery('html,body').animate({scrollTop: jQuery("#content-top").offset().top-100},'slow');
@@ -56,6 +37,33 @@ angular.module("theHideoutApp")
 
     // $scope.newsImageDefault = templateDirectory + 'images/design/news-default-image.png';
     $scope.newsImageDefault210X140 = templateDirectory + 'images/design/hideout-2005-210x140.jpg';
+
+      // SINGLE POSTS
+
+    $scope.getSinglePostArrayNumber = function () {
+      for (var i = 0; i < $scope.data.newsPosts.length; i++) {
+        if ($scope.data.newsPosts[i].ID == $scope.singlePostID) {
+          var arrayNumber = i;
+        }
+      }
+      return arrayNumber;
+    }
+
+    $scope.getSinglePost = function () {
+
+      // expose the singlepost object to the view
+      $scope.dataPromise.success(function () {
+        $scope.singlePostArrayNumber = $scope.getSinglePostArrayNumber();
+        $scope.singlePost = $scope.data.newsPosts[$scope.singlePostArrayNumber]; 
+      })
+    }
+
+    // Will only be a number on single app page calls
+    if (angular.isNumber($scope.singlePostID)) {
+      $scope.getSinglePost();
+    } else {
+      // console.log("single post ID not received");
+    }
      
 
   }]);

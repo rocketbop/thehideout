@@ -82,7 +82,7 @@
    </div>
 
   <div class="background-container-sidebar-item" ng-repeat="newsPost in data.newsPosts | orderBy: '-date' | limitTo: 5">
-    <a href="{{event.link}}">
+    <a href="{{newsPost.link}}">
       <div class="row item">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 col-lg-offset-1">
         <div class="item-image-wrapper">
