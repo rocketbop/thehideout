@@ -1035,7 +1035,6 @@ Events
 		border-bottom: lighten($color-black-1, 30%) 1px dotted;
 		padding-bottom: 1em;
 	}
-
 }
 .events-page {
 	.background-container {
@@ -1070,7 +1069,7 @@ Events
 }
 .events-section{
 	.item {
-		margin-top: 2em;
+		// margin-top: 2em;
 		p {
 			padding-left: 15px; 
 			padding-right: 15px;

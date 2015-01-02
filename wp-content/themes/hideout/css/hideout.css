@@ -621,30 +621,28 @@ Events
 .events-page .sidebar-events {
   display: none; }
 
-.events-section .item {
-  margin-top: 2em; }
-  .events-section .item p {
-    padding-left: 15px;
-    padding-right: 15px; }
-  .events-section .item p:first-child {
-    margin-top: 3em; }
-  .events-section .item .title {
-    background-color: #913a26; }
-    .events-section .item .title h2 {
-      color: white;
-      padding-left: 15px; }
-  .events-section .item h5.date {
-    background-color: #f2f2f2;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-top: 2em;
-    padding-bottom: 2em;
-    padding-left: 15px;
-    border-bottom: #a6422b solid 1px; }
-  .events-section .item div.image-title:hover .title {
-    background: #7d3220; }
-  .events-section .item div.image-title:hover img {
-    opacity: 0.9; }
+.events-section .item p {
+  padding-left: 15px;
+  padding-right: 15px; }
+.events-section .item p:first-child {
+  margin-top: 3em; }
+.events-section .item .title {
+  background-color: #913a26; }
+  .events-section .item .title h2 {
+    color: white;
+    padding-left: 15px; }
+.events-section .item h5.date {
+  background-color: #f2f2f2;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  padding-left: 15px;
+  border-bottom: #a6422b solid 1px; }
+.events-section .item div.image-title:hover .title {
+  background: #7d3220; }
+.events-section .item div.image-title:hover img {
+  opacity: 0.9; }
 
 .events-single-page .featured-image {
   margin-top: 2em; }
