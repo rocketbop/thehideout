@@ -41,7 +41,7 @@ function hideout_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 	  /** Register custom size */
-  add_image_size('sidebarimg', 210, 140, true);
+  add_image_size('sidebarimg', 300, 200, true);
   add_image_size('eventboard', 900, 450, true);
 
   set_post_thumbnail_size( 200, 140, true ); // true is for crop mode

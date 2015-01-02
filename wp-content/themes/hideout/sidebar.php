@@ -45,8 +45,6 @@
 <!-- EVENTS -->
 <div class="sidebar sidebar-events visible-links visible-links-cherry" ng-controller="eventCtrl">
   <div class=" section-header background-container-sidebar-header">
-    
-    
     <div class="row">
       <div class="col-md-12 col-lg-10 col-lg-offset-1 ">
         <h3>UPCOMING EVENTS</h3>
@@ -57,8 +55,10 @@
       <a href="{{event.link}}">
         <div class="row item">
           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 col-lg-offset-1">
-            <!-- <img src="{{event.event_image.url}}"> -->
+          <div class="item-image-wrapper">
             <img src="{{event.featured_image.attachment_meta.sizes.sidebarimg.url}}">
+          </div>
+            
           </div>
           <div class="date col-xs-12 col-sm-12 col-md-12 col-lg-10 col-lg-offset-1">
             <h3 ng-bind-html="event.event_name"></h3>
@@ -85,9 +85,11 @@
     <a href="{{event.link}}">
       <div class="row item">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 col-lg-offset-1">
+        <div class="item-image-wrapper">
           <!-- If there is an image use its thumbnail, else use the default -->
           <img ng-if="newsPost.featured_image.source" src="{{newsPost.featured_image.attachment_meta.sizes.sidebarimg.url}}">
          <img ng-if="!newsPost.featured_image.source" src="{{newsImageDefault210X140}}">
+         </div>
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 col-lg-offset-1">

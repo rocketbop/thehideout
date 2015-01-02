@@ -11,18 +11,14 @@ get_header(); ?>
         <div class="background-container col-xs-12 col-sm-12 col-md-12 col-lg-12" data-my-div-height="full" minus-header="true">
 
         <div class="row">
-          <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 col-md-offset-1">
+          <div class="col-sm-10 col-md-10 col-lg-10 col-sm-offset-1">
             <div class="row">
               <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                 
               </div>
-              <div id="blurb" class="blurb col-xs-12 col-sm-6 col-md-6 col-lg-6" data-my-vertical-center ext-function="getPanelMargin()">
-                <strong><h2>We Love Music</h2></strong>
-                <p>We care about music at <strong>The Hideout</strong>.</p>
-                <p>That's why we have great equipment, great bands and singers, and great audiences.</p>
-            
-               
-            
+              <div id="blurb" class="blurb col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-6 col-md-6" data-my-vertical-center ext-function="getPanelMargin()">
+                <h2>We Love Music</h2>
+                <p>We care about music at The Hideout.</p>
               </div>
             </div>
           </div>
@@ -62,74 +58,16 @@ get_header(); ?>
       </div>
 
       <div class="body-inner col-xs-10 col-sm-10 col-md-10 col-lg-10">
-        <div class="row">
-          <div class="column-filter">
-            <div class="col-md-2 no-padding-right">
-         
-              <h3 class="text-center">Filter</h3>
-              <a ng-click="selectCategory()"
-                class="btn btn-block btn-default btn-lg"><h4>All</h4></a>
-                <!-- The unique filter will mean categories with more than one event will not be generated in duplicate -->
-              <a ng-click="selectCategory(event.category)" ng-repeat="event in data.events | orderBy:'category' | unique:'category'"  class=" btn btn-block btn-default btn-lg" ng-class="getCategoryClass(event.category)"><h4>{{event.category}}</h4></a>  
-
-            </div>
-          </div>
           <div class="column-main">
-            <div class="col-md-7">
-              
-                <!-- <h3>{{selectedCategory}} Events</h3> -->
-                <div ng-repeat="event in data.events | orderBy: '-date_of_event' | filter:categoryFilterFn | range:selectedPage:pageSize">
+            <div class="col-md-9 col-lg-9">
+              <div ng-include src="htmlTemplatesDirectory + 'events_section_template.html'"></div>
 
-                  <a href="{{event.link}}">
-                    <div class="board board-wrapper ">
-                      <div class="row ">
-                        <div class="col-sm-6 col-md-6 col-lg-6 no-padding-right">
-                          <div class="board board-block board-block-left">
-                            <h3>{{event.event_name}}</h3>
-                          </div>  
-                        </div>
-                        <div class=" col-sm-6 col-md-6 col-lg-6 no-padding-left">
-                          <div class=" board board-block board-block-right no-padding-left">
-                             <h3>{{event.date_of_event | date: 'EEEE, d MMMM'}}</h3>
-                           </div>
-                        </div>
-                      </div>
-                      <!-- <div class=" crop-height"> -->
-                      <div class="">
-                      <!-- <img class="featured-image scale" src="{{event.event_image.url}}"> -->
-                      <img class="featured-image" src="{{event.featured_image.attachment_meta.sizes.eventboard.url}}">
-                    </div>  
-                      <div class="board board-block board-block-bottom">
-                        <h4>{{event.date_of_event | date: 'h:mma, EEEE, d MMMM yyyy'}}, {{event.category}}.
-                        </h4>
-                        <h4>{{event.category}}.</h4>
-                      </div>
-                    </div>
-                  </a>
-                  <!-- Below used as test while on local host
-                Substitute with event.link when moving onto live server. -->
-                <div class="fb-like" data-href="{{data.myTestURL}}" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
-                <!-- Save to use below for content entered through WP backend -->
-                <div ng-bind-html="event.event_description"></div>
-                  <img class="separator" ng-src="{{templateDirectory}}images/design/guitar-separator.png">
-
-                </div>
-
-
-             
-
-                <div class="pagination pull-left btn-group">
-                    <a ng-repeat=
-                       "page in data.events | filter:categoryFilterFn | pageCount:pageSize"
-                       ng-click="selectPage($index + 1)" class="btn btn-default"
-                       ng-class="getPageClass($index + 1)">
-                        {{$index + 1}}
-                    </a>
-                </div>
              </div>
             <!-- </div>  -->
 
-            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 no-padding-left">
+            <div class="hidden-xs hidden-sm col-md-3 no-padding-left">
+            <div ng-include src="htmlTemplatesDirectory + 'event_filter_template.html'"></div>
+
               <?php get_sidebar(); ?>
             </div>
          </div> <!-- row -->

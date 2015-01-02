@@ -1,4 +1,4 @@
-<div class="single-post secondary-page events events-single-page visible-links visible-links-red" ng-controller="eventCtrl">
+<div class="single-post secondary-page events events-single-page visible-links visible-links-cherry" ng-controller="eventCtrl">
   
   <div class="container-fluid">
     <div class="row">
@@ -27,7 +27,7 @@
             <div class="col-xs-1 col-sm-1 col-md-9 col-lg-9">
               <div class="row">
                 <div class="col-xs-1 col-sm-1 col-md-9 col-lg-9 col-md-offset-3">
-                  <h4>{{singlePost.date_of_event | date: 'EEEE, d MMMM'}}</h4>
+                  <h4>{{singlePost.date_of_event | date: 'h:mma, EEEE, d MMMM yyyy'}}</h4>
                 </div>
               </div>  
             </div>

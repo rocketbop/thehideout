@@ -1,0 +1,35 @@
+<div id="content-top" class="events-section">
+  <div ng-repeat="event in data.events | orderBy: '-date_of_event' | filter:categoryFilterFn | range:selectedPage:pageSize" class="item">
+    <div class="image-title">
+      <div class="item-image-wrapper">
+        <a href="{{event.link}}">
+          <img class="featured-image" ng-src="{{event.featured_image.attachment_meta.sizes.eventboard.url}}">
+        </a>
+      </div> <!-- item image wrapper -->
+      <div class="title">
+        <div class="row">
+          <div class="col-md-9 col-md-offset-3 col-lg-9">
+          <a href="{{event.link}}"><h2>{{event.event_name}}</h2></a>
+        </div>
+        </div>
+      </div> <!-- title -->
+    </div> <!-- image title -->
+    <div class="row">
+      <div class="col-sm-9 col-sm-offset-3 col-md-9 col-md-offset-3 col-lg-9">
+        <strong><h5 class="date">On: {{event.date_of_event | date: 'h:mma, EEEE, d MMMM yyyy' }}</h5></strong>
+        <span  ng-bind-html="event.event_description"></span>
+        <img class="separator" ng-src="{{templateDirectory}}images/design/guitar-separator.png">
+      </div>
+    </div>
+  </div> <!-- ng repeat -->
+  <div class="row">
+    <div class="col-xs-9 col-xs-offset-3">
+      <a ng-repeat=
+         "page in data.events | filter:categoryFilterFn | pageCount:pageSize"
+         ng-click="selectPage($index + 1)" class="btn btn-default"
+         ng-class="getPageClass($index + 1)">
+          {{$index + 1}}
+      </a>
+    </div>
+  </div>  
+</div> <!-- events section -->
