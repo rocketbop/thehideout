@@ -5,54 +5,49 @@ Template Name: Gallery Page
 
 get_header(); ?>
 
-<div id="primary" class="content-area secondary-page gallery-page visible-links visible-links-blue" ng-controller="galleryCtrl">
+<div id="primary" class="content-area secondary-page gallery-page visible-links visible-links-aqua" ng-controller="galleryCtrl">
   <div class="container-fluid">
     <div class="row">
-        <div class="background-container col-xs-12 col-sm-12 col-md-12 col-lg-12" data-my-div-height="navbar" minus-header="false">
+        <div class="background-container col-xs-12 col-sm-12" data-my-div-height="navbar" minus-header="false">
         </div>
       </div>
-
-    <div class="row page-header page-header-top">
-      <div class="page-inner col-xs-10 col-sm-10 col-md-10 col-lg-10 col-md-offset-1">
+  </div>
+      <div class="container-fluid">
+      <div class="row page-header page-header-top">
+        <div class="page-inner col-md-10 col-lg-10 col-md-offset-1">
           <div class="row">
-            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-md-offset-3">
+            <div class="title col-md-7 col-lg-7 col-md-offset-2">
               <h1>Gallery</h1>
-              
             </div>
           </div>
-      </div>  <!-- page header -->
-    </div> <!-- row -->
-  </div> <!-- fluid container -->
+        </div>  
+      </div> <!-- row -->
+    </div> <!-- fluid container -->
 
-  <div class="container-fluid">
-    <div class="row page-header page-header-bottom">
-      <div class="page-inner col-xs-10 col-sm-10 col-md-10 col-lg-10 col-md-offset-1">
-                  <div class="row">
-          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-md-offset-3">
-
-          <h4>Check out our photos.</h4>
-          
-
+    <!-- page header bottom -->
+    <div class="container-fluid">
+      <div class="row page-header page-header-bottom">
+        <div class="page-inner col-md-10 col-md-offset-1">
+          <div class="row">
+            <div class="col-md-7 col-lg-7 col-md-offset-2">
+              <h4>Check out our photos</h4>
+            </div>
           </div>
-          </div>
-      </div>  <!-- page header -->
-    </div> <!-- row -->
-  </div> <!-- fluid container -->
+        </div> 
+      </div> <!-- row -->
+    </div> <!-- fluid container -->
+
 
   <div id ="entries" class="container-fluid">
-    <div class="row page-body ">
-       <div class=" body-outer col-xs-1 col-sm-1 col-md-1 col-lg-1">
-        
-      </div>
-
-      <div class="body-inner col-xs-10 col-sm-10 col-md-10 col-lg-10">
+    <div class="row module-body ">
+      <div class="module-body-inner col-md-10 col-md-offset-1">
         <div class="row">
           <div class="column-filter">
             <div class="col-md-3 no-padding-right">
          
               <h3 class="text-center">Albums</h3>
                 <!-- The unique filter will mean categories with more than one event will not be generated in duplicate -->
-              <a ng-click="selectAlbum(photoset.id)" ng-repeat="photoset in data.photosetList.photosets.photoset"  class=" btn btn-block btn-default btn-lg" ng-class="getCategoryClass(event.category)"><h4>{{photoset.title._content}}</h4></a>  
+              <a ng-click="selectAlbum(photoset.id)" ng-repeat="photoset in data.photosetList.photosets.photoset"  class=" btn btn-block btn-default btn-lg" ng-class="getAlbumClass(photoset.id)"><h4>{{photoset.title._content}}</h4></a>  
 
             </div>
           </div>

@@ -3,7 +3,7 @@
 <div class="container-fluid">
   <div class="row module-header page-header-top">
 
-    <div class="module-header-inner col-md-10 col-md-offset-1">
+    <div ng-cloak class="module-header-inner col-md-10 col-md-offset-1">
       <a href="{{rootDirectory}}thenews"><h3>Hideout News</h3></a>
     </div>
   </div>
@@ -15,7 +15,7 @@
       <div class="row">
         <div class="news-section col-sm-8 col-md-9">
 
-          <div class="item item-1">
+          <div ng-cloak class="item item-1">
             <a class="item-link" href="{{data.newsPosts[0].link}}">
               <div class="row">
                 <div class="item-text col-xs-12 col-sm-4 col-md-4 col-lg-4">
@@ -40,7 +40,7 @@
           <div class="row">
             <div class="col-sm-6 col-md-8 col-lg-8">
 
-              <div class="item item-2">
+              <div ng-cloak class="item item-2">
                 <a class="item-link" href="{{data.newsPosts[1].link}}">
                   <div class="item-image-wrapper">
                     <div class="item-image" data-news-background-image="2">
@@ -62,7 +62,7 @@
               </div>
 
               <div class="item item-3">
-                <a class="item-link" href="{{data.newsPosts[2].link}}">
+                <a ng-cloak class="item-link" href="{{data.newsPosts[2].link}}">
                   <div class="row">
                     <div class="col-sm-6 col-md-4 col-lg-4">
                       <div class="item-image-wrapper">

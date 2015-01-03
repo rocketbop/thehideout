@@ -1,5 +1,6 @@
 angular.module('theHideoutApp')
-  .controller('galleryCtrl', ['$scope', '$timeout', 'Flickr', 'Lightbox', function ($scope, $timeout, Flickr, Lightbox) {
+  .constant("albumActiveClass", "btn-secondary")
+  .controller('galleryCtrl', ['$scope', '$timeout', 'Flickr', 'Lightbox', 'albumActiveClass', function ($scope, $timeout, Flickr, Lightbox, albumActiveClass) {
 
     // $scope.data = {}; This is now created in the MainCtrl
     $scope.selectedAlbumID = '';
@@ -50,6 +51,10 @@ angular.module('theHideoutApp')
           $scope.selectedAlbumID = albumID;
           $scope.getPhotosetPhotos($scope.selectedAlbumID);
         } 
+      }
+
+      $scope.getAlbumClass = function (albumID) {
+        return ($scope.selectedAlbumID == albumID) ? albumActiveClass : ''; 
       }
 
     }])

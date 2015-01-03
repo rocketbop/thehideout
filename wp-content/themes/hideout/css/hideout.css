@@ -148,6 +148,8 @@ header nav h2 {
   text-transform: uppercase;
   padding-top: 0.1em;
   transition: all 0.3s ease-in; }
+header nav h2:hover {
+  color: #cccccc; }
 header nav ul li {
   font-size: 1.1em;
   margin-top: .5em;
@@ -419,6 +421,9 @@ Front Page Music Module
     background-color: #a6422b; }
 .music-module .module-body-inner {
   background-color: white; }
+.music-module .item-image-wrapper {
+  background-color: #111111;
+  display: inline-block; }
 .music-module .item:hover img {
   opacity: 0.7; }
 .music-module .item-welcome .description {
@@ -531,7 +536,7 @@ Secondary page styles General
 --------------*/
 .secondary-page p {
   font-size: 1.3em;
-  line-height: 2.5em; }
+  line-height: 2.3em; }
 .secondary-page p:first-child {
   margin-top: 4em; }
 .secondary-page p:first-child:first-letter {
@@ -575,6 +580,9 @@ Secondary page styles General
 .secondary-page .body-inner {
   padding-top: 30px;
   margin-bottom: 2em; }
+.secondary-page img.featured-image {
+  overflow: hidden;
+  width: 100%; }
 @media (max-width: 991px) {
   .secondary-page p {
     font-size: 1.2em; } }

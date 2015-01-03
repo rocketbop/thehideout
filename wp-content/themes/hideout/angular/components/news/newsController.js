@@ -4,8 +4,16 @@ angular.module("theHideoutApp")
   .controller("newsCtrl", ['$scope', '$filter', '$q', '$log', 'newsPostListPageCount', 'apiService', 'globalService', 'newsPostListActiveClass', 'templateDirectory', function ($scope, $filter, $q, $log, newsPostListPageCount, apiService, globalService, newsPostListActiveClass, templateDirectory) {
 
 
+    $scope.primaryTemplateMessages = {
+      'welcomeMessage': 'News',
+      'location': 'thenews',
+    };
 
-    
+    $scope.secondaryTemplateMessages = {
+      'welcomeMessage': 'The Hideout News',
+      'secondMessage': 'Recent news, and thoughts from your friends at The Hideout'
+    };
+
     // GET THE DATA
 
       $scope.dataPromise = apiService.getAllNewsPosts().success(function(newsPosts) {

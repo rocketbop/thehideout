@@ -25,6 +25,8 @@ get_header(); ?>
           </div>
         </div>
       </div>
+    </div>
+    <div class="container-fluid">
       <div class="row page-header page-header-top">
         <div class="page-inner col-md-10 col-lg-10 col-md-offset-1">
           <div class="row">
