@@ -51,7 +51,7 @@
       </div>
     </div>
   </div>
-    <div class="background-container-sidebar-item" ng-repeat="event in data.events | filter: futureEvents | orderBy: '-date_of_event' | limitTo: 5">
+    <div class="background-container-sidebar-item" ng-repeat="event in data.events | filter: futureEvents | orderBy: '-date_of_event' | limitTo: 3">
       <a href="{{event.link}}">
         <div class="row item">
           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 col-lg-offset-1">
@@ -81,7 +81,7 @@
     </div>
    </div>
 
-  <div class="background-container-sidebar-item" ng-repeat="newsPost in data.newsPosts | orderBy: '-date' | limitTo: 5">
+  <div class="background-container-sidebar-item" ng-repeat="newsPost in data.newsPosts | orderBy: '-date' | limitTo: 3">
     <a href="{{newsPost.link}}">
       <div class="row item">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 col-lg-offset-1">

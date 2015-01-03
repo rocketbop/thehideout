@@ -1194,10 +1194,10 @@ Restaurant Page
 		}
 	}
 	.page-header-top {
-		background-color: lighten($color-lilac, 3%);
+		background-color: $color-lilac;
 		margin-bottom: 0;
 		.page-inner {
-			background-color: $color-lilac;
+			background-color: darken($color-lilac, 5%);
 		}
 	}
 	.page-header-bottom {
@@ -1285,13 +1285,23 @@ Gallery Page
 			left: 0;
 			clear: both;
 		}
+		.item-image-wrapper {
+		background-color: $black-2 !important;
+		display: inline-block !important;
+	}
 		.info {
 			 text-transform: capitalize;
-			 padding-left: 15px;
+			margin-top: 0;
+			padding-top: 1em;
+			padding-bottom: 0.2em;
+			border-bottom: $color-aqua 1px solid;
+			 background-color: darken($color-white-1, 5%);
 		}
 		h5 {
-		margin-top: 1.0em;
+		padding-left: 15px;
+
 		font-family: "PT Serif", sans-serif;
+		
 			@media (max-width: 991px) {
 				text-align: center;
 			}
