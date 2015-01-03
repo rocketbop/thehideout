@@ -133,6 +133,8 @@ body .btn-tertiary.active {
 body .btn {
   margin-top: 1em;
   margin-bottom: 1em; }
+body .modal-body {
+  padding: 0 !important; }
 
 /**** LAYOUT STYLES *****************/
 header .navbar-container {
@@ -608,20 +610,20 @@ Events
 .events-page .background-container {
   background-image: url("http://localhost:8888/wp-content/themes/hideout/images/backgrounds/hand-playing-guitar.jpg");
   background-position: bottom; }
-.events-page .event-filter a {
+.events-page .filter a {
   color: #2b2b2b; }
-.events-page .event-filter a:first-child {
+.events-page .filter a:first-child {
   margin-top: 0; }
-.events-page .event-filter a:last-child {
+.events-page .filter a:last-child {
   border-bottom: #a6422b solid 1px; }
-.events-page .event-filter h3:first-child {
+.events-page .filter h3:first-child {
   margin-top: 0;
   margin-bottom: 2em; }
-.events-page .event-filter h4 {
+.events-page .filter h4 {
   margin-top: 0;
   margin-bottom: 0;
   padding: 0.8em; }
-.events-page .event-filter .btn-primary h4 {
+.events-page .filter .btn-primary h4 {
   color: white; }
 .events-page .sidebar-events {
   display: none; }
@@ -748,13 +750,31 @@ Restaurant Page
 Gallery Page
 --------------------------------------------------------------*/
 .gallery-page .page-header-top {
-  background-color: #308ba0; }
+  background-color: #2a7a8c; }
   .gallery-page .page-header-top .page-inner {
-    background-color: #369cb4; }
+    background-color: #246979; }
 .gallery-page .page-header-bottom {
-  background-color: #2b7d90; }
+  background-color: #246979; }
   .gallery-page .page-header-bottom .page-inner {
-    background-color: #308ba0; }
+    background-color: #1e5865; }
+@media (max-width: 991px) {
+  .gallery-page .filter {
+    padding-right: 15px !important; } }
+.gallery-page .filter a {
+  color: #2b2b2b; }
+.gallery-page .filter a:first-child {
+  margin-top: 0; }
+.gallery-page .filter a:last-child {
+  border-bottom: #2a7a8c solid 1px; }
+.gallery-page .filter h3:first-child {
+  margin-top: 0;
+  margin-bottom: 2em; }
+.gallery-page .filter h4 {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0.8em; }
+.gallery-page .filter .btn-secondary h4 {
+  color: white; }
 .gallery-page .flickr .item {
   text-align: center;
   height: 15em;
@@ -768,7 +788,14 @@ Gallery Page
   left: 0;
   clear: both; }
 .gallery-page .flickr .info {
-  text-transform: capitalize; }
+  text-transform: capitalize;
+  padding-left: 15px; }
+.gallery-page .flickr h5 {
+  margin-top: 1.0em;
+  font-family: "PT Serif", sans-serif; }
+  @media (max-width: 991px) {
+    .gallery-page .flickr h5 {
+      text-align: center; } }
 
 /*--------------------------------------------------------------
 Sidebar

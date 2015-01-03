@@ -263,6 +263,9 @@ body {
 		margin-top: 1em;
 		margin-bottom: 1em;
 	}
+		.modal-body {
+		padding: 0 !important;
+	}
 }
 
 /**** LAYOUT STYLES *****************/
@@ -1017,7 +1020,7 @@ Events
 		background-image: url($templateDirectory + "images/backgrounds/hand-playing-guitar.jpg");
 		background-position: bottom;
 	}
-	.event-filter {
+	.filter {
 		a {
 			color: lighten($black-2, 10%);
 		}
@@ -1226,29 +1229,53 @@ Gallery Page
 --------------------------------------------------------------*/
 
 .gallery-page {
-	.page-header-top {
-		background-color: $color-aqua;
+		.page-header-top {
+		background-color: darken($color-aqua, 5%);
 		.page-inner {
-			background-color: lighten($color-aqua, 5%);
+			background-color: darken($color-aqua, 10%);
 		}
 	}
 	.page-header-bottom {
-		background-color: darken($color-aqua, 4%);
-		// margin-top: 0;
+		background-color: darken($color-aqua, 10%);
 		.page-inner {
-			background-color: darken($color-aqua, 0%);
+			background-color: darken($color-aqua, 15%);
 		}
 	}
-
+	.filter {
+			@media (max-width: 991px) {
+			padding-right: 15px !important;
+		}
+		a {
+			color: lighten($color-black-2, 10%);
+		}
+		a:first-child {
+			margin-top: 0;
+		}
+		a:last-child {
+			border-bottom: darken($color-aqua, 5%) solid 1px;
+		}
+		h3:first-child {
+			margin-top: 0;
+			margin-bottom: 2em;
+		}
+		h4 {
+			margin-top: 0;
+			margin-bottom: 0;
+			padding: 0.8em;
+		}
+		.btn-secondary {
+			h4 {
+				color: $color-white-1;
+			}
+		}
+	}
 	.flickr {
-
 		.item {
 			text-align: center;
 			height: 15em;
 			position: relative;
 
 		}
-
 		.item-image {
 			max-height: 15em;
 			margin: 0 auto;
@@ -1258,15 +1285,18 @@ Gallery Page
 			left: 0;
 			clear: both;
 		}
-
 		.info {
-
 			 text-transform: capitalize;
+			 padding-left: 15px;
+		}
+		h5 {
+		margin-top: 1.0em;
+		font-family: "PT Serif", sans-serif;
+			@media (max-width: 991px) {
+				text-align: center;
+			}
 		}
 	}
-
-
-
 }
 
 /*--------------------------------------------------------------

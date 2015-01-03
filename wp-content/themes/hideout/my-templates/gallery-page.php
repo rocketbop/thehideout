@@ -5,7 +5,7 @@ Template Name: Gallery Page
 
 get_header(); ?>
 
-<div id="primary" class="content-area secondary-page gallery-page visible-links visible-links-aqua" ng-controller="galleryCtrl">
+<div id="primary" class="content-area secondary-page  gallery-page visible-links visible-links-aqua" ng-controller="galleryCtrl">
   <div class="container-fluid">
     <div class="row">
         <div class="background-container col-xs-12 col-sm-12" data-my-div-height="navbar" minus-header="false">
@@ -42,20 +42,16 @@ get_header(); ?>
     <div class="row module-body ">
       <div class="module-body-inner col-md-10 col-md-offset-1">
         <div class="row">
-          <div class="column-filter">
-            <div class="col-md-3 no-padding-right">
+         
+          <div class="filter col-md-3 no-padding-right">
          
               <h3 class="text-center">Albums</h3>
                 <!-- The unique filter will mean categories with more than one event will not be generated in duplicate -->
-              <a ng-click="selectAlbum(photoset.id)" ng-repeat="photoset in data.photosetList.photosets.photoset"  class=" btn btn-block btn-default btn-lg" ng-class="getAlbumClass(photoset.id)"><h4>{{photoset.title._content}}</h4></a>  
-
-            </div>
-          </div>
+              <a ng-click="selectAlbum(photoset.id)" ng-repeat="photoset in data.photosetList.photosets.photoset" class=" btn btn-block btn-default btn-lg" ng-class="getAlbumClass(photoset.id)"><h4>{{photoset.title._content}}</h4></a>
+          </div> <!-- filter -->
           <div class="column-main">
             <div class="col-md-9">
               
-                
-
                 <div class="row" ng-repeat="photos in data.selectedAlbumPhotos.photoset.photo | groupBy:3">
                 <div class=" flickr col-md-4" ng-repeat="photo in photos" >
                   <div class="item">
@@ -80,13 +76,10 @@ get_header(); ?>
                 </div>
              </div>
             <!-- </div>  -->
-
-
          </div> <!-- row -->
        </div> <!-- page body -->
     </div> <!-- row -->
   </div> <!-- container fluid -->
-
 </div> <!-- ng controller -->
 
 
