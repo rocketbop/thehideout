@@ -31,10 +31,4 @@ angular.module("customFilters", [])
       var date = new Date(string);
       return date;
     }
-  })
-  .filter('convertTimestamp', function () {
-    return function (timestamp) {
-      var date = timestamp * 1000;
-      return date;
-    }
   });

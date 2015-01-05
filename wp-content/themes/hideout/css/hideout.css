@@ -110,14 +110,14 @@ body .btn-primary.active {
   border-color: #ba4a30; }
 body .btn-secondary {
   color: #eeeeee;
-  background-color: #308ba0;
+  background-color: #2a7a8c;
   border-color: #184752; }
 body .btn-secondary:hover,
 body .btn-secondary:focus,
 body .btn-secondary:active,
 body .btn-secondary.active {
   color: white;
-  background-color: #2a7a8c;
+  background-color: #246979;
   border-color: #308ba0; }
 body .btn-tertiary {
   color: #eeeeee;
@@ -135,6 +135,10 @@ body .btn {
   margin-bottom: 1em; }
 body .modal-body {
   padding: 0 !important; }
+body .lightbox-nav a {
+  font-family: "Source Sans Pro", sans-serif !important; }
+body .btn-group {
+  background-color: #f2f2f2; }
 
 /**** LAYOUT STYLES *****************/
 header .navbar-container {
@@ -775,37 +779,46 @@ Gallery Page
   padding: 0.8em; }
 .gallery-page .filter .btn-secondary h4 {
   color: white; }
+.gallery-page .album-meta-data {
+  margin-bottom: 2em; }
+  .gallery-page .album-meta-data h4 {
+    background-color: #246979;
+    color: white;
+    margin-top: 0;
+    padding-bottom: 0.8em;
+    padding-top: 0.8em;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-family: "Source Sans Pro";
+    line-height: 1.8em; }
+  .gallery-page .album-meta-data h5 {
+    border-bottom: #246979 solid 1px;
+    padding-bottom: 1px;
+    padding-bottom: 0.5em;
+    padding-left: 15px;
+    margin-bottom: 1px; }
 .gallery-page .flickr .item {
-  text-align: center;
-  height: 15em;
-  position: relative; }
-.gallery-page .flickr .item-image {
-  max-height: 15em;
-  margin: 0 auto;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  clear: both; }
-.gallery-page .flickr .item-image-wrapper {
-  background-color: #111111 !important;
-  display: inline-block !important; }
-.gallery-page .flickr .info {
-  text-transform: capitalize;
+  text-align: center; }
+.gallery-page .flickr .item-description {
+  display: inline-block;
+  min-height: 280px; }
+.gallery-page .flickr img {
+  max-height: 220px;
+  overflow: hidden; }
+.gallery-page .flickr .item-description:hover h5 {
+  background-color: #d9d9d9; }
+.gallery-page .flickr .description {
+  height: 3em; }
+.gallery-page .flickr h5 {
+  padding-left: 2em;
+  padding-right: 2em;
   margin-top: 0;
   padding-top: 1em;
-  padding-bottom: 0.2em;
+  text-transform: capitalize;
   border-bottom: #308ba0 1px solid;
-  background-color: #f2f2f2; }
-  @media (max-width: 991px) {
-    .gallery-page .flickr .info {
-      margin-bottom: 1.5em; } }
-.gallery-page .flickr h5 {
-  padding-left: 15px;
-  font-family: "PT Serif", sans-serif; }
-  @media (max-width: 991px) {
-    .gallery-page .flickr h5 {
-      text-align: center; } }
+  background-color: #f2f2f2;
+  color: black !important;
+  font-family: "Source Sans Pro", sans-serif; }
 
 /*--------------------------------------------------------------
 Facilties Page

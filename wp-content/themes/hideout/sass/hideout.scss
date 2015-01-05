@@ -235,7 +235,7 @@ body {
 	}
 	.btn-secondary {
 	  color: $white-3;
-	  background-color: $color-aqua;
+	  background-color: darken($color-aqua, 5%);
 	  border-color: darken($color-aqua, 20%);
 	}
 	.btn-secondary:hover,
@@ -243,7 +243,7 @@ body {
 	.btn-secondary:active,
 	.btn-secondary.active {
 	  color: $color-white-1;
-	  background-color: darken($color-aqua, 5%);
+	  background-color: darken($color-aqua, 10%);
 	  border-color: $color-aqua;
 	}
 	.btn-tertiary {
@@ -265,6 +265,14 @@ body {
 	}
 		.modal-body {
 		padding: 0 !important;
+	}
+		.lightbox-nav {
+		a {
+			font-family: "Source Sans Pro", sans-serif !important;
+		}
+	}
+	.btn-group {
+		background-color: darken($color-white-1, 5%);
 	}
 }
 
@@ -1269,45 +1277,56 @@ Gallery Page
 			}
 		}
 	}
+	.album-meta-data {
+		margin-bottom: 2em;
+		h4 {
+			background-color: darken($color-aqua, 10%);
+			color: $color-white-1;
+			margin-top: 0;
+			padding-bottom: 0.8em;
+			padding-top: 0.8em;
+			padding-left: 15px;
+			padding-right: 15px;
+			font-family: "Source Sans Pro";
+			line-height: 1.8em;
+		}
+		h5 {
+			border-bottom: darken($color-aqua, 10%) solid 1px;
+			padding-bottom: 1px;
+			padding-bottom: 0.5em;
+			padding-left: 15px;
+			margin-bottom: 1px;
+		}
+		
+	}
 	.flickr {
 		.item {
 			text-align: center;
-			height: 15em;
-			position: relative;
-
 		}
-		.item-image {
-			max-height: 15em;
-			margin: 0 auto;
-			position: absolute;
-			bottom: 0;
-			right: 0;
-			left: 0;
-			clear: both;
+		.item-description {
+			display: inline-block;
+			min-height: 280px;
 		}
-		.item-image-wrapper {
-		background-color: $black-2 !important;
-		display: inline-block !important;
-	}
-		.info {
-			 text-transform: capitalize;
-			margin-top: 0;
-			padding-top: 1em;
-			padding-bottom: 0.2em;
-			border-bottom: $color-aqua 1px solid;
-			 background-color: darken($color-white-1, 5%);
-			 @media (max-width: 991px) {
-				margin-bottom: 1.5em;
-			}
+		img {
+			max-height: 220px;
+    	overflow: hidden;
+		}
+		.item-description:hover h5 {
+			background-color: darken($color-white-1, 15%);
+		}
+		.description {
+			height: 3em;
 		}
 		h5 {
-		padding-left: 15px;
-
-		font-family: "PT Serif", sans-serif;
-		
-			@media (max-width: 991px) {
-				text-align: center;
-			}
+			padding-left: 2em;
+			padding-right: 2em;
+			margin-top: 0;
+			padding-top: 1em;
+			text-transform: capitalize;
+			border-bottom: $color-aqua 1px solid;
+			background-color: darken($color-white-1, 5%);
+			color: $color-black-1 !important;
+			font-family: "Source Sans Pro", sans-serif;
 		}
 	}
 }
