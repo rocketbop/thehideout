@@ -49,10 +49,27 @@ get_header(); ?>
                 <!-- The unique filter will mean categories with more than one event will not be generated in duplicate -->
               <a ng-click="selectAlbum(photoset.id)" ng-repeat="photoset in data.photosetList.photosets.photoset" class=" btn btn-block btn-default btn-lg" ng-class="getAlbumClass(photoset.id)"><h4>{{photoset.title._content}}</h4></a>
             </div> <!-- filter -->
-            <?php get_sidebar(); ?>
+            <div class="hidden-xs hidden-sm">
+              <?php get_sidebar(); ?>
+            </div>
           </div>
           <div class="column-main">
             <div class="col-md-9">
+                <div class="album-meta-data row">
+                  <div class="col-md-4 col-lg-3">
+                    <h3>Album Description:</h3>
+                  </div>
+                   <div class="col-md-8 col-lg-9">
+                    <h3>{{selectedAlbum.description._content}}</h3>
+                  </div>
+                  <div class="col-md-4 col-lg-3">
+                    <h5>Date Created:</h5>
+                  </div>
+                   <div class="col-md-8 col-lg-9">
+                    <h5>{{selectedAlbum.date_create * 1000 | date: 'h:mma, EEEE, d MMMM yyyy'}}</h5>
+                  </div>
+                </div>
+            
               
                 <div class="row" ng-repeat="photos in data.selectedAlbumPhotos.photoset.photo | groupBy:3">
                 <div class=" flickr col-md-4" ng-repeat="photo in photos" >

@@ -1296,6 +1296,9 @@ Gallery Page
 			padding-bottom: 0.2em;
 			border-bottom: $color-aqua 1px solid;
 			 background-color: darken($color-white-1, 5%);
+			 @media (max-width: 991px) {
+				margin-bottom: 1.5em;
+			}
 		}
 		h5 {
 		padding-left: 15px;
@@ -1305,6 +1308,45 @@ Gallery Page
 			@media (max-width: 991px) {
 				text-align: center;
 			}
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+Facilties Page
+--------------------------------------------------------------*/
+
+.facilities-page {
+	.page-header-top {
+		background-color: darken($color-cherry, 0%);
+		.page-inner {
+			background-color: darken($color-cherry, 5%);
+		}
+	}
+	.page-header-bottom {
+		background-color: darken($color-cherry, 5%);
+		.page-inner {
+			background-color: darken($color-cherry, 10%);
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+About Page
+--------------------------------------------------------------*/
+.about-page {
+	.page-header-top {
+		background-color: $color-lilac;
+		margin-bottom: 0;
+		.page-inner {
+			background-color: darken($color-lilac, 5%);
+		}
+	}
+	.page-header-bottom {
+		background-color: darken($color-lilac, 5%);
+		margin-top: 0;
+		.page-inner {
+			background-color: darken($color-lilac, 10%);
 		}
 	}
 }

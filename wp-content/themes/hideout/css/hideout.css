@@ -797,12 +797,41 @@ Gallery Page
   padding-bottom: 0.2em;
   border-bottom: #308ba0 1px solid;
   background-color: #f2f2f2; }
+  @media (max-width: 991px) {
+    .gallery-page .flickr .info {
+      margin-bottom: 1.5em; } }
 .gallery-page .flickr h5 {
   padding-left: 15px;
   font-family: "PT Serif", sans-serif; }
   @media (max-width: 991px) {
     .gallery-page .flickr h5 {
       text-align: center; } }
+
+/*--------------------------------------------------------------
+Facilties Page
+--------------------------------------------------------------*/
+.facilities-page .page-header-top {
+  background-color: #ba4a30; }
+  .facilities-page .page-header-top .page-inner {
+    background-color: #a6422b; }
+.facilities-page .page-header-bottom {
+  background-color: #a6422b; }
+  .facilities-page .page-header-bottom .page-inner {
+    background-color: #913a26; }
+
+/*--------------------------------------------------------------
+About Page
+--------------------------------------------------------------*/
+.about-page .page-header-top {
+  background-color: #8630ad;
+  margin-bottom: 0; }
+  .about-page .page-header-top .page-inner {
+    background-color: #772a99; }
+.about-page .page-header-bottom {
+  background-color: #772a99;
+  margin-top: 0; }
+  .about-page .page-header-bottom .page-inner {
+    background-color: #672585; }
 
 /*--------------------------------------------------------------
 Sidebar

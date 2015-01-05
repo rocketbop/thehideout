@@ -8,15 +8,18 @@ angular.module('theHideoutApp')
     $scope.dataPromise = Flickr.getPhotosetList()
       .success(function (data) {
         $scope.data.photosetList = data;
+        $scope.albumList = $scope.data.photosetList.photosets.photoset;
 
         // Select most recent gallery as init
-        $scope.selectedAlbumID = $scope.data.photosetList.photosets.photoset[0].id;
+        $scope.selectedAlbum = $scope.albumList[0];
+        $scope.selectedAlbumID = $scope.selectedAlbum.id;
 
         $scope.getPhotosetPhotos = function (selectedAlbumID) {
           Flickr.getPhotosetPhotos(selectedAlbumID)
             .success(function (data) {
               $scope.data.selectedAlbumPhotos = data;
-              console.log($scope.data.selectedAlbumPhotos);
+              // console.log($scope.data.selectedAlbumPhotos);
+
             })
             .error(function (error) {
               console.log(error);
@@ -24,7 +27,7 @@ angular.module('theHideoutApp')
           }
 
         $scope.getPhotosetPhotos($scope.selectedAlbumID);
-        console.log($scope.data.photosetList);
+        // console.log($scope.data.photosetList);
 
       })
       .error(function (error) {
@@ -32,7 +35,21 @@ angular.module('theHideoutApp')
       });
 
 
-      //$scope.sliderSets = $scope.getSliderSets();
+      $scope.getSelectedAlbum = function (albumID, albumList) {
+        console.log("Hi");
+        var album = [];
+
+        for (var i = 0; i < albumList.length; i++) {
+          console.log(albumList[i]);
+          if (albumList[i].id == albumID) {
+            console.log("got it");
+            album = albumList[i];
+            break;
+          }
+        };
+        console.log(album);
+        return album;
+      }
 
       $scope.getSliderSets = function ($filter) {
         
@@ -41,16 +58,18 @@ angular.module('theHideoutApp')
       }
 
       $scope.openLightboxModal = function (index) {
-        console.log($scope.data.selectedAlbumPhotos.photoset.photo);
+        // console.log($scope.data.selectedAlbumPhotos.photoset.photo);
         Lightbox.openModal($scope.data.selectedAlbumPhotos.photoset.photo, index);
-      };
+      };{}
 
       $scope.selectAlbum = function (albumID) {
         // if the album id doesn't match refetch the data
         if ($scope.selectedAlbumID != albumID) {
           $scope.selectedAlbumID = albumID;
-          $scope.getPhotosetPhotos($scope.selectedAlbumID);
         } 
+          $scope.selectedAlbum = $scope.getSelectedAlbum($scope.selectedAlbumID, $scope.albumList);
+          $scope.getPhotosetPhotos($scope.selectedAlbumID);
+
       }
 
       $scope.getAlbumClass = function (albumID) {
