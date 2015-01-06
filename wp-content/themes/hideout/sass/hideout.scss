@@ -178,7 +178,11 @@ a:visited {
 	}
 }
 .no-padding-left {
+	@media (min-width: 768px) {
+
+
 	padding-left: 0 !important;
+		}
 }
 .no-padding-right {
 	padding-right: 0 !important;
@@ -235,7 +239,7 @@ body {
 	}
 	.btn-secondary {
 	  color: $white-3;
-	  background-color: darken($color-aqua, 5%);
+	  background-color: darken($color-aqua, 10%);
 	  border-color: darken($color-aqua, 20%);
 	}
 	.btn-secondary:hover,
@@ -243,8 +247,7 @@ body {
 	.btn-secondary:active,
 	.btn-secondary.active {
 	  color: $color-white-1;
-	  background-color: darken($color-aqua, 10%);
-	  border-color: $color-aqua;
+	  background-color: darken($color-aqua, 15%);
 	}
 	.btn-tertiary {
 	  color: $color-white-3;
@@ -400,7 +403,7 @@ header {
 			padding-left: 0.4em;
 		}
 		.navbar-fixed-top {
-      position: relative;
+      position: absolute;
       top: auto;
     }
     .navbar-collapse {
@@ -502,6 +505,18 @@ header {
 Front Page General
 ---------------------------------------*/
 
+.front-page {
+	p, a {
+	font-family: "Source Sans Pro";
+
+	}
+}
+
+
+/*---------------
+ General
+---------------------------------------*/
+
 .module-body {
 	background-color: darken($color-white-1, 5%);
 }
@@ -521,7 +536,6 @@ Front Page General
 	padding-left: 2em;
 }
 p, a {
-		// font-family: "Lato", sans-serif;
 	font-size: 1.03em;
 	line-height: 1.3em;
 }
@@ -587,6 +601,7 @@ Front Page News Module
 		}
 		.item-text {
 			padding-left: 2em;
+			padding-right: 2em;
 		}
 		.item-image {
 			height: 18em;
@@ -622,6 +637,7 @@ Front Page News Module
 		color: $white-2;
 
 		.item-text {
+			padding-left: 2em;
 			padding-right: 2em;
 		}
 
@@ -1025,7 +1041,7 @@ Events
 }
 .events-page {
 	.background-container {
-		background-image: url($templateDirectory + "images/backgrounds/hand-playing-guitar.jpg");
+		background-image: url($templateDirectory + "images/backgrounds/man-singing-sepia.jpg");
 		background-position: bottom;
 	}
 	.filter {

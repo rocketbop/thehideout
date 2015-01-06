@@ -69,8 +69,8 @@
                         <div class="item-image" data-news-background-image="3"></div>
                       </div>
                     </div>
-                    <div class=" item-text col-xs-8 col-sm-8 col-md-8 col-lg-8">
-                      <p><h4>{{data.newsPosts[2].title}}</h4></p>
+                    <div class=" item-text col-xs-12 col-sm-6 col-md-8 col-lg-8">
+                      <h4>{{data.newsPosts[2].title}}</h4>
                       
                       <h5>{{data.newsPosts[2].date | date: 'medium' }}</h5>
                     </div>

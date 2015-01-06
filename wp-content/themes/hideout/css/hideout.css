@@ -63,8 +63,9 @@ a:visited {
 .visible-links-aqua a:hover {
   color: #2a7a8c; }
 
-.no-padding-left {
-  padding-left: 0 !important; }
+@media (min-width: 768px) {
+  .no-padding-left {
+    padding-left: 0 !important; } }
 
 .no-padding-right {
   padding-right: 0 !important; }
@@ -110,15 +111,14 @@ body .btn-primary.active {
   border-color: #ba4a30; }
 body .btn-secondary {
   color: #eeeeee;
-  background-color: #2a7a8c;
+  background-color: #246979;
   border-color: #184752; }
 body .btn-secondary:hover,
 body .btn-secondary:focus,
 body .btn-secondary:active,
 body .btn-secondary.active {
   color: white;
-  background-color: #246979;
-  border-color: #308ba0; }
+  background-color: #1e5865; }
 body .btn-tertiary {
   color: #eeeeee;
   background-color: #8630ad;
@@ -229,7 +229,7 @@ header nav.navbar a.navbar-brand {
     float: left;
     padding-left: 0.4em; }
   header .navbar-fixed-top {
-    position: relative;
+    position: absolute;
     top: auto; }
   header .navbar-collapse {
     max-height: none; }
@@ -297,6 +297,12 @@ header nav.navbar a.navbar-brand {
 /*---------------
 Front Page General
 ---------------------------------------*/
+.front-page p, .front-page a {
+  font-family: "Source Sans Pro"; }
+
+/*---------------
+ General
+---------------------------------------*/
 .module-body {
   background-color: #f2f2f2; }
 
@@ -360,7 +366,8 @@ Front Page News Module
   .news-module .item.item-1 p, .news-module .item.item-1 h1, .news-module .item.item-1 h2, .news-module .item.item-1 h3, .news-module .item.item-1 h4, .news-module .item.item-1 h5, .news-module .item.item-1 h6 {
     color: white; }
   .news-module .item.item-1 .item-text {
-    padding-left: 2em; }
+    padding-left: 2em;
+    padding-right: 2em; }
   .news-module .item.item-1 .item-image {
     height: 18em;
     background-position: bottom; }
@@ -382,6 +389,7 @@ Front Page News Module
   background-color: #2a7a8c;
   color: #f8f8f8; }
   .news-module .item.item-3 .item-text {
+    padding-left: 2em;
     padding-right: 2em; }
   .news-module .item.item-3 .item-image {
     height: 7em;
@@ -612,7 +620,7 @@ Events
   padding-bottom: 1em; }
 
 .events-page .background-container {
-  background-image: url("http://localhost:8888/wp-content/themes/hideout/images/backgrounds/hand-playing-guitar.jpg");
+  background-image: url("http://localhost:8888/wp-content/themes/hideout/images/backgrounds/man-singing-sepia.jpg");
   background-position: bottom; }
 .events-page .filter a {
   color: #2b2b2b; }
