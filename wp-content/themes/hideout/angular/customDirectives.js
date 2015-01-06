@@ -2,40 +2,34 @@ angular.module("theHideoutApp")
   .directive("myDivHeight", function ($window) {
 
     function setDivHeight(element, attrs) {
-      var topBackgroundSize = attrs["myDivHeight"],
+      var divHeightClass = attrs["myDivHeight"],
           windowHeight = '',
-          headerSize = '';
+          pageHeaderHeight = ''
+          imageHeight = 0;
       
-      if (attrs["minusHeader"]) {
-        headerSize = jQuery(".page-header-top").height();
-        headerSize += jQuery(".page-header-bottom").height();
-        console.log(headerSize);
+      if (attrs["minusHeader"] === 'true') {
+        pageHeaderHeight = jQuery(".page-header-top").height();
+        pageHeaderHeight += jQuery(".page-header-bottom").height();
       } else {
-        headerSize = false;
+        pageHeaderHeight = 0;
+        console.log(pageHeaderHeight);
       }
-
-       var setTopBackgroundSize = function (topBackgroundSize) {
-        if (topBackgroundSize == 'full') {
-          windowHeight = $window.innerHeight;
-          if (headerSize != false) {
-            console.log("All ood");
-            windowHeight = windowHeight - headerSize;
-          }
+      if (attrs['minusModuleHeader'] === 'true') {
+        pageHeaderHeight += jQuery(".module-header").height();
+      }
+       var calculateDivHeight = function (divHeightClass) {
+        if (divHeightClass == 'full') {
+          windowHeight = $window.innerHeight - pageHeaderHeight;
         }
-        if (topBackgroundSize == 'navbar') {
+        if (divHeightClass == 'navbar') {
           windowHeight = jQuery(".navbar-container").height();
         }
         return windowHeight;
       }
-
-      var imageHeight = setTopBackgroundSize(topBackgroundSize);
-      console.log(imageHeight);
-      
+      imageHeight = calculateDivHeight(divHeightClass);
       element.css('height', imageHeight + "px");
     }
-
     return {
-
       link: function (scope, element, attrs) {        
         jQuery(window).load(setDivHeight(element, attrs));
         angular.element($window).on('resize', function () {
@@ -43,7 +37,6 @@ angular.module("theHideoutApp")
         });
       }
     }
-
   })
   .directive("myVerticalCenter", function () {
 

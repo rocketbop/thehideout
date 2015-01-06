@@ -85,7 +85,8 @@ $color-white-1: #fff;
 $color-white-2: #f2f2f2;
 $color-white-3: #eee;
 
-$color-cherry: #ba4a30;
+// $color-cherry: #ba3a30;
+$color-cherry: #c0382d;
 $color-cherry-off: #c74c2f;
 $color-lilac: #8630ad;
 $color-aqua: #308ba0;
@@ -1352,16 +1353,87 @@ Facilties Page
 --------------------------------------------------------------*/
 
 .facilities-page {
-	.page-header-top {
-		background-color: darken($color-cherry, 0%);
+	.icon {
+			text-align: center;
+	}
+	.item {
+		.description {
+				@media (max-width: 991px) {
+					margin-top: 2em;
+				}
+			p {
+				color: $color-white-1;
+				font-family: "Source Sans Pro", sans-serif;
+				margin-top: 0em;
+				padding:	1em;
+
+			}
+		}
+		.image {
+			h4 {
+				background-color: darken($color-white-1, 10%);
+				margin-top: 0;
+				padding-top: 1em;
+				padding-left: 1em;
+				padding-bottom: 0.2em;
+			}
+		}
+	}
+		.page-header-top {
+		background-color: darken($color-aqua, 5%);
 		.page-inner {
-			background-color: darken($color-cherry, 5%);
+			background-color: darken($color-aqua, 10%);
 		}
 	}
 	.page-header-bottom {
-		background-color: darken($color-cherry, 5%);
+		background-color: darken($color-aqua, 10%);
 		.page-inner {
+			background-color: darken($color-aqua, 15%);
+		}
+	}
+	.bar {
+		.background-container {
+			background-image: url($templateDirectory + "images/backgrounds/front-bar-b+w.jpg");
+		}
+		.description {
+			background-color: darken($color-aqua, 10%);
+		}
+		h4 {
+			border-bottom: darken($color-aqua, 10%) 1px solid;
+		}
+	}
+	.smoking-area {
+		.background-container {
+			background-image: url($templateDirectory + "images/backgrounds/smoking-area.jpg");
+		}
+		.module-header {
+			background-color: $color-lilac;
+			.module-header-inner {
+				background-color: darken($color-lilac, 5%);
+			}
+		}
+		.description {
+			background-color: darken($color-lilac, 10%);
+		}
+		h4 {
+			border-bottom: darken($color-lilac, 10%) 1px solid;
+		}
+	}
+	.stage {
+		.background-container {
+			background-image: url($templateDirectory + "images/backgrounds/big-stage.jpg");
+		}
+		.module-header {
+			background-color: $color-cherry;
+			.module-header-inner {
+				background-color: darken($color-cherry, 5%);
+			}
+		}
+		.description {
 			background-color: darken($color-cherry, 10%);
+		}
+		h4 {
+			border-bottom: darken($color-cherry, 10%) 1px solid;
 		}
 	}
 }

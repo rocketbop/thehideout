@@ -49,9 +49,9 @@ a:visited {
   font-weight: 700; }
 
 .visible-links-cherry a {
-  color: #a6422b; }
+  color: #ab3228; }
 .visible-links-cherry a:hover {
-  color: #913a26; }
+  color: #972c23; }
 
 .visible-links-lilac a {
   color: #8630ad; }
@@ -100,15 +100,15 @@ body .btn-default {
   margin-bottom: 1em; }
 body .btn-primary {
   color: #eeeeee;
-  background-color: #ba4a30;
-  border-color: #692a1b; }
+  background-color: #c0382d;
+  border-color: #6d201a; }
 body .btn-primary:hover,
 body .btn-primary:focus,
 body .btn-primary:active,
 body .btn-primary.active {
   color: white !important;
-  background-color: #a6422b;
-  border-color: #ba4a30; }
+  background-color: #ab3228;
+  border-color: #c0382d; }
 body .btn-secondary {
   color: #eeeeee;
   background-color: #246979;
@@ -429,10 +429,10 @@ Front Page Music Module
 --------------------------------------------------------------*/
 /* All Screens */
 .music-module .module-header {
-  background-color: #ba4a30;
+  background-color: #c0382d;
   color: #f8f8f8; }
   .music-module .module-header .module-header-inner {
-    background-color: #a6422b; }
+    background-color: #ab3228; }
 .music-module .module-body-inner {
   background-color: white; }
 .music-module .item-image-wrapper {
@@ -453,28 +453,28 @@ Front Page Music Module
   padding-bottom: 0.5em;
   background-color: #f2f2f2; }
 .music-module .events-sidebar .item-header.previous h3 {
-  background-color: #fbf1ee; }
+  background-color: #fcf1f0; }
 .music-module .item-upcoming-sidebar .item {
   background-color: #f2f2f2; }
 .music-module .item-upcoming-sidebar .item:hover {
   background-color: #d8d8d8; }
 .music-module .item-previous-sidebar .item {
-  background-color: #fbf1ee; }
+  background-color: #fcf1f0; }
 .music-module .item-previous-sidebar .item:hover {
-  background-color: #f0cec6; }
+  background-color: #f2cac7; }
 .music-module .item-next-event {
-  background-color: #a6422b;
+  background-color: #ab3228;
   color: white; }
   .music-module .item-next-event .item-description {
     padding-left: 1em;
     padding-top: 2em; }
 .music-module .item-next-event:hover {
-  background-color: #7d3220; }
+  background-color: #82261e; }
 .music-module .item-facilities-header {
   text-align: center; }
 .music-module .item-facilities-items {
   padding-bottom: 1em;
-  border-bottom: 1px solid #a6422b; }
+  border-bottom: 1px solid #ab3228; }
   .music-module .item-facilities-items .item {
     background-color: #f2f2f2;
     padding-bottom: 0.5em; }
@@ -608,13 +608,13 @@ Secondary page styles General
 Events
 --------------------------------------------------------------*/
 .events .page-header-top {
-  background-color: #ba4a30; }
+  background-color: #c0382d; }
   .events .page-header-top .page-inner {
-    background-color: #a6422b; }
+    background-color: #ab3228; }
 .events .page-header-bottom {
-  background-color: #a6422b; }
+  background-color: #ab3228; }
   .events .page-header-bottom .page-inner {
-    background-color: #913a26; }
+    background-color: #972c23; }
 .events .social-buttons {
   border-bottom: #4d4d4d 1px dotted;
   padding-bottom: 1em; }
@@ -627,7 +627,7 @@ Events
 .events-page .filter a:first-child {
   margin-top: 0; }
 .events-page .filter a:last-child {
-  border-bottom: #a6422b solid 1px; }
+  border-bottom: #ab3228 solid 1px; }
 .events-page .filter h3:first-child {
   margin-top: 0;
   margin-bottom: 2em; }
@@ -646,7 +646,7 @@ Events
 .events-section .item p:first-child {
   margin-top: 3em; }
 .events-section .item .title {
-  background-color: #913a26; }
+  background-color: #972c23; }
   .events-section .item .title h2 {
     color: white;
     padding-left: 15px; }
@@ -657,9 +657,9 @@ Events
   padding-top: 2em;
   padding-bottom: 2em;
   padding-left: 15px;
-  border-bottom: #a6422b solid 1px; }
+  border-bottom: #ab3228 solid 1px; }
 .events-section .item div.image-title:hover .title {
-  background: #7d3220; }
+  background: #82261e; }
 .events-section .item div.image-title:hover img {
   opacity: 0.9; }
 
@@ -831,14 +831,56 @@ Gallery Page
 /*--------------------------------------------------------------
 Facilties Page
 --------------------------------------------------------------*/
+.facilities-page .icon {
+  text-align: center; }
+@media (max-width: 991px) {
+  .facilities-page .item .description {
+    margin-top: 2em; } }
+.facilities-page .item .description p {
+  color: white;
+  font-family: "Source Sans Pro", sans-serif;
+  margin-top: 0em;
+  padding: 1em; }
+.facilities-page .item .image h4 {
+  background-color: #e6e6e6;
+  margin-top: 0;
+  padding-top: 1em;
+  padding-left: 1em;
+  padding-bottom: 0.2em; }
 .facilities-page .page-header-top {
-  background-color: #ba4a30; }
+  background-color: #2a7a8c; }
   .facilities-page .page-header-top .page-inner {
-    background-color: #a6422b; }
+    background-color: #246979; }
 .facilities-page .page-header-bottom {
-  background-color: #a6422b; }
+  background-color: #246979; }
   .facilities-page .page-header-bottom .page-inner {
-    background-color: #913a26; }
+    background-color: #1e5865; }
+.facilities-page .bar .background-container {
+  background-image: url("http://localhost:8888/wp-content/themes/hideout/images/backgrounds/front-bar-b+w.jpg"); }
+.facilities-page .bar .description {
+  background-color: #246979; }
+.facilities-page .bar h4 {
+  border-bottom: #246979 1px solid; }
+.facilities-page .smoking-area .background-container {
+  background-image: url("http://localhost:8888/wp-content/themes/hideout/images/backgrounds/smoking-area.jpg"); }
+.facilities-page .smoking-area .module-header {
+  background-color: #8630ad; }
+  .facilities-page .smoking-area .module-header .module-header-inner {
+    background-color: #772a99; }
+.facilities-page .smoking-area .description {
+  background-color: #672585; }
+.facilities-page .smoking-area h4 {
+  border-bottom: #672585 1px solid; }
+.facilities-page .stage .background-container {
+  background-image: url("http://localhost:8888/wp-content/themes/hideout/images/backgrounds/big-stage.jpg"); }
+.facilities-page .stage .module-header {
+  background-color: #c0382d; }
+  .facilities-page .stage .module-header .module-header-inner {
+    background-color: #ab3228; }
+.facilities-page .stage .description {
+  background-color: #972c23; }
+.facilities-page .stage h4 {
+  border-bottom: #972c23 1px solid; }
 
 /*--------------------------------------------------------------
 About Page
@@ -892,9 +934,9 @@ Sidebar
 .sidebar.sidebar-events .section-header.background-container-sidebar-header {
   background-color: #f2f2f2; }
 .sidebar.sidebar-events .background-container-sidebar-item {
-  border-bottom: #a6422b solid 1px; }
+  border-bottom: #ab3228 solid 1px; }
 .sidebar.sidebar-events .item h3 {
-  color: #a6422b; }
+  color: #ab3228; }
 
 .sidebar.sidebar-news .section-header.background-container-sidebar-header {
   background-color: #f2f2f2; }
