@@ -8,7 +8,7 @@ get_header();  ?>
 <div id="primary" class="content-area secondary-page  facilities-page visible-links visible-links-cherry">
 
     <div class="container-fluid">
-      <div class="bar row">
+      <div id="bar" class="bar row">
           <div class="background-container col-xs-12 col-sm-12" data-my-div-height="full" minus-header="true">
           </div>
         </div>
@@ -18,7 +18,7 @@ get_header();  ?>
       <div class="page-inner col-md-10 col-lg-10 col-md-offset-1">
         <div class="row">
           <div class="title col-md-7 col-lg-7 col-md-offset-2">
-            <h1>Facilties</h1>
+            <h1>Facilities</h1>
           </div>
         </div>
       </div>  
@@ -60,7 +60,7 @@ get_header();  ?>
     </div> <!-- container fluid -->
 
     <div class="container-fluid">
-      <div class="stage row">
+      <div id="stage" class="stage row">
           <div class="background-container col-xs-12 col-sm-12" data-my-div-height="full" minus-module-header='true'>
           </div>
         </div>
@@ -97,7 +97,7 @@ get_header();  ?>
     </div> <!-- container fluid -->
 
     <div class="container-fluid">
-      <div class="smoking-area row">
+      <div id="smoking-area" class="smoking-area row">
           <div class="background-container col-xs-12 col-sm-12" data-my-div-height="full" minus-module-header='true'>
           </div>
         </div>

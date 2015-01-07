@@ -897,6 +897,27 @@ About Page
     background-color: #672585; }
 
 /*--------------------------------------------------------------
+Contact Page
+--------------------------------------------------------------*/
+.contact-page .page-header-top {
+  background-color: #ab3228; }
+  .contact-page .page-header-top .page-inner {
+    background-color: #972c23; }
+.contact-page .page-header-bottom {
+  background-color: #972c23; }
+  .contact-page .page-header-bottom .page-inner {
+    background-color: #82261e; }
+.contact-page input[type="submit"] {
+  background-color: #ab3228;
+  height: 4em;
+  width: 8em;
+  color: white;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 300; }
+.contact-page input[type="submit"]:hover {
+  background-color: #972c23; }
+
+/*--------------------------------------------------------------
 Sidebar
 --------------------------------------------------------------*/
 .sidebar .social-icons {

@@ -1459,6 +1459,36 @@ About Page
 }
 
 /*--------------------------------------------------------------
+Contact Page
+--------------------------------------------------------------*/
+
+.contact-page {
+	.page-header-top {
+		background-color: darken($color-cherry, 5%);
+		.page-inner {
+			background-color: darken($color-cherry, 10%);
+		}
+	}
+	.page-header-bottom {
+		background-color: darken($color-cherry, 10%);
+		.page-inner {
+			background-color: darken($color-cherry, 15%);
+		}
+	}
+	input[type="submit"] {
+		background-color: darken($color-cherry, 5%);
+		height: 4em;
+		width: 8em;
+		color: $color-white-1;
+		font-family: "Source Sans Pro", sans-serif;
+		font-weight: 300;
+	}
+	input[type="submit"]:hover {
+		background-color: darken($color-cherry, 10%);
+	}
+}
+
+/*--------------------------------------------------------------
 Sidebar
 --------------------------------------------------------------*/
 

@@ -37,4 +37,36 @@ get_header();  ?>
       </div> <!-- row -->
     </div> <!-- fluid container -->
 
+
+
+<div class="container-fluid">
+  <div class="row module-body">
+    <div class="module-body-inner col-md-10 col-md-offset-1">
+      <div class="row">
+        <div class="col-md-12 col-lg-9">
+          
+        
+          <?php if ( have_posts() ) : ?>
+            <?php /* Start the Loop */ ?>
+            <?php while ( have_posts() ) : the_post(); ?>
+              <?php
+                get_template_part( 'content', 'cleanpage' );
+              ?>
+            <?php endwhile; ?>
+          <?php else : ?>
+            <?php get_template_part( 'content', 'none' ); ?>
+          <?php endif; ?>
+        </div>
+         <div class="visible-lg col-lg-3">
+          <?php get_sidebar(); ?>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<?php get_sidebar(); ?>
+<?php get_footer(); ?>
+
 <?php get_footer(); ?>

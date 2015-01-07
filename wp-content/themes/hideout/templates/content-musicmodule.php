@@ -91,12 +91,12 @@
           <div class="item-facilities-items">
             <div class="row">
               <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                <a href="{{rootDirectory}}facilities/index.php#sound">
-                  <div class="item item-sound">
+                <a href="{{rootDirectory}}facilities/index.php#bar">
+                  <div class="item item-bar">
                     <div class="item-image-wrapper">
-                      <img class="featured-image" ng-src="{{templateDirectory}}images/facilities/design-speakers-250x150.jpg">
+                      <img class="featured-image" ng-src="{{templateDirectory}}images/facilities/design-bar-250x150.jpg">
                     </div>
-                    <h4>Great Sound</h4>
+                    <h4>Great Bar</h4>
                   </div>
                 </a>
               </div>
